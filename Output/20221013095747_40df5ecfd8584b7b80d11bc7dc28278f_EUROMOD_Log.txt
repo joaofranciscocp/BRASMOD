@@ -1,0 +1,47 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: bra
+Start: quinta-feira, 13 de outubro de 2022 09:57:47
+End: quinta-feira, 13 de outubro de 2022 09:57:47
+Duration: 0,2127287s
+Output-Path: c:\users\usuario\downloads\bra\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+c72d7463-7fe6-4517-b287-2585fcf1d1d2	aborted	BRA_2020	BRA_2018_a1	quinta-feira, 13 de outubro de 2022 09:57:47	quinta-feira, 13 de outubro de 2022 09:57:47	0,2127287s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: c72d7463-7fe6-4517-b287-2585fcf1d1d2
+WARNING: 9.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable kfb_s
+WARNING: 9.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable tintbrt_s
+WARNING: 9.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable bch_s
+ERROR: 9.8.2 tin_bra/BenCalc/Comp_perElig (274afb7c-a439-41ae-aae2-6cb7f4757c34): unknown variable ybd
+ERROR: 9.8.1 tin_bra/BenCalc/Comp_Cond (5b579451-13be-461b-a82f-669bd222e0b7): unknown variable ybd
+ERROR: 9.8.4 tin_bra/BenCalc/Comp_perElig (8dd9bb40-2e2e-46b1-9dde-8f6020973ba6): unknown variable ysh
+ERROR: 9.8.3 tin_bra/BenCalc/Comp_Cond (fc2b58ba-3980-4a4a-9459-6f151f01bb88): unknown variable ysh
+ERROR: 10.3.1 bcovid_bra/BenCalc/Comp_Cond (9d1accaf-ae1d-422b-a1c5-97a05ce7adda): unknown variable yhh00
+ERROR: 10.3.1 bcovid_bra/BenCalc/Comp_Cond (9d1accaf-ae1d-422b-a1c5-97a05ce7adda): unknown variable yhh
+ERROR: 10.3.4 bcovid_bra/BenCalc/Comp_Cond (12b36bc2-8d59-4fb5-b07f-899947414d0c): unknown variable yhh
+WARNING: 10.3.2 bcovid_bra/BenCalc/#_Level (89849fbc-fcce-49a0-9124-e4c89d52f0b4): unused footnote
+WARNING: 10.3.5 bcovid_bra/BenCalc/#_Level (09a97e45-b7b1-4010-a1a4-29e61bf8633f): unused footnote
+ERROR: 10.8.1 bcovid_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable yhh00
+ERROR: 10.8.1 bcovid_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable yhh
+ERROR: 10.8.4 bcovid_bra/BenCalc/Comp_Cond (5afc0dd5-92ab-47b1-ad2e-2479ab30d990): unknown variable yhh
+WARNING: 10.8.2 bcovid_bra/BenCalc/#_Level (bee6119e-09d4-4f19-aad9-27d11ae4c0e7): unused footnote
+WARNING: 10.8.5 bcovid_bra/BenCalc/#_Level (d17945aa-7db1-4fb9-b7c6-fa8d5e91979a): unused footnote
+ERROR: 11.4.7 bbf_ab_bra/BenCalc/Output_Var (9a100160-8206-411f-ba66-4e6c565a160f): unknown variable bbf_ab_s
+ERROR: 11.4.1 bbf_ab_bra/BenCalc/Comp_Cond (61233031-57bc-4a2f-a80b-37022c486905): unknown variable yhh00
+ERROR: 11.4.3 bbf_ab_bra/BenCalc/Comp_Cond (499cd90c-4fe2-4913-b1ab-95ef59c5307b): unknown variable yhh00
+ERROR: 11.4.3 bbf_ab_bra/BenCalc/Comp_Cond (499cd90c-4fe2-4913-b1ab-95ef59c5307b): unknown variable yhh00
+ERROR: 11.4.3 bbf_ab_bra/BenCalc/Comp_Cond (499cd90c-4fe2-4913-b1ab-95ef59c5307b): unknown variable yhh
+ERROR: 11.4.5 bbf_ab_bra/BenCalc/Comp_Cond (cbeec26e-080f-46e6-af83-0bd3aae19d16): unknown variable yhh00
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bsa_s
+ERROR: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bbf_ab_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bbf_ab_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bbf_ab_s
+ERROR: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown incomelist ils_bensim
+ERROR: 13.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bbf_ab_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bbf_ab_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bbf_ab_s
+ERROR: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable ils_bensim
+ERROR: Operand index does not contain operand ils_bensim

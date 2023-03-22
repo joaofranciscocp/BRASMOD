@@ -1,0 +1,36 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: quarta-feira, 22 de março de 2023 12:54:01
+End: quarta-feira, 22 de março de 2023 12:54:01
+Duration: 0,1563239s
+Output-Path: c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+f29d66fa-ede5-4c7a-92b8-58d70d85c37d	aborted	BRA_2020	pof euromod 2	quarta-feira, 22 de março de 2023 12:54:01	quarta-feira, 22 de março de 2023 12:54:01	0,1563239s	euro	1	-
+588521aa-3e25-44c3-8af0-015f45d58369	aborted	BRA_2019	pof euromod 2	quarta-feira, 22 de março de 2023 12:54:01	quarta-feira, 22 de março de 2023 12:54:01	0,1553261s	euro	1	-
+f3700dbe-31cd-416f-b558-5d05612f26c6	aborted	BRA_2018	pof euromod 2	quarta-feira, 22 de março de 2023 12:54:01	quarta-feira, 22 de março de 2023 12:54:01	0,1533061s	euro	1	-
+ccd4aafc-5550-4312-a5c5-08fed17a2b60	aborted	BRA_2021	pof euromod 2	quarta-feira, 22 de março de 2023 12:54:01	quarta-feira, 22 de março de 2023 12:54:01	0,1543028s	euro	1	-
+0626817d-0b21-4751-8e48-949c5c3ae8c0	aborted	BRA_REFORMA	pof euromod 2	quarta-feira, 22 de março de 2023 12:54:01	quarta-feira, 22 de março de 2023 12:54:01	0,1543028s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: f29d66fa-ede5-4c7a-92b8-58d70d85c37d
+ERROR: Failed reading file c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 588521aa-3e25-44c3-8af0-015f45d58369
+ERROR: Failed reading file c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: f3700dbe-31cd-416f-b558-5d05612f26c6
+ERROR: Failed reading file c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: ccd4aafc-5550-4312-a5c5-08fed17a2b60
+ERROR: Failed reading file c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 0626817d-0b21-4751-8e48-949c5c3ae8c0
+ERROR: Failed reading file c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\pof euromod 2.txt'.

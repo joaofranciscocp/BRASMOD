@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod_v1.0
+Start: quarta-feira, 8 de março de 2023 11:16:18
+End: quarta-feira, 8 de março de 2023 11:17:03
+Duration: 44,66974s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+744b76b5-5734-4f88-b0bc-175bdbfa7625	finished	BRA_2020	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:16:18	quarta-feira, 8 de março de 2023 11:17:00	41,329573s	euro	1	-	bra_2020_std	245810c607e6db51d3ebaea65fc8100a	bra_2020_std_hh	069a3909b5c131137737750d3394a8d0
+da39f20b-b313-4860-ab5d-40589e5b686d	finished	BRA_2021	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:16:18	quarta-feira, 8 de março de 2023 11:17:03	44,66974s	euro	1	-	bra_2021_std	b607948598335a899a66e5a8b2d1d1fd	bra_2021_std_hh	3812c775e905426e4c6e842ab2a743ff
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 744b76b5-5734-4f88-b0bc-175bdbfa7625
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: da39f20b-b313-4860-ab5d-40589e5b686d
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)

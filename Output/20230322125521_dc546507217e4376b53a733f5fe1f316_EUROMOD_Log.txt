@@ -1,0 +1,44 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: quarta-feira, 22 de março de 2023 12:54:59
+End: quarta-feira, 22 de março de 2023 12:55:21
+Duration: 22,3658014s
+Output-Path: c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+138f70e5-3dc4-400d-a987-f1750bdd83d9	finished	BRA_2020	BRA_2018_a1	quarta-feira, 22 de março de 2023 12:54:59	quarta-feira, 22 de março de 2023 12:55:21	22,3658014s	euro	1	-	bra_2020_std	245810c607e6db51d3ebaea65fc8100a	bra_2020_std_hh	069a3909b5c131137737750d3394a8d0
+3ae1d067-aec0-4423-8698-d78c09896a03	finished	BRA_2019	BRA_2018_a1	quarta-feira, 22 de março de 2023 12:54:59	quarta-feira, 22 de março de 2023 12:55:18	18,9947185s	euro	1	-	bra_2019_std	04b86536c46bfcb727045c109de237b6	bra_2019_std_hh	0d21890826933eb144f529cf503fe585
+e43c0022-8418-4030-9711-0751427958ef	finished	BRA_2018	BRA_2018_a1	quarta-feira, 22 de março de 2023 12:54:59	quarta-feira, 22 de março de 2023 12:55:20	21,3297332s	euro	1	-	bra_2018_std	227272a605430cade070256e10b1356f	bra_2018_std_hh	f9919475d056c8af8c4c336530d57394
+c1d4957a-7127-4034-a7ac-7f4f532bc603	finished	BRA_2021	BRA_2018_a1	quarta-feira, 22 de março de 2023 12:54:59	quarta-feira, 22 de março de 2023 12:55:20	21,357658s	euro	1	-	bra_2021_std	0ed8dc3e6458677122eacf76e414713a	bra_2021_std_hh	7870f43708ec9996566c44041513a534
+15e375a4-7cd2-41bf-91e2-90526484eb5d	finished	BRA_REFORMA	BRA_2018_a1	quarta-feira, 22 de março de 2023 12:54:59	quarta-feira, 22 de março de 2023 12:55:20	21,3297332s	euro	1	-	bra_reforma_std	584c1d99a7e9fce47d38543696cb73c7	bra_reforma_std_hh	e821b96837fda97dba550c1d22cf4928
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 138f70e5-3dc4-400d-a987-f1750bdd83d9
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 3ae1d067-aec0-4423-8698-d78c09896a03
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: e43c0022-8418-4030-9711-0751427958ef
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: c1d4957a-7127-4034-a7ac-7f4f532bc603
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 15e375a4-7cd2-41bf-91e2-90526484eb5d
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: No applicable Uprate function found

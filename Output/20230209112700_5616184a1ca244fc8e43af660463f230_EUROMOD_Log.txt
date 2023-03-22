@@ -1,0 +1,33 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: quinta-feira, 9 de fevereiro de 2023 11:27:00
+End: quinta-feira, 9 de fevereiro de 2023 11:27:00
+Duration: 0,1639566s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+20789b36-ffae-4fb2-a92e-47f02d8b1294	aborted	BRA_2020	BRA_2018_a1	quinta-feira, 9 de fevereiro de 2023 11:27:00	quinta-feira, 9 de fevereiro de 2023 11:27:00	0,1639566s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 20789b36-ffae-4fb2-a92e-47f02d8b1294
+ERROR: 2.1.1 ConstDef_bra/DefConst/$BENCOV (bb750163-bd02-4f76-bac8-ed10e4b25c61): Formula error: Unexpected token '#' found in position 1 of the formula.
+ERROR: 2.1.2 ConstDef_bra/DefConst/$BENCOVE (a183a198-1c87-40b1-84a7-c400a85c2746): Formula error: Unexpected token '#' found in position 1 of the formula.
+ERROR: 2.1.3 ConstDef_bra/DefConst/$BENCOVMS (8bbed6b4-35fe-45aa-9e57-8f0ca7bde969): Formula error: Unexpected token '#' found in position 1 of the formula.
+ERROR: 2.1.4 ConstDef_bra/DefConst/$BENCOVEMS (bbe7172b-87a6-493f-ba00-d058b6c702bc): Formula error: Unexpected token '#' found in position 1 of the formula.
+ERROR: 10.3.5 bcovid_bra/BenCalc/Output_Var (f48b70e4-8bd0-4685-b699-46318b5eb9b1): unknown variable bcovid01_s
+ERROR: 10.4.1 bcovid_bra/ArithOp/Formula (e602ca7e-d6e8-41f0-9cad-aef99f85c697): unknown variable bcovid01_s
+ERROR: 10.4.2 bcovid_bra/ArithOp/Output_Var (da5a09f7-9051-494e-9153-bd3539bb72a4): unknown variable bcovid_s
+ERROR: 10.5.5 bcovid_bra/BenCalc/Output_Var (904df455-e381-4d7d-b8ac-3adf4f697a6f): unknown variable bcovid02_s
+ERROR: 10.6.1 bcovid_bra/ArithOp/Formula (d67669f2-c58f-469a-9542-2cde422e332e): unknown variable bcovid02_s
+ERROR: 10.6.2 bcovid_bra/ArithOp/Output_Var (1b25229f-89dc-4ce8-aa03-12dede2d828a): unknown variable bcovid_s
+ERROR: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 13.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 13.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: Operand index does not contain operand bcovid_s

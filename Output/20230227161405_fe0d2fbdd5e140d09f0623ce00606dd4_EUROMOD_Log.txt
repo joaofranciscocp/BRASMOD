@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: segunda-feira, 27 de fevereiro de 2023 16:13:37
+End: segunda-feira, 27 de fevereiro de 2023 16:14:05
+Duration: 28,4184798s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+2ee8faeb-ba96-4ea1-af46-7d7f9532e29e	finished	BRA_2020	BRA_2018_a1	segunda-feira, 27 de fevereiro de 2023 16:13:37	segunda-feira, 27 de fevereiro de 2023 16:14:05	28,0482695s	euro	1	-	bra_2020_std	de1569fabba6eb3e1dbc055922038634	bra_2020_std_hh	7aa6a0b6d380e0b27b2064b29719bedc
+010ff31a-806b-4933-9f9c-993415758166	finished	BRA_2021	BRA_2018_a1	segunda-feira, 27 de fevereiro de 2023 16:13:37	segunda-feira, 27 de fevereiro de 2023 16:14:05	28,4184798s	euro	1	-	bra_2021_std	de1569fabba6eb3e1dbc055922038634	bra_2021_std_hh	7aa6a0b6d380e0b27b2064b29719bedc
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 2ee8faeb-ba96-4ea1-af46-7d7f9532e29e
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 010ff31a-806b-4933-9f9c-993415758166
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found

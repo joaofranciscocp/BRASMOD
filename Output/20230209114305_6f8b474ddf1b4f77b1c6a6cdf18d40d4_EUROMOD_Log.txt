@@ -1,0 +1,30 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: quinta-feira, 9 de fevereiro de 2023 11:43:05
+End: quinta-feira, 9 de fevereiro de 2023 11:43:05
+Duration: 0,1595729s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+b6e39e76-4524-45a4-85bd-f7280522c866	aborted	BRA_2020	BRA_2018_a1	quinta-feira, 9 de fevereiro de 2023 11:43:05	quinta-feira, 9 de fevereiro de 2023 11:43:05	0,1595729s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: b6e39e76-4524-45a4-85bd-f7280522c866
+ERROR:  10.6 bcovid_bra/BenCalc (7b3268cf-e776-4169-8eaa-7b2142d2ca41): compulsory parameter TAX_UNIT is missing
+ERROR: 10.4.5 bcovid_bra/BenCalc/Output_Var (f48b70e4-8bd0-4685-b699-46318b5eb9b1): unknown variable bcovid01_s
+ERROR: 10.5.2 bcovid_bra/ArithOp/Output_Var (3e232a0c-428a-45c8-b0eb-7d51562ebbc9): unknown variable bcovid_s
+ERROR: 10.6.3 bcovid_bra/BenCalc/Output_Var (56d743a6-d10f-45f0-a6eb-30fa2a19de05): unknown variable bcovid01_s
+ERROR: 10.7.2 bcovid_bra/ArithOp/Output_Var (da5a09f7-9051-494e-9153-bd3539bb72a4): unknown variable bcovid_s
+ERROR: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bcovid_s
+ERROR: 13.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 13.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 13.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bcovid_s
+ERROR: 13.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: Operand index does not contain operand bcovid_s

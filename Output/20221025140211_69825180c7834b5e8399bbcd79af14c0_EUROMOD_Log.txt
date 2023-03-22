@@ -1,0 +1,39 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: bra
+Start: terça-feira, 25 de outubro de 2022 14:01:58
+End: terça-feira, 25 de outubro de 2022 14:02:11
+Duration: 12,8563184s
+Output-Path: c:\users\usuario\downloads\bra\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash
+9f6e1fae-bc03-4ae9-8a7e-96e93d601c05	finished	BRA_2020	BRA_2018_a1	terça-feira, 25 de outubro de 2022 14:01:58	terça-feira, 25 de outubro de 2022 14:02:11	12,8563184s	euro	1	-	bra_2020_std	2bff7ddf7039bae72a4aaeb4efa2a860
+a582e911-e189-4dc9-b9cd-b581fa3dd09d	aborted	BRA_REFORMA	BRA_2018_a1	terça-feira, 25 de outubro de 2022 14:01:58	terça-feira, 25 de outubro de 2022 14:01:59	0,4949342s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 9f6e1fae-bc03-4ae9-8a7e-96e93d601c05
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\downloads\bra\input\BRA_2018_a1.txt: Variable(s) poa not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: a582e911-e189-4dc9-b9cd-b581fa3dd09d
+ERROR: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bbf_ab_s
+ERROR: 12.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 12.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bbf_ab_s
+ERROR: 12.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 12.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bbf_ab_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bcovid_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bbf_ab_s
+ERROR: 12.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 12.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bbf_ab_s
+ERROR: 12.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bcovid_s
+ERROR: 12.1.15 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bbf_ab_s
+ERROR: 12.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bcovid_s
+ERROR: 12.1.17 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bbf_ab_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bcovid_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bbf_ab_s
+ERROR: 12.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bcovid_s
+ERROR: 12.1.28 output_std_sl/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bbf_ab_s
+ERROR: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bcovid_s
+ERROR: Operand index does not contain operand bcovid_s

@@ -1,0 +1,35 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 5 - (22-12-2022) ab
+Start: segunda-feira, 16 de janeiro de 2023 14:27:12
+End: segunda-feira, 16 de janeiro de 2023 14:27:13
+Duration: 0,240765s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\5 - (22-12-2022) ab\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash
+e7a08f44-93da-4c34-942a-6fa744ac05d7	aborted	BRA_2020	BRA_2018_a1	segunda-feira, 16 de janeiro de 2023 14:27:12	segunda-feira, 16 de janeiro de 2023 14:27:13	0,240765s	euro	1	-	bra_2020_std	2bff7ddf7039bae72a4aaeb4efa2a860
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: e7a08f44-93da-4c34-942a-6fa744ac05d7
+ERROR: 9.3.7 bcovid_bra/BenCalc/Output_Var (f48b70e4-8bd0-4685-b699-46318b5eb9b1): unknown variable bcovid_s
+ERROR: 9.3.1 bcovid_bra/BenCalc/Comp_Cond (9d1accaf-ae1d-422b-a1c5-97a05ce7adda): unknown variable yhh00
+ERROR: 9.3.1 bcovid_bra/BenCalc/Comp_Cond (9d1accaf-ae1d-422b-a1c5-97a05ce7adda): unknown variable yhh
+ERROR: 9.3.4 bcovid_bra/BenCalc/Comp_Cond (12b36bc2-8d59-4fb5-b07f-899947414d0c): unknown variable yhh
+WARNING: 9.3.2 bcovid_bra/BenCalc/#_Level (89849fbc-fcce-49a0-9124-e4c89d52f0b4): unused footnote
+WARNING: 9.3.5 bcovid_bra/BenCalc/#_Level (09a97e45-b7b1-4010-a1a4-29e61bf8633f): unused footnote
+ERROR: 9.7.1 bcovid_bra/ArithOp/Formula (e602ca7e-d6e8-41f0-9cad-aef99f85c697): unknown variable bcovid_s
+ERROR: 9.7.2 bcovid_bra/ArithOp/Output_Var (da5a09f7-9051-494e-9153-bd3539bb72a4): unknown variable bcovid_s
+ERROR: 9.8.7 bcovid_bra/BenCalc/Output_Var (904df455-e381-4d7d-b8ac-3adf4f697a6f): unknown variable bcovid_s
+ERROR: 9.8.1 bcovid_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable yhh00
+ERROR: 9.8.1 bcovid_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable yhh
+ERROR: 9.8.4 bcovid_bra/BenCalc/Comp_Cond (5afc0dd5-92ab-47b1-ad2e-2479ab30d990): unknown variable yhh
+WARNING: 9.8.2 bcovid_bra/BenCalc/#_Level (bee6119e-09d4-4f19-aad9-27d11ae4c0e7): unused footnote
+WARNING: 9.8.5 bcovid_bra/BenCalc/#_Level (d17945aa-7db1-4fb9-b7c6-fa8d5e91979a): unused footnote
+ERROR: 9.9.1 bcovid_bra/ArithOp/Formula (d67669f2-c58f-469a-9542-2cde422e332e): unknown variable bcovid_s
+ERROR: 9.9.2 bcovid_bra/ArithOp/Output_Var (1b25229f-89dc-4ce8-aa03-12dede2d828a): unknown variable bcovid_s
+ERROR: 9.12.1 bcovid_bra/Allocate/Share (af4df718-3956-48c1-9895-037ec70c2043): unknown variable bcovid_s
+ERROR: 9.12.4 bcovid_bra/Allocate/Output_Var (80102f44-2540-45d4-b926-5a96b3d8b0e2): unknown variable bcovid_s
+ERROR: 9.12.2 bcovid_bra/Allocate/Share_Between (683a68b8-76f3-4227-ad3a-b7dfaccbc73a): Formula error: Too few parameters for function max.
+WARNING: 9.12.3 bcovid_bra/Allocate/#_Level (f6fcd838-096a-47d8-9883-87667d26a24a): unused footnote
+WARNING: No applicable Uprate function found

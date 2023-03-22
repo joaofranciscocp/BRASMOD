@@ -1,0 +1,58 @@
+﻿<RootElement>
+  <EXTENSIONs>
+    <EXTENSION>
+      <ID>8b258cd1-804e-4c9d-adc2-2d3e609c162a</ID>
+      <ShortName>BTA</ShortName>
+      <Name>Benefit Take-up Adjustments</Name>
+      <Look>|BUTTON_COLOR=-1468806|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>1e2f5161-bfad-4a11-8299-7adc39c829db</ID>
+      <ShortName>TCA</ShortName>
+      <Name>Tax Compliance Adjustments</Name>
+      <Look>|BUTTON_COLOR=-1468806|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>2f84ea98-8a92-439d-bd6e-4b381a8fbfec</ID>
+      <ShortName>FYA</ShortName>
+      <Name>Full Year Adjustments</Name>
+      <Look>|BUTTON_COLOR=-16711808|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>275b4fd0-de30-4fc4-be6a-11c5ab8bd52c</ID>
+      <ShortName>UAA</ShortName>
+      <Name>Uprating by Average Adjustment</Name>
+      <Look>|BUTTON_COLOR=-16744256|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ID>
+      <ShortName>TCO</ShortName>
+      <Name>Tax Commodities Extension</Name>
+      <Look>|BUTTON_COLOR=-16776961|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>b860b530-3935-44a8-92ea-17fc68dee7f9</ID>
+      <ShortName>EPS</ShortName>
+      <Name>Extended Policy Simulation</Name>
+      <Look>|BUTTON_COLOR=-1468806|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>25ea4c00-4cad-43b3-97c4-3e89d3c4463c</ID>
+      <ShortName>PBE</ShortName>
+      <Name>Parental leave benefits</Name>
+      <Look>|BUTTON_COLOR=-65281|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>557c232a-9ce6-4808-b52f-ca5e02fe8cf4</ID>
+      <ShortName>MWA</ShortName>
+      <Name>Minimum Wage Adjustments</Name>
+      <Look>|BUTTON_COLOR=-16744384|</Look>
+    </EXTENSION>
+    <EXTENSION>
+      <ID>0dd0de29-2126-4b94-bb39-2130faefc906</ID>
+      <ShortName>HHoT_un</ShortName>
+      <Name>HHoT unemployment extension</Name>
+      <Look>|BUTTON_COLOR=-32768|</Look>
+    </EXTENSION>
+  </EXTENSIONs>
+</RootElement>

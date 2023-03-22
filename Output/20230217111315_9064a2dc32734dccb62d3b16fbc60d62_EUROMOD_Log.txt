@@ -1,0 +1,24 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: sexta-feira, 17 de fevereiro de 2023 11:12:19
+End: sexta-feira, 17 de fevereiro de 2023 11:13:15
+Duration: 55,6928925s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+4f1a21ab-bfe2-42b9-8967-7c5fce05bd38	finished	BRA_2020	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:12:19	sexta-feira, 17 de fevereiro de 2023 11:13:10	50,5931372s	euro	1	-	bra_2020_std	74dc9ab263305e92ea42ef03baa21920	bra_2020_std_hh	c39d7923d387ff96feb04827953c5b3f
+1c2981bc-eb95-41ba-a171-28085f35f22d	finished	BRA_2021	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:12:19	sexta-feira, 17 de fevereiro de 2023 11:13:15	55,6928925s	euro	1	-	bra_2021_std	168c0fe0e36bf248a2c52692346bb17c	bra_2021_std_hh	7022f067669e0f01aa29823db2e3298d
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 4f1a21ab-bfe2-42b9-8967-7c5fce05bd38
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\input\BRA_2018_a1.txt: Variable(s) poa, bun, poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 1c2981bc-eb95-41ba-a171-28085f35f22d
+WARNING: 9.7.2 bls_COVID_bra/BenCalc/#_Level (f813a55b-2943-4a2b-857d-c6047dc51854): unused footnote
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\input\BRA_2018_a1.txt: Variable(s) poa, bun, poa01 not found (zero is used as default)

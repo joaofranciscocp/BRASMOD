@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: bra
+Start: sexta-feira, 19 de agosto de 2022 10:44:27
+End: sexta-feira, 19 de agosto de 2022 10:44:27
+Duration: 0,5735958s
+Output-Path: c:\users\usuario\downloads\bra\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+f4e95355-c842-490b-9a83-12007f37b5ed	aborted	BRA_2020	pof euromod 2	sexta-feira, 19 de agosto de 2022 10:44:27	sexta-feira, 19 de agosto de 2022 10:44:27	0,5735958s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: f4e95355-c842-490b-9a83-12007f37b5ed
+ERROR: Failed reading file c:\users\usuario\downloads\bra\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\usuario\downloads\bra\input\pof euromod 2.txt'.

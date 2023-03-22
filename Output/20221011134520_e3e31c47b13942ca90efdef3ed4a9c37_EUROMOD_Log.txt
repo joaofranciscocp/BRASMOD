@@ -1,0 +1,26 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: bra
+Start: terça-feira, 11 de outubro de 2022 13:45:20
+End: terça-feira, 11 de outubro de 2022 13:45:20
+Duration: 0,42084s
+Output-Path: c:\users\usuario\downloads\bra\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+20557a0a-b2b0-4d3b-a8f6-66637a984c69	aborted	BRA_2020	pof euromod 2	terça-feira, 11 de outubro de 2022 13:45:20	terça-feira, 11 de outubro de 2022 13:45:20	0,4155769s	euro	1	-
+5a159064-eddf-400a-93e4-30d63aa7a3fc	aborted	BRA_2021	pof euromod 2	terça-feira, 11 de outubro de 2022 13:45:20	terça-feira, 11 de outubro de 2022 13:45:20	0,4188457s	euro	1	-
+3098a5cf-70cf-450a-ac25-a2d05ac4b833	aborted	BRA_2020_S	pof euromod 2	terça-feira, 11 de outubro de 2022 13:45:20	terça-feira, 11 de outubro de 2022 13:45:20	0,4188457s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 20557a0a-b2b0-4d3b-a8f6-66637a984c69
+ERROR: Failed reading file c:\users\usuario\downloads\bra\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\usuario\downloads\bra\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 5a159064-eddf-400a-93e4-30d63aa7a3fc
+ERROR: Failed reading file c:\users\usuario\downloads\bra\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\usuario\downloads\bra\input\pof euromod 2.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 3098a5cf-70cf-450a-ac25-a2d05ac4b833
+ERROR: Failed reading file c:\users\usuario\downloads\bra\input\pof euromod 2.txt
+Não foi possível localizar o arquivo 'c:\users\usuario\downloads\bra\input\pof euromod 2.txt'.

@@ -1,0 +1,24 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: quinta-feira, 9 de fevereiro de 2023 12:37:50
+End: quinta-feira, 9 de fevereiro de 2023 12:37:51
+Duration: 0,2553217s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+1fa16b92-218d-4abe-b81e-04d2adbd2d86	aborted	BRA_2021	BRA_2018_a1	quinta-feira, 9 de fevereiro de 2023 12:37:50	quinta-feira, 9 de fevereiro de 2023 12:37:51	0,2553217s	euro	1	-	bra_2021_std		bra_2021_std_hh
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 1fa16b92-218d-4abe-b81e-04d2adbd2d86
+ERROR: 9.5.1 bls_COVID_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable pers_inc_2018
+ERROR: 9.7.8 bls_COVID_bra/BenCalc/Output_Var (1ecc66f8-d45b-4e16-ae3d-bded4766fb55): unknown variable blstm03_s
+WARNING: 9.7.2 bls_COVID_bra/BenCalc/#_Level (f813a55b-2943-4a2b-857d-c6047dc51854): unused footnote
+ERROR: 9.8.1 bls_COVID_bra/ArithOp/Formula (568d8605-0ad3-4f00-a4e4-7b8eadf4d5e2): unknown variable blstm03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bbf_ab_s
+ERROR: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bbf_ab_s
+ERROR: 13.1.7 output_std_hh_sl/DefOutput/il (0ea71e1f-2f1c-46cf-a1bc-17fd76f287d4): unknown variable bbf_ab_s
+ERROR: 13.1.7 output_std_hh_sl/DefOutput/il (0ea71e1f-2f1c-46cf-a1bc-17fd76f287d4): unknown variable bbf_ab_s
+WARNING: No applicable Uprate function found

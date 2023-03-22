@@ -1,0 +1,21 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: bra
+Start: terça-feira, 25 de outubro de 2022 14:08:53
+End: terça-feira, 25 de outubro de 2022 14:09:13
+Duration: 20,1739672s
+Output-Path: c:\users\usuario\downloads\bra\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash
+c5cfef6d-1b0c-48c1-9581-78cc9397f1a6	finished	BRA_2020	BRA_2018_a1	terça-feira, 25 de outubro de 2022 14:08:53	terça-feira, 25 de outubro de 2022 14:09:13	20,1739672s	euro	1	-	bra_2020_std	2bff7ddf7039bae72a4aaeb4efa2a860
+ff973b27-c6fb-4af7-a12f-35f3945453da	finished	BRA_REFORMA	BRA_2018_a1	terça-feira, 25 de outubro de 2022 14:08:53	terça-feira, 25 de outubro de 2022 14:09:12	19,1163401s	euro	1	-	bra_reforma_std	9a80ce55316d0387f058bf6d959bc09f
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: c5cfef6d-1b0c-48c1-9581-78cc9397f1a6
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\downloads\bra\input\BRA_2018_a1.txt: Variable(s) poa not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: ff973b27-c6fb-4af7-a12f-35f3945453da
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\downloads\bra\input\BRA_2018_a1.txt: Variable(s) poa not found (zero is used as default)

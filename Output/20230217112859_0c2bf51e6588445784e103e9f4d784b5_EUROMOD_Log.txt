@@ -1,0 +1,27 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: sexta-feira, 17 de fevereiro de 2023 11:28:00
+End: sexta-feira, 17 de fevereiro de 2023 11:28:59
+Duration: 58,7682179s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+86d1ab2c-3a32-4a28-a535-490aad55b03a	finished	BRA_2020	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:28:00	sexta-feira, 17 de fevereiro de 2023 11:28:54	53,9879825s	euro	1	-	bra_2020_std	aa4acef8dd342156c5c392792ddd6f4b	bra_2020_std_hh	256950c1589218a9cf05c832a7b6d4d6
+6e2da428-989b-4905-befa-6e17dfaa806f	finished	BRA_2021	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:28:00	sexta-feira, 17 de fevereiro de 2023 11:28:59	58,7662244s	euro	1	-	bra_2021_std	aa4acef8dd342156c5c392792ddd6f4b	bra_2021_std_hh	256950c1589218a9cf05c832a7b6d4d6
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 86d1ab2c-3a32-4a28-a535-490aad55b03a
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\input\BRA_2018_a1.txt: Variable(s) poa not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 6e2da428-989b-4905-befa-6e17dfaa806f
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\input\BRA_2018_a1.txt: Variable(s) poa not found (zero is used as default)

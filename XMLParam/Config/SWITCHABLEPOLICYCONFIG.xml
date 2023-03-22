@@ -1,0 +1,56 @@
+﻿<SwitchablePolicyConfig xmlns="http://tempuri.org/SwitchablePolicyConfig.xsd">
+  <SwitchablePolicy>
+    <ID>8b258cd1-804e-4c9d-adc2-2d3e609c162a</ID>
+    <NamePattern><![CDATA[BTA]]></NamePattern>
+    <LongName>Benefit Take-up Adjustments</LongName>
+    <Look>|BUTTON_COLOR=-1468806|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>1e2f5161-bfad-4a11-8299-7adc39c829db</ID>
+    <NamePattern><![CDATA[TCA]]></NamePattern>
+    <LongName>Tax Compliance Adjustments</LongName>
+    <Look>|BUTTON_COLOR=-1468806|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>2f84ea98-8a92-439d-bd6e-4b381a8fbfec</ID>
+    <NamePattern><![CDATA[FYA]]></NamePattern>
+    <LongName>Full Year Adjustments</LongName>
+    <Look>|BUTTON_COLOR=-16711808|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>275b4fd0-de30-4fc4-be6a-11c5ab8bd52c</ID>
+    <NamePattern><![CDATA[UAA]]></NamePattern>
+    <LongName>Uprating by Average Adjustment</LongName>
+    <Look>|BUTTON_COLOR=-16744256|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ID>
+    <NamePattern><![CDATA[TCO]]></NamePattern>
+    <LongName>Tax Commodities Extension</LongName>
+    <Look>|BUTTON_COLOR=-16776961|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>b860b530-3935-44a8-92ea-17fc68dee7f9</ID>
+    <NamePattern><![CDATA[EPS]]></NamePattern>
+    <LongName>Extended Policy Simulation</LongName>
+    <Look>|BUTTON_COLOR=-1468806|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>25ea4c00-4cad-43b3-97c4-3e89d3c4463c</ID>
+    <NamePattern><![CDATA[PBE]]></NamePattern>
+    <LongName>Parental leave benefits</LongName>
+    <Look>|BUTTON_COLOR=-65281|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>557c232a-9ce6-4808-b52f-ca5e02fe8cf4</ID>
+    <NamePattern><![CDATA[MWA]]></NamePattern>
+    <LongName>Minimum Wage Adjustments</LongName>
+    <Look>|BUTTON_COLOR=-16744384|</Look>
+  </SwitchablePolicy>
+  <SwitchablePolicy>
+    <ID>0dd0de29-2126-4b94-bb39-2130faefc906</ID>
+    <NamePattern><![CDATA[HHoT_un]]></NamePattern>
+    <LongName>HHoT unemployment extension</LongName>
+    <Look>|BUTTON_COLOR=-32768|</Look>
+  </SwitchablePolicy>
+</SwitchablePolicyConfig>

@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod_v1.0
+Start: quarta-feira, 8 de março de 2023 11:15:37
+End: quarta-feira, 8 de março de 2023 11:16:02
+Duration: 25,7432089s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+1b0f9acc-7030-4f5b-b6bc-9ef77e7fd396	finished	BRA_2020	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:15:37	quarta-feira, 8 de março de 2023 11:16:02	25,7432089s	euro	1	-	bra_2020_std	245810c607e6db51d3ebaea65fc8100a	bra_2020_std_hh	069a3909b5c131137737750d3394a8d0
+5189ac3d-df29-4a69-b251-d2c63a1da191	aborted	BRA_2021	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:15:37	quarta-feira, 8 de março de 2023 11:15:37	0,4957315s	euro	1	-	bra_2021_std	5bd923320982a1db917f17bf2abb6cdc	bra_2021_std_hh	47dd2090a6a700b0abbef66f19c457d4
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 1b0f9acc-7030-4f5b-b6bc-9ef77e7fd396
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 5189ac3d-df29-4a69-b251-d2c63a1da191
+ERROR:  9.14 bls_COVID_bra/ArithOp (ce325773-9919-4408-9cd6-ab9a6c323bba): compulsory parameter TAX_UNIT is missing
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found

@@ -1,0 +1,25 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod_v1.0
+Start: quarta-feira, 8 de março de 2023 11:17:37
+End: quarta-feira, 8 de março de 2023 11:18:40
+Duration: 62,80016s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+d9b40472-4dd1-46ab-962d-0c88a4b772f7	finished	BRA_2020	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:17:37	quarta-feira, 8 de março de 2023 11:18:33	56,3752819s	euro	1	-	bra_2020_std	cd0de36d30e75d6802c83db60c09ee74	bra_2020_std_hh	ffec5bf4a01769efe35946b521daeb29
+cc56d964-5939-4391-baf7-72a1df7aa36f	finished	BRA_2021	BRA_2018_a1	quarta-feira, 8 de março de 2023 11:17:37	quarta-feira, 8 de março de 2023 11:18:40	62,7749824s	euro	1	-	bra_2021_std	0c1ef8d08fb2b2af5139783fc28d05fe	bra_2021_std_hh	e9741b03befc2b94b443b3febe34fad0
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: d9b40472-4dd1-46ab-962d-0c88a4b772f7
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: cc56d964-5939-4391-baf7-72a1df7aa36f
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\josé\usp\trabalho\made\brasmod\brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)

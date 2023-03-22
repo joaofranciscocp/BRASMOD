@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: 7 - (27-02-2023) ae
+Start: segunda-feira, 27 de fevereiro de 2023 15:04:40
+End: segunda-feira, 27 de fevereiro de 2023 15:04:52
+Duration: 12,2563715s
+Output-Path: c:\users\usuario\downloads\7 - (27-02-2023) ae-20230227t200147z-001\7 - (27-02-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+32d4f4e1-ce0f-413e-8eee-58af34e95d93	finished	BRA_2020	BRA_2018_a1	segunda-feira, 27 de fevereiro de 2023 15:04:40	segunda-feira, 27 de fevereiro de 2023 15:04:52	12,2563715s	euro	1	-	bra_2020_std	3b69ab3c60da2417956635a4ec06bc67	bra_2020_std_hh	2d0f6e6d870bd631c53a050073f20a6d
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 32d4f4e1-ce0f-413e-8eee-58af34e95d93
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\downloads\7 - (27-02-2023) ae-20230227t200147z-001\7 - (27-02-2023) ae\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)

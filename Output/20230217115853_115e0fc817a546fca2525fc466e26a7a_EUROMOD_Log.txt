@@ -1,0 +1,24 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: 6 - (23-01-2023) ae
+Start: sexta-feira, 17 de fevereiro de 2023 11:58:53
+End: sexta-feira, 17 de fevereiro de 2023 11:58:53
+Duration: 0,830688s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\6 - (23-01-2023) ae\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+2a6c8a12-f858-4a9c-a016-2b032d2c46ab	aborted	BRA_2020	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:58:53	sexta-feira, 17 de fevereiro de 2023 11:58:53	0,3563671s	euro	1	-	bra_2020_std	d71110ce6522bf37d732eb4c2541da3b	bra_2020_std_hh	1b6fc5bc4b5823a4eab3bb7e6f982cbf
+1c491da0-27b0-4675-81d2-8f0f966ea6b1	aborted	BRA_2021	BRA_2018_a1	sexta-feira, 17 de fevereiro de 2023 11:58:53	sexta-feira, 17 de fevereiro de 2023 11:58:53	0,8257007s	euro	1	-	bra_2021_std	c60e4242e8ebaaf000962aeeee909361	bra_2021_std_hh	8e46eb7120358025ce6d0e60dfcf122e
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 2a6c8a12-f858-4a9c-a016-2b032d2c46ab
+ERROR: 10.3.7 bbf_ab_bra/BenCalc/Output_Var (9a100160-8206-411f-ba66-4e6c565a160f): unknown variable blstm03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 1c491da0-27b0-4675-81d2-8f0f966ea6b1
+WARNING: 9.7.2 bls_COVID_bra/BenCalc/#_Level (f813a55b-2943-4a2b-857d-c6047dc51854): unused footnote
+ERROR: 10.3.7 bbf_ab_bra/BenCalc/Output_Var (9a100160-8206-411f-ba66-4e6c565a160f): unknown variable blstm03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
