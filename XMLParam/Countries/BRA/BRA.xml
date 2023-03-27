@@ -5023,69 +5023,6 @@
             <Private />
           </Parameter>
         </Function>
-        <Function>
-          <ID>c38e9b10-21fd-473a-92e6-927882e9835b</ID>
-          <PolicyID>b9f1cfaf-6691-4df7-ab3c-0c382fa2ce9b</PolicyID>
-          <Name>DefTu</Name>
-          <Comment><![CDATA[Intermediate TU in order to ensure no household receives more than two benefits]]></Comment>
-          <PrivateComment />
-          <Order>0</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>0e5575d0-150f-4fd7-a227-d5363444a82a</ID>
-            <FunctionID>c38e9b10-21fd-473a-92e6-927882e9835b</FunctionID>
-            <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_nohead_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>ffbcfc85-a433-47e5-a856-d03c9e1fc011</ID>
-            <FunctionID>c38e9b10-21fd-473a-92e6-927882e9835b</FunctionID>
-            <Name>Type</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[SUBGROUP]]></Value>
-            <Order>2</Order>
-            <ValueType>categorical</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>decdf085-181c-4f35-8282-2456f5e4b846</ID>
-            <FunctionID>c38e9b10-21fd-473a-92e6-927882e9835b</FunctionID>
-            <Name>ExtHeadCond</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[!IsHeadOfTu#1]]></Value>
-            <Order>4</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>840876bd-43ed-4712-8af2-6e2cf5ebba77</ID>
-            <FunctionID>c38e9b10-21fd-473a-92e6-927882e9835b</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_sl]]></Value>
-            <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
       </Policy>
       <Policy>
         <ID>002d359b-6b29-48ab-9029-03b048c35182</ID>
@@ -10621,69 +10558,6 @@
             <Private />
           </Parameter>
         </Function>
-        <Function>
-          <ID>ca5440c1-99f8-4523-a15f-d625b8944540</ID>
-          <PolicyID>3994763f-855b-4e95-89fb-cc3a870e1bcc</PolicyID>
-          <Name>DefTu</Name>
-          <Comment><![CDATA[Intermediate TU in order to ensure no household receives more than two benefits]]></Comment>
-          <PrivateComment />
-          <Order>0</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>83b4d42d-6836-4daa-8c14-6caf0c2428c4</ID>
-            <FunctionID>ca5440c1-99f8-4523-a15f-d625b8944540</FunctionID>
-            <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>4747dd1a-a598-46a6-85b6-5452e878e92f</ID>
-            <FunctionID>ca5440c1-99f8-4523-a15f-d625b8944540</FunctionID>
-            <Name>Type</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>categorical</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>8567b250-6641-4a5a-a053-e3bf49ed2622</ID>
-            <FunctionID>ca5440c1-99f8-4523-a15f-d625b8944540</FunctionID>
-            <Name>ExtHeadCond</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>629a7aab-5342-4560-87a8-99be45d445c9</ID>
-            <FunctionID>ca5440c1-99f8-4523-a15f-d625b8944540</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
       </Policy>
       <Policy>
         <ID>6186843a-ff26-4d8c-b8be-aca714e2bc52</ID>
@@ -16210,69 +16084,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>cc0b597c-9182-44dc-8f86-9a9ccdff5be2</ID>
-          <PolicyID>81d0d281-d555-4825-9e75-5265bef5024f</PolicyID>
-          <Name>DefTu</Name>
-          <Comment><![CDATA[Intermediate TU in order to ensure no household receives more than two benefits]]></Comment>
-          <PrivateComment />
-          <Order>0</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>46d1037f-1c1d-4b21-aaf5-fc6de8baf938</ID>
-            <FunctionID>cc0b597c-9182-44dc-8f86-9a9ccdff5be2</FunctionID>
-            <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_nohead_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0809c0e9-a7de-4252-b5d7-01a1efe672d3</ID>
-            <FunctionID>cc0b597c-9182-44dc-8f86-9a9ccdff5be2</FunctionID>
-            <Name>Type</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[SUBGROUP]]></Value>
-            <Order>2</Order>
-            <ValueType>categorical</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fafe94e9-ecd9-45aa-8ae4-89349394d49c</ID>
-            <FunctionID>cc0b597c-9182-44dc-8f86-9a9ccdff5be2</FunctionID>
-            <Name>ExtHeadCond</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[!IsHeadOfTu#1]]></Value>
-            <Order>4</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>91cd5cca-39cd-4faf-83b7-1c13d2d5b23c</ID>
-            <FunctionID>cc0b597c-9182-44dc-8f86-9a9ccdff5be2</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_sl]]></Value>
-            <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -21815,69 +21626,6 @@
             <Private />
           </Parameter>
         </Function>
-        <Function>
-          <ID>87700cca-16b3-4dd3-9671-fa7e6b14749b</ID>
-          <PolicyID>392f2112-49da-4dca-964e-9e885d8a415d</PolicyID>
-          <Name>DefTu</Name>
-          <Comment><![CDATA[Intermediate TU in order to ensure no household receives more than two benefits]]></Comment>
-          <PrivateComment />
-          <Order>0</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>01664db7-4b8c-4ffa-8e81-1e6447815d04</ID>
-            <FunctionID>87700cca-16b3-4dd3-9671-fa7e6b14749b</FunctionID>
-            <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2b1ec9e4-30be-45e8-9362-59e44c2a5126</ID>
-            <FunctionID>87700cca-16b3-4dd3-9671-fa7e6b14749b</FunctionID>
-            <Name>Type</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>categorical</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0f245504-e1f6-42e9-acc1-eec01af01109</ID>
-            <FunctionID>87700cca-16b3-4dd3-9671-fa7e6b14749b</FunctionID>
-            <Name>ExtHeadCond</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>abc642a6-60c9-4eaf-900a-c9be8450f149</ID>
-            <FunctionID>87700cca-16b3-4dd3-9671-fa7e6b14749b</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
       </Policy>
       <Policy>
         <ID>9f553b37-4e1a-4134-9f9d-16907273d0cc</ID>
@@ -27411,69 +27159,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>153fd9ee-291e-47de-a53f-7d0ac251ce5c</ID>
-          <PolicyID>527c4e36-9f58-4a44-952b-b4c8d998219c</PolicyID>
-          <Name>DefTu</Name>
-          <Comment><![CDATA[Intermediate TU in order to ensure no household receives more than two benefits]]></Comment>
-          <PrivateComment />
-          <Order>0</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>e8edcc0a-92f2-4fe7-a959-0d758b67ec93</ID>
-            <FunctionID>153fd9ee-291e-47de-a53f-7d0ac251ce5c</FunctionID>
-            <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>b8a9305b-593b-4340-99c6-d0a8398d3a93</ID>
-            <FunctionID>153fd9ee-291e-47de-a53f-7d0ac251ce5c</FunctionID>
-            <Name>Type</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>categorical</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>b2211136-4871-4b10-97ec-2f20fe2a4821</ID>
-            <FunctionID>153fd9ee-291e-47de-a53f-7d0ac251ce5c</FunctionID>
-            <Name>ExtHeadCond</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>e539c230-2d5c-48d1-8be9-6b066e2f3338</ID>
-            <FunctionID>153fd9ee-291e-47de-a53f-7d0ac251ce5c</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
