@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: quinta-feira, 16 de março de 2023 16:23:58
+End: quinta-feira, 16 de março de 2023 16:23:58
+Duration: 0,1455253s
+Output-Path: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+f8a095d6-8207-4fe7-981e-0b639273ad4b	aborted	BRA_2020	BRA_2018_a1	quinta-feira, 16 de março de 2023 16:23:58	quinta-feira, 16 de março de 2023 16:23:58	0,1455253s	euro	1	-	bra_2020_std	5c8a2cd65951dfbe8090f8755ed5643e	bra_2020_std_hh	658150fc3cdff8c7281d2c95746d4abe
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: f8a095d6-8207-4fe7-981e-0b639273ad4b
+ERROR: 9.8.2 bls_COVID_bra/ArithOp/Output_Var (6ff7faab-431d-48c7-8669-ee49a87a65d6): unknown variable bls09_s
+WARNING: No applicable Uprate function found

@@ -1,0 +1,25 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: segunda-feira, 13 de março de 2023 15:53:11
+End: segunda-feira, 13 de março de 2023 15:53:34
+Duration: 23,1195616s
+Output-Path: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+2b3a4b55-2a3a-4466-b9fb-8fc5164dfe8c	finished	BRA_2021	BRA_2018_a1	segunda-feira, 13 de março de 2023 15:53:11	segunda-feira, 13 de março de 2023 15:53:34	23,1195616s	euro	1	-	bra_2021_std	e1261f217dd38f86296e70209045fac0	bra_2021_std_hh	31ea537ffaab6cbaf51c76a0d687c0ff
+6d81f225-4850-451a-84c8-aad03716c81d	finished	BRA_REF2021	BRA_2018_a1	segunda-feira, 13 de março de 2023 15:53:11	segunda-feira, 13 de março de 2023 15:53:32	21,0262506s	euro	1	-	bra_ref2021_std	435d7e7f234196d328a993d0e0870e9a	bra_ref2021_std_hh	097df82614e44a3d870dd290b45d45a0
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 2b3a4b55-2a3a-4466-b9fb-8fc5164dfe8c
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 6d81f225-4850-451a-84c8-aad03716c81d
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)

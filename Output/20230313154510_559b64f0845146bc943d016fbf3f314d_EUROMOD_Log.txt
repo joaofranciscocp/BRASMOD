@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: segunda-feira, 13 de março de 2023 15:44:59
+End: segunda-feira, 13 de março de 2023 15:45:10
+Duration: 11,0137736s
+Output-Path: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+86cf5f63-f0b9-42b0-8d6b-7bbf429a52f5	finished	BRA_REF2020	BRA_2018_a1	segunda-feira, 13 de março de 2023 15:44:59	segunda-feira, 13 de março de 2023 15:45:10	11,0137736s	euro	1	-	bra_ref2020_std	1678bdb2130a604eaefc189c44eb20a0	bra_ref2020_std_hh	d22d4d85aac3e76b7fec9e7eafcb072b
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 86cf5f63-f0b9-42b0-8d6b-7bbf429a52f5
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)

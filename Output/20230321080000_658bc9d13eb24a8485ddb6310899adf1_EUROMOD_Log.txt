@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: 8 - (08-03-2023) brasmod_v1.0
+Start: terça-feira, 21 de março de 2023 07:59:25
+End: terça-feira, 21 de março de 2023 08:00:00
+Duration: 35,4915621s
+Output-Path: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+46c37e6e-b4a8-46d9-993e-b68207e5b411	finished	BRA_2020	BRA_2018_a1	terça-feira, 21 de março de 2023 07:59:25	terça-feira, 21 de março de 2023 08:00:00	35,1453898s	euro	1	-	bra_2020_std	5c8a2cd65951dfbe8090f8755ed5643e	bra_2020_std_hh	658150fc3cdff8c7281d2c95746d4abe
+7c570c99-ad71-4a82-b726-dea3ac252dc6	finished	BRA_2020teste	BRA_2018_a1	terça-feira, 21 de março de 2023 07:59:25	terça-feira, 21 de março de 2023 08:00:00	35,4915621s	euro	1	-	bra_2020teste_std	5c8a2cd65951dfbe8090f8755ed5643e	bra_2020teste_std_hh	658150fc3cdff8c7281d2c95746d4abe
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 46c37e6e-b4a8-46d9-993e-b68207e5b411
+WARNING: 9.8.1 bls_COVID_bra/ArithOp/Formula (bf058004-bb78-4dd2-9e88-c2fb6c7300a0): use of not initialised variable blstm09_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 7c570c99-ad71-4a82-b726-dea3ac252dc6
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\downloads\2023) brasmod_v1.0 -20230313t175839z-001\8 - (08-03-2023) brasmod_v1.0\input\BRA_2018_a1.txt: Variable(s) poa01 not found (zero is used as default)
