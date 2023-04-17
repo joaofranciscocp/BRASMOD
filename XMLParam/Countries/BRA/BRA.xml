@@ -4109,7 +4109,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) age above 18 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income in 2018<28 559,70 4) no formal job]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2018*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2018*12 <=28559.7 & poa <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -4473,7 +4473,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) age above 18 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income in 2018<28 559,70 4) no formal job]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2018*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2018*12 <=28559.7 & yem <= 0 & poa <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -4587,7 +4587,7 @@
             <Comment><![CDATA[1) age above 18 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income in 2018<28 559,70 4) no formal job
 5) solo parent 6) at least a child <=18 7) all other unit members income =0]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsParentOfDepChild & yhh = ils_origy & dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2018*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[IsParentOfDepChild & dgn = 2 & yhh = ils_origy & dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2018*12 <=28559.7 & poa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -4700,7 +4700,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dgn=0 & IsParentOfDepChild & yhh = ils_origy & dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2018*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[dgn=2 & IsParentOfDepChild & yhh = ils_origy & dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2018*12 <=28559.7 & yem <= 0 & poa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -15664,7 +15664,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) age above 18 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income in 2018<28 559,70 4) no formal job]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2019*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[dag>18 & (yhh00 <=0.5*minwage | yhh<=3*minwage) & pers_inc_2019*12 <=28559.7 & yem <= 0 & poa <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -15891,7 +15891,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dgn=0 & IsParentOfDepChild & yhh = ils_origy & dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2019*12 <=28559.7 & yem <= 0 & bun <= 0 & poa01 <= 0 & poa <= 0]]></Value>
+            <Value><![CDATA[dgn=2 & IsParentOfDepChild & yhh = ils_origy & dag>18 & yhh00 <=0.5*minwage & yhh<=3*minwage & pers_inc_2019*12 <=28559.7 & yem <= 0 & poa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
