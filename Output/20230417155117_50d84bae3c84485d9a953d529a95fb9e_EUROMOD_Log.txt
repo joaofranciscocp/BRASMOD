@@ -1,0 +1,39 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: segunda-feira, 17 de abril de 2023 15:50:58
+End: segunda-feira, 17 de abril de 2023 15:51:17
+Duration: 18,4375865s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+4f69f377-d3f2-49ae-99c5-3540c7edc2f4	finished	BRA_2018	pof euromod 2	segunda-feira, 17 de abril de 2023 15:50:58	segunda-feira, 17 de abril de 2023 15:51:16	17,1899078s	euro	1	-	bra_2018_std	0f952a99c562fcd0d50d7dfe80354e2a	bra_2018_std_hh	908eeabb6284540dc3765c4ce8b531f1
+206eb016-204e-46a8-ab4e-ca005a03a6db	finished	BRA_2019	pof euromod 2	segunda-feira, 17 de abril de 2023 15:50:58	segunda-feira, 17 de abril de 2023 15:51:13	15,0460034s	euro	1	-	bra_2019_std	9d9ca9b548de8be9efd917efbd017487	bra_2019_std_hh	4084898ffb86149bc67fddd00fc95951
+44ccdd7f-1507-4376-a397-7ed9676c80d6	finished	BRA_2020	pof euromod 2	segunda-feira, 17 de abril de 2023 15:50:58	segunda-feira, 17 de abril de 2023 15:51:17	18,4375865s	euro	1	-	bra_2020_std	5a5a4a31130fc8425af2f81e003993a4	bra_2020_std_hh	1811035bd71fff84645d5e995d70c604
+a935f3b7-92c2-4493-8ca0-d3703702a524	finished	BRA_2021	pof euromod 2	segunda-feira, 17 de abril de 2023 15:50:58	segunda-feira, 17 de abril de 2023 15:51:16	17,7870954s	euro	1	-	bra_2021_std	daf3e553c50f7eaa38ec804617fcbec2	bra_2021_std_hh	91f661868f1c9cc5c56832168498732e
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 4f69f377-d3f2-49ae-99c5-3540c7edc2f4
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 206eb016-204e-46a8-ab4e-ca005a03a6db
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 44ccdd7f-1507-4376-a397-7ed9676c80d6
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun, poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: a935f3b7-92c2-4493-8ca0-d3703702a524
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun, poa01 not found (zero is used as default)
