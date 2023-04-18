@@ -1,0 +1,40 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: terça-feira, 18 de abril de 2023 13:49:58
+End: terça-feira, 18 de abril de 2023 13:50:07
+Duration: 9,1844269s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+a2d3e98c-b471-4560-a2be-5f07c89ccb5a	finished	BRA_2020	pof euromod 2	terça-feira, 18 de abril de 2023 13:49:58	terça-feira, 18 de abril de 2023 13:50:07	9,1844269s	euro	1	-	bra_2020_std	98a7f28a5d6d425a8bdd435464baf344	bra_2020_std_hh	9c138b759fa2bb11465f54f2dff7a92a
+fbcb5738-8f03-478e-aa56-1f77fc344275	aborted	BRA_2020_emp	pof euromod 2	terça-feira, 18 de abril de 2023 13:49:58	terça-feira, 18 de abril de 2023 13:49:58	0,3519317s	euro	1	-	bra_2020_emp_std		bra_2020_emp_std_hh	
+0218f91d-0099-4ace-bf79-97edc40be293	finished	BRA_2021	pof euromod 2	terça-feira, 18 de abril de 2023 13:49:58	terça-feira, 18 de abril de 2023 13:50:06	8,2304744s	euro	1	-	bra_2021_std	144686fdd30bc8306ea8afb1fed1b1f3	bra_2021_std_hh	1be09fe3e2ce2e195a4339f0ebab8c99
+4f86b1cd-3840-479e-9159-8d75724101ae	aborted	BRA_2021_emp	pof euromod 2	terça-feira, 18 de abril de 2023 13:49:58	terça-feira, 18 de abril de 2023 13:49:58	0,3519317s	euro	1	-	bra_2021_emp_std		bra_2021_emp_std_hh
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: a2d3e98c-b471-4560-a2be-5f07c89ccb5a
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: fbcb5738-8f03-478e-aa56-1f77fc344275
+ERROR: 9.4.1 bls_COVID_bra/BenCalc/Comp_Cond (9d1accaf-ae1d-422b-a1c5-97a05ce7adda): unknown variable emp
+ERROR: 9.8.1 bls_COVID_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable emp
+ERROR: 9.10.1 bls_COVID_bra/BenCalc/Comp_Cond (96bd0ccb-c8e1-41c0-9a2f-d22ee4c8e2fc): unknown variable emp
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 0218f91d-0099-4ace-bf79-97edc40be293
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun, poa01 not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 4f86b1cd-3840-479e-9159-8d75724101ae
+ERROR: 9.8.1 bls_COVID_bra/BenCalc/Comp_Cond (b406d6f4-fe12-4358-9d97-80dfad91ba44): unknown variable emp
+ERROR: 9.10.1 bls_COVID_bra/BenCalc/Comp_Cond (96bd0ccb-c8e1-41c0-9a2f-d22ee4c8e2fc): unknown variable emp
+ERROR: 9.12.1 bls_COVID_bra/BenCalc/Comp_Cond (63c328ea-12b7-44d2-9088-01f02c48df77): unknown variable emp
+ERROR: 9.14.1 bls_COVID_bra/BenCalc/Comp_Cond (9faa747e-8b21-40ac-a968-3a05f3a9a137): unknown variable emp
+ERROR: 9.16.1 bls_COVID_bra/BenCalc/Comp_Cond (478885db-ba20-4b40-931a-73b7ceed00af): unknown variable emp
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
