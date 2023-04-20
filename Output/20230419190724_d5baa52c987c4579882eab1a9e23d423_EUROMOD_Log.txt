@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: brasmod
+Start: quarta-feira, 19 de abril de 2023 19:07:23
+End: quarta-feira, 19 de abril de 2023 19:07:24
+Duration: 1,1898482s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+4a936079-d4cb-4ea3-abfb-0de79c8bc00d	aborted	BRA_2021	sl_demo_v4	quarta-feira, 19 de abril de 2023 19:07:23	quarta-feira, 19 de abril de 2023 19:07:24	1,1898482s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 4a936079-d4cb-4ea3-abfb-0de79c8bc00d
+ERROR: Failed reading file c:\users\lauro\documents\github\brasmod\input\sl_demo_v4.txt
+Não foi possível localizar o arquivo 'c:\users\lauro\documents\github\brasmod\input\sl_demo_v4.txt'.

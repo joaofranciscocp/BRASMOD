@@ -1,0 +1,16 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: brasmod
+Start: quarta-feira, 19 de abril de 2023 22:29:56
+End: quarta-feira, 19 de abril de 2023 22:29:56
+Duration: 0,458456s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+494b6f2b-1795-4d1f-80cc-b15760349148	aborted	BRA_2022	BRA_2018_a1	quarta-feira, 19 de abril de 2023 22:29:56	quarta-feira, 19 de abril de 2023 22:29:56	0,458456s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 494b6f2b-1795-4d1f-80cc-b15760349148
+ERROR: Failed reading file C:\Users\joao.perez\Downloads\brasmod\brasmod\Input\BRA_2018_a1.txt
+Não foi possível localizar uma parte do caminho 'C:\Users\joao.perez\Downloads\brasmod\brasmod\Input\BRA_2018_a1.txt'.
