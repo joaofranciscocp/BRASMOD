@@ -1,0 +1,35 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 19 de abril de 2023 19:58:44
+End: quarta-feira, 19 de abril de 2023 19:59:02
+Duration: 17,3042445s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+5f5ea730-20ce-4bf4-9643-d754970e1e8b	finished	BRA_2020	pof euromod 2	quarta-feira, 19 de abril de 2023 19:58:44	quarta-feira, 19 de abril de 2023 19:58:56	11,734076s	euro	1	-	bra_2020_std	c7805486ce53290a15da72643192df73	bra_2020_std_hh	256240be85ea729a827e67adb5ba7a71
+64cd2840-e63e-42ff-9580-7a2a8faefdfc	finished	BRA_2020_emp	pof euromod 2	quarta-feira, 19 de abril de 2023 19:58:44	quarta-feira, 19 de abril de 2023 19:58:58	13,7014292s	euro	1	-	bra_2020_lem_std	8092d78325f4c4a0804077fe4a66129b	bra_2020_lem_std_hh	405b20ee26d821889409d1c6d3a33764
+0359adf7-deb3-4949-a95d-a194374a90d5	aborted	BRA_2021	pof euromod 2	quarta-feira, 19 de abril de 2023 19:58:44	quarta-feira, 19 de abril de 2023 19:58:45	0,3834176s	euro	1	-	bra_2021_std	144686fdd30bc8306ea8afb1fed1b1f3	bra_2021_std_hh	1be09fe3e2ce2e195a4339f0ebab8c99
+4165a0b2-aee6-42bd-82b8-42aa99d05831	finished	BRA_2021_emp	pof euromod 2	quarta-feira, 19 de abril de 2023 19:58:44	quarta-feira, 19 de abril de 2023 19:59:02	17,3042445s	euro	1	-	bra_2021_lem_std	ffe25e51858a89d6a985913b5245ecef	bra_2021_lem_std_hh	5e0e056cc81f8edf3e5a144b531860f0
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 5f5ea730-20ce-4bf4-9643-d754970e1e8b
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 64cd2840-e63e-42ff-9580-7a2a8faefdfc
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun not found (zero is used as default)
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 0359adf7-deb3-4949-a95d-a194374a90d5
+ERROR: 9.10.1 bls_COVID_bra/BenCalc/Comp_Cond (96bd0ccb-c8e1-41c0-9a2f-d22ee4c8e2fc): Formula error: Formula not properly closed.
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 4165a0b2-aee6-42bd-82b8-42aa99d05831
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\joao.perez\downloads\brasmod\brasmod\input\pof euromod 2.txt: Variable(s) bun not found (zero is used as default)

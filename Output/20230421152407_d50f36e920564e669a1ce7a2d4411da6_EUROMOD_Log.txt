@@ -1,0 +1,20 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: sexta-feira, 21 de abril de 2023 15:23:57
+End: sexta-feira, 21 de abril de 2023 15:24:07
+Duration: 9,6121109s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+14f08dbf-d6a9-419f-bb30-b8e42cf463cc	finished	BRA_2020	pof euromod 2	sexta-feira, 21 de abril de 2023 15:23:57	sexta-feira, 21 de abril de 2023 15:24:06	8,9613869s	euro	1	-	bra_2020_std	0c5a1472cd4566dcca36101c875d98be	bra_2020_std_hh	6c8a4d7cb1d24fb55aa9189a2075aceb
+079dabf7-091a-434e-9fc5-a279a6302115	finished	BRA_2020_emp	pof euromod 2	sexta-feira, 21 de abril de 2023 15:23:57	sexta-feira, 21 de abril de 2023 15:24:07	9,6121109s	euro	1	-	bra_2020_lem_std	ab1c64ac3e3574ce4eef36ab1b5da5de	bra_2020_lem_std_hh	1ba43684249f2910be1f949d3912e90f
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 14f08dbf-d6a9-419f-bb30-b8e42cf463cc
+WARNING: No applicable Uprate function found
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 079dabf7-091a-434e-9fc5-a279a6302115
+WARNING: 12.1.16 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: No applicable Uprate function found

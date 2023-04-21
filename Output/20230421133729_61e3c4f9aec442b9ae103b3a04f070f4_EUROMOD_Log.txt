@@ -1,0 +1,19 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: sexta-feira, 21 de abril de 2023 13:37:29
+End: sexta-feira, 21 de abril de 2023 13:37:29
+Duration: 0,0964211s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+e7c94bff-15fa-4f55-98a0-5febbe8e7513	aborted	BRA_2020_emp	pof euromod 2	sexta-feira, 21 de abril de 2023 13:37:29	sexta-feira, 21 de abril de 2023 13:37:29	0,0964211s	euro	1	-	bra_2020_lem_std	681c5e83f75f2ef5091984d13b767b17	bra_2020_lem_std_hh	c12ceecb09841941d27e066bc2fdc45c
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: e7c94bff-15fa-4f55-98a0-5febbe8e7513
+ERROR: 9.3.2 bls_COVID_bra/Loop/BreakCond (7d38989e-b737-4b8c-bdc4-aaff2cdebd96): unknown variable elig_bls
+ERROR: 9.3 bls_COVID_bra/Loop (9ffac3ad-1a46-49a2-bce5-5f33199339fb): missing definition for loop start
+ERROR: 9.3 bls_COVID_bra/Loop (9ffac3ad-1a46-49a2-bce5-5f33199339fb): missing definition for loop end
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: No applicable Uprate function found
