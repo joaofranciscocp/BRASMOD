@@ -616,13 +616,6 @@
       <Private>no</Private>
     </FUN>
     <FUN>
-      <ID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</ID>
-      <Name>Allocate</Name>
-      <PolID>002d359b-6b29-48ab-9029-03b048c35182</PolID>
-      <Comment><![CDATA[]]></Comment>
-      <Private>no</Private>
-    </FUN>
-    <FUN>
       <ID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</ID>
       <Name>BenCalc</Name>
       <PolID>002d359b-6b29-48ab-9029-03b048c35182</PolID>
@@ -669,6 +662,20 @@
       <Name>ArithOp</Name>
       <PolID>002d359b-6b29-48ab-9029-03b048c35182</PolID>
       <Comment><![CDATA[Duration]]></Comment>
+      <Private>no</Private>
+    </FUN>
+    <FUN>
+      <ID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</ID>
+      <Name>Elig</Name>
+      <PolID>002d359b-6b29-48ab-9029-03b048c35182</PolID>
+      <Comment><![CDATA[]]></Comment>
+      <Private>no</Private>
+    </FUN>
+    <FUN>
+      <ID>0ccee112-d846-4462-969e-408e4269991b</ID>
+      <Name>Elig</Name>
+      <PolID>002d359b-6b29-48ab-9029-03b048c35182</PolID>
+      <Comment><![CDATA[]]></Comment>
       <Private>no</Private>
     </FUN>
   </FUNs>
@@ -2989,42 +2996,6 @@
       <Group>3</Group>
     </PAR>
     <PAR>
-      <ID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ID>
-      <Name>UpLim</Name>
-      <FunID>28f83787-c80d-4f83-ac9d-cabd909d97e3</FunID>
-      <Comment><![CDATA[max limit achieved by the benefit]]></Comment>
-    </PAR>
-    <PAR>
-      <ID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ID>
-      <Name>Share</Name>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
-      <Comment><![CDATA[]]></Comment>
-    </PAR>
-    <PAR>
-      <ID>8bea08be-9e3f-4f10-830f-c527aa302955</ID>
-      <Name>Output_Var</Name>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
-      <Comment><![CDATA[]]></Comment>
-    </PAR>
-    <PAR>
-      <ID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ID>
-      <Name>TAX_UNIT</Name>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
-      <Comment><![CDATA[]]></Comment>
-    </PAR>
-    <PAR>
-      <ID>932b482b-213f-42e0-8aaa-948cd75587f9</ID>
-      <Name>Share_Between</Name>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
-      <Comment><![CDATA[]]></Comment>
-    </PAR>
-    <PAR>
-      <ID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ID>
-      <Name>Ignore_Neg_Prop</Name>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
-      <Comment><![CDATA[]]></Comment>
-    </PAR>
-    <PAR>
       <ID>3115762e-d41b-4317-a48e-c5c4acfe171a</ID>
       <Name>Comp_Cond</Name>
       <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
@@ -3230,7 +3201,7 @@
       <ID>e8bf4a4c-8421-4a1c-992c-e6862779d302</ID>
       <Name>Output_Var</Name>
       <FunID>dd1b7ac5-a689-434a-9f27-197cb2e44487</FunID>
-      <Comment><![CDATA[benefit social assistence temporary simulated]]></Comment>
+      <Comment><![CDATA[benefit social assistence simulated]]></Comment>
     </PAR>
     <PAR>
       <ID>9c00cbb0-5e7e-4b49-984e-62dc55dce55f</ID>
@@ -3271,22 +3242,142 @@
       <Comment><![CDATA[]]></Comment>
     </PAR>
     <PAR>
+      <ID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ID>
+      <Name>#_m</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ID>
+      <Name>#_n</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ID>
+      <Name>Comp_perElig</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ID>
+      <Name>Comp_Cond</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>01c28eb6-724b-4ac5-9699-206cded3d179</ID>
+      <Name>#_AgeMax</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>97c7d708-c3db-42ee-8d51-4f30e772844d</ID>
+      <Name>#_AgeMin</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>2</Group>
+    </PAR>
+    <PAR>
+      <ID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ID>
+      <Name>Comp_Cond</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
+      <ID>42250cce-4241-4ac9-ba79-6744192e7d47</ID>
+      <Name>#_m</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
+      <ID>7dca3628-959a-44d6-9797-db50bf117cc5</ID>
+      <Name>#_n</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
+      <ID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ID>
+      <Name>#_AgeMax</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
+      <ID>092b4bd8-438a-489d-8638-162ae634be84</ID>
+      <Name>#_AgeMin</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
+      <ID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ID>
+      <Name>Comp_perElig</Name>
+      <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
+      <Comment><![CDATA[]]></Comment>
+      <Group>3</Group>
+    </PAR>
+    <PAR>
       <ID>accf6194-7f07-4f63-a344-f9043240d433</ID>
       <Name>Formula</Name>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Comment><![CDATA[December 2021]]></Comment>
+      <Comment><![CDATA[]]></Comment>
     </PAR>
     <PAR>
       <ID>6b8204ae-479e-46d7-9573-27bfb52bb888</ID>
       <Name>Output_Var</Name>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Comment><![CDATA[benefit social assistence temporary simulated]]></Comment>
+      <Comment><![CDATA[benefit social assistence simulated]]></Comment>
     </PAR>
     <PAR>
       <ID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ID>
       <Name>TAX_UNIT</Name>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
       <Comment><![CDATA[one per household]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>877e7289-7963-43e5-8690-6cf11a2baa49</ID>
+      <Name>Elig_Cond</Name>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Comment><![CDATA[]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>b5253fbb-b79b-42c4-9503-87362fec090a</ID>
+      <Name>TAX_UNIT</Name>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Comment><![CDATA[]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>9460e42d-9abf-484e-b929-4020abf797fa</ID>
+      <Name>Who_Must_Be_Elig</Name>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Comment><![CDATA[]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ID>
+      <Name>Elig_Cond</Name>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Comment><![CDATA[]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>b4a772b8-9aff-4452-ae02-12e194351050</ID>
+      <Name>TAX_UNIT</Name>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Comment><![CDATA[]]></Comment>
+    </PAR>
+    <PAR>
+      <ID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ID>
+      <Name>Who_Must_Be_Elig</Name>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Comment><![CDATA[]]></Comment>
     </PAR>
   </PARs>
   <SYS_POLs>
@@ -3438,7 +3529,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <PolID>b9f1cfaf-6691-4df7-ab3c-0c382fa2ce9b</PolID>
       <Order>9</Order>
-      <Switch>on</Switch>
+      <Switch>off</Switch>
     </SYS_POL>
     <SYS_POL>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -3672,7 +3763,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <PolID>b9f1cfaf-6691-4df7-ab3c-0c382fa2ce9b</PolID>
       <Order>9</Order>
-      <Switch>on</Switch>
+      <Switch>off</Switch>
     </SYS_POL>
     <SYS_POL>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -4098,20 +4189,14 @@
     </SYS_FUN>
     <SYS_FUN>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
+      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
       <Order>4</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
-      <Order>5</Order>
-      <Switch>on</Switch>
-    </SYS_FUN>
-    <SYS_FUN>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <FunID>e9036267-55d7-4440-8c78-6c6d0121696d</FunID>
-      <Order>6</Order>
+      <Order>5</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -4135,13 +4220,25 @@
     <SYS_FUN>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
-      <Order>9</Order>
+      <Order>10</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Order>10</Order>
+      <Order>11</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Order>6</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Order>9</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -4560,20 +4657,14 @@
     </SYS_FUN>
     <SYS_FUN>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
+      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
       <Order>4</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
-      <Order>5</Order>
-      <Switch>on</Switch>
-    </SYS_FUN>
-    <SYS_FUN>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <FunID>e9036267-55d7-4440-8c78-6c6d0121696d</FunID>
-      <Order>6</Order>
+      <Order>5</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -4597,13 +4688,25 @@
     <SYS_FUN>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
-      <Order>9</Order>
+      <Order>10</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Order>10</Order>
+      <Order>11</Order>
+      <Switch>on</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Order>6</Order>
+      <Switch>on</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Order>9</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5022,20 +5125,14 @@
     </SYS_FUN>
     <SYS_FUN>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
+      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
       <Order>4</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
-      <Order>5</Order>
-      <Switch>on</Switch>
-    </SYS_FUN>
-    <SYS_FUN>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <FunID>e9036267-55d7-4440-8c78-6c6d0121696d</FunID>
-      <Order>6</Order>
+      <Order>5</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5059,13 +5156,25 @@
     <SYS_FUN>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
-      <Order>9</Order>
+      <Order>10</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Order>10</Order>
+      <Order>11</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Order>6</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Order>9</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5484,20 +5593,14 @@
     </SYS_FUN>
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
+      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
       <Order>4</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
-      <Order>5</Order>
-      <Switch>on</Switch>
-    </SYS_FUN>
-    <SYS_FUN>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <FunID>e9036267-55d7-4440-8c78-6c6d0121696d</FunID>
-      <Order>6</Order>
+      <Order>5</Order>
       <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5521,13 +5624,25 @@
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
-      <Order>9</Order>
+      <Order>10</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Order>10</Order>
+      <Order>11</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Order>6</Order>
+      <Switch>n/a</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Order>9</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5946,20 +6061,14 @@
     </SYS_FUN>
     <SYS_FUN>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <FunID>a9bc011a-32a7-4991-815d-7f278a6aaa0f</FunID>
+      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
       <Order>4</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <FunID>1af4cf6b-378d-4ac2-8dcd-6b544235e017</FunID>
-      <Order>5</Order>
-      <Switch>n/a</Switch>
-    </SYS_FUN>
-    <SYS_FUN>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <FunID>e9036267-55d7-4440-8c78-6c6d0121696d</FunID>
-      <Order>6</Order>
+      <Order>5</Order>
       <Switch>n/a</Switch>
     </SYS_FUN>
     <SYS_FUN>
@@ -5983,14 +6092,26 @@
     <SYS_FUN>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <FunID>023a879c-66a5-4ad4-8020-67f8f553a229</FunID>
-      <Order>9</Order>
-      <Switch>n/a</Switch>
+      <Order>10</Order>
+      <Switch>on</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <FunID>bfcfaada-8427-41d5-bb5d-673616945f40</FunID>
-      <Order>10</Order>
-      <Switch>n/a</Switch>
+      <Order>11</Order>
+      <Switch>on</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <FunID>01aa076e-7d86-4f5f-9cda-0b55a8330f16</FunID>
+      <Order>6</Order>
+      <Switch>on</Switch>
+    </SYS_FUN>
+    <SYS_FUN>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <FunID>0ccee112-d846-4462-969e-408e4269991b</FunID>
+      <Order>9</Order>
+      <Switch>on</Switch>
     </SYS_FUN>
   </SYS_FUNs>
   <SYS_PARs>
@@ -7992,13 +8113,13 @@
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>504c2679-386c-4edd-a7e0-7b1028602eb5</ParID>
-      <Order>17</Order>
+      <Order>16</Order>
       <Value><![CDATA[i_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>d2852d34-46f3-4c86-803b-cfee889f137c</ParID>
-      <Order>18</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -8079,42 +8200,6 @@
       <ParID>ffb141c3-97e9-432f-a108-cc1a463e5acb</ParID>
       <Order>15</Order>
       <Value><![CDATA[17]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ParID>
-      <Order>16</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ParID>
-      <Order>1</Order>
-      <Value><![CDATA[i_bbf_ab_br]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>8bea08be-9e3f-4f10-830f-c527aa302955</ParID>
-      <Order>4</Order>
-      <Value><![CDATA[bls08_s]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ParID>
-      <Order>5</Order>
-      <Value><![CDATA[tu_individual_sl]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>932b482b-213f-42e0-8aaa-948cd75587f9</ParID>
-      <Order>2</Order>
-      <Value><![CDATA[IsParentOfDepChild & (dgn = 0 | !IsWithPartner)]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
-      <ParID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ParID>
-      <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -8331,19 +8416,91 @@
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>1b1d9762-6e08-496e-841b-673c35c9c060</ParID>
-      <Order>4</Order>
+      <Order>16</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>5a3df490-cf21-47ac-af00-4c23e6393a28</ParID>
-      <Order>5</Order>
+      <Order>17</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>dec16e03-b79f-459d-9db3-f7d18e850892</ParID>
       <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ParID>
+      <Order>6</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ParID>
+      <Order>5</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ParID>
+      <Order>7</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ParID>
+      <Order>4</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>01c28eb6-724b-4ac5-9699-206cded3d179</ParID>
+      <Order>9</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>97c7d708-c3db-42ee-8d51-4f30e772844d</ParID>
+      <Order>8</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ParID>
+      <Order>10</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>42250cce-4241-4ac9-ba79-6744192e7d47</ParID>
+      <Order>12</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>7dca3628-959a-44d6-9797-db50bf117cc5</ParID>
+      <Order>11</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ParID>
+      <Order>15</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>092b4bd8-438a-489d-8638-162ae634be84</ParID>
+      <Order>14</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ParID>
+      <Order>13</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -8362,6 +8519,42 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ParID>
       <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>877e7289-7963-43e5-8690-6cf11a2baa49</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>b5253fbb-b79b-42c4-9503-87362fec090a</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>9460e42d-9abf-484e-b929-4020abf797fa</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>b4a772b8-9aff-4452-ae02-12e194351050</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <ParID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ParID>
+      <Order>2</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -10356,18 +10549,18 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>10cd7b70-afb1-44b2-91cc-0e5cc1d91175</ParID>
       <Order>7</Order>
-      <Value><![CDATA[$base + 41#m*nDepChildrenInTu#2]]></Value>
+      <Value><![CDATA[41#m*nDepChildrenInTu#2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>504c2679-386c-4edd-a7e0-7b1028602eb5</ParID>
-      <Order>17</Order>
+      <Order>16</Order>
       <Value><![CDATA[i_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>d2852d34-46f3-4c86-803b-cfee889f137c</ParID>
-      <Order>18</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -10386,7 +10579,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>3e00a137-cec5-4008-91e9-b9ae2093571c</ParID>
       <Order>4</Order>
-      <Value><![CDATA[ils_origy <= $base &  IsNtoMchild#2  & (dec=1 | dec=2 | dec=3 | dec=4)
+      <Value><![CDATA[ils_origy <= 178#m & IsNtoMchild#2 & (dec=1 | dec=2 | dec=3)
 ]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -10417,7 +10610,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>889adb3d-07ed-46a4-9867-0aa5bb03d428</ParID>
       <Order>10</Order>
-      <Value><![CDATA[ils_origy <= $base & IsNtoMchild#3]]></Value>
+      <Value><![CDATA[ils_origy <= 178#m & IsNtoMchild#3 & & (dec=3 | dec=4)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10435,7 +10628,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>b94c2e33-361c-4f7a-a2e8-871a0e4205a0</ParID>
       <Order>13</Order>
-      <Value><![CDATA[$base + 48#m*nDepChildrenInTu#3]]></Value>
+      <Value><![CDATA[48#m*nDepChildrenInTu#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10448,43 +10641,6 @@
       <ParID>ffb141c3-97e9-432f-a108-cc1a463e5acb</ParID>
       <Order>15</Order>
       <Value><![CDATA[17]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ParID>
-      <Order>16</Order>
-      <Value><![CDATA[372#m]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ParID>
-      <Order>1</Order>
-      <Value><![CDATA[bchmt_s]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>8bea08be-9e3f-4f10-830f-c527aa302955</ParID>
-      <Order>4</Order>
-      <Value><![CDATA[bls08_s
-]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ParID>
-      <Order>5</Order>
-      <Value><![CDATA[tu_individual_sl]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>932b482b-213f-42e0-8aaa-948cd75587f9</ParID>
-      <Order>2</Order>
-      <Value><![CDATA[IsParentOfDepChild & (dgn = 0 | !IsWithPartner)]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
-      <ParID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ParID>
-      <Order>3</Order>
-      <Value><![CDATA[yes]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10602,13 +10758,13 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>ae1136bf-258a-453f-8918-38fa388444c9</ParID>
       <Order>4</Order>
-      <Value><![CDATA[ils_origy <= $base &  IsNtoMchild#2  & (dec=1 | dec=2 | dec=3 | dec=4)]]></Value>
+      <Value><![CDATA[ils_origy <= 200#m & IsNtoMchild#2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>d1354914-6b52-40b6-8873-45bca959794e</ParID>
       <Order>7</Order>
-      <Value><![CDATA[$base + 49#m*nDepChildrenInTu#2]]></Value>
+      <Value><![CDATA[49#m*nDepChildrenInTu#2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10662,25 +10818,25 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>737c2bd3-c47d-492e-878c-12228a520ed6</ParID>
       <Order>13</Order>
-      <Value><![CDATA[$base + 57#m*nDepChildrenInTu#3]]></Value>
+      <Value><![CDATA[57#m*nDepChildrenInTu#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>d362c4e2-9e19-4a77-8e70-97f55b03635a</ParID>
       <Order>10</Order>
-      <Value><![CDATA[ils_origy <= $base & IsNtoMchild#3]]></Value>
+      <Value><![CDATA[ils_origy <= 200#m & IsNtoMchild#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>acb21303-9f50-4a88-a788-1672b9a7065b</ParID>
       <Order>1</Order>
-      <Value><![CDATA[iii_bbf_ab_br*1/12]]></Value>
+      <Value><![CDATA[iii_bbf_ab_br * 1/12]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>e8bf4a4c-8421-4a1c-992c-e6862779d302</ParID>
       <Order>2</Order>
-      <Value><![CDATA[bsatm_s]]></Value>
+      <Value><![CDATA[bsa_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10692,7 +10848,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>a42f788e-ee24-4a4a-8cb6-df12c25587f7</ParID>
       <Order>2</Order>
-      <Value><![CDATA[ils_origy <= 100#m]]></Value>
+      <Value><![CDATA[ils_origy <= $base]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -10703,38 +10859,146 @@
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>1b1d9762-6e08-496e-841b-673c35c9c060</ParID>
-      <Order>4</Order>
+      <Order>16</Order>
       <Value><![CDATA[iii_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>5a3df490-cf21-47ac-af00-4c23e6393a28</ParID>
-      <Order>5</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>dec16e03-b79f-459d-9db3-f7d18e850892</ParID>
       <Order>1</Order>
-      <Value><![CDATA[400#m]]></Value>
+      <Value><![CDATA[100#m]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ParID>
+      <Order>6</Order>
+      <Value><![CDATA[5]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ParID>
+      <Order>5</Order>
+      <Value><![CDATA[1]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ParID>
+      <Order>7</Order>
+      <Value><![CDATA[49#m*nDepChildrenInTu#2]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ParID>
+      <Order>4</Order>
+      <Value><![CDATA[ils_origy <= 200#m & IsNtoMchild#2  & (dec=1 | dec=2 | dec=3 | dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>01c28eb6-724b-4ac5-9699-206cded3d179</ParID>
+      <Order>9</Order>
+      <Value><![CDATA[15]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>97c7d708-c3db-42ee-8d51-4f30e772844d</ParID>
+      <Order>8</Order>
+      <Value><![CDATA[0]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ParID>
+      <Order>10</Order>
+      <Value><![CDATA[ils_origy <= 200#m & IsNtoMchild#3 & (dec=3 | dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>42250cce-4241-4ac9-ba79-6744192e7d47</ParID>
+      <Order>12</Order>
+      <Value><![CDATA[2]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>7dca3628-959a-44d6-9797-db50bf117cc5</ParID>
+      <Order>11</Order>
+      <Value><![CDATA[1]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ParID>
+      <Order>15</Order>
+      <Value><![CDATA[17]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>092b4bd8-438a-489d-8638-162ae634be84</ParID>
+      <Order>14</Order>
+      <Value><![CDATA[16]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ParID>
+      <Order>13</Order>
+      <Value><![CDATA[57#m*nDepChildrenInTu#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>accf6194-7f07-4f63-a344-f9043240d433</ParID>
       <Order>1</Order>
-      <Value><![CDATA[iii_bbf_ab_br*1/12]]></Value>
+      <Value><![CDATA[MAX( iii_bbf_ab_br*1/12, 400*1/12)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>6b8204ae-479e-46d7-9573-27bfb52bb888</ParID>
       <Order>2</Order>
-      <Value><![CDATA[bsatm_s]]></Value>
+      <Value><![CDATA[bsa_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ParID>
       <Order>3</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>877e7289-7963-43e5-8690-6cf11a2baa49</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[dag> 18 | (dag<18 & dec=1) | (dag<18 & dec=2) | (dag<18 & dec=3) | (dag<18 & dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>b5253fbb-b79b-42c4-9503-87362fec090a</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>9460e42d-9abf-484e-b929-4020abf797fa</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[all]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[dag> 18 | (dag<18 & dec=1) | (dag<18 & dec=2) | (dag<18 & dec=3) | (dag<18 & dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>b4a772b8-9aff-4452-ae02-12e194351050</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <ParID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[all]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
@@ -12733,13 +12997,13 @@
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>504c2679-386c-4edd-a7e0-7b1028602eb5</ParID>
-      <Order>17</Order>
+      <Order>16</Order>
       <Value><![CDATA[i_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>d2852d34-46f3-4c86-803b-cfee889f137c</ParID>
-      <Order>18</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -12821,42 +13085,6 @@
       <ParID>ffb141c3-97e9-432f-a108-cc1a463e5acb</ParID>
       <Order>15</Order>
       <Value><![CDATA[17]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ParID>
-      <Order>16</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ParID>
-      <Order>1</Order>
-      <Value><![CDATA[i_bbf_ab_br]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>8bea08be-9e3f-4f10-830f-c527aa302955</ParID>
-      <Order>4</Order>
-      <Value><![CDATA[bls08_s]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ParID>
-      <Order>5</Order>
-      <Value><![CDATA[tu_individual_sl]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>932b482b-213f-42e0-8aaa-948cd75587f9</ParID>
-      <Order>2</Order>
-      <Value><![CDATA[IsParentOfDepChild & (dgn = 0 | !IsWithPartner)]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
-      <ParID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ParID>
-      <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
@@ -13074,19 +13302,91 @@
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>1b1d9762-6e08-496e-841b-673c35c9c060</ParID>
-      <Order>4</Order>
+      <Order>16</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>5a3df490-cf21-47ac-af00-4c23e6393a28</ParID>
-      <Order>5</Order>
+      <Order>17</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>dec16e03-b79f-459d-9db3-f7d18e850892</ParID>
       <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ParID>
+      <Order>6</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ParID>
+      <Order>5</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ParID>
+      <Order>7</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ParID>
+      <Order>4</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>01c28eb6-724b-4ac5-9699-206cded3d179</ParID>
+      <Order>9</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>97c7d708-c3db-42ee-8d51-4f30e772844d</ParID>
+      <Order>8</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ParID>
+      <Order>10</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>42250cce-4241-4ac9-ba79-6744192e7d47</ParID>
+      <Order>12</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>7dca3628-959a-44d6-9797-db50bf117cc5</ParID>
+      <Order>11</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ParID>
+      <Order>15</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>092b4bd8-438a-489d-8638-162ae634be84</ParID>
+      <Order>14</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ParID>
+      <Order>13</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -13105,6 +13405,42 @@
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ParID>
       <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>877e7289-7963-43e5-8690-6cf11a2baa49</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>b5253fbb-b79b-42c4-9503-87362fec090a</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>9460e42d-9abf-484e-b929-4020abf797fa</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>b4a772b8-9aff-4452-ae02-12e194351050</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <ParID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ParID>
+      <Order>2</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -15103,13 +15439,13 @@
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>504c2679-386c-4edd-a7e0-7b1028602eb5</ParID>
-      <Order>17</Order>
+      <Order>16</Order>
       <Value><![CDATA[i_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>d2852d34-46f3-4c86-803b-cfee889f137c</ParID>
-      <Order>18</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -15190,42 +15526,6 @@
       <ParID>ffb141c3-97e9-432f-a108-cc1a463e5acb</ParID>
       <Order>15</Order>
       <Value><![CDATA[17]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ParID>
-      <Order>16</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ParID>
-      <Order>1</Order>
-      <Value><![CDATA[i_bbf_ab_br]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>8bea08be-9e3f-4f10-830f-c527aa302955</ParID>
-      <Order>4</Order>
-      <Value><![CDATA[bls08_s]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ParID>
-      <Order>5</Order>
-      <Value><![CDATA[tu_individual_sl]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>932b482b-213f-42e0-8aaa-948cd75587f9</ParID>
-      <Order>2</Order>
-      <Value><![CDATA[IsParentOfDepChild & (dgn = 0 | !IsWithPartner)]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
-      <ParID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ParID>
-      <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -15443,19 +15743,91 @@
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>1b1d9762-6e08-496e-841b-673c35c9c060</ParID>
-      <Order>4</Order>
+      <Order>16</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>5a3df490-cf21-47ac-af00-4c23e6393a28</ParID>
-      <Order>5</Order>
+      <Order>17</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>dec16e03-b79f-459d-9db3-f7d18e850892</ParID>
       <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ParID>
+      <Order>6</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ParID>
+      <Order>5</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ParID>
+      <Order>7</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ParID>
+      <Order>4</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>01c28eb6-724b-4ac5-9699-206cded3d179</ParID>
+      <Order>9</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>97c7d708-c3db-42ee-8d51-4f30e772844d</ParID>
+      <Order>8</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ParID>
+      <Order>10</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>42250cce-4241-4ac9-ba79-6744192e7d47</ParID>
+      <Order>12</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>7dca3628-959a-44d6-9797-db50bf117cc5</ParID>
+      <Order>11</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ParID>
+      <Order>15</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>092b4bd8-438a-489d-8638-162ae634be84</ParID>
+      <Order>14</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ParID>
+      <Order>13</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -15474,6 +15846,42 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ParID>
       <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>877e7289-7963-43e5-8690-6cf11a2baa49</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>b5253fbb-b79b-42c4-9503-87362fec090a</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>9460e42d-9abf-484e-b929-4020abf797fa</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>b4a772b8-9aff-4452-ae02-12e194351050</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[n/a]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <ParID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ParID>
+      <Order>2</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -17471,13 +17879,13 @@
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>504c2679-386c-4edd-a7e0-7b1028602eb5</ParID>
-      <Order>17</Order>
+      <Order>16</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>d2852d34-46f3-4c86-803b-cfee889f137c</ParID>
-      <Order>18</Order>
+      <Order>17</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -17556,42 +17964,6 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>ffb141c3-97e9-432f-a108-cc1a463e5acb</ParID>
       <Order>15</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>9e745ddc-8dda-44ae-8268-80cd27f3a79e</ParID>
-      <Order>16</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>b4386858-cb8b-4ace-ad98-189cfd32ec06</ParID>
-      <Order>1</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>8bea08be-9e3f-4f10-830f-c527aa302955</ParID>
-      <Order>4</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>5bf777bb-9112-40aa-a3eb-ccc13afe443a</ParID>
-      <Order>5</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>932b482b-213f-42e0-8aaa-948cd75587f9</ParID>
-      <Order>2</Order>
-      <Value><![CDATA[n/a]]></Value>
-    </SYS_PAR>
-    <SYS_PAR>
-      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
-      <ParID>71afec74-26ad-46e3-a1d5-3b300f80d8f4</ParID>
-      <Order>3</Order>
       <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
@@ -17710,13 +18082,13 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>ae1136bf-258a-453f-8918-38fa388444c9</ParID>
       <Order>4</Order>
-      <Value><![CDATA[ils_origy <= $base &  IsNtoMchild#2  & (dec=1 | dec=2 | dec=3 | dec=4)]]></Value>
+      <Value><![CDATA[ils_origy <= 210#m & IsNtoMchild#2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>d1354914-6b52-40b6-8873-45bca959794e</ParID>
       <Order>7</Order>
-      <Value><![CDATA[$base + 130#m*nDepChildrenInTu#2]]></Value>
+      <Value><![CDATA[130#m*nDepChildrenInTu#2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -17728,7 +18100,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>5be534f5-89ca-4d41-a45d-83373f61df53</ParID>
       <Order>9</Order>
-      <Value><![CDATA[3]]></Value>
+      <Value><![CDATA[2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -17764,31 +18136,31 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>2bc9930b-818f-493f-b965-c68fe883d789</ParID>
       <Order>14</Order>
-      <Value><![CDATA[4]]></Value>
+      <Value><![CDATA[3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>737c2bd3-c47d-492e-878c-12228a520ed6</ParID>
       <Order>13</Order>
-      <Value><![CDATA[$base + 65#m*nDepChildrenInTu#3]]></Value>
+      <Value><![CDATA[65#m*nDepChildrenInTu#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>d362c4e2-9e19-4a77-8e70-97f55b03635a</ParID>
       <Order>10</Order>
-      <Value><![CDATA[ils_origy <= $base & IsNtoMchild#3 & (dag < 21 & IsInEducation) ]]></Value>
+      <Value><![CDATA[ils_origy <= 210#m & IsNtoMchild#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>acb21303-9f50-4a88-a788-1672b9a7065b</ParID>
       <Order>1</Order>
-      <Value><![CDATA[iii_bbf_ab_br*5/12]]></Value>
+      <Value><![CDATA[iii_bbf_ab_br * 5/12]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>e8bf4a4c-8421-4a1c-992c-e6862779d302</ParID>
       <Order>2</Order>
-      <Value><![CDATA[bsatm_s]]></Value>
+      <Value><![CDATA[bsa_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -17800,7 +18172,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>a42f788e-ee24-4a4a-8cb6-df12c25587f7</ParID>
       <Order>2</Order>
-      <Value><![CDATA[ils_origy <= 100#m]]></Value>
+      <Value><![CDATA[ils_origy <= 105#m]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -17811,38 +18183,146 @@
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>1b1d9762-6e08-496e-841b-673c35c9c060</ParID>
-      <Order>4</Order>
+      <Order>16</Order>
       <Value><![CDATA[iii_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>5a3df490-cf21-47ac-af00-4c23e6393a28</ParID>
-      <Order>5</Order>
+      <Order>17</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>dec16e03-b79f-459d-9db3-f7d18e850892</ParID>
       <Order>1</Order>
-      <Value><![CDATA[400#m]]></Value>
+      <Value><![CDATA[105#m]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>28dada99-65e3-4ac9-9dc5-8ec7d68aa89a</ParID>
+      <Order>6</Order>
+      <Value><![CDATA[99]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>1fb43cbd-bf8f-46f5-a21d-3a69cd6c09fa</ParID>
+      <Order>5</Order>
+      <Value><![CDATA[1]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>a2a2a3e0-ae06-47f7-96a3-beda0b78fcd0</ParID>
+      <Order>7</Order>
+      <Value><![CDATA[130#m*nDepChildrenInTu#2]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>4fc98422-83ef-4cc4-9e3b-4812518a1443</ParID>
+      <Order>4</Order>
+      <Value><![CDATA[ils_origy <= 210#m & IsNtoMchild#2  & (dec=1 | dec=2 | dec=3)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>01c28eb6-724b-4ac5-9699-206cded3d179</ParID>
+      <Order>9</Order>
+      <Value><![CDATA[2]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>97c7d708-c3db-42ee-8d51-4f30e772844d</ParID>
+      <Order>8</Order>
+      <Value><![CDATA[0]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>68fd4e0d-d9f1-455d-848e-948d2d96e77a</ParID>
+      <Order>10</Order>
+      <Value><![CDATA[ils_origy <= 210#m & IsNtoMchild#3 & (dec=3 | dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>42250cce-4241-4ac9-ba79-6744192e7d47</ParID>
+      <Order>12</Order>
+      <Value><![CDATA[99]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>7dca3628-959a-44d6-9797-db50bf117cc5</ParID>
+      <Order>11</Order>
+      <Value><![CDATA[1]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>2185ede6-811f-4b5b-b0e5-2105af430d5b</ParID>
+      <Order>15</Order>
+      <Value><![CDATA[21]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>092b4bd8-438a-489d-8638-162ae634be84</ParID>
+      <Order>14</Order>
+      <Value><![CDATA[3]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>e44bf33c-4cb3-4ec1-87cd-4b4c856c78c0</ParID>
+      <Order>13</Order>
+      <Value><![CDATA[65#m*nDepChildrenInTu#3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>accf6194-7f07-4f63-a344-f9043240d433</ParID>
       <Order>1</Order>
-      <Value><![CDATA[iii_bbf_ab_br*1/12]]></Value>
+      <Value><![CDATA[MAX( iii_bbf_ab_br*7/12, 600*7/12)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>6b8204ae-479e-46d7-9573-27bfb52bb888</ParID>
       <Order>2</Order>
-      <Value><![CDATA[bsatm_s]]></Value>
+      <Value><![CDATA[bsa_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>6d96c1b7-ddb5-4394-af82-6d63f8bd2e5c</ParID>
       <Order>3</Order>
       <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>877e7289-7963-43e5-8690-6cf11a2baa49</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[dag> 21 | (dag<21 & dec=1) | (dag<21 & dec=2) | (dag<21 & dec=3) | (dag<21 & dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>b5253fbb-b79b-42c4-9503-87362fec090a</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>9460e42d-9abf-484e-b929-4020abf797fa</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[all]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>3ff17770-4f68-40f6-ab80-2147c95f0f6f</ParID>
+      <Order>1</Order>
+      <Value><![CDATA[dag> 21 | (dag<21 & dec=1) | (dag<21 & dec=2) | (dag<21 & dec=3) | (dag<21 & dec=4)]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>b4a772b8-9aff-4452-ae02-12e194351050</ParID>
+      <Order>3</Order>
+      <Value><![CDATA[tu_household_sl]]></Value>
+    </SYS_PAR>
+    <SYS_PAR>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <ParID>22ea96d4-9126-429e-8c38-9bb8c6eca1b9</ParID>
+      <Order>2</Order>
+      <Value><![CDATA[all]]></Value>
     </SYS_PAR>
   </SYS_PARs>
   <UPINDs />

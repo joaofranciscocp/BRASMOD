@@ -1,0 +1,22 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: brasmod
+Start: segunda-feira, 24 de abril de 2023 15:18:59
+End: segunda-feira, 24 de abril de 2023 15:19:00
+Duration: 0,2281955s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+005e00e0-56bd-4979-8847-7175adc9b6bb	aborted	BRA_2021	pof euromod 2	segunda-feira, 24 de abril de 2023 15:18:59	segunda-feira, 24 de abril de 2023 15:19:00	0,2281955s	euro	1	-	bra_2021_std	fd2ce9f752c16aea7547929ded6158e9	bra_2021_std_hh	172d5ffc4f434241873fc79f877fab7c
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 005e00e0-56bd-4979-8847-7175adc9b6bb
+ERROR:  10.8 bbf_ab_bra/BenCalc (023a879c-66a5-4ad4-8020-67f8f553a229): compulsory group-parameter Comp_Cond (group 4) is missing
+ERROR:  10.8 bbf_ab_bra/BenCalc (023a879c-66a5-4ad4-8020-67f8f553a229): compulsory group-parameter Comp_perTU (group 3) is missing
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
