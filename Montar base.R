@@ -728,6 +728,8 @@ base_xpp <- base_xpp %>% rename(dec01 = V0415) %>%
                         yes = 1,
                         no = 2))
 
+
+
 #SUB-CHEFE
 
 #O sub-chefe de cada domicílio será identificado como o indivíduo que tiver a maior
@@ -946,9 +948,5 @@ write.table(base_final_nao_obrigatorias, file='pof euromod 2.txt', quote=FALSE, 
 
 #Salva uma versão com todas as variáveis, pra adicionar mais no futuro
 write.table(base, file='pof euromod raw 2.txt', quote=FALSE, sep='\t', row.names=FALSE)
-
-
-
-
 
 
