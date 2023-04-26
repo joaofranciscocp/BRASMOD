@@ -2549,7 +2549,7 @@
         <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
         <Name>tin_bra</Name>
         <Type>tax</Type>
-        <Comment><![CDATA[TAX: Personal Income Tax (Brazil)]]></Comment>
+        <Comment><![CDATA[TAX: Personal Income Tax]]></Comment>
         <PrivateComment />
         <Order>15</Order>
         <Switch>on</Switch>
@@ -2685,7 +2685,7 @@
           <ID>5f2ff502-cc23-41c8-908f-bb5321292d84</ID>
           <PolicyID>0dc9382e-1070-46c0-a58b-57c8da71abbc</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Complete]]></Comment>
           <PrivateComment />
           <Order>9</Order>
           <Switch>on</Switch>
@@ -2695,7 +2695,7 @@
             <ID>38e18f79-d959-4f0c-8b21-339d87f97435</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Taxbase is income as defined in incomelist il_TaxableY]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_TaxableY]]></Value>
             <Order>0</Order>
@@ -2708,10 +2708,10 @@
             <ID>52d23ae5-c04e-498d-8f78-6ea83990f3a8</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>2</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -2724,7 +2724,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tin_pagar]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2737,7 +2737,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2746,10 +2746,10 @@
           <Parameter>
             <ID>2276fac4-7405-4b07-be46-fa88f302856f</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -2759,8 +2759,8 @@
           <Parameter>
             <ID>80cf6741-d58a-49b7-b643-900a932bb2f8</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
             <Order>7</Order>
@@ -2772,10 +2772,10 @@
           <Parameter>
             <ID>647ebc54-6d0a-4a90-a81d-fa1be6ff00b7</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[3751.05#m]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -2785,10 +2785,10 @@
           <Parameter>
             <ID>6b9e0cb4-d201-47b4-8b09-ed1bf8afa456</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[2826.65#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -2799,10 +2799,10 @@
             <ID>36d233d5-852a-4cd2-b183-6d91322d81d4</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
-            <Order>8</Order>
+            <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -2812,10 +2812,10 @@
             <ID>3e00a11e-6a19-44d2-8034-fd580851edd2</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>6</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -2825,10 +2825,10 @@
             <ID>f022ebb2-f256-4626-b8ba-f904fd4ee701</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>4</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -2838,12 +2838,25 @@
             <ID>daf09371-c3fe-43ae-bf90-f67fff3d1e89</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>formula</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bec2c9cf-36d7-40b0-8f47-bc5a99f59d8b</ID>
+            <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[... with this rate]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -2854,7 +2867,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Parcelas a deduzir do IRPF]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -3045,7 +3058,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -3653,9 +3666,9 @@
           <ID>52e9add1-c0e8-4c0a-b839-90f0dcb7a60f</ID>
           <PolicyID>0dc9382e-1070-46c0-a58b-57c8da71abbc</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF versão simplificada]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -3963,7 +3976,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4000,7 +4013,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>15</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4037,7 +4050,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8211,7 +8224,7 @@
         <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
         <Name>tin_bra</Name>
         <Type>tax</Type>
-        <Comment><![CDATA[TAX: Personal Income Tax (Brazil)]]></Comment>
+        <Comment><![CDATA[TAX: Personal Income Tax]]></Comment>
         <PrivateComment />
         <Order>15</Order>
         <Switch>on</Switch>
@@ -8347,7 +8360,7 @@
           <ID>777471a8-8f66-4cc9-bf15-55805c56649d</ID>
           <PolicyID>244d11ac-1a54-468f-9b0c-fd35a1cc204e</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Complete]]></Comment>
           <PrivateComment />
           <Order>9</Order>
           <Switch>on</Switch>
@@ -8357,7 +8370,7 @@
             <ID>0e300ea7-97e4-4fdc-933f-5715c4ecb46f</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Taxbase is income as defined in incomelist il_TaxableY]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_TaxableY]]></Value>
             <Order>0</Order>
@@ -8370,10 +8383,10 @@
             <ID>8160bfea-e39f-4db8-8c6c-72317726704d</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>2</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -8386,7 +8399,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tin_pagar]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8399,7 +8412,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8408,10 +8421,10 @@
           <Parameter>
             <ID>87d078f4-4972-410e-83da-1580ea4c53e8</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -8421,8 +8434,8 @@
           <Parameter>
             <ID>c0b0caab-cf51-49b9-b13b-55047ea8c32f</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
             <Order>7</Order>
@@ -8434,10 +8447,10 @@
           <Parameter>
             <ID>dfef00e5-422a-4d1b-8222-5e25ffb160a5</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[3751.05#m]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -8447,10 +8460,10 @@
           <Parameter>
             <ID>b22fb82c-67c0-4d6e-bf39-9c8bf3933a29</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[2826.65#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -8461,10 +8474,10 @@
             <ID>28a08492-929c-4ffc-9349-7491bca6b149</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
-            <Order>8</Order>
+            <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -8474,10 +8487,10 @@
             <ID>764f0b58-f042-4fce-bdca-7c9951bbbfef</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>6</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -8487,10 +8500,10 @@
             <ID>046ccd82-72b4-4e18-aaf9-6c6da226a007</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>4</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -8500,12 +8513,25 @@
             <ID>adf30bce-de2e-4052-a3f9-ad88d16d9771</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>formula</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f08d0c43-f04f-4d65-8c3e-d762951acc34</ID>
+            <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[... with this rate]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -8516,7 +8542,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Parcelas a deduzir do IRPF]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8707,7 +8733,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -9315,9 +9341,9 @@
           <ID>3a7ec50c-bc18-470d-a834-e1242c2a1938</ID>
           <PolicyID>244d11ac-1a54-468f-9b0c-fd35a1cc204e</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF versão simplificada]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -9625,7 +9651,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -9662,7 +9688,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>15</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -9699,7 +9725,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13875,7 +13901,7 @@
         <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
         <Name>tin_bra</Name>
         <Type>tax</Type>
-        <Comment><![CDATA[TAX: Personal Income Tax (Brazil)]]></Comment>
+        <Comment><![CDATA[TAX: Personal Income Tax]]></Comment>
         <PrivateComment />
         <Order>15</Order>
         <Switch>on</Switch>
@@ -14011,7 +14037,7 @@
           <ID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</ID>
           <PolicyID>9d2e363f-49b1-45fd-a2a9-5da1718b0d2b</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Complete]]></Comment>
           <PrivateComment />
           <Order>9</Order>
           <Switch>on</Switch>
@@ -14021,7 +14047,7 @@
             <ID>31744d79-b4fd-4af2-95dd-a0f09aba24f8</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Taxbase is income as defined in incomelist il_TaxableY]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_TaxableY]]></Value>
             <Order>0</Order>
@@ -14034,10 +14060,10 @@
             <ID>e6586548-5802-46ee-8447-98a55a5ce0f1</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>2</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -14050,7 +14076,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tin_pagar]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14063,7 +14089,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14072,10 +14098,10 @@
           <Parameter>
             <ID>ba1c04a0-c801-410d-b19f-31edf90982d4</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -14085,8 +14111,8 @@
           <Parameter>
             <ID>c991cacd-4944-490f-a80a-c3e8c6ee1c0a</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
             <Order>7</Order>
@@ -14098,10 +14124,10 @@
           <Parameter>
             <ID>3dedba61-5f84-4171-9e1a-7b84100849e5</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[3751.05#m]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -14111,10 +14137,10 @@
           <Parameter>
             <ID>5cb5a147-ad17-44ce-b60a-c0fe6186b664</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[2826.65#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -14125,10 +14151,10 @@
             <ID>1b930cd0-cdbb-4930-b952-aa34e377d424</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
-            <Order>8</Order>
+            <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -14138,10 +14164,10 @@
             <ID>d0206e1b-06b3-41f1-932b-066d7b977942</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>6</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -14151,10 +14177,10 @@
             <ID>9e186097-4e1e-42cb-a4ac-3cd6895f2196</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>4</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -14164,12 +14190,25 @@
             <ID>61149087-a1dc-4fd7-87f7-c15d0e36f679</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>formula</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>acd8c43b-8b8c-4a6a-9bf1-0b056c11ae2f</ID>
+            <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[... with this rate]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -14180,7 +14219,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Parcelas a deduzir do IRPF]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14371,7 +14410,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14979,9 +15018,9 @@
           <ID>b39c66f5-6217-4cb3-bb6d-b464cc083116</ID>
           <PolicyID>9d2e363f-49b1-45fd-a2a9-5da1718b0d2b</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF versão simplificada]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15289,7 +15328,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15326,7 +15365,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>15</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15363,7 +15402,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -19538,7 +19577,7 @@
         <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
         <Name>tin_bra</Name>
         <Type>tax</Type>
-        <Comment><![CDATA[TAX: Personal Income Tax (Brazil)]]></Comment>
+        <Comment><![CDATA[TAX: Personal Income Tax]]></Comment>
         <PrivateComment />
         <Order>15</Order>
         <Switch>on</Switch>
@@ -19674,7 +19713,7 @@
           <ID>ec19b3c9-e191-47f3-a719-be7d7c194f19</ID>
           <PolicyID>9afab4f4-d310-4a67-b5e4-2decea0df589</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Complete]]></Comment>
           <PrivateComment />
           <Order>9</Order>
           <Switch>on</Switch>
@@ -19684,7 +19723,7 @@
             <ID>860deaba-8243-4674-a7a2-8d5e0b4a9b5c</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Taxbase is income as defined in incomelist il_TaxableY]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_TaxableY]]></Value>
             <Order>0</Order>
@@ -19697,10 +19736,10 @@
             <ID>393b45cc-c943-4a7d-81a8-ac694d743865</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>2</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -19713,7 +19752,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tin_pagar]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19726,7 +19765,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19735,10 +19774,10 @@
           <Parameter>
             <ID>c48d08b5-9313-46ef-8aad-84c87ffabbf2</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -19748,8 +19787,8 @@
           <Parameter>
             <ID>5de7635c-3a6e-48bf-9829-15b36a63a2dd</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
             <Order>7</Order>
@@ -19761,10 +19800,10 @@
           <Parameter>
             <ID>1b14e886-f0f6-43a6-83b9-88fea47236d8</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[3751.05#m]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -19774,10 +19813,10 @@
           <Parameter>
             <ID>a27f9ba8-576a-4f32-b89d-0ab405aabd35</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
-            <Name>Band_LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[2826.65#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -19788,10 +19827,10 @@
             <ID>d561842d-f203-4f82-8440-fb3435d3666f</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
-            <Order>8</Order>
+            <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -19801,10 +19840,10 @@
             <ID>380f4710-5077-4aa3-90de-f4519bcb939b</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>6</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -19814,10 +19853,10 @@
             <ID>29aa29cc-dca0-43ae-838b-d3ed23c786ad</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>4</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -19827,12 +19866,25 @@
             <ID>e947cd7d-b179-45de-b1c2-da8774e2b28c</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>formula</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ba279c76-9f7e-4f8a-aaba-94583c652929</ID>
+            <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[... with this rate]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -19843,7 +19895,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Parcelas a deduzir do IRPF]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -20034,7 +20086,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -20642,9 +20694,9 @@
           <ID>b1341ed7-8b59-4c2e-b572-98664801f442</ID>
           <PolicyID>9afab4f4-d310-4a67-b5e4-2decea0df589</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Tabela progressiva do IRPF versão simplificada]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -20952,7 +21004,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -20989,7 +21041,7 @@
           <Name>Elig</Name>
           <Comment><![CDATA[Verificar se a pessoa declarou o IRPF com deduções completas ou simplificadas]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>15</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -21026,7 +21078,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Total a pagar líquido das deduções]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
