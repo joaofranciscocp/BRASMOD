@@ -4116,7 +4116,7 @@
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
         <Order>16</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -5255,7 +5255,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[kids and tween in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 48#m*nDepChildrenInTu#2
+            <Value><![CDATA[48#m*nDepChildrenInTu#2
 ]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
@@ -5426,7 +5426,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[teenagers in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 41#m*nDepChildrenInTu#3]]></Value>
+            <Value><![CDATA[41#m*nDepChildrenInTu#3]]></Value>
             <Order>12</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -5467,7 +5467,7 @@
           <Comment><![CDATA[Duration (10 months)]]></Comment>
           <PrivateComment />
           <Order>2</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -5476,7 +5476,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Jan/21 - Oct/21]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[i_bbf_ab_br]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -5489,7 +5489,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls08_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -5502,7 +5502,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_sl]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -17649,7 +17649,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[kids and tween in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 48#m*nDepChildrenInTu#2
+            <Value><![CDATA[48#m*nDepChildrenInTu#2
 ]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
@@ -17821,7 +17821,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[teenagers in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 41#m*nDepChildrenInTu#3]]></Value>
+            <Value><![CDATA[41#m*nDepChildrenInTu#3]]></Value>
             <Order>12</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -17862,7 +17862,7 @@
           <Comment><![CDATA[Duration (10 months)]]></Comment>
           <PrivateComment />
           <Order>2</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -17871,7 +17871,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Jan/21 - Oct/21]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[i_bbf_ab_br]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -17884,7 +17884,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls08_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -17897,7 +17897,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_sl]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -23846,7 +23846,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[kids and tween in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 45#m*nDepChildrenInTu#2
+            <Value><![CDATA[45#m*nDepChildrenInTu#2
 ]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
@@ -24017,7 +24017,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[teenagers in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$base + 38#m*nDepChildrenInTu#3]]></Value>
+            <Value><![CDATA[38#m*nDepChildrenInTu#3]]></Value>
             <Order>12</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -24058,7 +24058,7 @@
           <Comment><![CDATA[Duration (10 months)]]></Comment>
           <PrivateComment />
           <Order>2</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -24067,7 +24067,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Jan/21 - Oct/21]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[i_bbf_ab_br]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -24080,7 +24080,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls08_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -24093,7 +24093,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_sl]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
