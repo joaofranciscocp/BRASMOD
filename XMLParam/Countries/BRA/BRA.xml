@@ -5168,7 +5168,7 @@
         <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
         <Name>bbf_ab_bra</Name>
         <Type>ben</Type>
-        <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
+        <Comment><![CDATA[BEN: Conditional cash transfer programs (Bolsa Família, Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
         <Switch>on</Switch>
@@ -5178,7 +5178,7 @@
           <ID>63cc5def-7dd0-4daa-950e-a8e883ab5e19</ID>
           <PolicyID>002d359b-6b29-48ab-9029-03b048c35182</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -5188,7 +5188,7 @@
             <ID>9f113ac5-fbdf-4a76-9255-5054fc3ef57e</ID>
             <FunctionID>63cc5def-7dd0-4daa-950e-a8e883ab5e19</FunctionID>
             <Name>i_bbf_ab_br</Name>
-            <Comment><![CDATA[intermediate variable]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>1</Order>
@@ -5229,7 +5229,7 @@
           <ID>28f83787-c80d-4f83-ac9d-cabd909d97e3</ID>
           <PolicyID>002d359b-6b29-48ab-9029-03b048c35182</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Bolsa Família - 2018 till 10/2021]]></Comment>
+          <Comment><![CDATA[Conditional cash transfers - Programa Bolsa Família (PBF) 2018- 10/2021]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -5241,8 +5241,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= 89
-]]></Value>
+            <Value><![CDATA[yhh00 <= 89]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -5293,7 +5292,7 @@
             <ID>446864dd-d8ce-4ef0-85da-0245d59803b8</ID>
             <FunctionID>28f83787-c80d-4f83-ac9d-cabd909d97e3</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off in monthly per capita household income defined by law. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
             <Value><![CDATA[89#m
 ]]></Value>
@@ -11365,7 +11364,7 @@
         <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
         <Name>bbf_ab_bra</Name>
         <Type>ben</Type>
-        <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
+        <Comment><![CDATA[BEN: Conditional cash transfer programs (Bolsa Família, Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
         <Switch>on</Switch>
@@ -11375,7 +11374,7 @@
           <ID>37006885-fd7e-463f-990b-43d13f650601</ID>
           <PolicyID>24bc6f34-cff8-48f1-bd82-bce700bbb1c0</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -11385,7 +11384,7 @@
             <ID>2f5fdfdf-b608-4d4f-86b0-48541e202b14</ID>
             <FunctionID>37006885-fd7e-463f-990b-43d13f650601</FunctionID>
             <Name>i_bbf_ab_br</Name>
-            <Comment><![CDATA[intermediate variable]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>1</Order>
@@ -11426,7 +11425,7 @@
           <ID>19cb4ce0-ff23-461e-970a-fa24e607871a</ID>
           <PolicyID>24bc6f34-cff8-48f1-bd82-bce700bbb1c0</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Bolsa Família - 2018 till 10/2021]]></Comment>
+          <Comment><![CDATA[Conditional cash transfers - Programa Bolsa Família (PBF) 2018- 10/2021]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -11438,9 +11437,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= $base
-
-]]></Value>
+            <Value><![CDATA[yhh00 <= 89]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -11490,7 +11487,7 @@
             <ID>8d3f9567-b74f-404a-8432-3deb19d9f49c</ID>
             <FunctionID>19cb4ce0-ff23-461e-970a-fa24e607871a</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off in monthly per capita household income defined by law. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
             <Value><![CDATA[89#m]]></Value>
             <Order>0</Order>
@@ -17562,7 +17559,7 @@
         <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
         <Name>bbf_ab_bra</Name>
         <Type>ben</Type>
-        <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
+        <Comment><![CDATA[BEN: Conditional cash transfer programs (Bolsa Família, Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
         <Switch>on</Switch>
@@ -17572,7 +17569,7 @@
           <ID>5596c746-d8ff-4c0b-b3cf-3ffe347c78c4</ID>
           <PolicyID>9f553b37-4e1a-4134-9f9d-16907273d0cc</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -17582,7 +17579,7 @@
             <ID>ad98a251-b081-4785-b5b8-9b0e09ef8ab8</ID>
             <FunctionID>5596c746-d8ff-4c0b-b3cf-3ffe347c78c4</FunctionID>
             <Name>i_bbf_ab_br</Name>
-            <Comment><![CDATA[intermediate variable]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>1</Order>
@@ -17623,7 +17620,7 @@
           <ID>dc438712-2775-424b-8175-9a1871fe1839</ID>
           <PolicyID>9f553b37-4e1a-4134-9f9d-16907273d0cc</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Bolsa Família - 2018 till 10/2021]]></Comment>
+          <Comment><![CDATA[Conditional cash transfers - Programa Bolsa Família (PBF) 2018- 10/2021]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -17635,8 +17632,8 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= 89
-]]></Value>
+            <Value><![CDATA[yhh00 <= 89
+ ]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -17687,7 +17684,7 @@
             <ID>6315f8f2-000c-4299-9633-d004a5951741</ID>
             <FunctionID>dc438712-2775-424b-8175-9a1871fe1839</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off in monthly per capita household income defined by law. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
             <Value><![CDATA[89#m
 ]]></Value>
@@ -23760,7 +23757,7 @@
         <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
         <Name>bbf_ab_bra</Name>
         <Type>ben</Type>
-        <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
+        <Comment><![CDATA[BEN: Conditional cash transfer programs (Bolsa Família, Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
         <Switch>on</Switch>
@@ -23770,7 +23767,7 @@
           <ID>0775436a-d8dc-4de8-958d-7642dc94a7d2</ID>
           <PolicyID>04191597-a389-4a43-bbaa-2f427c8fc2fa</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -23780,7 +23777,7 @@
             <ID>a40413cd-fb54-4e03-99ec-82fd3ec24ced</ID>
             <FunctionID>0775436a-d8dc-4de8-958d-7642dc94a7d2</FunctionID>
             <Name>i_bbf_ab_br</Name>
-            <Comment><![CDATA[intermediate variable]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>1</Order>
@@ -23821,7 +23818,7 @@
           <ID>3a813cb1-310d-453e-b4c6-4b9309a8d9d4</ID>
           <PolicyID>04191597-a389-4a43-bbaa-2f427c8fc2fa</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Bolsa Família - 2018 till 10/2021]]></Comment>
+          <Comment><![CDATA[Conditional cash transfers - Programa Bolsa Família (PBF) 2018- 10/2021]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -23833,7 +23830,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= 82]]></Value>
+            <Value><![CDATA[yhh00 <= 82]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -23884,7 +23881,7 @@
             <ID>f4156508-7497-47aa-98b3-bbdd0f60733d</ID>
             <FunctionID>3a813cb1-310d-453e-b4c6-4b9309a8d9d4</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off in monthly per capita household income defined by law. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
             <Value><![CDATA[82#m
 ]]></Value>
@@ -29956,7 +29953,7 @@
         <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
         <Name>bbf_ab_bra</Name>
         <Type>ben</Type>
-        <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
+        <Comment><![CDATA[BEN: Conditional cash transfer programs (Bolsa Família, Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
         <Switch>on</Switch>
@@ -29966,7 +29963,7 @@
           <ID>6977f47d-6827-463a-b41a-f8b4b0b90d79</ID>
           <PolicyID>d257e45e-162f-45c3-8bb6-a051985e0178</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -29976,7 +29973,7 @@
             <ID>d45978b3-8577-412f-82cf-40e683635a4e</ID>
             <FunctionID>6977f47d-6827-463a-b41a-f8b4b0b90d79</FunctionID>
             <Name>i_bbf_ab_br</Name>
-            <Comment><![CDATA[intermediate variable]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>1</Order>
@@ -30017,7 +30014,7 @@
           <ID>ac7f7766-82ac-4725-8856-8014e22c046b</ID>
           <PolicyID>d257e45e-162f-45c3-8bb6-a051985e0178</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Bolsa Família - 2018 till 10/2021]]></Comment>
+          <Comment><![CDATA[Conditional cash transfers - Programa Bolsa Família (PBF) 2018- 10/2021]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>n/a</Switch>
@@ -30079,7 +30076,7 @@
             <ID>1df928e3-48f5-4ec2-9387-c095d8273f4f</ID>
             <FunctionID>ac7f7766-82ac-4725-8856-8014e22c046b</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off in monthly per capita household income defined by law. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>0</Order>
