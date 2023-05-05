@@ -1,0 +1,21 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: sexta-feira, 5 de maio de 2023 15:21:22
+End: sexta-feira, 5 de maio de 2023 15:21:22
+Duration: 0,0576213s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+fac38f9d-02e6-48dd-9573-ac3c82310613	aborted	BRA_2019	pof euromod 2	sexta-feira, 5 de maio de 2023 15:21:22	sexta-feira, 5 de maio de 2023 15:21:22	0,0576213s	euro	1	-	bra_2019_std	n/a	bra_2019_std_hh	n/a
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: fac38f9d-02e6-48dd-9573-ac3c82310613
+ERROR: 10.5.1 bbf_ab_bra/BenCalc/Comp_Cond/isntomchild (3e00a137-cec5-4008-91e9-b9ae2093571c): compulsory query-parameter #_n missing
+ERROR: 10.5.1 bbf_ab_bra/BenCalc/Comp_Cond/isntomchild (3e00a137-cec5-4008-91e9-b9ae2093571c): compulsory query-parameter #_m missing
+WARNING: 10.5.2 bbf_ab_bra/BenCalc/#_n (06fdd13a-0fcd-4328-94fb-5a063dab3c20): unused footnote
+WARNING: 10.5.3 bbf_ab_bra/BenCalc/#_m (770eb701-620d-4587-ac6d-37b7b5e8acfc): unused footnote
+WARNING: 12.1.20 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.20 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found

@@ -1,0 +1,19 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: sexta-feira, 5 de maio de 2023 15:22:09
+End: sexta-feira, 5 de maio de 2023 15:22:12
+Duration: 3,7379248s
+Output-Path: c:\users\joao.perez\downloads\brasmod\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+e7e82efc-d0a9-45d6-8189-69973c0b03d2	aborted	BRA_2019	pof euromod 2	sexta-feira, 5 de maio de 2023 15:22:09	sexta-feira, 5 de maio de 2023 15:22:12	3,7379248s	euro	1	-	bra_2019_std	n/a	bra_2019_std_hh	n/a
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: e7e82efc-d0a9-45d6-8189-69973c0b03d2
+WARNING: 12.1.20 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.20 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+ERROR: Error writing output to c:\users\joao.perez\downloads\brasmod\brasmod\output\bra_2019_std.txt.
+O processo não pode acessar o arquivo 'c:\users\joao.perez\downloads\brasmod\brasmod\output\bra_2019_std.txt' porque ele está sendo usado por outro processo.
