@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quinta-feira, 4 de maio de 2023 15:46:38
+End: quinta-feira, 4 de maio de 2023 15:46:38
+Duration: 0,0689408s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+82ac4dea-1b4d-4c91-a652-be815722c1ee	aborted	BRA_2018	pof euromod 2	quinta-feira, 4 de maio de 2023 15:46:38	quinta-feira, 4 de maio de 2023 15:46:38	0,0689408s	euro	1	-	bra_2018_std	968205009deab5d066376294e2be5213	bra_2018_std_hh	fa57e9a27d496d6e7bc491cd74839000
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 82ac4dea-1b4d-4c91-a652-be815722c1ee
+ERROR: 10.3.2 bbf_ab_bra/BenCalc/Comp_Cond (1876d260-f7c0-43d6-b4d5-bb191d7fd6f4): unknown variable $bpbf_base
+ERROR: 10.3.3 bbf_ab_bra/BenCalc/Comp_perElig (771b35f3-ab4f-42d6-b1d8-745fd1c1a357): unknown variable $bpbf_base
+WARNING: 10.3.9 bbf_ab_bra/BenCalc/Comp_perElig (10cd7b70-afb1-44b2-91cc-0e5cc1d91175): missing footnote parameter for $bpbf_child#w
+ERROR: 10.3.9 bbf_ab_bra/BenCalc/Comp_perElig (10cd7b70-afb1-44b2-91cc-0e5cc1d91175): unknown variable $bpbf_child
+WARNING: 10.3.8 bbf_ab_bra/BenCalc/#_AgeMax (32558dcd-ddbd-4ac7-a7cd-23bdf47a4c43): unused footnote
+WARNING: 10.3.7 bbf_ab_bra/BenCalc/#_AgeMin (44e39897-6ee7-4d35-b0a6-791bb84d36e7): unused footnote
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
