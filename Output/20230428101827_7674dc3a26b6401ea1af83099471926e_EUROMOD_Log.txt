@@ -1,0 +1,22 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod-main
+Start: sexta-feira, 28 de abril de 2023 10:18:27
+End: sexta-feira, 28 de abril de 2023 10:18:27
+Duration: 0,1746901s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+c783c7f8-6a94-4c80-a11c-5eb6b8cfb923	aborted	BRA_2018	pof euromod 2	sexta-feira, 28 de abril de 2023 10:18:27	sexta-feira, 28 de abril de 2023 10:18:27	0,1746901s	euro	1	-	bra_2018_std	370c2165816f32c18c9e898bf6d2b9e1	bra_2018_std_hh	b940eab628c787d48a08d7c07dfbeade
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: c783c7f8-6a94-4c80-a11c-5eb6b8cfb923
+ERROR: 7.3 sic_sl/SchedCalc (13a393f3-ecb2-4eba-8827-682e866c57bd): Double definition of upper limit as 'Band_UpLim 1' and 'Band_LowLim 2'.
+ERROR: 7.3 sic_sl/SchedCalc (13a393f3-ecb2-4eba-8827-682e866c57bd): Double definition of upper limit as 'Band_UpLim 2' and 'Band_LowLim 3'.
+WARNING: 8.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable tscse_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: 12.1.25 output_std_sl/DefOutput/il (8be0b87f-96b9-4d10-a64d-e546f61f6d77): use of not initialised variable tscer_s
+WARNING: No applicable Uprate function found

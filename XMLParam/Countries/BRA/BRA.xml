@@ -1334,9 +1334,9 @@
           <ID>13a393f3-ecb2-4eba-8827-682e866c57bd</ID>
           <PolicyID>92396ca2-aaa4-4b02-805a-b6dbb23a6247</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employer's contribution]]></Comment>
+          <Comment><![CDATA[employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>1</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -1359,23 +1359,10 @@
             <Name>band_rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.1]]></Value>
+            <Value><![CDATA[0.08]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c1a6d90a-4647-4f01-8b0a-352b21bfe54c</ID>
-            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -1385,8 +1372,8 @@
             <Name>output_var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscer_s]]></Value>
-            <Order>4</Order>
+            <Value><![CDATA[tscee_s]]></Value>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1399,159 +1386,159 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <Order>11</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
-        </Function>
-        <Function>
-          <ID>5a23dba9-8a59-4edb-8055-45519bf9e264</ID>
-          <PolicyID>92396ca2-aaa4-4b02-805a-b6dbb23a6247</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private />
-          <Color>-1</Color>
           <Parameter>
-            <ID>4425cd0f-1a47-4bce-9e6b-39ef4aa44feb</ID>
-            <FunctionID>5a23dba9-8a59-4edb-8055-45519bf9e264</FunctionID>
-            <Name>base</Name>
+            <ID>53977671-37f9-4b54-a068-ef3ed2d1e97c</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yem]]></Value>
-            <Order>1</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.09]]></Value>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
-            <Group />
+            <Group>2</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>4271cf2e-e8f7-4e19-b3e9-5d9f6dc39fc4</ID>
-            <FunctionID>5a23dba9-8a59-4edb-8055-45519bf9e264</FunctionID>
-            <Name>band_rate</Name>
+            <ID>c1c08273-03c6-4a89-9714-8122f25ed4bf</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.05]]></Value>
-            <Order>2</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.11]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bb882c7e-d208-46c9-a9ca-85e0f5a8ac83</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bf98fc7e-59d4-4d41-862b-8b3f4b97497a</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1830.29#m]]></Value>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>1617c3f5-ac4c-4c88-aeab-a7a423365069</ID>
-            <FunctionID>5a23dba9-8a59-4edb-8055-45519bf9e264</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>46b7cc6c-d312-44fb-9203-44e8ba6483d9</ID>
-            <FunctionID>5a23dba9-8a59-4edb-8055-45519bf9e264</FunctionID>
-            <Name>output_var</Name>
+            <ID>389f6fef-9227-4926-93d3-3599071c8a4f</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscee_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>ea30f799-68e9-4b5b-8fea-e3b5ce37286b</ID>
-            <FunctionID>5a23dba9-8a59-4edb-8055-45519bf9e264</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[3050.52#m]]></Value>
             <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e3925b24-a181-4b9b-8094-b42144d5e146</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[6101.06#m]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9aad7eda-b10c-4bd7-95f6-2b48070df210</ID>
+            <FunctionID>13a393f3-ecb2-4eba-8827-682e866c57bd</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
         </Function>
         <Function>
-          <ID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</ID>
+          <ID>b1fe0dd0-726f-4070-914b-cb657143e22f</ID>
           <PolicyID>92396ca2-aaa4-4b02-805a-b6dbb23a6247</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[self-employed contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>2ebe1808-7f2a-404e-b393-11287a756739</ID>
+            <FunctionID>b1fe0dd0-726f-4070-914b-cb657143e22f</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[998.00#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>a41297a1-cd5c-4be4-b4e0-a30ea9748ced</ID>
+          <PolicyID>92396ca2-aaa4-4b02-805a-b6dbb23a6247</PolicyID>
+          <Name>Elig</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
           <Order>3</Order>
-          <Switch>on</Switch>
-          <Private />
+          <Switch>n/a</Switch>
+          <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
-            <ID>e23311e3-d5b9-4fac-abb5-6209d59a3074</ID>
-            <FunctionID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</FunctionID>
-            <Name>base</Name>
+            <ID>20e25ab6-501b-4960-9d05-e0c8bbc64edb</ID>
+            <FunctionID>a41297a1-cd5c-4be4-b4e0-a30ea9748ced</FunctionID>
+            <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yse]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
-            <ValueType>formula</ValueType>
+            <ValueType>condition</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>15ed818a-fb3a-4c99-b7d3-6a8ba0729d5e</ID>
-            <FunctionID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</FunctionID>
-            <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.13]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>8255794b-27fd-4ab0-ac82-ff10f3a7e8f1</ID>
-            <FunctionID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[325#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>8e4ded14-afc8-4ad5-baed-ccab4e00d014</ID>
-            <FunctionID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</FunctionID>
-            <Name>output_var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscse_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c99402db-5272-48be-a94b-a651b552ad16</ID>
-            <FunctionID>0b7dfd6a-c381-4987-8fb2-379abc61a2d7</FunctionID>
+            <ID>38605a6d-5e74-425d-ba5d-1025f68e9e65</ID>
+            <FunctionID>a41297a1-cd5c-4be4-b4e0-a30ea9748ced</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -4103,7 +4090,7 @@
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
         <Order>16</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -5158,7 +5145,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -6996,9 +6983,9 @@
           <ID>b88c7da2-362c-4380-8323-f87bc4f3938a</ID>
           <PolicyID>aa43991a-d141-4287-b154-8a4c93a3ea99</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employer's contribution]]></Comment>
+          <Comment><![CDATA[employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>1</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -7021,23 +7008,10 @@
             <Name>band_rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.1]]></Value>
+            <Value><![CDATA[0.075]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>a6cb66af-bb1e-4c47-a538-a50e45149718</ID>
-            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -7047,8 +7021,8 @@
             <Name>output_var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscer_s]]></Value>
-            <Order>4</Order>
+            <Value><![CDATA[tscee_s]]></Value>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7061,159 +7035,159 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <Order>11</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
-        </Function>
-        <Function>
-          <ID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</ID>
-          <PolicyID>aa43991a-d141-4287-b154-8a4c93a3ea99</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private />
-          <Color>-1</Color>
           <Parameter>
-            <ID>25fc5304-ea9d-431e-a61e-f68a521ec4a6</ID>
-            <FunctionID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</FunctionID>
-            <Name>base</Name>
+            <ID>a9c03d3e-d07f-4931-b496-202214d5c946</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yem]]></Value>
-            <Order>1</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.09]]></Value>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
-            <Group />
+            <Group>2</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>7d8583b6-76eb-4fb9-bdb3-bb803a99b57d</ID>
-            <FunctionID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</FunctionID>
-            <Name>band_rate</Name>
+            <ID>b8372f26-95ba-4455-999e-16d6eb06190f</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.05]]></Value>
-            <Order>2</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.12]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1282ed68-b7ef-4fbc-88cc-74f1cfa2b33e</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0.14]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f53b936f-15a1-4247-9afa-b3abf43c2951</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1100.00#m]]></Value>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>4a5eaa76-674b-4319-a98c-91d0379a4d11</ID>
-            <FunctionID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>8a0ecdaa-a682-41d9-abf2-7199f70a5dd6</ID>
-            <FunctionID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</FunctionID>
-            <Name>output_var</Name>
+            <ID>f67a4907-d4b5-4188-a902-f92e1e9b8a40</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscee_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>cc48a7fa-c3db-4eed-a66a-64eb3bc541eb</ID>
-            <FunctionID>924c3bbc-5bd3-4b41-a00f-434c3a8d120a</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[2203.49#m]]></Value>
             <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e18a2e1f-f951-4abe-8e84-8c3bfcf2ab0c</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[3305.22#m]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>06d5d92a-2d17-421b-a2e7-88695cc401df</ID>
+            <FunctionID>b88c7da2-362c-4380-8323-f87bc4f3938a</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[6433.57#m]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
         </Function>
         <Function>
-          <ID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</ID>
+          <ID>f0f545e1-72f9-4703-b595-d58322aec8db</ID>
           <PolicyID>aa43991a-d141-4287-b154-8a4c93a3ea99</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[self-employed contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>d9bd1d34-e5ba-4c28-b69c-19a33ffc5cf8</ID>
+            <FunctionID>f0f545e1-72f9-4703-b595-d58322aec8db</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1100.00#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>ca4889d0-71bd-4cec-aa30-1e9c84856573</ID>
+          <PolicyID>aa43991a-d141-4287-b154-8a4c93a3ea99</PolicyID>
+          <Name>Elig</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
           <Order>3</Order>
-          <Switch>on</Switch>
-          <Private />
+          <Switch>n/a</Switch>
+          <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
-            <ID>b5319fe0-b7e0-4ccf-932d-2daed03b9ec5</ID>
-            <FunctionID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</FunctionID>
-            <Name>base</Name>
+            <ID>fd921c65-7873-4980-875b-3c689bfbb4a7</ID>
+            <FunctionID>ca4889d0-71bd-4cec-aa30-1e9c84856573</FunctionID>
+            <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yse]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
-            <ValueType>formula</ValueType>
+            <ValueType>condition</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>83733aaa-fdd5-4a7d-91ca-67fe9da22e26</ID>
-            <FunctionID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</FunctionID>
-            <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.13]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>7862f0d5-da68-4848-bcaa-31b128a2738d</ID>
-            <FunctionID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[325#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>ee0e268f-6171-4ec8-b131-107975ed8058</ID>
-            <FunctionID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</FunctionID>
-            <Name>output_var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscse_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>344e7cba-f60c-4c92-a0bc-b2f9cea27e24</ID>
-            <FunctionID>01a2a49f-f968-4dfa-afd3-258b7b6b9504</FunctionID>
+            <ID>f3df21ca-0834-4dd3-bdd9-f3a974ae51cc</ID>
+            <FunctionID>ca4889d0-71bd-4cec-aa30-1e9c84856573</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9765,7 +9739,7 @@
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
         <Order>16</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -10819,7 +10793,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -12660,9 +12634,9 @@
           <ID>cd893b76-e56e-4afa-bb11-0e1049dc5728</ID>
           <PolicyID>3f7f85b2-61fb-4398-aa02-2a7544691983</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employer's contribution]]></Comment>
+          <Comment><![CDATA[employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>1</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -12685,23 +12659,10 @@
             <Name>band_rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.1]]></Value>
+            <Value><![CDATA[0.08]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>b69e1d1b-6fd3-40db-9721-ebb94b034369</ID>
-            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -12711,8 +12672,8 @@
             <Name>output_var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscer_s]]></Value>
-            <Order>4</Order>
+            <Value><![CDATA[tscee_s]]></Value>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -12725,159 +12686,159 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <Order>11</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
-        </Function>
-        <Function>
-          <ID>3320e7f7-f15f-463e-a804-f73903be9d04</ID>
-          <PolicyID>3f7f85b2-61fb-4398-aa02-2a7544691983</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private />
-          <Color>-1</Color>
           <Parameter>
-            <ID>32155b56-88dd-40f7-9af3-eed59832992d</ID>
-            <FunctionID>3320e7f7-f15f-463e-a804-f73903be9d04</FunctionID>
-            <Name>base</Name>
+            <ID>44fc6287-50ab-4fa8-b110-0532973a6c7e</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yem]]></Value>
-            <Order>1</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.09]]></Value>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
-            <Group />
+            <Group>2</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>5806b566-fdd3-4ca4-8ec0-57459f220d32</ID>
-            <FunctionID>3320e7f7-f15f-463e-a804-f73903be9d04</FunctionID>
-            <Name>band_rate</Name>
+            <ID>44136d8e-2d1f-4aff-b1c5-a32f726c94b3</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.05]]></Value>
-            <Order>2</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.11]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>87b7b020-d66f-4f00-ab65-14f1299db4e8</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4230d154-f644-45f8-9617-e3bbea5a874a</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1751.81#m]]></Value>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>2f544db5-ea5e-49f5-9f70-7491a86344e9</ID>
-            <FunctionID>3320e7f7-f15f-463e-a804-f73903be9d04</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d6413685-06aa-4f12-a4f9-608811def8e3</ID>
-            <FunctionID>3320e7f7-f15f-463e-a804-f73903be9d04</FunctionID>
-            <Name>output_var</Name>
+            <ID>c6022202-73f9-4c75-b2aa-870fd97e5b69</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscee_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2226224b-8176-46d6-a243-05d6bf5347ce</ID>
-            <FunctionID>3320e7f7-f15f-463e-a804-f73903be9d04</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[2919.72#m]]></Value>
             <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>72a91801-3e63-4591-b4b0-e001fad2b740</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[5839.45#m]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>22564c8b-92bb-4307-b18d-4f11a6000898</ID>
+            <FunctionID>cd893b76-e56e-4afa-bb11-0e1049dc5728</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
         </Function>
         <Function>
-          <ID>f0698126-0796-46f3-a131-382553dc6f59</ID>
+          <ID>87710946-c932-4996-8ebc-3053bd44a129</ID>
           <PolicyID>3f7f85b2-61fb-4398-aa02-2a7544691983</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[self-employed contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>5a0e3ae9-39c4-4c41-bfb1-b94c97692949</ID>
+            <FunctionID>87710946-c932-4996-8ebc-3053bd44a129</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[998.00#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>1103ac2b-fb04-4fab-84be-465b55d5b923</ID>
+          <PolicyID>3f7f85b2-61fb-4398-aa02-2a7544691983</PolicyID>
+          <Name>Elig</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
           <Order>3</Order>
-          <Switch>on</Switch>
-          <Private />
+          <Switch>n/a</Switch>
+          <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
-            <ID>09e9b0b2-711b-47ba-95ff-7583bafbeceb</ID>
-            <FunctionID>f0698126-0796-46f3-a131-382553dc6f59</FunctionID>
-            <Name>base</Name>
+            <ID>3b1f69f2-6b16-41b6-ac75-dead3078d47e</ID>
+            <FunctionID>1103ac2b-fb04-4fab-84be-465b55d5b923</FunctionID>
+            <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yse]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
-            <ValueType>formula</ValueType>
+            <ValueType>condition</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>da0d8339-cae9-4930-b873-6f3bda7e118f</ID>
-            <FunctionID>f0698126-0796-46f3-a131-382553dc6f59</FunctionID>
-            <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.13]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2860cadb-f630-4303-8aeb-9cdb1fd07820</ID>
-            <FunctionID>f0698126-0796-46f3-a131-382553dc6f59</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[325#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9b67154f-6b9a-4f6e-8773-f753fc8f9c8c</ID>
-            <FunctionID>f0698126-0796-46f3-a131-382553dc6f59</FunctionID>
-            <Name>output_var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscse_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>34399e5d-fad4-422a-87ac-66bbf6ed8638</ID>
-            <FunctionID>f0698126-0796-46f3-a131-382553dc6f59</FunctionID>
+            <ID>79be93a2-39f7-4d79-bd7b-e7ff3fe096c4</ID>
+            <FunctionID>1103ac2b-fb04-4fab-84be-465b55d5b923</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16483,7 +16444,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -18323,9 +18284,9 @@
           <ID>fa4080b9-707b-4cb6-8d5c-add9a9542453</ID>
           <PolicyID>5fd7ebb9-423e-4b93-8b96-3d4936623346</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employer's contribution]]></Comment>
+          <Comment><![CDATA[employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>1</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -18348,23 +18309,10 @@
             <Name>band_rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.1]]></Value>
+            <Value><![CDATA[0.08]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>074c045e-4705-4a8d-8aa6-edf3895bd734</ID>
-            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -18374,8 +18322,8 @@
             <Name>output_var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscer_s]]></Value>
-            <Order>4</Order>
+            <Value><![CDATA[tscee_s]]></Value>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -18388,159 +18336,159 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <Order>11</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
-        </Function>
-        <Function>
-          <ID>8021a51f-8e50-461b-9149-63d6e825de3f</ID>
-          <PolicyID>5fd7ebb9-423e-4b93-8b96-3d4936623346</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private />
-          <Color>-1</Color>
           <Parameter>
-            <ID>bf31c3d8-23ea-4d96-9984-c2669e186bd7</ID>
-            <FunctionID>8021a51f-8e50-461b-9149-63d6e825de3f</FunctionID>
-            <Name>base</Name>
+            <ID>fae3c486-3506-43f1-aaed-59895a5333cd</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yem]]></Value>
-            <Order>1</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.09]]></Value>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
-            <Group />
+            <Group>2</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>4e24452f-153a-4816-ab00-37e7b0ebd21c</ID>
-            <FunctionID>8021a51f-8e50-461b-9149-63d6e825de3f</FunctionID>
-            <Name>band_rate</Name>
+            <ID>0eb1d785-c17e-45b4-80b2-47881ad16436</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.05]]></Value>
-            <Order>2</Order>
+            <PrivateComment />
+            <Value><![CDATA[0.11]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b70dc146-8f36-4fc1-bd5b-562a07c24877</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1388bb12-ca81-4e70-9a8d-e9f67efd7871</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1693.72#m]]></Value>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>dc07688a-beed-4e32-bf9c-92bd0946150d</ID>
-            <FunctionID>8021a51f-8e50-461b-9149-63d6e825de3f</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[i.e. switched off]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[999999999.99#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>5217858c-1dd1-48af-ae88-23bb43c4c66d</ID>
-            <FunctionID>8021a51f-8e50-461b-9149-63d6e825de3f</FunctionID>
-            <Name>output_var</Name>
+            <ID>445f42c4-b2fd-4d7d-9831-53526d97a631</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscee_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>234f9336-c8b4-4db8-919a-6a6bf9f92013</ID>
-            <FunctionID>8021a51f-8e50-461b-9149-63d6e825de3f</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tu_individual_sl]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[2822.90#m]]></Value>
             <Order>5</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9dcb5e4b-3ceb-4472-9071-e02bcd4b9dfa</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[5645.80#m]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>10f42e7a-0b13-48c0-a8de-7b43133ae8de</ID>
+            <FunctionID>fa4080b9-707b-4cb6-8d5c-add9a9542453</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
         </Function>
         <Function>
-          <ID>66d9f73e-93bb-4cee-9305-0c514e381dc8</ID>
+          <ID>74925de9-46a2-4b04-8874-e65e25cc7599</ID>
           <PolicyID>5fd7ebb9-423e-4b93-8b96-3d4936623346</PolicyID>
-          <Name>SchedCalc</Name>
-          <Comment><![CDATA[self-employed contribution]]></Comment>
-          <PrivateComment>""</PrivateComment>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e8f52889-92ce-4781-a9ee-cd972b2e1f6f</ID>
+            <FunctionID>74925de9-46a2-4b04-8874-e65e25cc7599</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[954.00#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>275e6f5d-36e0-4e96-9247-b9439d0c7020</ID>
+          <PolicyID>5fd7ebb9-423e-4b93-8b96-3d4936623346</PolicyID>
+          <Name>Elig</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
           <Order>3</Order>
-          <Switch>on</Switch>
-          <Private />
+          <Switch>off</Switch>
+          <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
-            <ID>5e4477d8-a501-4122-8ceb-43498a116b01</ID>
-            <FunctionID>66d9f73e-93bb-4cee-9305-0c514e381dc8</FunctionID>
-            <Name>base</Name>
+            <ID>19e19a51-be03-4618-890b-fab38dab38a0</ID>
+            <FunctionID>275e6f5d-36e0-4e96-9247-b9439d0c7020</FunctionID>
+            <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[yse]]></Value>
+            <PrivateComment />
+            <Value><![CDATA[les=3]]></Value>
             <Order>1</Order>
-            <ValueType>formula</ValueType>
+            <ValueType>condition</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>e49a0aa5-2b5a-42e9-96ff-8f9e69e39931</ID>
-            <FunctionID>66d9f73e-93bb-4cee-9305-0c514e381dc8</FunctionID>
-            <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[0.13]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>f80eceb2-c536-4a01-983e-e287412eb434</ID>
-            <FunctionID>66d9f73e-93bb-4cee-9305-0c514e381dc8</FunctionID>
-            <Name>uplim</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[325#m]]></Value>
-            <Order>3</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>677aebc5-dcc0-4a77-9f3d-09b39d0cffd5</ID>
-            <FunctionID>66d9f73e-93bb-4cee-9305-0c514e381dc8</FunctionID>
-            <Name>output_var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
-            <Value><![CDATA[tscse_s]]></Value>
-            <Order>4</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fc393dcd-66ac-425f-b166-3653a354098f</ID>
-            <FunctionID>66d9f73e-93bb-4cee-9305-0c514e381dc8</FunctionID>
+            <ID>1a0ad230-80d8-4151-a88e-e260197c87d9</ID>
+            <FunctionID>275e6f5d-36e0-4e96-9247-b9439d0c7020</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
-            <PrivateComment>""</PrivateComment>
+            <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>5</Order>
+            <Order>2</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -22146,7 +22094,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Bolsa Família, later renamed Auxílio-Brasil)]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>

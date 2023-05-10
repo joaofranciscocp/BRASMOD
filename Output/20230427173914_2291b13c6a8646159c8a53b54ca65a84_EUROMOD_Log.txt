@@ -1,0 +1,27 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod-main
+Start: quinta-feira, 27 de abril de 2023 17:39:14
+End: quinta-feira, 27 de abril de 2023 17:39:14
+Duration: 0,2997138s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+6ea16d4a-84a9-4d0d-8436-596ad1d595a7	aborted	BRA_2018	pof euromod 2	quinta-feira, 27 de abril de 2023 17:39:14	quinta-feira, 27 de abril de 2023 17:39:14	0,2997138s	euro	1	-	bra_2018_std	2d73d8cd1925d1e7b85a59785ac20a34	bra_2018_std_hh	127ebf54815a7a691c1503dc37d92ffb
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 6ea16d4a-84a9-4d0d-8436-596ad1d595a7
+ERROR: 7.1 sic_sl/SchedCalc (13a393f3-ecb2-4eba-8827-682e866c57bd): Band 1: insufficient definition of upper limit. Use parameters 'band_uplim' or 'band_lowlim'(+1).
+ERROR: 7.1 sic_sl/SchedCalc (13a393f3-ecb2-4eba-8827-682e866c57bd): Band 2: insufficient definition of upper limit. Use parameters 'band_uplim' or 'band_lowlim'(+1).
+WARNING: 7.1.5 sic_sl/SchedCalc/#_UpLim (f673909c-5e2c-4f1f-a523-c2e7ff0b7014): unused footnote
+WARNING: 7.1.7 sic_sl/SchedCalc/#_UpLim (b1e9cca1-76e6-4b38-b4b0-c2450c73e73b): unused footnote
+WARNING: 7.1.3 sic_sl/SchedCalc/#_UpLim (6e040a3a-8a9e-44f9-8313-c336ed9fce3d): unused footnote
+ERROR: 7.2.2 sic_sl/SchedCalc/Run_Cond (720f7950-5662-4cfb-a412-e45e00ab9f3a): Formula error: Unexpected token '<' found in position 7 of the formula.
+ERROR: 7.2.2 sic_sl/SchedCalc/Run_Cond (720f7950-5662-4cfb-a412-e45e00ab9f3a): Referência de objeto não definida para uma instância de um objeto.
+WARNING: 8.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable tscse_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: 12.1.25 output_std_sl/DefOutput/il (8be0b87f-96b9-4d10-a64d-e546f61f6d77): use of not initialised variable tscer_s
+WARNING: No applicable Uprate function found

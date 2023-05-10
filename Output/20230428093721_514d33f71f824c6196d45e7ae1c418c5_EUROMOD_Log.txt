@@ -1,0 +1,20 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod-main
+Start: sexta-feira, 28 de abril de 2023 09:37:20
+End: sexta-feira, 28 de abril de 2023 09:37:21
+Duration: 0,190724s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+dd887d2a-713e-40ca-8f03-9f284f078d69	aborted	BRA_2018	pof euromod 2	sexta-feira, 28 de abril de 2023 09:37:20	sexta-feira, 28 de abril de 2023 09:37:21	0,190724s	euro	1	-	bra_2018_std	0fb1c278c9d071f58b292288be724d0e	bra_2018_std_hh	8faa016904df273ad8ea8f1b8480aa4d
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: dd887d2a-713e-40ca-8f03-9f284f078d69
+ERROR: 7.4.1 sic_sl/Elig/Elig_Cond (37825fa3-9b11-4f67-ad7c-f1b3b0ec68b9): unknown variable se
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: 12.1.25 output_std_sl/DefOutput/il (8be0b87f-96b9-4d10-a64d-e546f61f6d77): use of not initialised variable tscer_s
+WARNING: No applicable Uprate function found

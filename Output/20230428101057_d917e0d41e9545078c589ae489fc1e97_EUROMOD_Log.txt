@@ -1,0 +1,21 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.2
+Project: brasmod-main
+Start: sexta-feira, 28 de abril de 2023 10:10:49
+End: sexta-feira, 28 de abril de 2023 10:10:57
+Duration: 7,5857108s
+Output-Path: c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+e0383435-8cab-43ef-92b5-a36da76352f9	aborted	BRA_2018	pof euromod 2	sexta-feira, 28 de abril de 2023 10:10:49	sexta-feira, 28 de abril de 2023 10:10:57	7,5857108s	euro	1	-	bra_2018_std	n/a	bra_2018_std_hh	9df907d281b0825c7108b137e6229b78
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: e0383435-8cab-43ef-92b5-a36da76352f9
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 12.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: 12.1.25 output_std_sl/DefOutput/il (8be0b87f-96b9-4d10-a64d-e546f61f6d77): use of not initialised variable tscer_s
+WARNING: No applicable Uprate function found
+ERROR: Error writing output to c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\bra_2018_std.txt.
+O processo não pode acessar o arquivo 'c:\josé\usp\trabalho\made\brasmod\brasmod-main\output\bra_2018_std.txt' porque ele está sendo usado por outro processo.
