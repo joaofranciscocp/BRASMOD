@@ -236,4 +236,112 @@
       <BestMatch>no</BestMatch>
     </DBSystemConfig>
   </DataBase>
+  <DataBase>
+    <ID>fc48ffeb-52f7-43b0-9aeb-1b222cf5ace2</ID>
+    <Name>pnad2019 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>fc48ffeb-52f7-43b0-9aeb-1b222cf5ace2</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</ID>
+    <Name>pnad2019 euromod 2</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>1fa9f43a-8f41-41b5-98fe-c2762b40cb32</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>5f579688-dade-458f-bbfa-3bb1f775fe2e</ID>
+    <Name>pnad2020 euromod 2</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>5f579688-dade-458f-bbfa-3bb1f775fe2e</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
 </DataConfig>

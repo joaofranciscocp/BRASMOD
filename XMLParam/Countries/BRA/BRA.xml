@@ -5332,7 +5332,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= 89 &  IsNtoMchild#2 & (dec = 1)]]></Value>
+            <Value><![CDATA[IsDepChild & dag<=15 & dec > 0 & IsNtoMchild#2 & yhh00#1<= $povline]]></Value>
             <Order>4</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -5345,7 +5345,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ils_origy <= 89 & IsNtoMchild#3]]></Value>
+            <Value><![CDATA[yhh00#1 <= $extrempovline]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -5358,8 +5358,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[kids and tween in the family]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[48#m*nDepChildrenInTu#2
-]]></Value>
+            <Value><![CDATA[$bpbf_bv]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -5398,7 +5397,7 @@
             <Name>#_Level</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_individual_sl]]></Value>
             <Order>2</Order>
             <ValueType>taxunit</ValueType>
             <Group>1</Group>
@@ -5411,7 +5410,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[$bpbf_bb]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -5424,7 +5423,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[2]]></Value>
             <Order>11</Order>
             <ValueType>amount</ValueType>
             <Group>3</Group>
@@ -5437,7 +5436,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[1]]></Value>
             <Order>10</Order>
             <ValueType>amount</ValueType>
             <Group>3</Group>
@@ -5450,7 +5449,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[$bpbf_bvj]]></Value>
             <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -5463,7 +5462,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & yhh00#1<= $povline]]></Value>
             <Order>8</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
@@ -6218,7 +6217,7 @@
           <Comment><![CDATA[Benefit values ]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -6227,7 +6226,7 @@
             <Name>$bpbf_bb</Name>
             <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off (defined by Brazilian law) in monthly per capita household income. From 06/2016 to 06/2018, the cut-off was R$82,00. In July 2018, it was updated to R$89,00.]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[89#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -6240,7 +6239,7 @@
             <Name>$bpbf_bv</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[41#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -6253,7 +6252,7 @@
             <Name>$bpbf_bvj</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[48#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -6266,7 +6265,7 @@
             <Name>$extrempovline</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[89#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -6279,7 +6278,7 @@
             <Name>$povline</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[178#m]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
@@ -17901,7 +17900,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<=15 & dec>0 & IsNtoMchild#2 & yhh00#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag<=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & yhh00#1<= $povline]]></Value>
             <Order>4</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -18032,7 +18031,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild &  dag>15 & dag<18 & dec>0 & IsNtoMchild#3 & yhh00#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & yhh00#1<= $povline]]></Value>
             <Order>8</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
