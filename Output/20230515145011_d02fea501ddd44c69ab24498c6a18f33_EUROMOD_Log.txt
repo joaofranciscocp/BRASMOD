@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.5.8
+Project: brasmod
+Start: segunda-feira, 15 de maio de 2023 14:50:04
+End: segunda-feira, 15 de maio de 2023 14:50:11
+Duration: 7,7024606s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+1a6bb4cf-8b44-473a-8dd1-4019879522f7	finished	BRA_2020	pof euromod 2	segunda-feira, 15 de maio de 2023 14:50:04	segunda-feira, 15 de maio de 2023 14:50:11	7,7024606s	euro	1	-	bra_2020_std	c42a9c87929188859d747253f10da68f	bra_2020_std_hh	737834642bfc74eb6179cc209985df96
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 1a6bb4cf-8b44-473a-8dd1-4019879522f7
+WARNING: 8.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable tscse_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls01_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls02_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 12.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 12.1.25 output_std_sl/DefOutput/il (8be0b87f-96b9-4d10-a64d-e546f61f6d77): use of not initialised variable tscer_s
+WARNING: No applicable Uprate function found
