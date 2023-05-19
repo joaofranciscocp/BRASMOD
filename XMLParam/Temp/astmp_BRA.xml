@@ -1881,7 +1881,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1894,7 +1894,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1907,7 +1907,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1920,7 +1920,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1933,7 +1933,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1946,7 +1946,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1959,7 +1959,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1972,7 +1972,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>20</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1985,7 +1985,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>21</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1998,7 +1998,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>22</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2011,7 +2011,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>23</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2024,7 +2024,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>24</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2037,7 +2037,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>27</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2050,7 +2050,7 @@
             <Comment><![CDATA[lemloyee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>28</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2063,7 +2063,7 @@
             <Comment><![CDATA[lemloyer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>30</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2076,7 +2076,7 @@
             <Comment><![CDATA[self-lemloyed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>31</Order>
+            <Order>35</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2089,7 +2089,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>32</Order>
+            <Order>36</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2102,7 +2102,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>33</Order>
+            <Order>37</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2115,7 +2115,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>34</Order>
+            <Order>38</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2128,7 +2128,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>35</Order>
+            <Order>39</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2141,7 +2141,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>36</Order>
+            <Order>40</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2154,7 +2154,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>25</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2167,7 +2167,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>26</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2180,7 +2180,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>29</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2193,7 +2193,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[poa01]]></Value>
-            <Order>15</Order>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2206,7 +2206,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bun]]></Value>
-            <Order>16</Order>
+            <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2219,7 +2219,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh00]]></Value>
-            <Order>17</Order>
+            <Order>18</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2232,7 +2232,85 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>939c1318-2014-4999-a0f3-1c585660cf48</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bls04_s]]></Value>
+            <Order>20</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eebda6a1-7c28-4e9a-844a-df04f89d62cd</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>41</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4d678870-c3b4-48ce-90d5-f58baba899c2</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>42</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1c43aad4-a94c-4454-a25f-c7ddc75b16a8</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bls05_s]]></Value>
+            <Order>21</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>34329ac0-bd25-4a62-aff6-f39edc02e506</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bls06_s]]></Value>
+            <Order>22</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>69c1e31f-3a41-402e-b59c-4637d44aad0f</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[Stratum]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[dst]]></Value>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -4815,7 +4893,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income <=3*yem_bra 3) personal income 2 years before<28 559,70 3) no formal job 4) 2 or more people in the household]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (yhh00#1 <=0.5*minwage |  yhh#1 <=3*minwage) & (pers_inc_2019#1)*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU#1 >=2]]></Value>
+            <Value><![CDATA[dag>=18 & (yhh00#1 <=0.5*minwage |  yhh#1 <=3*minwage) & (pers_inc_2019#1)*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU >=2]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -7827,7 +7905,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7840,7 +7918,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7853,7 +7931,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7866,7 +7944,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7879,7 +7957,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7892,7 +7970,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7905,7 +7983,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7918,7 +7996,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>20</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7931,7 +8009,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>21</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7944,7 +8022,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>22</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7957,7 +8035,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>23</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7970,7 +8048,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>24</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7983,7 +8061,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>27</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -7996,7 +8074,7 @@
             <Comment><![CDATA[lemloyee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>28</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8009,7 +8087,7 @@
             <Comment><![CDATA[lemloyer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>30</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8022,7 +8100,7 @@
             <Comment><![CDATA[self-lemloyed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>31</Order>
+            <Order>35</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8035,7 +8113,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>32</Order>
+            <Order>36</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8048,7 +8126,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>33</Order>
+            <Order>37</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8061,7 +8139,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>34</Order>
+            <Order>38</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8074,7 +8152,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>35</Order>
+            <Order>39</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8087,7 +8165,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>36</Order>
+            <Order>40</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8100,7 +8178,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>25</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8113,7 +8191,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>26</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8126,7 +8204,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>29</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8139,7 +8217,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8152,7 +8230,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8165,7 +8243,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>17</Order>
+            <Order>18</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8178,7 +8256,85 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2f7eb107-7a59-4d70-9368-38d5177476d0</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>20</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2721be40-9547-4fa3-b674-af5b71d0a16f</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>41</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c8ec00a5-a2a6-4706-9eb6-c677e5f2006d</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>42</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e48a9ff2-8dff-43c9-9591-e71636cfaf54</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>21</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7f5a3f5c-de63-4f9d-93df-f9b8336c5179</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>22</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bed5e12c-8983-4511-8ae8-b10d6bd95fe4</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[Stratum]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[dst]]></Value>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13772,7 +13928,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13785,7 +13941,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13798,7 +13954,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13811,7 +13967,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13824,7 +13980,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13837,7 +13993,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13850,7 +14006,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13863,7 +14019,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>20</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13876,7 +14032,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>21</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13889,7 +14045,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>22</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13902,7 +14058,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>23</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13915,7 +14071,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>24</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13928,7 +14084,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>27</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13941,7 +14097,7 @@
             <Comment><![CDATA[lemloyee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>28</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13954,7 +14110,7 @@
             <Comment><![CDATA[lemloyer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>30</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13967,7 +14123,7 @@
             <Comment><![CDATA[self-lemloyed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>31</Order>
+            <Order>35</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13980,7 +14136,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>32</Order>
+            <Order>36</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13993,7 +14149,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>33</Order>
+            <Order>37</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14006,7 +14162,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>34</Order>
+            <Order>38</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14019,7 +14175,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>35</Order>
+            <Order>39</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14032,7 +14188,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>36</Order>
+            <Order>40</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14045,7 +14201,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>25</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14058,7 +14214,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>26</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14071,7 +14227,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>29</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14084,7 +14240,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14097,7 +14253,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14110,7 +14266,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>17</Order>
+            <Order>18</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14123,7 +14279,85 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>34c07205-582b-4a9a-9e59-556e6306c6a9</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>20</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7f5945ee-ff9e-475c-a53d-0dff6595eea8</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>41</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>387c3bfc-7a2d-46a4-9bf3-99a33b312e37</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>42</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0143dcb7-0381-4ddd-ab19-01cf1ed40ee0</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>21</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e076a65c-72a3-4370-9357-35d8c1f5183f</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>22</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d3466732-1adc-4958-99ab-79746bad6143</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[Stratum]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[dst]]></Value>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19715,7 +19949,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19728,7 +19962,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19741,7 +19975,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19754,7 +19988,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19767,7 +20001,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19780,7 +20014,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19793,7 +20027,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19806,7 +20040,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>20</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19819,7 +20053,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>21</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19832,7 +20066,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>22</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19845,7 +20079,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>23</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19858,7 +20092,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>24</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19871,7 +20105,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>27</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19884,7 +20118,7 @@
             <Comment><![CDATA[lemloyee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>28</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19897,7 +20131,7 @@
             <Comment><![CDATA[lemloyer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>30</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19910,7 +20144,7 @@
             <Comment><![CDATA[self-lemloyed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>31</Order>
+            <Order>35</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19923,7 +20157,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>32</Order>
+            <Order>36</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19936,7 +20170,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>33</Order>
+            <Order>37</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19949,7 +20183,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>34</Order>
+            <Order>38</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19962,7 +20196,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>35</Order>
+            <Order>39</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19975,7 +20209,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>36</Order>
+            <Order>40</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -19988,7 +20222,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>25</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20001,7 +20235,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>26</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20014,7 +20248,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>29</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20027,7 +20261,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[poa01]]></Value>
-            <Order>15</Order>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20040,7 +20274,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bun]]></Value>
-            <Order>16</Order>
+            <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20053,7 +20287,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh00]]></Value>
-            <Order>17</Order>
+            <Order>18</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20066,7 +20300,85 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>83de48eb-0136-4091-83b5-7979c735fbe0</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>20</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ed30d2a1-3cf6-429c-b453-32d4df2284bc</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>41</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>78a8723a-3647-478c-afa6-14374146dceb</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>42</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>82bb7c77-fae1-4fb8-86e8-9926bf1711c9</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>21</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>313b55bb-4399-47cd-9a8f-9c967612687c</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>22</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d3e3f69e-22d1-463c-8957-7b044c1ee8c0</ID>
+            <FunctionID>4a822826-3485-44d4-95f1-a7ba42f4a3a4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[Stratum]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[dst]]></Value>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>

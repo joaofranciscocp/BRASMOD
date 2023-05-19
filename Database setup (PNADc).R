@@ -131,7 +131,8 @@ base_ids$dct <- "76"
 base_ids <- base_ids %>% 
   rename(dwt = V1032,
          dag = V2009,
-         dgn = V2007) %>% 
+         dgn = V2007,
+         dst = Estrato) %>% 
   mutate(dgn = case_when(dgn == "Homem" ~ 1,
                          dgn == "Mulher" ~ 2))
 
@@ -277,8 +278,8 @@ base_lem <- base_bun %>%
 base <- base_lem
 
 #Select mandatory variables for Euromod and make final adjustments
-base_final <- base_lem %>% 
-  select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
+base_final <- base %>% 
+  select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dst, dag,
          dec, les, lpmfc, yem, yem00, yem01, dgn, lhw, dms, loc, yse, yiy, ddi, 
          poa, poa01, yhh, yhh00) %>% 
   mutate(across(everything(), as.character),
