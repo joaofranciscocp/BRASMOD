@@ -3455,7 +3455,7 @@
     </PAR>
     <PAR>
       <ID>4d23fb44-f377-4dbf-abc7-a4aa53b92122</ID>
-      <Name>Output_Add_Var</Name>
+      <Name>Output_Var</Name>
       <FunID>a504fc4c-28ab-4a21-b8b2-35d596f17289</FunID>
       <Comment><![CDATA[]]></Comment>
     </PAR>
@@ -5979,13 +5979,13 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <FunID>4212d08b-8aee-4e6e-ab17-425e4cea1af2</FunID>
       <Order>9</Order>
-      <Switch>on</Switch>
+      <Switch>off</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <FunID>a504fc4c-28ab-4a21-b8b2-35d596f17289</FunID>
       <Order>10</Order>
-      <Switch>on</Switch>
+      <Switch>off</Switch>
     </SYS_FUN>
     <SYS_FUN>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -14243,13 +14243,13 @@
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>78b47fdf-a3a3-4796-993f-2a3a19e048f0</ParID>
       <Order>2</Order>
-      <Value><![CDATA[($extrempovline - ii_bbf_ab_br)]]></Value>
+      <Value><![CDATA[$extrempovline - ii_bbf_ab_br]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>4d23fb44-f377-4dbf-abc7-a4aa53b92122</ParID>
       <Order>3</Order>
-      <Value><![CDATA[bls08_s]]></Value>
+      <Value><![CDATA[bls07_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
