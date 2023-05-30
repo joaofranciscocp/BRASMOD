@@ -687,49 +687,49 @@
       <ID>141063fc-e667-4aa5-83af-c0c144344831</ID>
       <Name>DefConst</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Standard policy values and definitons ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>d6834849-44c0-4825-b523-8879d0cc24d4</ID>
       <Name>DefVar</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>b133c500-c191-49f1-970f-77e50996ba71</ID>
       <Name>BenCalc</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[BPI e BCF ]]></Comment>
+      <Comment><![CDATA[BPI and BCF ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>8316c196-2525-4852-a605-3df8e44779f5</ID>
       <Name>ArithOp</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Adjusting for the duration of the policy along the year]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>05c844d4-6dda-4a27-969d-f6f17f4ae2ee</ID>
       <Name>Allocate</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Allocating household benefits ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>ed28a115-bde9-40e2-9975-6175802b94e2</ID>
       <Name>ArithOp</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>839520c8-310c-4322-b907-bcfdc4b2e141</ID>
       <Name>BenCalc</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[BSEP ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
@@ -743,21 +743,21 @@
       <ID>13275333-f9db-4b0b-aef2-f9b9e43a9cee</ID>
       <Name>BenCalc</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[BEX ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>b84bf210-4879-4817-873a-08611f50e23f</ID>
       <Name>ArithOp</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
       <ID>77169132-08f0-4b37-a49e-5001bcd95433</ID>
       <Name>BenCalc</Name>
       <PolID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
@@ -3402,14 +3402,14 @@
       <ID>d40ba1c5-7293-47fc-a2e2-2d118484ab08</ID>
       <Name>$bab_bpi</Name>
       <FunID>141063fc-e667-4aa5-83af-c0c144344831</FunID>
-      <Comment><![CDATA[Baseline value for children aged 0-3 ("Benefício Primeira Infância")]]></Comment>
+      <Comment><![CDATA[Benefit value for children aged 0-3 ("Benefício Primeira Infância - BPI")]]></Comment>
       <Group>3</Group>
     </PAR>
     <PAR>
       <ID>b75059b7-9de6-4afb-97dc-9b1eb2e01a93</ID>
       <Name>$bab_bcf</Name>
       <FunID>141063fc-e667-4aa5-83af-c0c144344831</FunID>
-      <Comment><![CDATA[Baseline value for children aged 4-21 ("Benefício Composição Familiar")]]></Comment>
+      <Comment><![CDATA[Benefit value for children aged 4-21 ("Benefício Composição Familiar - BCF")]]></Comment>
       <Group>4</Group>
     </PAR>
     <PAR>
@@ -3451,7 +3451,7 @@
       <ID>c75a62fe-a4dc-4a8f-a176-6559ccf85903</ID>
       <Name>Comp_Cond</Name>
       <FunID>b133c500-c191-49f1-970f-77e50996ba71</FunID>
-      <Comment><![CDATA[(obs: max 5 por família, como fazer isso?)]]></Comment>
+      <Comment><![CDATA[(obs: em 2021 max 5 por família, como fazer isso?)]]></Comment>
       <Group>1</Group>
     </PAR>
     <PAR>
@@ -3580,7 +3580,7 @@
       <ID>f126b822-f97e-4157-95e0-4086a292e09d</ID>
       <Name>Comp_Cond</Name>
       <FunID>839520c8-310c-4322-b907-bcfdc4b2e141</FunID>
-      <Comment><![CDATA[???]]></Comment>
+      <Comment><![CDATA[the 25???]]></Comment>
       <Group>1</Group>
     </PAR>
     <PAR>
@@ -3676,7 +3676,7 @@
       <ID>30df1e4f-e96a-447f-b7df-4d349d379983</ID>
       <Name>Comp_Cond</Name>
       <FunID>77169132-08f0-4b37-a49e-5001bcd95433</FunID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[*correct the name ]]></Comment>
       <Group>1</Group>
     </PAR>
     <PAR>
@@ -12101,7 +12101,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>a1402e05-40fb-44ba-9bfe-91e9af4922c9</ParID>
       <Order>4</Order>
-      <Value><![CDATA[n]]></Value>
+      <Value><![CDATA[2]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -12119,7 +12119,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>6f4032b6-44f7-41cd-9ae8-e5091657c31e</ParID>
       <Order>7</Order>
-      <Value><![CDATA[n]]></Value>
+      <Value><![CDATA[3]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
