@@ -2205,7 +2205,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh00]]></Value>
             <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -2218,7 +2218,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh]]></Value>
             <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -2231,7 +2231,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls07_s]]></Value>
             <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -6561,7 +6561,7 @@
             <ID>f126b822-f97e-4157-95e0-4086a292e09d</ID>
             <FunctionID>839520c8-310c-4322-b907-bcfdc4b2e141</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[the 25???]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -6677,7 +6677,7 @@
           <ID>13275333-f9db-4b0b-aef2-f9b9e43a9cee</ID>
           <PolicyID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[BEX ]]></Comment>
+          <Comment><![CDATA[Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
           <Order>10</Order>
           <Switch>n/a</Switch>
@@ -6737,60 +6737,10 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>b84bf210-4879-4817-873a-08611f50e23f</ID>
-          <PolicyID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolicyID>
-          <Name>ArithOp</Name>
-          <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
-          <PrivateComment />
-          <Order>11</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>314d8e4c-11d1-437c-8740-ae3160329e63</ID>
-            <FunctionID>b84bf210-4879-4817-873a-08611f50e23f</FunctionID>
-            <Name>Formula</Name>
-            <Comment><![CDATA[*conferir mês]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c38922f8-ae32-4aa8-94a0-13f43b1b5592</ID>
-            <FunctionID>b84bf210-4879-4817-873a-08611f50e23f</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>ace95ece-0b78-43c0-b8b3-cf8f2d89f876</ID>
-            <FunctionID>b84bf210-4879-4817-873a-08611f50e23f</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>77169132-08f0-4b37-a49e-5001bcd95433</ID>
           <PolicyID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
+          <Comment><![CDATA[Additional extraordinary benefit ]]></Comment>
           <PrivateComment />
           <Order>12</Order>
           <Switch>n/a</Switch>
@@ -6800,7 +6750,7 @@
             <ID>30df1e4f-e96a-447f-b7df-4d349d379983</ID>
             <FunctionID>77169132-08f0-4b37-a49e-5001bcd95433</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*correct the name ]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -6945,105 +6895,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-      </Policy>
-      <Policy>
-        <ID>3ec7f76e-662e-4101-a713-6ec3d23f21e3</ID>
-        <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
-        <Name>bex_bra</Name>
-        <Type>ben</Type>
-        <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
-        <PrivateComment />
-        <Order>19</Order>
-        <Switch>n/a</Switch>
-        <Private>no</Private>
-        <Color>-1</Color>
-        <Function>
-          <ID>19718e49-2a05-4246-a830-9de3e136aa12</ID>
-          <PolicyID>3ec7f76e-662e-4101-a713-6ec3d23f21e3</PolicyID>
-          <Name>BenCalc</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>2</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>ebc1af57-acaa-4418-9f5a-620b9874260b</ID>
-            <FunctionID>19718e49-2a05-4246-a830-9de3e136aa12</FunctionID>
-            <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*será que usar #y resolve ser só pra dezembro?]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c56805eb-5bea-4044-8312-479513d7aea9</ID>
-            <FunctionID>19718e49-2a05-4246-a830-9de3e136aa12</FunctionID>
-            <Name>Comp_perTU</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>58282ede-5e7d-4bd0-a786-eef429cc0086</ID>
-            <FunctionID>19718e49-2a05-4246-a830-9de3e136aa12</FunctionID>
-            <Name>Output_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>a9e009bb-94ed-4d6a-9b0b-2dfb361c5a4f</ID>
-            <FunctionID>19718e49-2a05-4246-a830-9de3e136aa12</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>b2f0c58f-1390-4951-b603-2dce207a7310</ID>
-          <PolicyID>3ec7f76e-662e-4101-a713-6ec3d23f21e3</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>1</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>b120bd66-904a-4e5a-91e7-728a236c6224</ID>
-            <FunctionID>b2f0c58f-1390-4951-b603-2dce207a7310</FunctionID>
-            <Name>$bex</Name>
-            <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -9251,7 +9102,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh00]]></Value>
             <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -9264,7 +9115,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh]]></Value>
             <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -9277,7 +9128,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls07_s]]></Value>
             <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -12307,7 +12158,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -13383,7 +13234,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[5]]></Value>
+            <Value><![CDATA[3]]></Value>
             <Order>7</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -13396,7 +13247,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3]]></Value>
+            <Value><![CDATA[1]]></Value>
             <Order>6</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -13562,7 +13413,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[yhh00+ bls07_s]]></Value>
+            <Value><![CDATA[yhh00+ bls07_s*12/2]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -13610,10 +13461,9 @@
             <ID>8e564b95-f4bd-41bb-82f2-8e9b10b4a26a</ID>
             <FunctionID>07f9b09a-7d65-437d-b6cf-542cf61719d4</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[the 25???]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$extrempovline - bab_ii >= 25
-
+            <Value><![CDATA[bab_ii < $extrempovline 
 ]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
@@ -13627,7 +13477,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$extrempovline - bab_ii
+            <Value><![CDATA[MAX(25, ($extrempovline - bab_ii))*2/12
 ]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
@@ -13671,7 +13521,7 @@
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
           <Order>9</Order>
-          <Switch>on</Switch>
+          <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -13680,7 +13530,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[*aqui está só pra PBF, mas tem que incorporar AE ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s<bls08_s]]></Value>
+            <Value><![CDATA[bls07_s*12/2 < MAX(bls_01, bls_08)]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13693,7 +13543,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls08_s-bls07_s]]></Value>
+            <Value><![CDATA[MAX(bls_01, bls_08) - bls07_s*2/12]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -13731,10 +13581,10 @@
           <ID>bf94f0ed-b482-4768-be63-d48fe2937849</ID>
           <PolicyID>77ffe1e2-14c1-4c65-9d5c-ad907ad4b16b</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[BEX ]]></Comment>
+          <Comment><![CDATA[Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
           <Order>10</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -13743,7 +13593,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls07_s > 0 & bls07_s*12/2 < $bab_bex]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13756,7 +13606,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[($bab_bex - bls07_s*12/2)*2/12]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -13769,7 +13619,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls07_s]]></Value>
             <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -13782,58 +13632,8 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_sl]]></Value>
             <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>e18d9beb-ff89-4126-a76d-7bc786bed0eb</ID>
-          <PolicyID>77ffe1e2-14c1-4c65-9d5c-ad907ad4b16b</PolicyID>
-          <Name>ArithOp</Name>
-          <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
-          <PrivateComment />
-          <Order>11</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>1d93f7ea-788c-4e39-941a-3b582ee7868a</ID>
-            <FunctionID>e18d9beb-ff89-4126-a76d-7bc786bed0eb</FunctionID>
-            <Name>Formula</Name>
-            <Comment><![CDATA[*conferir mês]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fecd6a29-859e-41e4-8525-9d8d3082c9ed</ID>
-            <FunctionID>e18d9beb-ff89-4126-a76d-7bc786bed0eb</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c9939f9d-4814-4b47-994d-802df95505a9</ID>
-            <FunctionID>e18d9beb-ff89-4126-a76d-7bc786bed0eb</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13844,7 +13644,7 @@
           <ID>27b0ada2-fd12-43eb-b42f-f3c4db69d311</ID>
           <PolicyID>77ffe1e2-14c1-4c65-9d5c-ad907ad4b16b</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
+          <Comment><![CDATA[Additional extraordinary benefit ]]></Comment>
           <PrivateComment />
           <Order>12</Order>
           <Switch>n/a</Switch>
@@ -13854,7 +13654,7 @@
             <ID>41b67eb4-5f76-47cc-a656-855be8bb4e3a</ID>
             <FunctionID>27b0ada2-fd12-43eb-b42f-f3c4db69d311</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*correct the name ]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -13999,105 +13799,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-      </Policy>
-      <Policy>
-        <ID>6cf05d3b-c5cc-4fe8-8dea-aa157b8bfb83</ID>
-        <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
-        <Name>bex_bra</Name>
-        <Type>ben</Type>
-        <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
-        <PrivateComment />
-        <Order>19</Order>
-        <Switch>on</Switch>
-        <Private>no</Private>
-        <Color>-1</Color>
-        <Function>
-          <ID>1fda6120-a281-47f6-9020-2a53922cb0b6</ID>
-          <PolicyID>6cf05d3b-c5cc-4fe8-8dea-aa157b8bfb83</PolicyID>
-          <Name>BenCalc</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>1f9d6032-1d9c-44a2-9721-2db324a82f07</ID>
-            <FunctionID>1fda6120-a281-47f6-9020-2a53922cb0b6</FunctionID>
-            <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*será que usar #y resolve ser só pra dezembro?]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls07_s<$bex#m]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2d62cdbc-7a4b-4edf-a077-450649fcd63c</ID>
-            <FunctionID>1fda6120-a281-47f6-9020-2a53922cb0b6</FunctionID>
-            <Name>Comp_perTU</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[$bex#y-bls07_s]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>10e71520-7d83-41ca-88a8-6f32dd7d84b7</ID>
-            <FunctionID>1fda6120-a281-47f6-9020-2a53922cb0b6</FunctionID>
-            <Name>Output_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls06_s]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>768dfe0b-9ddc-4e14-8b6f-9f5d7c7b4bfc</ID>
-            <FunctionID>1fda6120-a281-47f6-9020-2a53922cb0b6</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_sl]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>0bb1d036-b4b6-4979-ae96-18faedd05d65</ID>
-          <PolicyID>6cf05d3b-c5cc-4fe8-8dea-aa157b8bfb83</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>1</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>f2af5a26-46ce-469b-9c27-ea40c7479192</ID>
-            <FunctionID>0bb1d036-b4b6-4979-ae96-18faedd05d65</FunctionID>
-            <Name>$bex</Name>
-            <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[400]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -20665,7 +20366,7 @@
             <ID>5903dd9c-f976-4b0d-b7b6-1836acfb2568</ID>
             <FunctionID>5c3b6397-1bba-40f3-b5bf-a4a5ceb9614d</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[the 25???]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -20781,7 +20482,7 @@
           <ID>d096a9e5-d808-4614-b266-bc28695042cd</ID>
           <PolicyID>9c76daeb-7211-45f1-b1ac-6d4cb7c4d390</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[BEX ]]></Comment>
+          <Comment><![CDATA[Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
           <Order>10</Order>
           <Switch>n/a</Switch>
@@ -20841,60 +20542,10 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>29c21a7b-2a49-489e-b891-5977eba85d52</ID>
-          <PolicyID>9c76daeb-7211-45f1-b1ac-6d4cb7c4d390</PolicyID>
-          <Name>ArithOp</Name>
-          <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
-          <PrivateComment />
-          <Order>11</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>bac670fd-067b-4c79-a83a-cda8f6ad7b62</ID>
-            <FunctionID>29c21a7b-2a49-489e-b891-5977eba85d52</FunctionID>
-            <Name>Formula</Name>
-            <Comment><![CDATA[*conferir mês]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>283aed4c-df67-4173-aa93-3ecda0e5a89f</ID>
-            <FunctionID>29c21a7b-2a49-489e-b891-5977eba85d52</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>3d90605c-be02-45f1-875f-c72b13f006bf</ID>
-            <FunctionID>29c21a7b-2a49-489e-b891-5977eba85d52</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>cc4ad98b-f736-4707-b7de-1a917f56e459</ID>
           <PolicyID>9c76daeb-7211-45f1-b1ac-6d4cb7c4d390</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
+          <Comment><![CDATA[Additional extraordinary benefit ]]></Comment>
           <PrivateComment />
           <Order>12</Order>
           <Switch>n/a</Switch>
@@ -20904,7 +20555,7 @@
             <ID>2430f102-6391-45bf-8d55-ee3b6992cfb2</ID>
             <FunctionID>cc4ad98b-f736-4707-b7de-1a917f56e459</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*correct the name ]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -21049,105 +20700,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-      </Policy>
-      <Policy>
-        <ID>0f3e522b-ace7-4068-a4d0-1ec5fc2bc7fe</ID>
-        <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
-        <Name>bex_bra</Name>
-        <Type>ben</Type>
-        <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
-        <PrivateComment />
-        <Order>19</Order>
-        <Switch>n/a</Switch>
-        <Private>no</Private>
-        <Color>-1</Color>
-        <Function>
-          <ID>03880d68-6ba0-47a9-8e47-b09c4cb61dad</ID>
-          <PolicyID>0f3e522b-ace7-4068-a4d0-1ec5fc2bc7fe</PolicyID>
-          <Name>BenCalc</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>2</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>a3e23a6b-1b9c-4b39-aeb2-45a79bf12b8a</ID>
-            <FunctionID>03880d68-6ba0-47a9-8e47-b09c4cb61dad</FunctionID>
-            <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*será que usar #y resolve ser só pra dezembro?]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0d530957-9a22-4b55-882e-b84cff400516</ID>
-            <FunctionID>03880d68-6ba0-47a9-8e47-b09c4cb61dad</FunctionID>
-            <Name>Comp_perTU</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2ca6a55c-79e4-44b7-98e3-9c94664b0d99</ID>
-            <FunctionID>03880d68-6ba0-47a9-8e47-b09c4cb61dad</FunctionID>
-            <Name>Output_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2bfba1d3-41fb-4b7a-a550-fea178f01b18</ID>
-            <FunctionID>03880d68-6ba0-47a9-8e47-b09c4cb61dad</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>2eab345a-d378-4427-8c8f-7f032e71f7bb</ID>
-          <PolicyID>0f3e522b-ace7-4068-a4d0-1ec5fc2bc7fe</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>1</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>73b5aecc-c9ea-485c-bd28-f834c62f9910</ID>
-            <FunctionID>2eab345a-d378-4427-8c8f-7f032e71f7bb</FunctionID>
-            <Name>$bex</Name>
-            <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -27712,7 +27264,7 @@
             <ID>d398808b-8422-4b6f-b369-2313fd44147c</ID>
             <FunctionID>ca862470-f2d3-4d4d-9eeb-45af916baa6c</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[the 25???]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -27828,7 +27380,7 @@
           <ID>6ba938e5-6a00-4bac-9a18-94a557c82420</ID>
           <PolicyID>78c82b24-14c4-4c01-92d7-2cb8320d408f</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[BEX ]]></Comment>
+          <Comment><![CDATA[Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
           <Order>10</Order>
           <Switch>n/a</Switch>
@@ -27888,60 +27440,10 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>6711eae3-771b-44d6-8480-94b76ac06f34</ID>
-          <PolicyID>78c82b24-14c4-4c01-92d7-2cb8320d408f</PolicyID>
-          <Name>ArithOp</Name>
-          <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
-          <PrivateComment />
-          <Order>11</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>d9e9e7d2-90c1-410b-b9e5-442c7a02ffcb</ID>
-            <FunctionID>6711eae3-771b-44d6-8480-94b76ac06f34</FunctionID>
-            <Name>Formula</Name>
-            <Comment><![CDATA[*conferir mês]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>1e6fe944-7716-4048-9fd4-f63bc5ec6a1d</ID>
-            <FunctionID>6711eae3-771b-44d6-8480-94b76ac06f34</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0632d5a2-c059-4524-b8b2-46abca506206</ID>
-            <FunctionID>6711eae3-771b-44d6-8480-94b76ac06f34</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>b874015a-77db-4017-87e1-eee59c460e8d</ID>
           <PolicyID>78c82b24-14c4-4c01-92d7-2cb8320d408f</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
+          <Comment><![CDATA[Additional extraordinary benefit ]]></Comment>
           <PrivateComment />
           <Order>12</Order>
           <Switch>n/a</Switch>
@@ -27951,7 +27453,7 @@
             <ID>9f09c833-092f-489b-b16e-dc1216eb0b8a</ID>
             <FunctionID>b874015a-77db-4017-87e1-eee59c460e8d</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*correct the name ]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -28096,105 +27598,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-      </Policy>
-      <Policy>
-        <ID>5be9aef1-ecee-4060-bdd0-8ea3294d976a</ID>
-        <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
-        <Name>bex_bra</Name>
-        <Type>ben</Type>
-        <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
-        <PrivateComment />
-        <Order>19</Order>
-        <Switch>n/a</Switch>
-        <Private>no</Private>
-        <Color>-1</Color>
-        <Function>
-          <ID>c70f1240-20ba-4a98-bca2-0cf09c749800</ID>
-          <PolicyID>5be9aef1-ecee-4060-bdd0-8ea3294d976a</PolicyID>
-          <Name>BenCalc</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>2</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>04191ef6-e281-4d0f-84cf-8acb4412231c</ID>
-            <FunctionID>c70f1240-20ba-4a98-bca2-0cf09c749800</FunctionID>
-            <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*será que usar #y resolve ser só pra dezembro?]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d381dc47-2ec9-4005-9242-a55692f5bf4b</ID>
-            <FunctionID>c70f1240-20ba-4a98-bca2-0cf09c749800</FunctionID>
-            <Name>Comp_perTU</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fe8db30e-74f2-47ac-95e2-a18b190190d1</ID>
-            <FunctionID>c70f1240-20ba-4a98-bca2-0cf09c749800</FunctionID>
-            <Name>Output_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>4b298137-aa35-4d2b-93fb-79896416122b</ID>
-            <FunctionID>c70f1240-20ba-4a98-bca2-0cf09c749800</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>d4f81dde-adb0-4f20-85c6-91c69eefdb23</ID>
-          <PolicyID>5be9aef1-ecee-4060-bdd0-8ea3294d976a</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>1</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>d359c830-43a8-45d1-b412-1c09132742be</ID>
-            <FunctionID>d4f81dde-adb0-4f20-85c6-91c69eefdb23</FunctionID>
-            <Name>$bex</Name>
-            <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -29777,7 +29180,7 @@
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
         <Order>20</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
         <Function>
@@ -30402,7 +29805,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh00]]></Value>
             <Order>15</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -30415,7 +29818,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[yhh]]></Value>
             <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -30428,7 +29831,7 @@
             <Name>Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[bls07_s]]></Value>
             <Order>17</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -33458,7 +32861,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
         <Order>17</Order>
-        <Switch>on</Switch>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -34455,7 +33858,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[(obs: em 2021 max 5 por família, como fazer isso?)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<3 &  yhh00#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag<3 &  IsNtoMchild#1 & yhh00#1<= $povline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -34507,7 +33910,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[99]]></Value>
             <Order>3</Order>
             <ValueType>amount</ValueType>
             <Group>1</Group>
@@ -34520,7 +33923,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[1]]></Value>
             <Order>2</Order>
             <ValueType>amount</ValueType>
             <Group>1</Group>
@@ -34533,7 +33936,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[99]]></Value>
             <Order>7</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -34546,7 +33949,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[1]]></Value>
             <Order>6</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -34572,7 +33975,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & yhh00#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & IsNtoMchild#2 & yhh00#1<= $povline]]></Value>
             <Order>5</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -34757,9 +34160,9 @@
             <ID>a1afb390-d30a-4b93-a443-d89ea4da01ee</ID>
             <FunctionID>0869f768-f646-48a9-8faa-7fca7ec4410f</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[the 25???]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[ bab_i < $extrempovline]]></Value>
+            <Value><![CDATA[ bab_ii < $extrempovline]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -34813,7 +34216,7 @@
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
           <Order>9</Order>
-          <Switch>on</Switch>
+          <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -34873,7 +34276,7 @@
           <ID>2b59250f-6d67-4e0f-909a-2e935ee8e446</ID>
           <PolicyID>ad5c20cd-b96f-46c9-aec5-acf747863913</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[BEX ]]></Comment>
+          <Comment><![CDATA[Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
           <Order>10</Order>
           <Switch>on</Switch>
@@ -34885,7 +34288,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s<$bab_bex]]></Value>
+            <Value><![CDATA[bls07_s > 0 & bls07_s < $bab_bex]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -34898,7 +34301,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$bab_bex-bls07_s]]></Value>
+            <Value><![CDATA[($bab_bex - bls07_s)]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -34911,7 +34314,8 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bab_iii]]></Value>
+            <Value><![CDATA[bls07_s
+]]></Value>
             <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -34933,61 +34337,10 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>b98f61b2-f4c4-40cc-8ef0-746b06a7331e</ID>
-          <PolicyID>ad5c20cd-b96f-46c9-aec5-acf747863913</PolicyID>
-          <Name>ArithOp</Name>
-          <Comment><![CDATA[Adjusting for the duration of the policy complements along the year]]></Comment>
-          <PrivateComment />
-          <Order>11</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>e5b99395-4235-4a8e-ba88-efee472d00aa</ID>
-            <FunctionID>b98f61b2-f4c4-40cc-8ef0-746b06a7331e</FunctionID>
-            <Name>Formula</Name>
-            <Comment><![CDATA[*conferir mês]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bab_iii*7/12
-]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>54c78fb5-9ec4-4620-906c-8b18375acddf</ID>
-            <FunctionID>b98f61b2-f4c4-40cc-8ef0-746b06a7331e</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls07_s]]></Value>
-            <Order>2</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>292b4264-cf46-47bc-ae5c-b761e44ea75b</ID>
-            <FunctionID>b98f61b2-f4c4-40cc-8ef0-746b06a7331e</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_sl]]></Value>
-            <Order>3</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>a4b141c9-0528-43d4-a87e-d994a6799b88</ID>
           <PolicyID>ad5c20cd-b96f-46c9-aec5-acf747863913</PolicyID>
           <Name>BenCalc</Name>
-          <Comment><![CDATA[Extra extraordinary benefit ]]></Comment>
+          <Comment><![CDATA[Additional extraordinary benefit ]]></Comment>
           <PrivateComment />
           <Order>12</Order>
           <Switch>on</Switch>
@@ -34997,7 +34350,7 @@
             <ID>a3e74c89-8792-4af1-91ee-81ec3ea48a73</ID>
             <FunctionID>a4b141c9-0528-43d4-a87e-d994a6799b88</FunctionID>
             <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*correct the name ]]></Comment>
+            <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bls07_s>0]]></Value>
             <Order>1</Order>
@@ -35143,105 +34496,6 @@
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-      </Policy>
-      <Policy>
-        <ID>7c29da3f-4eac-4a50-891d-2bf3f31d19c5</ID>
-        <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
-        <Name>bex_bra</Name>
-        <Type>ben</Type>
-        <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
-        <PrivateComment />
-        <Order>19</Order>
-        <Switch>on</Switch>
-        <Private>no</Private>
-        <Color>-1</Color>
-        <Function>
-          <ID>79be9a35-e206-4c00-b195-100b93b3a3d6</ID>
-          <PolicyID>7c29da3f-4eac-4a50-891d-2bf3f31d19c5</PolicyID>
-          <Name>BenCalc</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>2</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>6aa52ce8-5271-490a-a906-cda40f3b79c6</ID>
-            <FunctionID>79be9a35-e206-4c00-b195-100b93b3a3d6</FunctionID>
-            <Name>Comp_Cond</Name>
-            <Comment><![CDATA[*será que usar #y resolve ser só pra dezembro?]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls07_s<$bex#m]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d8ffbc04-17ac-4201-8fd7-43d0be8a2a5f</ID>
-            <FunctionID>79be9a35-e206-4c00-b195-100b93b3a3d6</FunctionID>
-            <Name>Comp_perTU</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[$bex#y-bls07_s]]></Value>
-            <Order>2</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>4fa7a8a7-9e4d-41e5-9b67-30cfccfc4287</ID>
-            <FunctionID>79be9a35-e206-4c00-b195-100b93b3a3d6</FunctionID>
-            <Name>Output_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls06_s]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>e4974acb-c51f-4051-8f0d-1fee02a7ecfa</ID>
-            <FunctionID>79be9a35-e206-4c00-b195-100b93b3a3d6</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_sl]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
-          <ID>35b18b71-8285-4c9b-b777-0b91bd1356df</ID>
-          <PolicyID>7c29da3f-4eac-4a50-891d-2bf3f31d19c5</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[]]></Comment>
-          <PrivateComment />
-          <Order>1</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>f42c678c-0377-4ec2-b117-2ff5aa8400c7</ID>
-            <FunctionID>35b18b71-8285-4c9b-b777-0b91bd1356df</FunctionID>
-            <Name>$bex</Name>
-            <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[400#m]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
