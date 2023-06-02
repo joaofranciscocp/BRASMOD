@@ -1,0 +1,32 @@
+===== EUROMOD LOG =====
+Software-Version: 3.6.2
+Project: brasmod
+Start: quarta-feira, 24 de maio de 2023 13:12:22
+End: quarta-feira, 24 de maio de 2023 13:12:22
+Duration: 0,4877857s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+a5d3d847-bb91-4eb1-b99d-b1619895be2b	aborted	BRA_2022	pnad2022 euromod	quarta-feira, 24 de maio de 2023 13:12:22	quarta-feira, 24 de maio de 2023 13:12:22	0,4877857s	euro	1	-	bra_2022_std	n/a	bra_2022_std_hh	2ff244a983e36748058539607876d3e1
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: a5d3d847-bb91-4eb1-b99d-b1619895be2b
+ERROR: 7.6.5 tscee_bra/SchedCalc/Band_UpLim (7da5c17d-356c-4572-a2ea-27da99908dc9): Formula error: Formula not properly closed.
+ERROR: 7.6.7 tscee_bra/SchedCalc/Band_UpLim (d08524a5-578f-4fcb-95fe-f9566870dc19): Formula error: Formula not properly closed.
+ERROR: 7.6.9 tscee_bra/SchedCalc/Band_UpLim (db75e5f3-fc0d-4963-abae-04e4fe1d948c): Formula error: Formula not properly closed.
+ERROR: 7.6.5 tscee_bra/SchedCalc/Band_UpLim (7da5c17d-356c-4572-a2ea-27da99908dc9): Referência de objeto não definida para uma instância de um objeto.
+ERROR: 7.6.7 tscee_bra/SchedCalc/Band_UpLim (d08524a5-578f-4fcb-95fe-f9566870dc19): Referência de objeto não definida para uma instância de um objeto.
+ERROR: 7.6.9 tscee_bra/SchedCalc/Band_UpLim (db75e5f3-fc0d-4963-abae-04e4fe1d948c): Referência de objeto não definida para uma instância de um objeto.
+ERROR: 7.6 tscee_bra/SchedCalc (91c86e10-4019-4eb4-9543-3a642bd1b42d):  1212 > 0, upper limit of Band 1 is higher than upper limit of Band 2.
+WARNING: 9.3.1 tin_bra/ArithOp/Formula (6cac1e3b-5beb-4e9f-b75b-f13d682d8545): use of not initialised variable tscse_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls07_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 13.1.14 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 13.1.18 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found

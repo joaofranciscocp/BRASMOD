@@ -1,0 +1,34 @@
+===== EUROMOD LOG =====
+Software-Version: 3.6.2
+Project: brasmod
+Start: sexta-feira, 2 de junho de 2023 12:27:09
+End: sexta-feira, 2 de junho de 2023 12:27:12
+Duration: 2,489947s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+6aaa0a76-cbc8-492c-9bbc-e4e43d9dcfd2	aborted	BRA_2021	pnad2021 euromod	sexta-feira, 2 de junho de 2023 12:27:09	sexta-feira, 2 de junho de 2023 12:27:12	2,489947s	euro	1	-	bra_2021_std	797deab11a44f0233956909121bbc769	bra_2021_std_hh	1f0d0eaebc89b99f497c006b5529b9bb
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 6aaa0a76-cbc8-492c-9bbc-e4e43d9dcfd2
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscse_s
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscer_s
+WARNING: 11.3.3 tscer_housekeeper_bra/ArithOp/Output_Add_Var (cdf0083d-96c4-4bf7-a1c8-44367a6872e9): use of not initialised variable tscer_s
+ERROR: 12.2 tscse_bra/DefVar (fa90377a-277f-47c9-8381-cf2d9ca82657) tscse_s: DefVar/DefConst can only overwrite variables created by (another) DefVar/DefConst
+WARNING: 12.3.5 tscse_bra/BenCalc/Output_Add_Var (9813e1a7-7cd6-4bb0-b8c4-cfec5cfb12d6): use of not initialised variable tscse_s
+ERROR: 12.3.1 tscse_bra/BenCalc/Comp_Cond (29668520-3f7e-4433-b015-7fbadbcaca0f): unknown variable tscse_rand01
+ERROR: 12.3.1 tscse_bra/BenCalc/Comp_Cond (29668520-3f7e-4433-b015-7fbadbcaca0f): unknown variable tscse_rand02
+ERROR: 12.3.3 tscse_bra/BenCalc/Comp_Cond (0b2bde03-0c1e-4cfc-8b7b-bb31447a5166): unknown variable tscse_rand01
+ERROR: 12.3.3 tscse_bra/BenCalc/Comp_Cond (0b2bde03-0c1e-4cfc-8b7b-bb31447a5166): unknown variable tscse_rand02
+WARNING: 18.1.18 output_std_sl/DefOutput/Var (c7c7aeb8-da51-44e4-b62e-502e125b8b8b): use of not initialised variable tscot_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls07_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 18.1.19 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 18.1.23 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 18.1.23 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
