@@ -1,0 +1,29 @@
+===== EUROMOD LOG =====
+Software-Version: 3.6.2
+Project: brasmod
+Start: sexta-feira, 2 de junho de 2023 16:27:53
+End: sexta-feira, 2 de junho de 2023 16:28:38
+Duration: 45,5798155s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+fff5e133-59dd-441c-a359-b6a2f14da053	finished	BRA_2021	pnad2021 euromod	sexta-feira, 2 de junho de 2023 16:27:53	sexta-feira, 2 de junho de 2023 16:28:38	45,5798155s	euro	1	-	bra_2021_std	56b5a8e425ba88ab6d500d214d0bed87	bra_2021_std_hh	9cd84369e4e04c8341cce511bf4492d0
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: fff5e133-59dd-441c-a359-b6a2f14da053
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscse_s
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscer_s
+WARNING: 11.3.3 tscer_housekeeper_bra/ArithOp/Output_Add_Var (cdf0083d-96c4-4bf7-a1c8-44367a6872e9): use of not initialised variable tscer_s
+WARNING: 12.2.6 tscse_bra/BenCalc/Output_Add_Var (9813e1a7-7cd6-4bb0-b8c4-cfec5cfb12d6): use of not initialised variable tscse_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls07_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 18.1.23 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 18.1.27 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 18.1.27 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\documents\github\brasmod\input\pnad2021 euromod.txt: Variable(s) xhl, xed, xpp, xmp not found (zero is used as default)
