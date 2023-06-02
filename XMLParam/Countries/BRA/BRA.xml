@@ -853,6 +853,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>3b40c2a9-551b-447a-bce2-f3fe0f7b708f</ID>
+            <FunctionID>02229bd3-6b3c-4c05-a5a8-bc552834cac6</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>a704073f-bb6f-47aa-b238-b310001678cb</ID>
@@ -989,6 +1002,19 @@
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
             <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c0726509-d817-4f63-b476-8d1195f8750c</ID>
+            <FunctionID>a704073f-bb6f-47aa-b238-b310001678cb</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>11</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1579,7 +1605,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
-        <Order>20</Order>
+        <Order>21</Order>
         <Switch>off</Switch>
         <Private />
         <Color>-1</Color>
@@ -1782,7 +1808,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>21</Order>
+        <Order>22</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -1816,7 +1842,7 @@
             <Comment><![CDATA[Household ID]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idhh]]></Value>
-            <Order>3</Order>
+            <Order>1</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1829,7 +1855,7 @@
             <Comment><![CDATA[Unique Person ID = idhh * 100 + unique number within household]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idperson]]></Value>
-            <Order>4</Order>
+            <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1842,7 +1868,7 @@
             <Comment><![CDATA[ID of partner if married or cohabiting]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idpartner]]></Value>
-            <Order>5</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1855,7 +1881,7 @@
             <Comment><![CDATA[ID of mother if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idmother]]></Value>
-            <Order>6</Order>
+            <Order>4</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1868,7 +1894,7 @@
             <Comment><![CDATA[ID of father if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idfather]]></Value>
-            <Order>7</Order>
+            <Order>5</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1881,7 +1907,7 @@
             <Comment><![CDATA[Household Weight]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dwt]]></Value>
-            <Order>8</Order>
+            <Order>6</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1894,7 +1920,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>7</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1907,7 +1933,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>8</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1920,7 +1946,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1933,7 +1959,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1946,7 +1972,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1959,7 +1985,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1972,7 +1998,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1985,7 +2011,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>20</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -1998,7 +2024,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>20</Order>
+            <Order>21</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2011,7 +2037,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>21</Order>
+            <Order>22</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2024,7 +2050,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>22</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2037,7 +2063,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>23</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2050,7 +2076,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>26</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2063,7 +2089,7 @@
             <Comment><![CDATA[employee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>27</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2076,7 +2102,7 @@
             <Comment><![CDATA[employer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>29</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2089,7 +2115,7 @@
             <Comment><![CDATA[self-employed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>30</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2102,7 +2128,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>31</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2115,7 +2141,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>32</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2128,7 +2154,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>33</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2141,7 +2167,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>34</Order>
+            <Order>35</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2154,7 +2180,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>35</Order>
+            <Order>36</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2167,7 +2193,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>24</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2180,7 +2206,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>25</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2193,7 +2219,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>28</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2206,7 +2232,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2219,7 +2245,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2232,7 +2258,46 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dd8cf5ee-7f00-46bc-ac0b-08adf5021e24</ID>
+            <FunctionID>ba2e3b3a-1ffe-4b05-93e1-1e72d22935c4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>562c1bc6-ac41-4348-8b7b-e75c6c8c210b</ID>
+            <FunctionID>ba2e3b3a-1ffe-4b05-93e1-1e72d22935c4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ddi]]></Value>
             <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>84078a06-e336-4a1f-bb31-c19cf9546fb4</ID>
+            <FunctionID>ba2e3b3a-1ffe-4b05-93e1-1e72d22935c4</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00]]></Value>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -2247,7 +2312,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -4206,7 +4271,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -5261,7 +5326,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -6099,7 +6164,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Auxílio Brasil ]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -6957,7 +7022,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -7041,6 +7106,105 @@
             <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>67ecb5ea-7933-46eb-9e68-568b41bd0223</ID>
+        <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+        <Name>bpc_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN:]]></Comment>
+        <PrivateComment />
+        <Order>16</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>5658eab2-3567-401f-8ca0-70331ab36a35</ID>
+          <PolicyID>67ecb5ea-7933-46eb-9e68-568b41bd0223</PolicyID>
+          <Name>BenCalc</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>5828e48e-7fe8-44de-a65b-72dd3de09704</ID>
+            <FunctionID>5658eab2-3567-401f-8ca0-70331ab36a35</FunctionID>
+            <Name>Comp_Cond</Name>
+            <Comment><![CDATA[Benefit is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00 < 0.25*minwage & (IsDisabled | dag >= 65)]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5361f889-8d2c-4103-ae48-a14d1520d323</ID>
+            <FunctionID>5658eab2-3567-401f-8ca0-70331ab36a35</FunctionID>
+            <Name>Comp_perElig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[minwage]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3cea0aea-ee8a-4311-b001-83b4882ea4db</ID>
+            <FunctionID>5658eab2-3567-401f-8ca0-70331ab36a35</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[Benefit: disabled: old age]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>56a7fdb3-fac9-4ce3-93f1-b3f0e9096d4a</ID>
+            <FunctionID>5658eab2-3567-401f-8ca0-70331ab36a35</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_sl]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>12968fcb-40db-4ba5-8962-c27f9a3165c1</ID>
+          <PolicyID>67ecb5ea-7933-46eb-9e68-568b41bd0223</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>626e6c2c-1343-4000-9664-2cc48e1427bd</ID>
+            <FunctionID>12968fcb-40db-4ba5-8962-c27f9a3165c1</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1039#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -7899,6 +8063,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>dadcacd1-7ecd-4590-93e7-d3a9a0be8b4e</ID>
+            <FunctionID>64bccb02-5af0-40e2-aaf7-2127e77b1ef4</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>18f3461f-003e-4524-afdb-23e017ec9a98</ID>
@@ -8035,6 +8212,19 @@
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
             <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d1ffe9b1-9a78-46c3-879b-22749b314149</ID>
+            <FunctionID>18f3461f-003e-4524-afdb-23e017ec9a98</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>11</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8625,7 +8815,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
-        <Order>20</Order>
+        <Order>21</Order>
         <Switch>off</Switch>
         <Private />
         <Color>-1</Color>
@@ -8828,7 +9018,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>21</Order>
+        <Order>22</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -8862,7 +9052,7 @@
             <Comment><![CDATA[Household ID]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idhh]]></Value>
-            <Order>3</Order>
+            <Order>1</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8875,7 +9065,7 @@
             <Comment><![CDATA[Unique Person ID = idhh * 100 + unique number within household]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idperson]]></Value>
-            <Order>4</Order>
+            <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8888,7 +9078,7 @@
             <Comment><![CDATA[ID of partner if married or cohabiting]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idpartner]]></Value>
-            <Order>5</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8901,7 +9091,7 @@
             <Comment><![CDATA[ID of mother if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idmother]]></Value>
-            <Order>6</Order>
+            <Order>4</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8914,7 +9104,7 @@
             <Comment><![CDATA[ID of father if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idfather]]></Value>
-            <Order>7</Order>
+            <Order>5</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8927,7 +9117,7 @@
             <Comment><![CDATA[Household Weight]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dwt]]></Value>
-            <Order>8</Order>
+            <Order>6</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8940,7 +9130,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>7</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8953,7 +9143,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>8</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8966,7 +9156,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8979,7 +9169,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8992,7 +9182,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9005,7 +9195,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9018,7 +9208,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9031,7 +9221,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>20</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9044,7 +9234,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>20</Order>
+            <Order>21</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9057,7 +9247,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>21</Order>
+            <Order>22</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9070,7 +9260,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>22</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9083,7 +9273,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>23</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9096,7 +9286,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>26</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9109,7 +9299,7 @@
             <Comment><![CDATA[employee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>27</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9122,7 +9312,7 @@
             <Comment><![CDATA[employer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>29</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9135,7 +9325,7 @@
             <Comment><![CDATA[self-employed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>30</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9148,7 +9338,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>31</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9161,7 +9351,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>32</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9174,7 +9364,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>33</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9187,7 +9377,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>34</Order>
+            <Order>35</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9200,7 +9390,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>35</Order>
+            <Order>36</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9213,7 +9403,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>24</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9226,7 +9416,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>25</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9239,7 +9429,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>28</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9252,7 +9442,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9265,7 +9455,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9278,7 +9468,46 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>05a080b3-e34a-4798-81b6-f2d59eebe271</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9f792aa3-25ed-440e-bc31-282401f57bff</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ddi]]></Value>
             <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c31668a0-6e13-4220-b09b-4001b34d5b57</ID>
+            <FunctionID>0a1cab04-44ae-4603-a2cf-2d5d0611eea6</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00]]></Value>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -9293,7 +9522,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -11252,7 +11481,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -12306,7 +12535,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -13144,7 +13373,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Auxílio Brasil ]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -14011,7 +14240,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -14095,6 +14324,105 @@
             <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[400]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>82e1c2c3-7242-4ba1-b37b-abfdaa81862c</ID>
+        <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+        <Name>bpc_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN:]]></Comment>
+        <PrivateComment />
+        <Order>16</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>cd0bcc4a-70d7-4790-a953-155c2a724cf2</ID>
+          <PolicyID>82e1c2c3-7242-4ba1-b37b-abfdaa81862c</PolicyID>
+          <Name>BenCalc</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>287b422e-5123-4ef7-b07b-de13edad86bc</ID>
+            <FunctionID>cd0bcc4a-70d7-4790-a953-155c2a724cf2</FunctionID>
+            <Name>Comp_Cond</Name>
+            <Comment><![CDATA[Benefit is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00 < 0.25*minwage & (IsDisabled | dag >= 65)]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c36367a8-58e2-45c0-9876-deea2bccf979</ID>
+            <FunctionID>cd0bcc4a-70d7-4790-a953-155c2a724cf2</FunctionID>
+            <Name>Comp_perElig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[minwage]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b428812e-e449-4065-9755-74a831df5c6f</ID>
+            <FunctionID>cd0bcc4a-70d7-4790-a953-155c2a724cf2</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[Benefit: disabled: old age]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>10fc2b75-cfa8-4776-ad8f-412699469bd9</ID>
+            <FunctionID>cd0bcc4a-70d7-4790-a953-155c2a724cf2</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_sl]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>e03ba6f2-b68e-41f5-8831-a6cbbcd7de75</ID>
+          <PolicyID>82e1c2c3-7242-4ba1-b37b-abfdaa81862c</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>0</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e9c78374-a6c0-450a-90ff-fa5c7e80f2cc</ID>
+            <FunctionID>e03ba6f2-b68e-41f5-8831-a6cbbcd7de75</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1100#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -14953,6 +15281,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>19667cea-c650-4963-b37a-772e0c265c12</ID>
+            <FunctionID>340546eb-75f0-44f9-be3d-9d046db7447e</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>04859df3-9547-4e71-a47e-c5d76e16c071</ID>
@@ -15089,6 +15430,19 @@
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>835d91ac-8453-4fd0-9633-b4e62d5411d1</ID>
+            <FunctionID>04859df3-9547-4e71-a47e-c5d76e16c071</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>11</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15679,7 +16033,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
-        <Order>20</Order>
+        <Order>21</Order>
         <Switch>off</Switch>
         <Private />
         <Color>-1</Color>
@@ -15882,7 +16236,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>21</Order>
+        <Order>22</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -15916,7 +16270,7 @@
             <Comment><![CDATA[Household ID]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idhh]]></Value>
-            <Order>3</Order>
+            <Order>1</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15929,7 +16283,7 @@
             <Comment><![CDATA[Unique Person ID = idhh * 100 + unique number within household]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idperson]]></Value>
-            <Order>4</Order>
+            <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15942,7 +16296,7 @@
             <Comment><![CDATA[ID of partner if married or cohabiting]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idpartner]]></Value>
-            <Order>5</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15955,7 +16309,7 @@
             <Comment><![CDATA[ID of mother if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idmother]]></Value>
-            <Order>6</Order>
+            <Order>4</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15968,7 +16322,7 @@
             <Comment><![CDATA[ID of father if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idfather]]></Value>
-            <Order>7</Order>
+            <Order>5</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15981,7 +16335,7 @@
             <Comment><![CDATA[Household Weight]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dwt]]></Value>
-            <Order>8</Order>
+            <Order>6</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -15994,7 +16348,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>7</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16007,7 +16361,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>8</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16020,7 +16374,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16033,7 +16387,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16046,7 +16400,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16059,7 +16413,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16072,7 +16426,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16085,7 +16439,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>20</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16098,7 +16452,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>20</Order>
+            <Order>21</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16111,7 +16465,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>21</Order>
+            <Order>22</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16124,7 +16478,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>22</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16137,7 +16491,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>23</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16150,7 +16504,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>26</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16163,7 +16517,7 @@
             <Comment><![CDATA[employee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>27</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16176,7 +16530,7 @@
             <Comment><![CDATA[employer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>29</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16189,7 +16543,7 @@
             <Comment><![CDATA[self-employed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>30</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16202,7 +16556,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>31</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16215,7 +16569,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>32</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16228,7 +16582,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>33</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16241,7 +16595,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>34</Order>
+            <Order>35</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16254,7 +16608,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>35</Order>
+            <Order>36</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16267,7 +16621,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>24</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16280,7 +16634,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>25</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16293,7 +16647,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>28</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16306,7 +16660,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh00]]></Value>
-            <Order>15</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16319,7 +16673,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[yhh]]></Value>
-            <Order>16</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16332,7 +16686,46 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bls07_s]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ec9d4898-0639-4d44-9070-31fa2c22d33c</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>959256f0-b6ee-4585-b69b-62a8f5609542</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ddi]]></Value>
             <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>acd8ddae-b77f-4656-aa9c-89a699bca923</ID>
+            <FunctionID>c99f4dce-cfd0-442e-9782-59fc14c34e76</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00]]></Value>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -16347,7 +16740,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -18309,7 +18702,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -19363,7 +19756,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -20203,7 +20596,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Auxílio Brasil ]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -21061,7 +21454,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -21145,6 +21538,105 @@
             <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>84436d30-d314-4a24-9fce-447948eefa3b</ID>
+        <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+        <Name>bpc_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN:]]></Comment>
+        <PrivateComment />
+        <Order>16</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>d83dfadf-f063-4110-9d4b-42cfe2f61818</ID>
+          <PolicyID>84436d30-d314-4a24-9fce-447948eefa3b</PolicyID>
+          <Name>BenCalc</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>2217e978-31c0-4789-a29b-385b3e153e24</ID>
+            <FunctionID>d83dfadf-f063-4110-9d4b-42cfe2f61818</FunctionID>
+            <Name>Comp_Cond</Name>
+            <Comment><![CDATA[Benefit is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00 < 0.25*minwage & (IsDisabled | dag >= 65)]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>527572ad-8aaf-4a8f-b14e-4ab55cfda0f0</ID>
+            <FunctionID>d83dfadf-f063-4110-9d4b-42cfe2f61818</FunctionID>
+            <Name>Comp_perElig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[minwage]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b3858be0-d186-4ce8-990d-eff6e2c070f0</ID>
+            <FunctionID>d83dfadf-f063-4110-9d4b-42cfe2f61818</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[Benefit: disabled: old age]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ac64350e-c68f-4839-a344-be23932bbe92</ID>
+            <FunctionID>d83dfadf-f063-4110-9d4b-42cfe2f61818</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_sl]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>6964fc9e-b846-4f50-92aa-27fdba8cda34</ID>
+          <PolicyID>84436d30-d314-4a24-9fce-447948eefa3b</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>a683f5e0-4a74-4ee1-856d-b1f4e81c3d63</ID>
+            <FunctionID>6964fc9e-b846-4f50-92aa-27fdba8cda34</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[998#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -22003,6 +22495,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>dcf0fb86-71ab-4f92-a7b1-06a530ed336d</ID>
+            <FunctionID>7357c17d-66a8-44d7-85f9-464e4a797f59</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>1c1e94d4-cf05-475e-b252-f393d991e2dc</ID>
@@ -22139,6 +22644,19 @@
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>77ab3cc1-ff64-4909-9a6b-c8316f756736</ID>
+            <FunctionID>1c1e94d4-cf05-475e-b252-f393d991e2dc</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>11</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -22729,7 +23247,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
-        <Order>20</Order>
+        <Order>21</Order>
         <Switch>off</Switch>
         <Private />
         <Color>-1</Color>
@@ -22932,7 +23450,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>21</Order>
+        <Order>22</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -22966,7 +23484,7 @@
             <Comment><![CDATA[Household ID]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idhh]]></Value>
-            <Order>3</Order>
+            <Order>1</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -22979,7 +23497,7 @@
             <Comment><![CDATA[Unique Person ID = idhh * 100 + unique number within household]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idperson]]></Value>
-            <Order>4</Order>
+            <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -22992,7 +23510,7 @@
             <Comment><![CDATA[ID of partner if married or cohabiting]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idpartner]]></Value>
-            <Order>5</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23005,7 +23523,7 @@
             <Comment><![CDATA[ID of mother if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idmother]]></Value>
-            <Order>6</Order>
+            <Order>4</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23018,7 +23536,7 @@
             <Comment><![CDATA[ID of father if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idfather]]></Value>
-            <Order>7</Order>
+            <Order>5</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23031,7 +23549,7 @@
             <Comment><![CDATA[Household Weight]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dwt]]></Value>
-            <Order>8</Order>
+            <Order>6</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23044,7 +23562,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>7</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23057,7 +23575,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>8</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23070,7 +23588,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23083,7 +23601,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23096,7 +23614,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23109,7 +23627,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23122,7 +23640,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23135,7 +23653,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>20</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23148,7 +23666,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>20</Order>
+            <Order>21</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23161,7 +23679,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>21</Order>
+            <Order>22</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23174,7 +23692,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>22</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23187,7 +23705,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>23</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23200,7 +23718,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>26</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23213,7 +23731,7 @@
             <Comment><![CDATA[employee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>27</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23226,7 +23744,7 @@
             <Comment><![CDATA[employer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>29</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23239,7 +23757,7 @@
             <Comment><![CDATA[self-employed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>30</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23252,7 +23770,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>31</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23265,7 +23783,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>32</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23278,7 +23796,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>33</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23291,7 +23809,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>34</Order>
+            <Order>35</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23304,7 +23822,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>35</Order>
+            <Order>36</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23317,7 +23835,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>24</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23330,7 +23848,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>25</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23343,7 +23861,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>28</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23356,7 +23874,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23369,7 +23887,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23382,7 +23900,46 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b5d3ae1a-e8e3-410a-8e06-eb462e55a69a</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8330dc4b-15c2-44f7-9527-725849ad59b1</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ddi]]></Value>
             <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9a81bb87-6067-4953-a0f8-47c07ea87e16</ID>
+            <FunctionID>b666ac67-a7fb-4872-8ba3-f0b300277217</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00]]></Value>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23397,7 +23954,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -25356,7 +25913,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -26410,8 +26967,8 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
-        <Switch>on</Switch>
+        <Order>18</Order>
+        <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -27250,7 +27807,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Auxílio Brasil ]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -28108,7 +28665,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -28192,6 +28749,105 @@
             <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>a641c9e4-47ff-4eb2-9524-ffd077f477d5</ID>
+        <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+        <Name>bpc_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN:]]></Comment>
+        <PrivateComment />
+        <Order>16</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>63d0bcd2-1a26-4df9-85e1-cf4d55e22e1a</ID>
+          <PolicyID>a641c9e4-47ff-4eb2-9524-ffd077f477d5</PolicyID>
+          <Name>BenCalc</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9e936171-7cc0-43f5-9857-7dee9a06e3a8</ID>
+            <FunctionID>63d0bcd2-1a26-4df9-85e1-cf4d55e22e1a</FunctionID>
+            <Name>Comp_Cond</Name>
+            <Comment><![CDATA[Benefit is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00 < 0.25*minwage & (IsDisabled | dag >= 65)]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5cc98a27-5014-4c58-8846-465d33582adf</ID>
+            <FunctionID>63d0bcd2-1a26-4df9-85e1-cf4d55e22e1a</FunctionID>
+            <Name>Comp_perElig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[minwage]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b068b772-de9c-472e-8af6-35740f8932dc</ID>
+            <FunctionID>63d0bcd2-1a26-4df9-85e1-cf4d55e22e1a</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[Benefit: disabled: old age]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ec619be5-b1c1-4d16-9f7e-f4dd116e1b4f</ID>
+            <FunctionID>63d0bcd2-1a26-4df9-85e1-cf4d55e22e1a</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_sl]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>6a9a7939-2e30-45f7-9160-5d00bceaee56</ID>
+          <PolicyID>a641c9e4-47ff-4eb2-9524-ffd077f477d5</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e3804213-fd0b-494a-a001-3f825744ad8d</ID>
+            <FunctionID>6a9a7939-2e30-45f7-9160-5d00bceaee56</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[954#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -29050,6 +29706,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>12fa03ae-a623-4585-bbd6-291cce494086</ID>
+            <FunctionID>8638f469-a93a-41ae-9c71-050ba004b7d5</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>08f364c1-7ee1-496d-88f6-e34f771ab102</ID>
@@ -29186,6 +29855,19 @@
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
             <Order>10</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>72bff030-01c5-4ee7-89d5-f79b7265121b</ID>
+            <FunctionID>08f364c1-7ee1-496d-88f6-e34f771ab102</FunctionID>
+            <Name>bdioa</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>11</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -29776,7 +30458,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Social Assistance]]></Comment>
         <PrivateComment />
-        <Order>20</Order>
+        <Order>21</Order>
         <Switch>off</Switch>
         <Private />
         <Color>-1</Color>
@@ -29979,7 +30661,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>21</Order>
+        <Order>22</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -30013,7 +30695,7 @@
             <Comment><![CDATA[Household ID]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idhh]]></Value>
-            <Order>3</Order>
+            <Order>1</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30026,7 +30708,7 @@
             <Comment><![CDATA[Unique Person ID = idhh * 100 + unique number within household]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idperson]]></Value>
-            <Order>4</Order>
+            <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30039,7 +30721,7 @@
             <Comment><![CDATA[ID of partner if married or cohabiting]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idpartner]]></Value>
-            <Order>5</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30052,7 +30734,7 @@
             <Comment><![CDATA[ID of mother if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idmother]]></Value>
-            <Order>6</Order>
+            <Order>4</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30065,7 +30747,7 @@
             <Comment><![CDATA[ID of father if in household otherwise 0]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[idfather]]></Value>
-            <Order>7</Order>
+            <Order>5</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30078,7 +30760,7 @@
             <Comment><![CDATA[Household Weight]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dwt]]></Value>
-            <Order>8</Order>
+            <Order>6</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30091,7 +30773,7 @@
             <Comment><![CDATA[demographic : country]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dct]]></Value>
-            <Order>9</Order>
+            <Order>7</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30104,7 +30786,7 @@
             <Comment><![CDATA[Age]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dag]]></Value>
-            <Order>10</Order>
+            <Order>8</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30117,7 +30799,7 @@
             <Comment><![CDATA[Gender]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dgn]]></Value>
-            <Order>11</Order>
+            <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30130,7 +30812,7 @@
             <Comment><![CDATA[Marital Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dms]]></Value>
-            <Order>12</Order>
+            <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30143,7 +30825,7 @@
             <Comment><![CDATA[Current level of Education]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[dec]]></Value>
-            <Order>13</Order>
+            <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30156,7 +30838,7 @@
             <Comment><![CDATA[Labour Economis Status]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[les]]></Value>
-            <Order>14</Order>
+            <Order>12</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30169,7 +30851,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>18</Order>
+            <Order>19</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30182,7 +30864,7 @@
             <Comment><![CDATA[standard disposable income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_dispy]]></Value>
-            <Order>19</Order>
+            <Order>20</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30195,7 +30877,7 @@
             <Comment><![CDATA[original income]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_origy]]></Value>
-            <Order>20</Order>
+            <Order>21</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30208,7 +30890,7 @@
             <Comment><![CDATA[All benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_ben]]></Value>
-            <Order>21</Order>
+            <Order>22</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30221,7 +30903,7 @@
             <Comment><![CDATA[simulated benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bensim]]></Value>
-            <Order>22</Order>
+            <Order>23</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30234,7 +30916,7 @@
             <Comment><![CDATA[taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_tax]]></Value>
-            <Order>23</Order>
+            <Order>24</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30247,7 +30929,7 @@
             <Comment><![CDATA[simulated taxes]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_taxsim]]></Value>
-            <Order>26</Order>
+            <Order>27</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30260,7 +30942,7 @@
             <Comment><![CDATA[employee social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicee]]></Value>
-            <Order>27</Order>
+            <Order>28</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30273,7 +30955,7 @@
             <Comment><![CDATA[employer social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicer]]></Value>
-            <Order>29</Order>
+            <Order>30</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30286,7 +30968,7 @@
             <Comment><![CDATA[self-employed social insurance contributions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_sicse]]></Value>
-            <Order>30</Order>
+            <Order>31</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30299,7 +30981,7 @@
             <Comment><![CDATA[Pensions]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_pen]]></Value>
-            <Order>31</Order>
+            <Order>32</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30312,7 +30994,7 @@
             <Comment><![CDATA[Means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_benmt]]></Value>
-            <Order>32</Order>
+            <Order>33</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30325,7 +31007,7 @@
             <Comment><![CDATA[Non means-tested benefits]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[ils_bennt]]></Value>
-            <Order>33</Order>
+            <Order>34</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30338,7 +31020,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[2]]></Value>
-            <Order>34</Order>
+            <Order>35</Order>
             <ValueType>amount</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30351,7 +31033,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>35</Order>
+            <Order>36</Order>
             <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30364,7 +31046,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_earns]]></Value>
-            <Order>24</Order>
+            <Order>25</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30377,7 +31059,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicot]]></Value>
-            <Order>25</Order>
+            <Order>26</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30390,7 +31072,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[ils_sicdy]]></Value>
-            <Order>28</Order>
+            <Order>29</Order>
             <ValueType>incomelist</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30403,7 +31085,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>15</Order>
+            <Order>13</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30416,7 +31098,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>16</Order>
+            <Order>14</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30429,7 +31111,46 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d9c8cdcf-391e-4e76-8d39-614594c1e39f</ID>
+            <FunctionID>93071407-0327-41fd-8702-a7fd65687eea</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5d114ea4-c45a-4ba6-838b-ecc1214ecda0</ID>
+            <FunctionID>93071407-0327-41fd-8702-a7fd65687eea</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ddi]]></Value>
             <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e677d739-47f4-4a30-8a57-fbeb50a187cb</ID>
+            <FunctionID>93071407-0327-41fd-8702-a7fd65687eea</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00]]></Value>
+            <Order>16</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -30444,7 +31165,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -32403,7 +33124,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -33457,7 +34178,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Bolsa Família]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -34295,7 +35016,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program Auxílio Brasil ]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -35155,7 +35876,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Extra benefit for families within the Auxílio Brasil Program (Benefício Extraordinário) ]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -35239,6 +35960,105 @@
             <Comment><![CDATA[Minimum total Auxílio Brasil benefit value per household ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[400#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>2b4174c7-5b21-49db-96e0-4c39c261eafd</ID>
+        <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+        <Name>bpc_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN:]]></Comment>
+        <PrivateComment />
+        <Order>16</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>4717fead-1b8e-4d54-b8f5-1639683f0f37</ID>
+          <PolicyID>2b4174c7-5b21-49db-96e0-4c39c261eafd</PolicyID>
+          <Name>BenCalc</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>4538934b-1f34-499e-9de6-a5364fa18b73</ID>
+            <FunctionID>4717fead-1b8e-4d54-b8f5-1639683f0f37</FunctionID>
+            <Name>Comp_Cond</Name>
+            <Comment><![CDATA[Benefit is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yre00 < 0.25*minwage & (IsDisabled | dag >= 65)]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>cfa63671-de9f-4514-a4cd-32bb643c06a6</ID>
+            <FunctionID>4717fead-1b8e-4d54-b8f5-1639683f0f37</FunctionID>
+            <Name>Comp_perElig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[minwage]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aa1ece17-4ab9-463f-9696-71399810a88e</ID>
+            <FunctionID>4717fead-1b8e-4d54-b8f5-1639683f0f37</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[Benefit: disabled: old age]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bdioa]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>cdad3d55-04a5-4a82-a3cf-d009430a4695</ID>
+            <FunctionID>4717fead-1b8e-4d54-b8f5-1639683f0f37</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_sl]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>96835963-32e0-494c-8d3a-25785fc9e810</ID>
+          <PolicyID>2b4174c7-5b21-49db-96e0-4c39c261eafd</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>0</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>c007a8bb-14b2-49eb-98a6-944197aee8c9</ID>
+            <FunctionID>96835963-32e0-494c-8d3a-25785fc9e810</FunctionID>
+            <Name>minwage</Name>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1302#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
