@@ -2711,7 +2711,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -2747,7 +2747,7 @@
             <ID>2276fac4-7405-4b07-be46-fa88f302856f</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income up to this annual amount is taxed...]]></Comment>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
@@ -2760,10 +2760,10 @@
             <ID>80cf6741-d58a-49b7-b643-900a932bb2f8</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
-            <Order>8</Order>
+            <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -2773,10 +2773,10 @@
             <ID>647ebc54-6d0a-4a90-a81d-fa1be6ff00b7</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[3751.05#m]]></Value>
-            <Order>6</Order>
+            <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -2786,10 +2786,10 @@
             <ID>6b9e0cb4-d201-47b4-8b09-ed1bf8afa456</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2826.65#m]]></Value>
-            <Order>4</Order>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -2799,7 +2799,7 @@
             <ID>36d233d5-852a-4cd2-b183-6d91322d81d4</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
             <Order>9</Order>
@@ -2815,7 +2815,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>7</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -2828,7 +2828,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>5</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -2838,7 +2838,7 @@
             <ID>daf09371-c3fe-43ae-bf90-f67fff3d1e89</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>11</Order>
@@ -2851,7 +2851,7 @@
             <ID>bec2c9cf-36d7-40b0-8f47-bc5a99f59d8b</ID>
             <FunctionID>5f2ff502-cc23-41c8-908f-bb5321292d84</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>2</Order>
@@ -8386,7 +8386,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -8422,7 +8422,7 @@
             <ID>87d078f4-4972-410e-83da-1580ea4c53e8</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income up to this annual amount is taxed...]]></Comment>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
@@ -8435,10 +8435,10 @@
             <ID>c0b0caab-cf51-49b9-b13b-55047ea8c32f</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
-            <Order>8</Order>
+            <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -8448,10 +8448,10 @@
             <ID>dfef00e5-422a-4d1b-8222-5e25ffb160a5</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[3751.05#m]]></Value>
-            <Order>6</Order>
+            <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -8461,10 +8461,10 @@
             <ID>b22fb82c-67c0-4d6e-bf39-9c8bf3933a29</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2826.65#m]]></Value>
-            <Order>4</Order>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -8474,7 +8474,7 @@
             <ID>28a08492-929c-4ffc-9349-7491bca6b149</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
             <Order>9</Order>
@@ -8490,7 +8490,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>7</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -8503,7 +8503,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>5</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -8513,7 +8513,7 @@
             <ID>adf30bce-de2e-4052-a3f9-ad88d16d9771</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>11</Order>
@@ -8526,7 +8526,7 @@
             <ID>f08d0c43-f04f-4d65-8c3e-d762951acc34</ID>
             <FunctionID>777471a8-8f66-4cc9-bf15-55805c56649d</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>2</Order>
@@ -14063,7 +14063,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -14099,7 +14099,7 @@
             <ID>ba1c04a0-c801-410d-b19f-31edf90982d4</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income up to this annual amount is taxed...]]></Comment>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
@@ -14112,10 +14112,10 @@
             <ID>c991cacd-4944-490f-a80a-c3e8c6ee1c0a</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
-            <Order>8</Order>
+            <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -14125,10 +14125,10 @@
             <ID>3dedba61-5f84-4171-9e1a-7b84100849e5</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[3751.05#m]]></Value>
-            <Order>6</Order>
+            <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -14138,10 +14138,10 @@
             <ID>5cb5a147-ad17-44ce-b60a-c0fe6186b664</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2826.65#m]]></Value>
-            <Order>4</Order>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -14151,7 +14151,7 @@
             <ID>1b930cd0-cdbb-4930-b952-aa34e377d424</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
             <Order>9</Order>
@@ -14167,7 +14167,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>7</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -14180,7 +14180,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>5</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -14190,7 +14190,7 @@
             <ID>61149087-a1dc-4fd7-87f7-c15d0e36f679</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>11</Order>
@@ -14203,7 +14203,7 @@
             <ID>acd8c43b-8b8c-4a6a-9bf1-0b056c11ae2f</ID>
             <FunctionID>2679ed01-2ee0-4b5e-8503-2f4880baaa9f</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>2</Order>
@@ -19739,7 +19739,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.075]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
             <Color>-1</Color>
@@ -19775,7 +19775,7 @@
             <ID>c48d08b5-9313-46ef-8aad-84c87ffabbf2</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income up to this annual amount is taxed...]]></Comment>
+            <Comment><![CDATA[Income up to this monthly amount is taxed...]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1903.98#m]]></Value>
             <Order>1</Order>
@@ -19788,10 +19788,10 @@
             <ID>5de7635c-3a6e-48bf-9829-15b36a63a2dd</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4664.69#m]]></Value>
-            <Order>8</Order>
+            <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
             <Color>-1</Color>
@@ -19801,10 +19801,10 @@
             <ID>1b14e886-f0f6-43a6-83b9-88fea47236d8</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[3751.05#m]]></Value>
-            <Order>6</Order>
+            <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -19814,10 +19814,10 @@
             <ID>a27f9ba8-576a-4f32-b89d-0ab405aabd35</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[Income above the previous annual amount and up to this annual amount is taxed…]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount and up to this monthly amount is taxed…]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2826.65#m]]></Value>
-            <Order>4</Order>
+            <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -19827,7 +19827,7 @@
             <ID>d561842d-f203-4f82-8440-fb3435d3666f</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income above the previous monthly amount is taxed with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.275]]></Value>
             <Order>9</Order>
@@ -19843,7 +19843,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.225]]></Value>
-            <Order>7</Order>
+            <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
             <Color>-1</Color>
@@ -19856,7 +19856,7 @@
             <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.15]]></Value>
-            <Order>5</Order>
+            <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
             <Color>-1</Color>
@@ -19866,7 +19866,7 @@
             <ID>e947cd7d-b179-45de-b1c2-da8774e2b28c</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>LowLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[This is to avoid negative results (i.e. if taxbase is negative, the tax is set to 0)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>11</Order>
@@ -19879,7 +19879,7 @@
             <ID>ba279c76-9f7e-4f8a-aaba-94583c652929</ID>
             <FunctionID>ec19b3c9-e191-47f3-a719-be7d7c194f19</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[... with this rate]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0]]></Value>
             <Order>2</Order>
