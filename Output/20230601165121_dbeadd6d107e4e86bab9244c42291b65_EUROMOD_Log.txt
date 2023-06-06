@@ -1,0 +1,18 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quinta-feira, 1 de junho de 2023 16:51:00
+End: quinta-feira, 1 de junho de 2023 16:51:21
+Duration: 21,2231499s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+afa7eb93-0d05-45c0-bb16-61e12ef07624	finished	BRA_2018	pnad2018 euromod	quinta-feira, 1 de junho de 2023 16:51:00	quinta-feira, 1 de junho de 2023 16:51:21	21,2231499s	euro	1	-	bra_2018_std	9a2e822eafd990da47072a42ff0a401c	bra_2018_std_hh	d63c35847625d1c9ce96c53064f8f055
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: afa7eb93-0d05-45c0-bb16-61e12ef07624
+WARNING: 13.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 13.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\documents\github\brasmod\input\pnad2018 euromod.txt: Variable(s) xhl, xed, xpp, xmp not found (zero is used as default)

@@ -1,0 +1,24 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 31 de maio de 2023 12:10:32
+End: quarta-feira, 31 de maio de 2023 12:10:39
+Duration: 6,9445295s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+01949d77-8fcd-48bc-9b42-d64066db847d	aborted	BRA_2021	pnad2021 euromod	quarta-feira, 31 de maio de 2023 12:10:32	quarta-feira, 31 de maio de 2023 12:10:39	6,9445295s	euro	1	-	bra_2021_std	9e1a8fa9994ff46be23601b18eafaa5c	bra_2021_std_hh	a700932d42ebd74a52a62953f8542e75
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 01949d77-8fcd-48bc-9b42-d64066db847d
+WARNING: 12.2.1 bex_bra/BenCalc/Comp_Cond (ebc1af57-acaa-4418-9f5a-620b9874260b): missing footnote parameter for $bex#m
+WARNING: 12.2.2 bex_bra/BenCalc/Comp_perTU (c56805eb-5bea-4044-8312-479513d7aea9): missing footnote parameter for $bex#y
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\documents\github\brasmod\input\pnad2021 euromod.txt: Variable(s) xhl, xed, xpp, xmp not found (zero is used as default)

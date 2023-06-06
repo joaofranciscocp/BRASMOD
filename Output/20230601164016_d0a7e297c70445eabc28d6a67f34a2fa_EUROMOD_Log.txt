@@ -1,0 +1,19 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quinta-feira, 1 de junho de 2023 16:40:16
+End: quinta-feira, 1 de junho de 2023 16:40:16
+Duration: 0,5300816s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+bced56bd-71b2-474b-aa18-0e4388a9fd7f	aborted	BRA_2019	pnad2019 euromod	quinta-feira, 1 de junho de 2023 16:40:16	quinta-feira, 1 de junho de 2023 16:40:16	0,5300816s	euro	1	-	bra_2019_std	0ad4255af6abda3d3ad8eb5163d84a89	bra_2019_std_hh	bca075f9bd10c048e288a8f1a407eaff
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: bced56bd-71b2-474b-aa18-0e4388a9fd7f
+ERROR: 10.9.2 bpbf_bra/ArithOp/Output_Var (dc44bad6-3339-4b24-bd22-2bb11a222ff2): unknown variable ibpbf_i
+WARNING: 13.1.16 output_std_sl/DefOutput/Var (be08bb59-50d9-4697-95b5-bb44cc85e290): use of not initialised variable bls07_s
+WARNING: 13.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 13.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
