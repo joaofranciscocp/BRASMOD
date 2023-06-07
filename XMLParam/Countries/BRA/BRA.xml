@@ -5638,7 +5638,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_pbf + bls08_s*12/3]]></Value>
+            <Value><![CDATA[y_pbf#1/nPersInUnit#1 + bls08_s*12/3]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -5652,7 +5652,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bpbf_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -5665,9 +5665,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>88f904f0-1e46-4288-a3d5-c760a9bbff76</ID>
+            <FunctionID>4212d08b-8aee-4e6e-ab17-425e4cea1af2</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_sl]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -12963,7 +12976,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_pbf + bls08_s*12/10]]></Value>
+            <Value><![CDATA[y_pbf#1/nPersInUnit#1 + bls08_s*12/10]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -12977,7 +12990,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bpbf_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -12990,9 +13003,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>be082ea8-e840-458e-92ef-c0705d613d8d</ID>
+            <FunctionID>15ae2594-3cfd-4636-85e0-bf44fd9828e9</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_sl]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -20300,7 +20326,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_pbf +  bls08_s*12/13
+            <Value><![CDATA[y_pbf#1/nPersInUnit#1 +  bls08_s*12/13
 ]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
@@ -20315,7 +20341,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bpbf_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -20328,9 +20354,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2d504116-ec9f-4a50-9fbb-068cbe857c8e</ID>
+            <FunctionID>3c69998c-62f6-4caf-9534-8b362771bac4</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_sl]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -27628,7 +27667,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_pbf +  bls08_s]]></Value>
+            <Value><![CDATA[y_pbf#1/nPersInUnit#1 +  bls08_s]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -27642,7 +27681,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bpbf_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -27655,9 +27694,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_sl]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>73117d67-0678-40d0-9437-089e761c977b</ID>
+            <FunctionID>97c80f29-2cb6-4ee6-9ac6-fdc03d9685ad</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_sl]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -34969,7 +35021,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -34982,9 +35034,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ff031b54-5f97-4fc9-8e92-905f8757e085</ID>
+            <FunctionID>c7e7a758-fb51-4d44-83a9-82d048662216</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
