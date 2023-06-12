@@ -1,0 +1,23 @@
+===== EUROMOD LOG =====
+Software-Version: 3.6.2
+Project: brasmod
+Start: terça-feira, 6 de junho de 2023 08:08:16
+End: terça-feira, 6 de junho de 2023 08:08:37
+Duration: 20,4491718s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+391ffcb3-1de2-4686-a401-a4309b245854	finished	BRA_2018	pnad2021 euromod	terça-feira, 6 de junho de 2023 08:08:16	terça-feira, 6 de junho de 2023 08:08:37	20,4491718s	euro	1	-	bra_2018_std	931bf279840a8593ede128dc5fadf96e	bra_2018_std_hh	e57b27f3894f1d5fd5948930172b0bc1
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 391ffcb3-1de2-4686-a401-a4309b245854
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscse_s
+WARNING: 9.2.1 tscer_bra/Elig/Elig_Cond (a79a116b-e249-44a6-b6cb-3c71f88c88ec): use of not initialised variable tscer_s
+WARNING: 11.3.3 tscer_housekeeper_bra/ArithOp/Output_Add_Var (cdf0083d-96c4-4bf7-a1c8-44367a6872e9): use of not initialised variable tscer_s
+WARNING: 12.2.6 tscse_bra/BenCalc/Output_Add_Var (9813e1a7-7cd6-4bb0-b8c4-cfec5cfb12d6): use of not initialised variable tscse_s
+WARNING: 18.1.24 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 18.1.28 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 18.1.28 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\documents\github\brasmod\input\pnad2021 euromod.txt: Variable(s) xhl, xed, xpp, xmp not found (zero is used as default)
