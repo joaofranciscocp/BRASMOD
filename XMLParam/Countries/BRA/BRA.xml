@@ -232,7 +232,7 @@
             <Name>bfa01_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Programa Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -245,7 +245,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -258,7 +258,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -271,7 +271,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -1012,7 +1012,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -1490,7 +1490,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -3698,7 +3698,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-15, with children aged 6-15 in school... ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & il_pbf#1/nPersInUnit#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag <=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -3711,7 +3711,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[If per capita household income is below the extreme poverty line, ...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_pbf#1/nPersInUnit#1 <= $extrempovline]]></Value>
+            <Value><![CDATA[IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $extrempovline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -3815,7 +3815,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 16-18 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & il_pbf#1/nPersInUnit#1 <= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>7</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
@@ -3839,7 +3839,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Obsevations: in 2019 there was a christmas bonus (double the value in december); for 2020 and 2021 there was the Covid Benefit. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i*3/12]]></Value>
+            <Value><![CDATA[bpbf_i*13/12]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -3965,7 +3965,8 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_pbf#1/nPersInUnit#1 + bfa01_s*12/3]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_pbf_sub#1/nPersInUnit#1, il_pbf#1/nPersInUnit#1) +  bfa01_s*12/13
+]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -4435,7 +4436,7 @@
           <ID>70def52c-f7bf-4ffd-9126-5c2effc4f6de</ID>
           <PolicyID>002d359b-6b29-48ab-9029-03b048c35182</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[Income list for PBF]]></Comment>
+          <Comment><![CDATA[Policy specific income list]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -4445,7 +4446,7 @@
             <ID>4d250d27-8097-4d04-812b-064e52bd345f</ID>
             <FunctionID>70def52c-f7bf-4ffd-9126-5c2effc4f6de</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list PBF]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_pbf]]></Value>
             <Order>1</Order>
@@ -4573,7 +4574,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4650,7 +4651,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4713,7 +4714,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4867,7 +4868,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4917,7 +4918,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4967,7 +4968,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -4991,7 +4992,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -5004,9 +5005,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>63042623-2ed3-462c-830e-2d16ad691658</ID>
+            <FunctionID>ed28a115-bde9-40e2-9975-6175802b94e2</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -5017,7 +5031,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5080,7 +5094,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5143,7 +5157,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extraordinary benefit for households receiving Auxílio Brasil (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5206,7 +5220,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Additional extraordinary benefit for households receiving Auxílio Brasil]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5269,7 +5283,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the additional extraordinary benefit throughout the year]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5319,7 +5333,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5367,7 +5381,7 @@
           <ID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</ID>
           <PolicyID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Policy-specific income list]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>n/a</Switch>
@@ -5377,7 +5391,7 @@
             <ID>0eddf258-0448-418d-a8df-b8c456b37341</ID>
             <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Brasi)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -5389,76 +5403,11 @@
           <Parameter>
             <ID>f9be491c-ce80-42a9-a1bb-0f385d1869f5</ID>
             <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>71d8917d-7173-4b9c-97fc-68655bda931b</ID>
-            <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>yse</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>76d08b0c-74ec-4b78-8318-3882b793e8b7</ID>
-            <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>poa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>05efbdfd-3618-4943-b6fb-0f11ac9e9af4</ID>
-            <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fcd70650-457b-4fba-ba65-4a4669aeb4d1</ID>
-            <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>740ffd81-f2fd-47c2-8e95-e1ba5a00b04d</ID>
-            <FunctionID>23c49181-9645-49c5-b1f2-1bacc5ceedf9</FunctionID>
-            <Name>bdioa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>7</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -5471,7 +5420,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5485,6 +5434,43 @@
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>9b840210-4e86-49d3-bc36-4d0429f69092</ID>
+          <PolicyID>fef135b3-6f69-4056-9d49-f29f9aa196ff</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>29b8776e-6dbc-4f3e-97eb-2f229e8063c7</ID>
+            <FunctionID>9b840210-4e86-49d3-bc36-4d0429f69092</FunctionID>
+            <Name>Name</Name>
+            <Comment><![CDATA[Subreported income list (Auxílio Brasi)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7bb39381-978a-4aa3-b6a1-f03c0df4fd33</ID>
+            <FunctionID>9b840210-4e86-49d3-bc36-4d0429f69092</FunctionID>
+            <Name>il_pbf_sub</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -5517,7 +5503,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For those who didn't declare receiving the benefit, it is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65. We assume that per_sub% of households subreport their income (cadunico_rand < per_sub)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_CadUnico#1/nPersInUnit#1 < 0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_CadUnico_sub#1/nPersInUnit#1, il_CadUnico#1/nPersInUnit#1) <  0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -5715,7 +5701,7 @@
           <ID>bc14cb12-7504-401d-b1ce-7b779b6921db</ID>
           <PolicyID>5c1b1a43-a424-4003-937e-b93c8f1d05c9</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[List of random variables]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -5753,7 +5739,7 @@
             <Name>cadunico_rand</Name>
             <Comment><![CDATA[Cadastro Único income subreporting ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[0]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -5842,7 +5828,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>6</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -5851,7 +5837,7 @@
             <Name>Seed</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[1243]]></Value>
             <Order>1</Order>
             <ValueType>amount</ValueType>
             <Group />
@@ -5866,7 +5852,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>7</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -5875,7 +5861,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[rand]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -5888,7 +5874,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[cadunico_rand]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -5901,7 +5887,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_bra]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -7095,7 +7081,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Personal income 2 years before]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7270,36 +7256,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>1dbde0a5-ae39-4279-94eb-91693804c93e</ID>
-          <PolicyID>ad9161b5-9fba-49ef-afc1-1150699cde35</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[Prevalent minimum wage for COVID benefit eligibility]]></Comment>
-          <PrivateComment />
-          <Order>3</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>e2c3bf07-cd59-47b9-9e4b-0adede983b7b</ID>
-            <FunctionID>1dbde0a5-ae39-4279-94eb-91693804c93e</FunctionID>
-            <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[1045#m]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>c3893bcd-08c2-407c-bdc0-ac1413d59569</ID>
           <PolicyID>ad9161b5-9fba-49ef-afc1-1150699cde35</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7349,7 +7311,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
           <PrivateComment />
-          <Order>21</Order>
+          <Order>23</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7412,7 +7374,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (one person in hh)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>15</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7488,7 +7450,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7538,7 +7500,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 -2021]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7548,7 +7510,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half minwage or total family income<=3*minwage 3) personal income 2 years before <28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
+            <Value><![CDATA[dag>=18 & (IF(cadunico_rand#1 < per_sub, il_ae_sub#1/nPersInUnit#1, il_ae#1/nPersInUnit#1) <=0.5*minwage | IF(cadunico_rand#1 < per_sub, il_ae_sub#1, il_ae#1) <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -7627,7 +7589,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7677,7 +7639,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7727,7 +7689,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7737,7 +7699,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income two years before <28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família) 6) solo mother 7) all income from household comes from mother up to R$ 25 difference (arbitrary choice for confidence interval)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner & ABS(yhh - ils_origy) < 25]]></Value>
+            <Value><![CDATA[dag>=18 & (IF(cadunico_rand#1 < per_sub, il_ae_sub#1/nPersInUnit#1, il_ae#1/nPersInUnit#1) <=0.5*minwage | IF(cadunico_rand#1 < per_sub, il_ae_sub#1, il_ae#1) <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner & ABS(yhh - ils_origy) < 25]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -7816,7 +7778,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7824,7 +7786,7 @@
             <ID>d19426fd-1f82-4fd6-9390-c473f6629f3f</ID>
             <FunctionID>617a5278-87aa-4dd0-ac26-54694ac4273e</FunctionID>
             <Name>Formula</Name>
-            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Marc21)]]></Comment>
+            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Mar21)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bcovid_iv * 3/12]]></Value>
             <Order>1</Order>
@@ -7866,7 +7828,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (two or more people in hh)]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7955,7 +7917,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8005,7 +7967,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8081,7 +8043,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>20</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8131,7 +8093,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8141,7 +8103,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income 2 years before <28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
+            <Value><![CDATA[dag>=18 & (IF(cadunico_rand#1 < per_sub, il_ae_sub#1/nPersInUnit#1, il_ae#1/nPersInUnit#1) <=0.5*minwage | IF(cadunico_rand#1 < per_sub, il_ae_sub#1, il_ae#1) <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -8220,7 +8182,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8231,7 +8193,7 @@
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income in 2018<28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família)
 6) solo mother 7) all income from household comes from mother up to R$ 25 difference (arbitrary choice for confidence interval)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 &  (y_covid#1/nPersInUnit#1  <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2018*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 & !IsWithPartner & nDepChildrenInTu#1 > 0 & ABS(yhh - ils_origy) < 25]]></Value>
+            <Value><![CDATA[dag>=18 &  (IF(cadunico_rand#1 < per_sub, il_ae_sub#1/nPersInUnit#1, il_ae#1/nPersInUnit#1) <=0.5*minwage | IF(cadunico_rand#1 < per_sub, il_ae_sub#1, il_ae#1) <=3*minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 & !IsWithPartner & nDepChildrenInTu#1 > 0 & ABS(yhh - ils_origy) < 25]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -8310,7 +8272,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8360,7 +8322,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8383,7 +8345,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bot]]></Value>
+            <Value><![CDATA[bot_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -8405,75 +8367,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>52bbf4ae-3c13-4dbf-909c-345ff6727d9b</ID>
-          <PolicyID>ad9161b5-9fba-49ef-afc1-1150699cde35</PolicyID>
-          <Name>Allocate</Name>
-          <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
-          <PrivateComment />
-          <Order>22</Order>
-          <Switch>off</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>4541376f-5c3e-4a60-953c-e6cccc30184f</ID>
-            <FunctionID>52bbf4ae-3c13-4dbf-909c-345ff6727d9b</FunctionID>
-            <Name>Share</Name>
-            <Comment><![CDATA[The final benefit is shared between all adults]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls06_s]]></Value>
-            <Order>0</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>e022cd41-c851-4ca2-8e52-f0ac1be44ea1</ID>
-            <FunctionID>52bbf4ae-3c13-4dbf-909c-345ff6727d9b</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls06_s]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>950aeeb3-3424-457a-b949-839c210ff45e</ID>
-            <FunctionID>52bbf4ae-3c13-4dbf-909c-345ff6727d9b</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>cfa7fe97-747b-4e2c-a1d2-e3a57e34c156</ID>
-            <FunctionID>52bbf4ae-3c13-4dbf-909c-345ff6727d9b</FunctionID>
-            <Name>Share_Between</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[dag >= 18]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>840ed06b-98bf-45d1-92d1-dfc651ae5c95</ID>
           <PolicyID>ad9161b5-9fba-49ef-afc1-1150699cde35</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>20</Order>
+          <Order>21</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8531,9 +8430,9 @@
             <ID>23e6bd6e-fcc9-4472-be33-ffc3e8934f5d</ID>
             <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_covid]]></Value>
+            <Value><![CDATA[il_ae]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -8543,7 +8442,7 @@
           <Parameter>
             <ID>06ae25ae-1bda-45b7-b774-0ec9e77e46e1</ID>
             <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
@@ -8553,66 +8452,38 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+        </Function>
+        <Function>
+          <ID>334df870-179c-456d-b443-3fee1fd09918</ID>
+          <PolicyID>ad9161b5-9fba-49ef-afc1-1150699cde35</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
           <Parameter>
-            <ID>43a50487-796a-4ee8-8386-9d319b3ec6f8</ID>
-            <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>yse</Name>
+            <ID>7ec41431-6f49-4048-8004-920aaf3b5dfe</ID>
+            <FunctionID>334df870-179c-456d-b443-3fee1fd09918</FunctionID>
+            <Name>Name</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
+            <Value><![CDATA[il_ae_sub]]></Value>
+            <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>5a245792-262d-4457-8620-17c2eaf0e538</ID>
-            <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>poa</Name>
+            <ID>0e814e6c-1f72-4f1d-a3cf-923e18444552</ID>
+            <FunctionID>334df870-179c-456d-b443-3fee1fd09918</FunctionID>
+            <Name>il_pbf_sub</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>cb5bb3eb-ee6c-428f-a9a3-e66af8ea7ed3</ID>
-            <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d3801740-3a23-4928-94d5-ac559681da46</ID>
-            <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9955a9c5-7dd7-45da-bb07-37af1bbba072</ID>
-            <FunctionID>d69e6df0-7826-44d7-9bb3-2b78e13a2760</FunctionID>
-            <Name>bdioa_s</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -8765,6 +8636,118 @@
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>192282cd-f20b-47e7-b826-cfa59c34dde0</ID>
+        <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+        <Name>comp_pbf_ae_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN: Compatibilization between PBF and AE]]></Comment>
+        <PrivateComment />
+        <Order>27</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>ffc44799-cb51-4cfa-a877-f38cdca813a1</ID>
+          <PolicyID>192282cd-f20b-47e7-b826-cfa59c34dde0</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 1: PBF is higher]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>35edbdfc-fde5-470b-b563-9760afdd40dc</ID>
+            <FunctionID>ffc44799-cb51-4cfa-a877-f38cdca813a1</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If PBF is higher, set AE to 0]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[IF(bfa01_s >= bot_s, 0, bot_s)]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0d50809d-4eaa-4c3b-bd08-354eb03fac28</ID>
+            <FunctionID>ffc44799-cb51-4cfa-a877-f38cdca813a1</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bot_s]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>60b208f9-b8a7-4c9e-8816-3686d8c461ec</ID>
+            <FunctionID>ffc44799-cb51-4cfa-a877-f38cdca813a1</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>26b45055-ef8b-4795-b8e1-344940cfdc76</ID>
+          <PolicyID>192282cd-f20b-47e7-b826-cfa59c34dde0</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 2: AE is higher]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>34bf2ed2-3a91-40ae-b9aa-b9647ff8f7d5</ID>
+            <FunctionID>26b45055-ef8b-4795-b8e1-344940cfdc76</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If AE is higher, set it to the difference between PBF and AE (it serves as a top-up)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[IF(bfa01_s < bot_s, bot_s - bfa01_s, bot_s)]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b31e0e9b-8c99-40b2-8954-453329ef1bac</ID>
+            <FunctionID>26b45055-ef8b-4795-b8e1-344940cfdc76</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bot_s]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e08f55e7-f304-45c1-9617-2a27cd466d17</ID>
+            <FunctionID>26b45055-ef8b-4795-b8e1-344940cfdc76</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -9779,7 +9762,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -10257,7 +10240,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -12465,7 +12448,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-15, with children aged 6-15 in school... ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & il_pbf#1/nPersInUnit#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag <=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -12478,7 +12461,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[If per capita household income is below the extreme poverty line, ...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_pbf#1/nPersInUnit#1 <= $extrempovline]]></Value>
+            <Value><![CDATA[IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $extrempovline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -12582,7 +12565,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 16-18 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & il_pbf#1/nPersInUnit#1 <= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>7</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
@@ -12732,7 +12715,8 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_pbf#1/nPersInUnit#1 + bfa01_s*12/10]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_pbf_sub#1/nPersInUnit#1, il_pbf#1/nPersInUnit#1) +  bfa01_s*12/10
+]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -13202,7 +13186,7 @@
           <ID>79e45f59-7fec-4127-8783-417f3e5ef930</ID>
           <PolicyID>24bc6f34-cff8-48f1-bd82-bce700bbb1c0</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[Income list for PBF]]></Comment>
+          <Comment><![CDATA[Policy specific income list]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -13212,7 +13196,7 @@
             <ID>264bb930-bd52-4f3a-a242-c05ea5efcf27</ID>
             <FunctionID>79e45f59-7fec-4127-8783-417f3e5ef930</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list PBF]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_pbf]]></Value>
             <Order>1</Order>
@@ -13340,7 +13324,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13417,7 +13401,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13480,7 +13464,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13490,7 +13474,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-3...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<3 & IsNtoMchild#1 & y_ab#1/nPersInUnit#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag<3 & IsNtoMchild#1 & IF(cadunico_rand < per_sub, il_ab_sub/nPersInUnit, il_ab/nPersInUnit) <= $povline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13608,7 +13592,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 3-21 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & IsNtoMchild#2 & y_ab#1/nPersInUnit#1 <= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_ab_sub/nPersInUnit, il_ab/nPersInUnit) <= $povline]]></Value>
             <Order>5</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -13635,7 +13619,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13687,7 +13671,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13737,7 +13721,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13747,7 +13731,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_ab+ bls07_s*12/2]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_ab_sub#1/nPersInUnit#1, il_ab#1/nPersInUnit#1)+ bfa02_s*12/2]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -13761,7 +13745,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bab_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -13774,9 +13758,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_bra]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>672db239-03ed-47c9-b6da-6bc319b2d19a</ID>
+            <FunctionID>6bb91ea4-d90b-4953-8fd8-1c22f079481f</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_bra]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -13787,7 +13784,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13852,7 +13849,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13862,7 +13859,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[*aqui está só pra PBF, mas tem que incorporar AE e aí conferir]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s*12/2 < MAX(bls_01, bls_08)]]></Value>
+            <Value><![CDATA[bfa02_s*12/2 < MAX(bls_01, bls_08)]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13875,7 +13872,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(MAX(bls_01, bls_08) - bls07_s)*2/12]]></Value>
+            <Value><![CDATA[(MAX(bls_01, bls_08) - bfa02_s)*2/12]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -13915,7 +13912,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extraordinary benefit for households receiving Auxílio Brasil (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -13925,7 +13922,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[Establlishes a minimum for the total benefit value.  ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s > 0 & bls07_s*12/2 < $bab_bex]]></Value>
+            <Value><![CDATA[bfa02_s > 0 & bfa02_s*12/2 < $bab_bex]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13938,7 +13935,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[($bab_bex - bls07_s*12/2)*2/12]]></Value>
+            <Value><![CDATA[($bab_bex - bfa02_s*12/2)*2/12]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -13978,7 +13975,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Additional extraordinary benefit for households receiving Auxílio Brasil]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14041,7 +14038,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the additional extraordinary benefit throughout the year]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14091,7 +14088,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14139,7 +14136,7 @@
           <ID>29adda83-7497-4177-a407-b36cafa8767a</ID>
           <PolicyID>77ffe1e2-14c1-4c65-9d5c-ad907ad4b16b</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Policy-specific income list]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -14149,9 +14146,9 @@
             <ID>ebc077fb-04d9-43d1-ae9c-ee0ecf35b736</ID>
             <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Brasi)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_ab]]></Value>
+            <Value><![CDATA[il_ab]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -14161,76 +14158,11 @@
           <Parameter>
             <ID>eb62ac82-eca9-4688-8d55-958da5be1ddb</ID>
             <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
             <Order>2</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>73dd24f8-79aa-4308-a951-3ecb47781993</ID>
-            <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>yse</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>a85f069f-5c92-4882-971f-1d2eccb069ee</ID>
-            <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>poa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>15b5c6c0-0f00-4ae5-8073-c5b37195d1fd</ID>
-            <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9669fb18-271d-4404-9d54-724622b1753c</ID>
-            <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>81f0d8e5-6295-4942-b945-fa9b40988a5f</ID>
-            <FunctionID>29adda83-7497-4177-a407-b36cafa8767a</FunctionID>
-            <Name>bdioa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -14243,7 +14175,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -14257,6 +14189,43 @@
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>06dff974-09a1-4849-a953-75684062f1e5</ID>
+          <PolicyID>77ffe1e2-14c1-4c65-9d5c-ad907ad4b16b</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>b4221878-964a-4ab5-8185-284d8d2c7066</ID>
+            <FunctionID>06dff974-09a1-4849-a953-75684062f1e5</FunctionID>
+            <Name>Name</Name>
+            <Comment><![CDATA[Subreported income list (Auxílio Brasi)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[il_ab_sub]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dc93510f-810a-4e39-bbd8-4a953e505a20</ID>
+            <FunctionID>06dff974-09a1-4849-a953-75684062f1e5</FunctionID>
+            <Name>il_pbf_sub</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -14289,7 +14258,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For those who didn't declare receiving the benefit, it is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65. We assume that per_sub% of households subreport their income (cadunico_rand < per_sub)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_CadUnico#1/nPersInUnit#1 < 0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_CadUnico_sub#1/nPersInUnit#1, il_CadUnico#1/nPersInUnit#1) <  0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -14487,7 +14456,7 @@
           <ID>7e3a93bc-3b09-4bb4-8a9c-8e71d3e14d94</ID>
           <PolicyID>99600724-7d0a-43a5-b7a4-c38330421f35</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[List of random variables]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -14525,7 +14494,7 @@
             <Name>cadunico_rand</Name>
             <Comment><![CDATA[Cadastro Único income subreporting ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[0]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -14614,7 +14583,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>6</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -14623,7 +14592,7 @@
             <Name>Seed</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[2341]]></Value>
             <Order>1</Order>
             <ValueType>amount</ValueType>
             <Group />
@@ -14638,7 +14607,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>7</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -14647,7 +14616,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[rand]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -14660,7 +14629,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[cadunico_rand]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -14673,7 +14642,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_bra]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -15867,7 +15836,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Personal income 2 years before]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16042,36 +16011,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>be2c9d45-628c-42f4-a97a-f338dcc11d81</ID>
-          <PolicyID>b5eef00a-7aa8-48eb-8b7b-19d2f748a262</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[Prevalent minimum wage for COVID benefit eligibility]]></Comment>
-          <PrivateComment />
-          <Order>3</Order>
-          <Switch>on</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>7a45587f-1197-457b-98e4-ef90a0187d73</ID>
-            <FunctionID>be2c9d45-628c-42f4-a97a-f338dcc11d81</FunctionID>
-            <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[1100#m]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>7c603ebd-0e27-4c5a-9a7d-9fd3477481cc</ID>
           <PolicyID>b5eef00a-7aa8-48eb-8b7b-19d2f748a262</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16121,7 +16066,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
           <PrivateComment />
-          <Order>21</Order>
+          <Order>23</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16184,7 +16129,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (one person in hh)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>15</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16233,7 +16178,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income 2 years before<28 559,70 3) no formal job 4) only one person in the household]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU#1 =1]]></Value>
+            <Value><![CDATA[dag>=18 & (il_ae#1/nPersInUnit#1 <=0.5*minwage | il_ae#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU#1 =1]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -16260,7 +16205,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16310,7 +16255,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 -2021]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16320,7 +16265,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half minwage or total family income<=3*minwage 3) personal income 2 years before <28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
+            <Value><![CDATA[dag>=18 & (il_ae#1/nPersInUnit#1 <=0.5*minwage | il_ae#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) &  poa <= 0 & bdioa_s <= 0 & bun <= 0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -16399,7 +16344,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16449,7 +16394,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16499,7 +16444,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16509,7 +16454,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income<=3*yem_bra 3) personal income two years before <28 559,70 4) no formal job 5) no pensions or other form of social benefit (besides Bolsa Família) 6) solo mother 7) all income from household comes from mother up to R$ 25 difference (arbitrary choice for confidence interval)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner & ABS(yhh - ils_origy) < 25]]></Value>
+            <Value><![CDATA[dag>=18 & (il_ae#1/nPersInUnit#1 <=0.5*minwage | il_ae#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner & ABS(yhh - ils_origy) < 25]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -16588,7 +16533,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16596,7 +16541,7 @@
             <ID>bdedb143-cbe7-4d9e-ac4a-f11056661e02</ID>
             <FunctionID>d1d1de92-f383-4bed-9fa0-de59bc6272f6</FunctionID>
             <Name>Formula</Name>
-            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Marc21)]]></Comment>
+            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Mar21)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bcovid_ii * 3/12]]></Value>
             <Order>1</Order>
@@ -16638,7 +16583,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (two or more people in hh)]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16648,7 +16593,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income <=3*yem_bra 3) personal income 2 years before<28 559,70 3) no formal job 4) 2 or more people in the household]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & (pers_inc_2019#1)*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU >=2]]></Value>
+            <Value><![CDATA[dag>=18 & (il_ae#1/nPersInUnit#1 <=0.5*minwage | il_ae#1 <=3*minwage) & (pers_inc_2019#1)*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & poa01 <= 0 & bun <= 0 & nPersonsInTU >=2]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -16727,7 +16672,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16777,7 +16722,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16787,7 +16732,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[1) 18 yrs or older 2) per capita family income <= half yem_bra or total family income <=3*yem_bra 3) personal income 2 years before<28 559,70 3) no formal job 4) 2 or more people in the household 5) single mother ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[dag>=18 & (y_covid#1/nPersInUnit#1 <=0.5*minwage | y_covid#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner]]></Value>
+            <Value><![CDATA[dag>=18 & (il_ae#1/nPersInUnit#1 <=0.5*minwage | il_ae#1 <=3*minwage) & pers_inc_2019*12 <=28559.7 & (lem = 2 | yem < minwage) & poa <= 0 & bun <= 0 & dgn = 2 &  nDepChildrenInTu#1 > 0 & !IsWithPartner]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -16853,7 +16798,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>20</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16903,7 +16848,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16992,7 +16937,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -17082,7 +17027,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -17132,7 +17077,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -17177,75 +17122,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>5252b80c-1e3e-459c-b56f-073e963131c8</ID>
-          <PolicyID>b5eef00a-7aa8-48eb-8b7b-19d2f748a262</PolicyID>
-          <Name>Allocate</Name>
-          <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
-          <PrivateComment />
-          <Order>22</Order>
-          <Switch>off</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>4343470b-86ad-4ee8-8301-2b3c493a23c6</ID>
-            <FunctionID>5252b80c-1e3e-459c-b56f-073e963131c8</FunctionID>
-            <Name>Share</Name>
-            <Comment><![CDATA[The final benefit is shared between all adults]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls07_s]]></Value>
-            <Order>0</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0751fa94-a52b-426d-8e3e-8df0ac893dfc</ID>
-            <FunctionID>5252b80c-1e3e-459c-b56f-073e963131c8</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[bls07_s]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>afa1d38f-29cc-4166-8d67-8972342834ca</ID>
-            <FunctionID>5252b80c-1e3e-459c-b56f-073e963131c8</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0ec45503-765f-45e4-a1a7-30c5379a141d</ID>
-            <FunctionID>5252b80c-1e3e-459c-b56f-073e963131c8</FunctionID>
-            <Name>Share_Between</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[dag >= 18]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>0d6c5611-c817-4848-a9e1-04433c7fb472</ID>
           <PolicyID>b5eef00a-7aa8-48eb-8b7b-19d2f748a262</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>20</Order>
+          <Order>21</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -17303,9 +17185,9 @@
             <ID>88611d1e-479b-46cb-881d-fbc0bd1e3241</ID>
             <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_covid]]></Value>
+            <Value><![CDATA[il_ae]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -17315,7 +17197,7 @@
           <Parameter>
             <ID>3edc1e16-499c-452b-aeeb-ee60c8f37333</ID>
             <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
@@ -17325,66 +17207,38 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+        </Function>
+        <Function>
+          <ID>fc764819-b695-4332-a585-942cc4a6711b</ID>
+          <PolicyID>b5eef00a-7aa8-48eb-8b7b-19d2f748a262</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
           <Parameter>
-            <ID>f5d93f76-d26f-4d28-95e0-0fe071b54a6b</ID>
-            <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>yse</Name>
+            <ID>3f6ddd3b-e3ae-4453-beac-19a82481268e</ID>
+            <FunctionID>fc764819-b695-4332-a585-942cc4a6711b</FunctionID>
+            <Name>Name</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
+            <Value><![CDATA[il_ae_sub]]></Value>
+            <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>99fff507-c6a6-4a6b-b570-925fc8513eb9</ID>
-            <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>poa</Name>
+            <ID>72a43b77-5b14-4c43-9aaa-4aa8921ba691</ID>
+            <FunctionID>fc764819-b695-4332-a585-942cc4a6711b</FunctionID>
+            <Name>il_pbf_sub</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>5071297a-279b-41bd-a46f-a2ebee99f1e4</ID>
-            <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>3c64d6af-d1f5-4836-97db-8381d5aa49f4</ID>
-            <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9e8c2385-65e5-406c-a5c1-25cfaa05f153</ID>
-            <FunctionID>89be2068-cbca-4d1d-a996-b564b9a1e765</FunctionID>
-            <Name>bdioa_s</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -17537,6 +17391,118 @@
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>fdbe178d-cea9-49d2-b2c3-b590f9934f74</ID>
+        <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+        <Name>comp_pbf_ae_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN: Compatibilization between PBF and AE]]></Comment>
+        <PrivateComment />
+        <Order>27</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>208938f4-da6b-4bdf-9be3-bca580b95d95</ID>
+          <PolicyID>fdbe178d-cea9-49d2-b2c3-b590f9934f74</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 1: PBF is higher]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8ee03ed3-fa4b-4bbf-ba5e-9c5e7ab97464</ID>
+            <FunctionID>208938f4-da6b-4bdf-9be3-bca580b95d95</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If PBF is higher, set AE to 0]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[IF(bfa01_s >= bot_s, 0, bot_s)]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7d21a0d7-ee99-4772-84a2-2cc813a072e1</ID>
+            <FunctionID>208938f4-da6b-4bdf-9be3-bca580b95d95</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bot_s]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>759ee5cf-1818-45fc-8bf1-07586a5f298b</ID>
+            <FunctionID>208938f4-da6b-4bdf-9be3-bca580b95d95</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>28d3d09c-2e7d-46a8-abb4-7dff6932e405</ID>
+          <PolicyID>fdbe178d-cea9-49d2-b2c3-b590f9934f74</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 2: AE is higher]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>2acd4c40-2e50-41ca-99b8-74f80021f3f4</ID>
+            <FunctionID>28d3d09c-2e7d-46a8-abb4-7dff6932e405</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If AE is higher, set it to the difference between PBF and AE (it serves as a top-up)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[IF(bfa01_s < bot_s, bot_s - bfa01_s, bot_s)]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5baf245e-ff2f-46fc-83cf-c8c0e62744ac</ID>
+            <FunctionID>28d3d09c-2e7d-46a8-abb4-7dff6932e405</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[bot_s]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e495d3f0-6bba-478f-bb5e-f8cbfdc4160e</ID>
+            <FunctionID>28d3d09c-2e7d-46a8-abb4-7dff6932e405</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -17758,7 +17724,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -17784,7 +17750,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -17797,7 +17763,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -17810,7 +17776,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -18551,7 +18517,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -19029,7 +18995,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -21977,7 +21943,7 @@
           <ID>e34b99eb-a93c-4272-8d2b-94559bea405b</ID>
           <PolicyID>9f553b37-4e1a-4134-9f9d-16907273d0cc</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[Income list for PBF]]></Comment>
+          <Comment><![CDATA[Policy specific income list]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -21987,7 +21953,7 @@
             <ID>a4e361d8-8bce-434b-b16f-17419317430d</ID>
             <FunctionID>e34b99eb-a93c-4272-8d2b-94559bea405b</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list PBF]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_pbf]]></Value>
             <Order>1</Order>
@@ -22115,7 +22081,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22192,7 +22158,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22255,7 +22221,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22409,7 +22375,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22459,7 +22425,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22509,7 +22475,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22533,7 +22499,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -22546,9 +22512,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dd4a6a61-29f5-4df4-b4d7-59f8479ae042</ID>
+            <FunctionID>4b04dd78-7e66-496d-9148-5eac73d0b7d3</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -22559,7 +22538,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22622,7 +22601,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22685,7 +22664,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extraordinary benefit for households receiving Auxílio Brasil (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22748,7 +22727,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Additional extraordinary benefit for households receiving Auxílio Brasil]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22811,7 +22790,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the additional extraordinary benefit throughout the year]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22861,7 +22840,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -22909,7 +22888,7 @@
           <ID>5f8b4380-857b-40fb-99fc-63201e8af4de</ID>
           <PolicyID>9c76daeb-7211-45f1-b1ac-6d4cb7c4d390</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Policy-specific income list]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>n/a</Switch>
@@ -22919,7 +22898,7 @@
             <ID>f76f39c5-f90e-4316-89d4-8286a09876cb</ID>
             <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Brasi)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -22931,76 +22910,11 @@
           <Parameter>
             <ID>3f00ed1e-da77-409f-bba1-50a6e2b4bdc1</ID>
             <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>55fe2e4a-5748-447f-8741-7d39998313b1</ID>
-            <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>yse</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>c697e6ed-fb69-4a70-8c61-22ee1a63a60d</ID>
-            <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>poa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>e036c33b-5050-4df4-b61d-e23bd827c156</ID>
-            <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>0dbbc963-4d7d-49b2-b599-bae3d873bd56</ID>
-            <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>8806f1b0-4c51-43ad-8bcb-8e747a800137</ID>
-            <FunctionID>5f8b4380-857b-40fb-99fc-63201e8af4de</FunctionID>
-            <Name>bdioa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>7</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -23013,7 +22927,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -23027,6 +22941,43 @@
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>79436cf2-d6f0-4927-8e11-61533242c379</ID>
+          <PolicyID>9c76daeb-7211-45f1-b1ac-6d4cb7c4d390</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8e15b3aa-2f39-4412-b575-6e83de66d2c1</ID>
+            <FunctionID>79436cf2-d6f0-4927-8e11-61533242c379</FunctionID>
+            <Name>Name</Name>
+            <Comment><![CDATA[Subreported income list (Auxílio Brasi)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>703520d0-0ae5-4bfd-8cb7-83f6a5bf5a68</ID>
+            <FunctionID>79436cf2-d6f0-4927-8e11-61533242c379</FunctionID>
+            <Name>il_pbf_sub</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -23257,7 +23208,7 @@
           <ID>2c9c836a-c24f-49b1-a9ac-e3310dcea7cf</ID>
           <PolicyID>f07d658a-da68-4bcd-b00c-080ca775a489</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[List of random variables]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -24637,7 +24588,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Personal income 2 years before]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -24812,36 +24763,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>9335277c-ab17-440e-ad51-0739347b932b</ID>
-          <PolicyID>7dfffd08-9a43-428a-9714-19b3f597a0fa</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[Prevalent minimum wage for COVID benefit eligibility]]></Comment>
-          <PrivateComment />
-          <Order>3</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>08e6f6ee-ba09-4049-90ce-c2fde64e046c</ID>
-            <FunctionID>9335277c-ab17-440e-ad51-0739347b932b</FunctionID>
-            <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>fb9cb049-b666-452c-888f-bffb8902974c</ID>
           <PolicyID>7dfffd08-9a43-428a-9714-19b3f597a0fa</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>11</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -24891,7 +24818,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
           <PrivateComment />
-          <Order>21</Order>
+          <Order>23</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -24954,7 +24881,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (one person in hh)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>15</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25030,7 +24957,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25080,7 +25007,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 -2021]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25169,7 +25096,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25219,7 +25146,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25269,7 +25196,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25358,7 +25285,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25366,7 +25293,7 @@
             <ID>913e7e14-c8e5-4319-9a5d-8da8b0da2d91</ID>
             <FunctionID>a9239af0-bae2-4a3c-9d7d-92094b275c8c</FunctionID>
             <Name>Formula</Name>
-            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Marc21)]]></Comment>
+            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Mar21)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -25408,7 +25335,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (two or more people in hh)]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25497,7 +25424,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25547,7 +25474,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25623,7 +25550,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>20</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25673,7 +25600,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25762,7 +25689,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25852,7 +25779,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25902,7 +25829,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -25947,75 +25874,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>6aa2397d-cc50-4a09-a7d1-e615b4e07795</ID>
-          <PolicyID>7dfffd08-9a43-428a-9714-19b3f597a0fa</PolicyID>
-          <Name>Allocate</Name>
-          <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
-          <PrivateComment />
-          <Order>22</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>b04e8457-2aca-4bd5-9922-9abb590a1ce9</ID>
-            <FunctionID>6aa2397d-cc50-4a09-a7d1-e615b4e07795</FunctionID>
-            <Name>Share</Name>
-            <Comment><![CDATA[The final benefit is shared between all adults]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>0</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9f08f8ba-5fcc-4844-b0ce-005ee858ae72</ID>
-            <FunctionID>6aa2397d-cc50-4a09-a7d1-e615b4e07795</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>ee7a65e2-eb27-40fa-bbfc-c765439fadae</ID>
-            <FunctionID>6aa2397d-cc50-4a09-a7d1-e615b4e07795</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>fc2471c9-5d70-42cc-a9ce-ce9a8ef24152</ID>
-            <FunctionID>6aa2397d-cc50-4a09-a7d1-e615b4e07795</FunctionID>
-            <Name>Share_Between</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>0fdad2d4-714c-42f0-8cb9-dcab4c30efcc</ID>
           <PolicyID>7dfffd08-9a43-428a-9714-19b3f597a0fa</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>20</Order>
+          <Order>21</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26073,9 +25937,9 @@
             <ID>1eb13965-7af3-46e6-aa73-ea9366fe9651</ID>
             <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_covid]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -26085,76 +25949,48 @@
           <Parameter>
             <ID>752d8717-6012-439a-96cf-185f6b4b77e1</ID>
             <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
+        </Function>
+        <Function>
+          <ID>c5c4fe85-d46c-40b4-bba3-c82e6e2aab83</ID>
+          <PolicyID>7dfffd08-9a43-428a-9714-19b3f597a0fa</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
           <Parameter>
-            <ID>87174257-e287-4496-812f-2d9b3fe63306</ID>
-            <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>yse</Name>
+            <ID>d5a50384-90f9-4c48-8392-c2d5edc74e01</ID>
+            <FunctionID>c5c4fe85-d46c-40b4-bba3-c82e6e2aab83</FunctionID>
+            <Name>Name</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>0d81a47c-5732-469d-841d-b820f8b51027</ID>
-            <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>poa</Name>
+            <ID>58e48a28-78e7-4d8d-800f-261ec5075825</ID>
+            <FunctionID>c5c4fe85-d46c-40b4-bba3-c82e6e2aab83</FunctionID>
+            <Name>il_pbf_sub</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>6466cb18-211c-4535-8c1f-66b25798852c</ID>
-            <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>5ee22ebb-b37b-4c5e-b6b7-6e61bf275d9d</ID>
-            <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>1430d0d1-e7c3-4758-9274-7f0b9967bf06</ID>
-            <FunctionID>b4a3926b-1c87-4ceb-9c52-3c972baaff05</FunctionID>
-            <Name>bdioa_s</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -26307,6 +26143,118 @@
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>7e5231cd-6d6b-4aff-a713-4cf3ebd3ba32</ID>
+        <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+        <Name>comp_pbf_ae_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN: Compatibilization between PBF and AE]]></Comment>
+        <PrivateComment />
+        <Order>27</Order>
+        <Switch>n/a</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>3612666e-5f68-4637-8ea2-9c94fe3a9328</ID>
+          <PolicyID>7e5231cd-6d6b-4aff-a713-4cf3ebd3ba32</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 1: PBF is higher]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9fd90404-7b45-4ccd-922b-eb38c6eebd70</ID>
+            <FunctionID>3612666e-5f68-4637-8ea2-9c94fe3a9328</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If PBF is higher, set AE to 0]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>38421ebd-f0f5-47fb-8428-7e780c6f8fdf</ID>
+            <FunctionID>3612666e-5f68-4637-8ea2-9c94fe3a9328</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0acfe3f7-7199-4b79-a6e2-84b7d83ff132</ID>
+            <FunctionID>3612666e-5f68-4637-8ea2-9c94fe3a9328</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>cac1061a-e1ef-4c3a-91b2-c7970556893b</ID>
+          <PolicyID>7e5231cd-6d6b-4aff-a713-4cf3ebd3ba32</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 2: AE is higher]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>24fa1e73-fb52-4942-b0e2-4b43bc6a1bbc</ID>
+            <FunctionID>cac1061a-e1ef-4c3a-91b2-c7970556893b</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If AE is higher, set it to the difference between PBF and AE (it serves as a top-up)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>49bf0248-d284-4101-8a44-fc59a14cb98d</ID>
+            <FunctionID>cac1061a-e1ef-4c3a-91b2-c7970556893b</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d78d18ca-06a2-4e73-8d69-09c0ba9fa023</ID>
+            <FunctionID>cac1061a-e1ef-4c3a-91b2-c7970556893b</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -27321,7 +27269,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -27799,7 +27747,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -30275,7 +30223,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_pbf_sub#1/nPersInUnit#1, il_pbf#1/nPersInUnit#1) +  bfa01_s*12/13
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_pbf_sub#1/nPersInUnit#1, il_pbf#1/nPersInUnit#1) +  bfa01_s
 ]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
@@ -30429,7 +30377,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-15, with children aged 6-15 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & ((cadunico_rand < 0.3 & il_pbf/nPersInUnit <= $povline) | (cadunico_rand >= 0.3 & il_pbf_sub/nPersInUnit <= $povline))]]></Value>
+            <Value><![CDATA[IsDepChild & dag <=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -30442,7 +30390,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[If per capita household income is below the extreme poverty line, ...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(cadunico_rand < 0.3 & il_pbf/nPersInUnit <= $extrempovline) | (cadunico_rand >= 0.3 & il_pbf_sub/nPersInUnit <= $extrempovline)]]></Value>
+            <Value><![CDATA[IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $extrempovline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -30560,7 +30508,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 16-18 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & ((cadunico_rand < 0.3 & il_pbf/nPersInUnit <= $povline) | (cadunico_rand >= 0.3 & il_pbf_sub/nPersInUnit <= $povline))]]></Value>
+            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
             <Order>7</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
@@ -30749,7 +30697,7 @@
           <ID>29b83e97-15c3-4063-9304-066cb882661a</ID>
           <PolicyID>04191597-a389-4a43-bbaa-2f427c8fc2fa</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[Income list for PBF]]></Comment>
+          <Comment><![CDATA[Policy specific income list]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -30759,7 +30707,7 @@
             <ID>49e7a2d1-14b6-41ab-abbc-398219828730</ID>
             <FunctionID>29b83e97-15c3-4063-9304-066cb882661a</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list PBF]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_pbf]]></Value>
             <Order>1</Order>
@@ -30887,7 +30835,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -30964,7 +30912,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31027,7 +30975,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31181,7 +31129,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31231,7 +31179,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31281,7 +31229,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31305,7 +31253,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -31318,9 +31266,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ab6a1422-2001-4706-8b84-ac6bc3263b90</ID>
+            <FunctionID>e67982ca-5413-41d6-bcef-71150c0512a8</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -31331,7 +31292,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31394,7 +31355,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31457,7 +31418,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extraordinary benefit for households receiving Auxílio Brasil (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31520,7 +31481,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Additional extraordinary benefit for households receiving Auxílio Brasil]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31583,7 +31544,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the additional extraordinary benefit throughout the year]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31633,7 +31594,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31681,7 +31642,7 @@
           <ID>9288b422-4a72-459d-a615-40681de0c4a3</ID>
           <PolicyID>78c82b24-14c4-4c01-92d7-2cb8320d408f</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Policy-specific income list]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>n/a</Switch>
@@ -31691,7 +31652,7 @@
             <ID>4c9b9f73-80a2-49a8-99e0-35f40150034a</ID>
             <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Brasi)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -31703,76 +31664,11 @@
           <Parameter>
             <ID>2c2c0713-8716-4034-99d7-d912eb1108c2</ID>
             <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>7f734621-a591-4e12-8cf3-8f6e55e17ab3</ID>
-            <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>yse</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>30e4e89e-29b0-4550-9a80-2ee1cd728970</ID>
-            <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>poa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d25f8377-7b0a-483b-8191-765dca56d8c0</ID>
-            <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>1a2dfb67-325a-4e13-ba34-9c1bcc70510c</ID>
-            <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>55319d84-9fad-45a7-852b-340adef807ed</ID>
-            <FunctionID>9288b422-4a72-459d-a615-40681de0c4a3</FunctionID>
-            <Name>bdioa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>7</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -31785,7 +31681,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31799,6 +31695,43 @@
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>cb91a91f-482b-4db8-a66d-249248ffe441</ID>
+          <PolicyID>78c82b24-14c4-4c01-92d7-2cb8320d408f</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>1f5d0ed6-9b0c-495c-8387-621c611d3af6</ID>
+            <FunctionID>cb91a91f-482b-4db8-a66d-249248ffe441</FunctionID>
+            <Name>Name</Name>
+            <Comment><![CDATA[Subreported income list (Auxílio Brasi)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7ca660ec-c1c2-4074-b4a1-a93b77a24a92</ID>
+            <FunctionID>cb91a91f-482b-4db8-a66d-249248ffe441</FunctionID>
+            <Name>il_pbf_sub</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -31831,7 +31764,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For those who didn't declare receiving the benefit, it is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65. We assume that per_sub% of households subreport their income (cadunico_rand < per_sub)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_CadUnico#1/nPersInUnit#1 < 0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_CadUnico_sub#1/nPersInUnit#1, il_CadUnico#1/nPersInUnit#1) <  0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -32029,7 +31962,7 @@
           <ID>877a1165-6708-45f8-a0f0-6b2af464b749</ID>
           <PolicyID>e3cec214-2e61-4f06-849f-51e7776031f5</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[List of random variables]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -32156,7 +32089,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>6</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -32165,7 +32098,7 @@
             <Name>Seed</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[3214]]></Value>
             <Order>1</Order>
             <ValueType>amount</ValueType>
             <Group />
@@ -32180,7 +32113,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>7</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -32189,7 +32122,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[rand]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -32202,7 +32135,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[cadunico_rand]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -32215,7 +32148,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_bra]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -33409,7 +33342,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Personal income 2 years before]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33584,36 +33517,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>3cf0bda0-cee9-4321-9aec-90b5496e0b67</ID>
-          <PolicyID>dcc30055-0f23-4217-ba0a-885ee69a5dc7</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[Prevalent minimum wage for COVID benefit eligibility]]></Comment>
-          <PrivateComment />
-          <Order>3</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>4467a454-6c77-4b47-96d1-1d5018174f59</ID>
-            <FunctionID>3cf0bda0-cee9-4321-9aec-90b5496e0b67</FunctionID>
-            <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>7e6d2a48-eaf4-49ec-ab13-35fc191487d7</ID>
           <PolicyID>dcc30055-0f23-4217-ba0a-885ee69a5dc7</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>11</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33663,7 +33572,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
           <PrivateComment />
-          <Order>21</Order>
+          <Order>23</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33726,7 +33635,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (one person in hh)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>15</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33802,7 +33711,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33852,7 +33761,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 -2021]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33941,7 +33850,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -33991,7 +33900,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34041,7 +33950,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34130,7 +34039,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34138,7 +34047,7 @@
             <ID>6e37baa7-53df-4953-b0c3-afab52c904f6</ID>
             <FunctionID>3a72173a-dfd5-4158-bb4b-4a241cdf6f33</FunctionID>
             <Name>Formula</Name>
-            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Marc21)]]></Comment>
+            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Mar21)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -34180,7 +34089,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (two or more people in hh)]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34269,7 +34178,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34319,7 +34228,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34395,7 +34304,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>20</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34445,7 +34354,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34534,7 +34443,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34624,7 +34533,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34674,7 +34583,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34719,75 +34628,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>05d1c969-df6c-4c80-949f-def6ad713de5</ID>
-          <PolicyID>dcc30055-0f23-4217-ba0a-885ee69a5dc7</PolicyID>
-          <Name>Allocate</Name>
-          <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
-          <PrivateComment />
-          <Order>22</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>5c0acad1-7777-48aa-82f6-cca087a422b7</ID>
-            <FunctionID>05d1c969-df6c-4c80-949f-def6ad713de5</FunctionID>
-            <Name>Share</Name>
-            <Comment><![CDATA[The final benefit is shared between all adults]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>0</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>63084574-4bfb-43bc-8028-5ec88d58e87d</ID>
-            <FunctionID>05d1c969-df6c-4c80-949f-def6ad713de5</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>3472506d-284f-4c3d-b0de-3fcf88b4f1d7</ID>
-            <FunctionID>05d1c969-df6c-4c80-949f-def6ad713de5</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>a40219e0-a284-401e-a856-4cfe06e59655</ID>
-            <FunctionID>05d1c969-df6c-4c80-949f-def6ad713de5</FunctionID>
-            <Name>Share_Between</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>47582304-5dd0-4a0a-9346-df42b8a3b46a</ID>
           <PolicyID>dcc30055-0f23-4217-ba0a-885ee69a5dc7</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>20</Order>
+          <Order>21</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34845,9 +34691,9 @@
             <ID>274c58c5-7a86-4c27-9964-677e13f8a82b</ID>
             <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_covid]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -34857,76 +34703,48 @@
           <Parameter>
             <ID>84391510-b441-4c57-9d0d-44d5b55a8eb5</ID>
             <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
+        </Function>
+        <Function>
+          <ID>ac9df914-8b91-4ab9-a3f3-812dbfb6a15d</ID>
+          <PolicyID>dcc30055-0f23-4217-ba0a-885ee69a5dc7</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
           <Parameter>
-            <ID>96790efc-f1e5-450b-8c62-f84b61d0970c</ID>
-            <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>yse</Name>
+            <ID>23096eb8-6a40-4c2c-a227-f37c9feea1cc</ID>
+            <FunctionID>ac9df914-8b91-4ab9-a3f3-812dbfb6a15d</FunctionID>
+            <Name>Name</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>6e28d69d-15cc-485c-b10d-0d54c20db1f3</ID>
-            <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>poa</Name>
+            <ID>e0e37d15-2744-497d-a674-fb01319a62af</ID>
+            <FunctionID>ac9df914-8b91-4ab9-a3f3-812dbfb6a15d</FunctionID>
+            <Name>il_pbf_sub</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>9bb17e6e-892e-478a-ad03-16636718adfa</ID>
-            <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>a673f557-2383-4fea-aa9c-9526b8a027c5</ID>
-            <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2dd967d0-38ed-4c8f-a962-8a227de2181e</ID>
-            <FunctionID>3a74400b-65a6-44ea-94de-5a6a81c84901</FunctionID>
-            <Name>bdioa_s</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -35043,7 +34861,7 @@
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
         <Order>13</Order>
-        <Switch>n/a</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -35079,6 +34897,118 @@
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>ce197052-40b0-4e9b-8e0a-1d4513100fa5</ID>
+        <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+        <Name>comp_pbf_ae_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN: Compatibilization between PBF and AE]]></Comment>
+        <PrivateComment />
+        <Order>27</Order>
+        <Switch>n/a</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>4011fa51-89ea-46b4-963d-569d3f74870a</ID>
+          <PolicyID>ce197052-40b0-4e9b-8e0a-1d4513100fa5</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 1: PBF is higher]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>73abd7c9-da27-4b71-945c-048998d62819</ID>
+            <FunctionID>4011fa51-89ea-46b4-963d-569d3f74870a</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If PBF is higher, set AE to 0]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7b23701a-8cb5-4204-858e-bba05ac9047d</ID>
+            <FunctionID>4011fa51-89ea-46b4-963d-569d3f74870a</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>02f687ec-ce62-4749-bb98-14f578fa4467</ID>
+            <FunctionID>4011fa51-89ea-46b4-963d-569d3f74870a</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7d7b8b9f-869b-4d61-b9a2-13302a776e58</ID>
+          <PolicyID>ce197052-40b0-4e9b-8e0a-1d4513100fa5</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 2: AE is higher]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>93fbfe82-5746-48af-937a-20fed1a43b73</ID>
+            <FunctionID>7d7b8b9f-869b-4d61-b9a2-13302a776e58</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If AE is higher, set it to the difference between PBF and AE (it serves as a top-up)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>490b1926-634d-40e7-a044-af0af6d860eb</ID>
+            <FunctionID>7d7b8b9f-869b-4d61-b9a2-13302a776e58</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b69751f8-9a03-41a1-8208-e25ac716c6b1</ID>
+            <FunctionID>7d7b8b9f-869b-4d61-b9a2-13302a776e58</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -36093,7 +36023,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -36571,7 +36501,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -39516,7 +39446,7 @@
           <ID>b96138f4-696f-4556-81a5-a01768a87ed6</ID>
           <PolicyID>d257e45e-162f-45c3-8bb6-a051985e0178</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[Income list for PBF]]></Comment>
+          <Comment><![CDATA[Policy specific income list]]></Comment>
           <PrivateComment />
           <Order>0</Order>
           <Switch>on</Switch>
@@ -39526,7 +39456,7 @@
             <ID>04eb2933-0340-480d-a242-a3ce0420865b</ID>
             <FunctionID>b96138f4-696f-4556-81a5-a01768a87ed6</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list PBF]]></Comment>
             <PrivateComment />
             <Value><![CDATA[il_pbf]]></Value>
             <Order>1</Order>
@@ -39654,7 +39584,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -39731,7 +39661,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -39794,7 +39724,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -39804,7 +39734,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-3...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag<3 &  IsNtoMchild#1 & y_ab#1/nPersInUnit#1 <= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag<3 &  IsNtoMchild#1 & IF(cadunico_rand < per_sub, il_ab_sub/nPersInUnit, il_ab/nPersInUnit) <= $povline]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -39921,7 +39851,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 3-21 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & IsNtoMchild#2 & y_ab#1/nPersInUnit#1<= $povline]]></Value>
+            <Value><![CDATA[IsDepChild & dag>=3 & dag<21 & dec > 0 & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_ab_sub/nPersInUnit, il_ab/nPersInUnit) <= $povline]]></Value>
             <Order>5</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -39948,7 +39878,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -39998,7 +39928,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40048,7 +39978,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income ]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40058,7 +39988,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_ab + bls07_s]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_ab_sub#1/nPersInUnit#1, il_ab#1/nPersInUnit#1)+ bfa02_s]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -40072,7 +40002,7 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[bab_ii]]></Value>
-            <Order>2</Order>
+            <Order>3</Order>
             <ValueType>variable</ValueType>
             <Group />
             <Color>-1</Color>
@@ -40085,9 +40015,22 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[tu_individual_bra]]></Value>
-            <Order>3</Order>
+            <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a98dbfcc-b277-4758-82b2-2961d71beea2</ID>
+            <FunctionID>cf6e4b97-923e-448d-a765-9341b6ca0c20</FunctionID>
+            <Name>#_Level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_household_bra]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -40098,7 +40041,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40161,7 +40104,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Compensatory Benefit for Families Eligible to the PBF or AE in October/2021]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40171,7 +40114,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[*aqui está só pra PBF, mas tem que incorporar AE e aí conferir]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s<bls08_s]]></Value>
+            <Value><![CDATA[bfa02_s<bfa01_s]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -40184,7 +40127,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls08_s-bls07_s]]></Value>
+            <Value><![CDATA[bfa01_s-bfa02_s]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -40224,7 +40167,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extraordinary benefit for households receiving Auxílio Brasil (Benefício Extraordinário) ]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40234,7 +40177,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[Establlishes a minimum for the total benefit value.  ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bls07_s > 0 & bls07_s < $bab_bex]]></Value>
+            <Value><![CDATA[bfa02_s > 0 & bfa02_s < $bab_bex]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -40247,7 +40190,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[($bab_bex - bls07_s)]]></Value>
+            <Value><![CDATA[($bab_bex - bfa02_s)]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -40287,7 +40230,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Additional extraordinary benefit for households receiving Auxílio Brasil]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40350,7 +40293,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the additional extraordinary benefit throughout the year]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40401,7 +40344,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40449,7 +40392,7 @@
           <ID>739c9791-d286-4f83-ab98-a939cf98aa36</ID>
           <PolicyID>ad5c20cd-b96f-46c9-aec5-acf747863913</PolicyID>
           <Name>DefIl</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[Policy-specific income list]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -40459,9 +40402,9 @@
             <ID>7557387c-3a91-443e-9f20-0df452f69495</ID>
             <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Brasi)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_ab]]></Value>
+            <Value><![CDATA[il_ab]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -40471,76 +40414,11 @@
           <Parameter>
             <ID>a49bddf8-9dd6-446c-94da-fdf8f0a56895</ID>
             <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
             <Order>2</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>98d214ea-099d-46f9-b6e6-07aaa331aa04</ID>
-            <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>yse</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>bd837eaf-bf88-4dc7-8d7f-072ea0d69f62</ID>
-            <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>poa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>5e3c8d9f-d61d-4517-942f-8ac111dc7300</ID>
-            <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>92423c80-3b7d-47e9-ac5c-5a51fc88cd0e</ID>
-            <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>d9ee4383-c59f-49d0-a685-39ca9a2e1464</ID>
-            <FunctionID>739c9791-d286-4f83-ab98-a939cf98aa36</FunctionID>
-            <Name>bdioa</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -40553,7 +40431,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40567,6 +40445,43 @@
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>5ed70e6a-c069-4a98-bc08-539c911fd346</ID>
+          <PolicyID>ad5c20cd-b96f-46c9-aec5-acf747863913</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>d02cb877-af3d-495c-909f-ed67dfdc19d6</ID>
+            <FunctionID>5ed70e6a-c069-4a98-bc08-539c911fd346</FunctionID>
+            <Name>Name</Name>
+            <Comment><![CDATA[Subreported income list (Auxílio Brasi)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[il_ab_sub]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f37daef9-2d27-4a79-b0e2-06300a362c48</ID>
+            <FunctionID>5ed70e6a-c069-4a98-bc08-539c911fd346</FunctionID>
+            <Name>il_pbf_sub</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[+]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -40599,7 +40514,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For those who didn't declare receiving the benefit, it is available if 1) household per capita income is less than 1/4 of minimum wage 2) person is disabled or over 65. We assume that per_sub% of households subreport their income (cadunico_rand < per_sub)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_CadUnico#1/nPersInUnit#1 < 0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
+            <Value><![CDATA[IF(cadunico_rand#1 < per_sub, il_CadUnico_sub#1/nPersInUnit#1, il_CadUnico#1/nPersInUnit#1) <  0.25*minwage & (IsDisabled | dag >= 65) & bdioa <= 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -40797,7 +40712,7 @@
           <ID>dfc1bb92-69ca-47bf-b196-b00b9347ab34</ID>
           <PolicyID>eb8a13f2-a046-46ad-b7e3-6daefe6db284</PolicyID>
           <Name>DefVar</Name>
-          <Comment><![CDATA[]]></Comment>
+          <Comment><![CDATA[List of random variables]]></Comment>
           <PrivateComment />
           <Order>1</Order>
           <Switch>on</Switch>
@@ -40835,7 +40750,7 @@
             <Name>cadunico_rand</Name>
             <Comment><![CDATA[Cadastro Único income subreporting ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[0]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -40924,7 +40839,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>6</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -40933,7 +40848,7 @@
             <Name>Seed</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[2134]]></Value>
             <Order>1</Order>
             <ValueType>amount</ValueType>
             <Group />
@@ -40948,7 +40863,7 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>7</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -40957,7 +40872,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[rand]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -40970,7 +40885,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[cadunico_rand]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -40983,7 +40898,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tu_household_bra]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -42177,7 +42092,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Personal income 2 years before]]></Comment>
           <PrivateComment />
-          <Order>2</Order>
+          <Order>3</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42352,36 +42267,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>8608a898-c8c4-4219-8ec3-ea926bf1a251</ID>
-          <PolicyID>f3cf83a3-7b80-42d6-bdb7-0040c47eba64</PolicyID>
-          <Name>DefConst</Name>
-          <Comment><![CDATA[Prevalent minimum wage for COVID benefit eligibility]]></Comment>
-          <PrivateComment />
-          <Order>3</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>da2f54c6-a3fe-4080-b845-f1d975222d83</ID>
-            <FunctionID>8608a898-c8c4-4219-8ec3-ea926bf1a251</FunctionID>
-            <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>formula</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>08697778-0dcc-4751-aca3-a7e60ad4b87c</ID>
           <PolicyID>f3cf83a3-7b80-42d6-bdb7-0040c47eba64</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>11</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42431,7 +42322,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
           <PrivateComment />
-          <Order>21</Order>
+          <Order>23</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42494,7 +42385,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (one person in hh)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>15</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42570,7 +42461,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>15</Order>
+          <Order>16</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42620,7 +42511,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 -2021]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42709,7 +42600,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42759,7 +42650,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42809,7 +42700,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42898,7 +42789,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Extension COVID benefit - Auxílio Emergencial 2020 - 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>13</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42906,7 +42797,7 @@
             <ID>f91d03c7-9e4b-4f34-b571-b96a2c9fb4e1</ID>
             <FunctionID>0df1c619-5c1a-4edc-9412-f90b2f023356</FunctionID>
             <Name>Formula</Name>
-            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Marc21)]]></Comment>
+            <Comment><![CDATA[Final value of benefit for 6 months (Oct20 - Mar21)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -42948,7 +42839,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (two or more people in hh)]]></Comment>
           <PrivateComment />
-          <Order>16</Order>
+          <Order>17</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43037,7 +42928,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>17</Order>
+          <Order>18</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43087,7 +42978,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43163,7 +43054,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2021 duration]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>20</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43213,7 +43104,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43302,7 +43193,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 (single mothers)]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43392,7 +43283,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[COVID benefit - Auxílio Emergencial 2020 duration]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43442,7 +43333,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>14</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43487,75 +43378,12 @@
           </Parameter>
         </Function>
         <Function>
-          <ID>48d3b9b9-bfa3-4378-a653-3b5ba7bc8809</ID>
-          <PolicyID>f3cf83a3-7b80-42d6-bdb7-0040c47eba64</PolicyID>
-          <Name>Allocate</Name>
-          <Comment><![CDATA[Allocation of COVID Benefit - Auxílio Emergencial]]></Comment>
-          <PrivateComment />
-          <Order>22</Order>
-          <Switch>n/a</Switch>
-          <Private>no</Private>
-          <Color>-1</Color>
-          <Parameter>
-            <ID>3767ee76-2952-41f4-bc40-1e2119b26ebf</ID>
-            <FunctionID>48d3b9b9-bfa3-4378-a653-3b5ba7bc8809</FunctionID>
-            <Name>Share</Name>
-            <Comment><![CDATA[The final benefit is shared between all adults]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>0</Order>
-            <ValueType>formula</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>11bfb0aa-0733-4e53-864e-71c98623284f</ID>
-            <FunctionID>48d3b9b9-bfa3-4378-a653-3b5ba7bc8809</FunctionID>
-            <Name>Output_Add_Var</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>3</Order>
-            <ValueType>variable</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>1f4039cb-0ee4-4824-a849-757f664254e9</ID>
-            <FunctionID>48d3b9b9-bfa3-4378-a653-3b5ba7bc8809</FunctionID>
-            <Name>TAX_UNIT</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>4</Order>
-            <ValueType>taxunit</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>cdffa16d-4aa0-4ed4-bec9-5eb72f9cc562</ID>
-            <FunctionID>48d3b9b9-bfa3-4378-a653-3b5ba7bc8809</FunctionID>
-            <Name>Share_Between</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>condition</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-        </Function>
-        <Function>
           <ID>6949f358-e3b5-4497-a5d3-b90a1bf34706</ID>
           <PolicyID>f3cf83a3-7b80-42d6-bdb7-0040c47eba64</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>20</Order>
+          <Order>21</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43613,9 +43441,9 @@
             <ID>28af223b-33be-4c6e-883f-9d2479204c86</ID>
             <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
             <Name>Name</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Income list (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[y_covid]]></Value>
+            <Value><![CDATA[il_ae]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -43625,7 +43453,7 @@
           <Parameter>
             <ID>92c1adbf-dc01-4ad3-a80d-882c3f43d351</ID>
             <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>yem</Name>
+            <Name>il_pbf</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
@@ -43635,66 +43463,38 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+        </Function>
+        <Function>
+          <ID>401e5eba-8356-48f6-902a-9ed237592716</ID>
+          <PolicyID>f3cf83a3-7b80-42d6-bdb7-0040c47eba64</PolicyID>
+          <Name>DefIl</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
           <Parameter>
-            <ID>b8145d5e-18bf-432e-8186-580b4a873a60</ID>
-            <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>yse</Name>
+            <ID>08ba7e2e-65f5-444a-ba1d-51fa3e212546</ID>
+            <FunctionID>401e5eba-8356-48f6-902a-9ed237592716</FunctionID>
+            <Name>Name</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>3</Order>
+            <Value><![CDATA[il_ae_sub]]></Value>
+            <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
           <Parameter>
-            <ID>dad874cd-fac3-4bbf-ae73-5c67629fed62</ID>
-            <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>poa</Name>
+            <ID>37326807-8466-45dd-a0f1-46532b139134</ID>
+            <FunctionID>401e5eba-8356-48f6-902a-9ed237592716</FunctionID>
+            <Name>il_pbf_sub</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[+]]></Value>
-            <Order>4</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>2bacfb8c-82a0-451d-9cc7-0111a92a291b</ID>
-            <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>bun</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>5</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>52d9879c-7877-4fe7-90d2-e3b157b4904e</ID>
-            <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>ypt</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>6</Order>
-            <ValueType>string</ValueType>
-            <Group />
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
-            <ID>591cb66b-ac61-4169-ac46-c92ccb85fbcd</ID>
-            <FunctionID>3cd6ef83-22ed-4ce4-97db-8f888a2a229f</FunctionID>
-            <Name>bdioa_s</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[+]]></Value>
-            <Order>7</Order>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -43847,6 +43647,118 @@
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>ab6a14f1-671d-40ad-968c-2f003eacd59f</ID>
+        <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+        <Name>comp_pbf_ae_bra</Name>
+        <Type>ben</Type>
+        <Comment><![CDATA[BEN: Compatibilization between PBF and AE]]></Comment>
+        <PrivateComment />
+        <Order>27</Order>
+        <Switch>n/a</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>d435bc39-69f0-42b1-a0d9-f1a3f1eee8a0</ID>
+          <PolicyID>ab6a14f1-671d-40ad-968c-2f003eacd59f</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 1: PBF is higher]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8e0d1e46-f6db-4180-b2b8-a37c451703b1</ID>
+            <FunctionID>d435bc39-69f0-42b1-a0d9-f1a3f1eee8a0</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If PBF is higher, set AE to 0]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f13b5008-ef14-4a6c-98b0-bd4fcb5ff62e</ID>
+            <FunctionID>d435bc39-69f0-42b1-a0d9-f1a3f1eee8a0</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6b08e584-71af-4e66-8cbe-6ff6e07bebcd</ID>
+            <FunctionID>d435bc39-69f0-42b1-a0d9-f1a3f1eee8a0</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>442c8da2-4ac3-40b7-a225-38b9c39c2ce6</ID>
+          <PolicyID>ab6a14f1-671d-40ad-968c-2f003eacd59f</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[Case 2: AE is higher]]></Comment>
+          <PrivateComment />
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>87faf862-67c3-4c73-97e1-38091ce7ba79</ID>
+            <FunctionID>442c8da2-4ac3-40b7-a225-38b9c39c2ce6</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[If AE is higher, set it to the difference between PBF and AE (it serves as a top-up)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>42e86d38-046f-4a2e-a3b4-4902724d07b9</ID>
+            <FunctionID>442c8da2-4ac3-40b7-a225-38b9c39c2ce6</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>01f7d67f-d258-495b-9090-fc6a11cea39b</ID>
+            <FunctionID>442c8da2-4ac3-40b7-a225-38b9c39c2ce6</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
