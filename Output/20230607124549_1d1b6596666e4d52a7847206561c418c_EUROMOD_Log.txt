@@ -1,0 +1,26 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 7 de junho de 2023 12:45:49
+End: quarta-feira, 7 de junho de 2023 12:45:49
+Duration: 0,0837942s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+18cae75b-0bf8-4946-84d5-1682e8fb1807	aborted	BRA_2022	pnad2022 euromod	quarta-feira, 7 de junho de 2023 12:45:49	quarta-feira, 7 de junho de 2023 12:45:49	0,0837942s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 18cae75b-0bf8-4946-84d5-1682e8fb1807
+ERROR: 15.1.17 output_std_sl/DefOutput/Var (84078a06-e336-4a1f-bb31-c19cf9546fb4): unknown variable yre00
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls07_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 15.1.20 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 15.1.24 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 15.1.24 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+ERROR: 15.1.17 output_std_sl/DefOutput/Var (84078a06-e336-4a1f-bb31-c19cf9546fb4): unknown variable yre00
+ERROR: Operand index does not contain operand yre00

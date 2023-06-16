@@ -1,0 +1,21 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 14 de junho de 2023 12:46:13
+End: quarta-feira, 14 de junho de 2023 12:46:14
+Duration: 0,669574s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+c1950b7a-d4ed-4ab6-8cf7-9f84043b1019	aborted	BRA_2020	pnad2020 euromod	quarta-feira, 14 de junho de 2023 12:46:13	quarta-feira, 14 de junho de 2023 12:46:14	0,669574s	euro	1	-
+bd30a907-d94c-4c97-b655-3e2e0ccfd900	aborted	BRA_2021	pnad2021 euromod	quarta-feira, 14 de junho de 2023 12:46:13	quarta-feira, 14 de junho de 2023 12:46:14	0,6675665s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: c1950b7a-d4ed-4ab6-8cf7-9f84043b1019
+ERROR: Failed reading file C:\Users\joao.perez\Desktop\Projetos\PNAD\pnad2020 euromod.txt
+Não foi possível localizar uma parte do caminho 'C:\Users\joao.perez\Desktop\Projetos\PNAD\pnad2020 euromod.txt'.
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: bd30a907-d94c-4c97-b655-3e2e0ccfd900
+ERROR: Failed reading file C:\Users\joao.perez\Desktop\Projetos\PNAD\pnad2021 euromod.txt
+Não foi possível localizar uma parte do caminho 'C:\Users\joao.perez\Desktop\Projetos\PNAD\pnad2021 euromod.txt'.

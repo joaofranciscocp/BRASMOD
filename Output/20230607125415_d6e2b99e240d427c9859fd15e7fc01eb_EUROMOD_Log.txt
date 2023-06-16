@@ -1,0 +1,26 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 7 de junho de 2023 12:54:15
+End: quarta-feira, 7 de junho de 2023 12:54:15
+Duration: 0,0889796s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+10ac97a9-e9de-4c27-acc4-4db542269e59	aborted	BRA_2022	pnad2022 euromod	quarta-feira, 7 de junho de 2023 12:54:15	quarta-feira, 7 de junho de 2023 12:54:15	0,0889796s	euro	1	-	bra_2022_std	7e2f419e0737e2186a621a4a4c95e563	bra_2022_std_hh	eeaf7e006a3628a02fce612b0114da28
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 10ac97a9-e9de-4c27-acc4-4db542269e59
+WARNING: 8.11.1 tin_bra/SchedCalc/Base (db56f743-596f-49bd-8977-e546848b251c): use of not initialised variable tintaox_s
+ERROR: 8.11.10 tin_bra/SchedCalc/Output_Add_Var (c6ad0eaf-4612-4bfc-a570-c5a8bae8da0c): unknown variable tin_pagar_simplificado
+WARNING: 13.2.8 bsa_sl/BenCalc/withdraw_base (237a175b-c6e9-4783-b140-a99536ae26b8): use of not initialised variable tin_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found

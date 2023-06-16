@@ -1,0 +1,19 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 14 de junho de 2023 13:47:28
+End: quarta-feira, 14 de junho de 2023 13:47:53
+Duration: 24,585971s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+914efdbe-20d8-4094-b6b5-a660ca40e298	finished	BRA_2020	pnad2020 euromod_3	quarta-feira, 14 de junho de 2023 13:47:28	quarta-feira, 14 de junho de 2023 13:47:53	24,585971s	euro	1	-	bra_2020_std	25b8598b6011502e599c5f4bdbea45c8	bra_2020_std_hh	6594f4f21cf2fac9e4ed78aa2d171335
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: 914efdbe-20d8-4094-b6b5-a660ca40e298
+WARNING: 6.2.1 tscse_bra/BenCalc/Comp_Cond (0452029d-2e4f-42b5-8598-aa4877436299): use of not initialised variable tscer_s
+WARNING: 9.3.3 tscdw_bra/ArithOp/Output_Add_Var (8a10c3a3-10eb-4959-99c2-192dd364b804): use of not initialised variable tscer_s
+WARNING: 16.1.18 output_std_bra/DefOutput/Var (be08bb59-50d9-4697-95b5-bb44cc85e290): use of not initialised variable bls07_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\documents\github\brasmod\input\pnad2020 euromod_3.txt: Variable(s) les01, les03, les04, les02, xhl, xed, xpp, xmp, bun, lem, poa01, bot not found (zero is used as default)

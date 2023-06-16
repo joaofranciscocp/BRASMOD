@@ -1,0 +1,24 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 7 de junho de 2023 12:46:56
+End: quarta-feira, 7 de junho de 2023 12:47:00
+Duration: 4,586988s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+ff2b3e6a-286e-4cc9-8dba-d36de74445b3	aborted	BRA_2022	pnad2022 euromod	quarta-feira, 7 de junho de 2023 12:46:56	quarta-feira, 7 de junho de 2023 12:47:00	4,586988s	euro	1	-	bra_2022_std	7334ea85172a41a26cd87daed6fec62b	bra_2022_std_hh	c0a1a69c15e96c5cbe108c8497e5f7dc
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: ff2b3e6a-286e-4cc9-8dba-d36de74445b3
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls03_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls04_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls05_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls06_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls08_s
+WARNING: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bls09_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\usuario\documents\github\brasmod\input\pnad2022 euromod.txt: Variable(s) xhl, xed, xpp, xmp, bdioa, bun, ypt not found (zero is used as default)

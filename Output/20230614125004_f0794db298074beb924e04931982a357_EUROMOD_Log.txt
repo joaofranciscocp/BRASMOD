@@ -1,0 +1,81 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 14 de junho de 2023 12:50:04
+End: quarta-feira, 14 de junho de 2023 12:50:04
+Duration: 0,3960294s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+ba3315cc-0b22-4b88-a35e-5db873e6469a	aborted	BRA_2020	pnad2020 euromod_3	quarta-feira, 14 de junho de 2023 12:50:04	quarta-feira, 14 de junho de 2023 12:50:04	0,3960294s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: ba3315cc-0b22-4b88-a35e-5db873e6469a
+WARNING: 6.2.1 tscse_bra/BenCalc/Comp_Cond (0452029d-2e4f-42b5-8598-aa4877436299): use of not initialised variable tscer_s
+WARNING: 9.3.3 tscdw_bra/ArithOp/Output_Add_Var (8a10c3a3-10eb-4959-99c2-192dd364b804): use of not initialised variable tscer_s
+ERROR: 13.8.2 bpbf_bra/ArithOp/Output_Add_Var (a0016170-f381-4d9a-ad5c-f4faf5484797): unknown variable bfa01_s
+ERROR: 13.9.1 bpbf_bra/Allocate/Share (e89e8e3b-d8ce-49f2-8ffc-ba0f0338f1a4): unknown variable bfa01_s
+ERROR: 13.9.2 bpbf_bra/Allocate/Output_Var (d2fc20d9-8474-4721-bc4b-e2522e5d13bb): unknown variable bfa01_s
+WARNING: 13.10.1 bpbf_bra/ArithOp/Formula (ce918ee6-05be-4cad-bcb7-ea1fe3d80000): use of not initialised variable bls08_s
+ERROR: 13.11.3 bpbf_bra/BenCalc/Output_Add_Var (4d23fb44-f377-4dbf-abc7-a4aa53b92122): unknown variable bfa01_s
+ERROR: 15.4.1 bae_COVID_bra/BenCalc/Comp_Cond (3c762335-f241-408c-a9a9-33ba6f7a162e): unknown variable bdioa_s
+ERROR: 15.4.1 bae_COVID_bra/BenCalc/Comp_Cond (3c762335-f241-408c-a9a9-33ba6f7a162e): unknown variable lem
+ERROR: 15.4.1 bae_COVID_bra/BenCalc/Comp_Cond (3c762335-f241-408c-a9a9-33ba6f7a162e): unknown variable bdioa_s
+ERROR: 15.5.1 bae_COVID_bra/BenCalc/Comp_Cond (10f7dd32-1087-4d20-9714-d44741c9c010): unknown variable bdioa_s
+ERROR: 15.5.1 bae_COVID_bra/BenCalc/Comp_Cond (10f7dd32-1087-4d20-9714-d44741c9c010): unknown variable lem
+ERROR: 15.8.2 bae_COVID_bra/ArithOp/Output_Add_Var (2c49d3d3-cbb0-44bf-a184-7100ada31b6f): unknown variable bot_s
+ERROR: 15.9.1 bae_COVID_bra/BenCalc/Comp_Cond (65c76237-a64c-4ce3-a6a1-1a140be651f3): unknown variable bdioa_s
+ERROR: 15.9.1 bae_COVID_bra/BenCalc/Comp_Cond (65c76237-a64c-4ce3-a6a1-1a140be651f3): unknown variable lem
+ERROR: 15.9.1 bae_COVID_bra/BenCalc/Comp_Cond (65c76237-a64c-4ce3-a6a1-1a140be651f3): unknown variable bdioa_s
+ERROR: 15.11.1 bae_COVID_bra/BenCalc/Comp_Cond (ed0fe7b9-a373-4e00-9876-15f47814ca88): unknown variable bdioa_s
+ERROR: 15.11.1 bae_COVID_bra/BenCalc/Comp_Cond (ed0fe7b9-a373-4e00-9876-15f47814ca88): unknown variable lem
+ERROR: 15.21.1 bae_COVID_bra/Allocate/Share (80720b66-86fb-43e8-9f29-ff6faaac9157): unknown variable bot_s
+ERROR: 15.21.3 bae_COVID_bra/Allocate/Output_Var (4437a7d3-38a0-4e2d-ada1-b015ea29cdf1): unknown variable bot_s
+WARNING: 16.1.16 output_std_bra/DefOutput/Var (be08bb59-50d9-4697-95b5-bb44cc85e290): use of not initialised variable bls07_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bdioa_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bot_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bfa01_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bfa02_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bdioa_s
+WARNING: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): use of not initialised variable bchmt_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bot_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bfa01_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bfa02_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bot_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bfa01_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bfa02_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bot_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bfa01_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bfa02_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bdioa_s
+ERROR: 16.1.30 output_std_bra/DefOutput/il (262a8755-01c5-457a-b781-1ffc50a42831): unknown variable bdioa_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bot_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bfa01_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bfa02_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bdioa_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bot_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bfa01_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bfa02_s
+ERROR: 16.1.18 output_std_bra/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bot_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bfa01_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bfa02_s
+ERROR: 16.1.20 output_std_bra/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bot_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bfa01_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bfa02_s
+ERROR: 16.1.21 output_std_bra/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): unknown variable bdioa_s
+ERROR: 16.1.30 output_std_bra/DefOutput/il (262a8755-01c5-457a-b781-1ffc50a42831): unknown variable bdioa_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bot_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bfa01_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bfa02_s
+ERROR: 16.1.31 output_std_bra/DefOutput/il (4c0be0a6-ad89-4bd9-b509-5094af373821): unknown variable bdioa_s
+ERROR: 16.1.17 output_std_bra/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bdioa_s
+ERROR: Operand index does not contain operand bdioa_s

@@ -1,0 +1,26 @@
+===== EUROMOD LOG =====
+Software-Version: 3.4.10
+Project: brasmod
+Start: quarta-feira, 7 de junho de 2023 16:20:29
+End: quarta-feira, 7 de junho de 2023 16:20:29
+Duration: 0,0813866s
+Output-Path: c:\users\usuario\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	Non-Default Output-Path
+bef7dd24-fc04-4f29-8555-370fcc5f998f	aborted	BRA_2019	pnad2019 euromod	quarta-feira, 7 de junho de 2023 16:20:29	quarta-feira, 7 de junho de 2023 16:20:29	0,0813866s	euro	1	-
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+Run-Id: bef7dd24-fc04-4f29-8555-370fcc5f998f
+WARNING: 14.1.16 output_std_sl/DefOutput/Var (be08bb59-50d9-4697-95b5-bb44cc85e290): use of not initialised variable bls07_s
+ERROR: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bdioa_s
+ERROR: 14.1.18 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 14.1.20 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls01_s
+WARNING: 14.1.21 output_std_sl/DefOutput/il (daeff884-ff47-4ed1-9126-7e9e06354c6b): use of not initialised variable bls02_s
+ERROR: 14.1.32 output_std_sl/DefOutput/il (02466818-0241-45f6-a769-b502c13c2879): unknown variable bdioa_s
+ERROR: 14.1.18 output_std_sl/DefOutput/il (c296369a-c6cf-4e25-b0fe-c984dfddeee4): unknown variable bdioa_s
+ERROR: 14.1.20 output_std_sl/DefOutput/il (ccb2721f-7424-4f82-b15d-14abf4890d79): unknown variable bdioa_s
+ERROR: 14.1.32 output_std_sl/DefOutput/il (02466818-0241-45f6-a769-b502c13c2879): unknown variable bdioa_s
+ERROR: 14.1.17 output_std_sl/DefOutput/defil (46b0c03c-38e9-479f-a013-47ca75bfaac5): unknown variable bdioa_s
+ERROR: Operand index does not contain operand bdioa_s
