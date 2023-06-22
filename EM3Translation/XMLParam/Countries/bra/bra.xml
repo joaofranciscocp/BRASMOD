@@ -959,7 +959,7 @@
       <ID>ed8bcfbc-350a-4664-aa67-d1efd7c65f33</ID>
       <Name>SchedCalc</Name>
       <PolID>e068c8fc-ee29-49cb-b33d-381a1d560095</PolID>
-      <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+      <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
       <Private>no</Private>
     </FUN>
     <FUN>
@@ -3918,7 +3918,7 @@
       <ID>a3645938-9d88-49c4-bfe8-00d49505e280</ID>
       <Name>base_simplificada</Name>
       <FunID>620bc277-1d0a-4e66-a10a-38d04bba1127</FunID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Tax regime choice]]></Comment>
       <Group>4</Group>
     </PAR>
     <PAR>
@@ -4049,7 +4049,7 @@
       <ID>b069c25b-b277-42b1-84af-92e66696e9a5</ID>
       <Name>Base</Name>
       <FunID>ed8bcfbc-350a-4664-aa67-d1efd7c65f33</FunID>
-      <Comment><![CDATA[]]></Comment>
+      <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
     </PAR>
     <PAR>
       <ID>f629e288-1c9d-44a6-a179-e9deb6c3f91a</ID>
@@ -10991,7 +10991,7 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>a3645938-9d88-49c4-bfe8-00d49505e280</ParID>
       <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
+      <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -11111,7 +11111,7 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>b069c25b-b277-42b1-84af-92e66696e9a5</ParID>
       <Order>1</Order>
-      <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+      <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -11123,7 +11123,7 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>19c27a1a-6b95-4a01-8b38-e596cd050d8d</ParID>
       <Order>10</Order>
-      <Value><![CDATA[tin_simplificado]]></Value>
+      <Value><![CDATA[tin_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -11135,25 +11135,25 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>e3d1983e-386d-469f-a392-0bd68c782e61</ParID>
       <Order>2</Order>
-      <Value><![CDATA[1903.99#m]]></Value>
+      <Value><![CDATA[22847.76#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>17f7c1b4-3c81-4f98-a0a7-e082dca45bbd</ParID>
       <Order>8</Order>
-      <Value><![CDATA[4664.69#m]]></Value>
+      <Value><![CDATA[55976.16#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>510f3271-bda9-4af9-ac5c-a7c9a29504c6</ParID>
       <Order>6</Order>
-      <Value><![CDATA[3751.06#m]]></Value>
+      <Value><![CDATA[45012.60#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>fea7cd32-9a7d-4dfc-aeb2-8a45e80b5cbb</ParID>
       <Order>4</Order>
-      <Value><![CDATA[2826.66#m]]></Value>
+      <Value><![CDATA[33919.80#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -14015,7 +14015,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>a3645938-9d88-49c4-bfe8-00d49505e280</ParID>
       <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
+      <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -14135,7 +14135,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>b069c25b-b277-42b1-84af-92e66696e9a5</ParID>
       <Order>1</Order>
-      <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+      <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -14147,7 +14147,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>19c27a1a-6b95-4a01-8b38-e596cd050d8d</ParID>
       <Order>10</Order>
-      <Value><![CDATA[tin_simplificado]]></Value>
+      <Value><![CDATA[tin_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -14159,25 +14159,25 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>e3d1983e-386d-469f-a392-0bd68c782e61</ParID>
       <Order>2</Order>
-      <Value><![CDATA[1903.99#m]]></Value>
+      <Value><![CDATA[22847.76#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>17f7c1b4-3c81-4f98-a0a7-e082dca45bbd</ParID>
       <Order>8</Order>
-      <Value><![CDATA[4664.69#m]]></Value>
+      <Value><![CDATA[55976.16#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>510f3271-bda9-4af9-ac5c-a7c9a29504c6</ParID>
       <Order>6</Order>
-      <Value><![CDATA[3751.06#m]]></Value>
+      <Value><![CDATA[45012.60#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>fea7cd32-9a7d-4dfc-aeb2-8a45e80b5cbb</ParID>
       <Order>4</Order>
-      <Value><![CDATA[2826.66#m]]></Value>
+      <Value><![CDATA[33919.80#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -20059,7 +20059,7 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>a3645938-9d88-49c4-bfe8-00d49505e280</ParID>
       <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
+      <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -20179,7 +20179,7 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>b069c25b-b277-42b1-84af-92e66696e9a5</ParID>
       <Order>1</Order>
-      <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+      <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -20191,7 +20191,7 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>19c27a1a-6b95-4a01-8b38-e596cd050d8d</ParID>
       <Order>10</Order>
-      <Value><![CDATA[tin_simplificado]]></Value>
+      <Value><![CDATA[tin_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -20203,25 +20203,25 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>e3d1983e-386d-469f-a392-0bd68c782e61</ParID>
       <Order>2</Order>
-      <Value><![CDATA[1903.99#m]]></Value>
+      <Value><![CDATA[22847.76#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>17f7c1b4-3c81-4f98-a0a7-e082dca45bbd</ParID>
       <Order>8</Order>
-      <Value><![CDATA[4664.69#m]]></Value>
+      <Value><![CDATA[55976.16#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>510f3271-bda9-4af9-ac5c-a7c9a29504c6</ParID>
       <Order>6</Order>
-      <Value><![CDATA[3751.06#m]]></Value>
+      <Value><![CDATA[45012.60#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>fea7cd32-9a7d-4dfc-aeb2-8a45e80b5cbb</ParID>
       <Order>4</Order>
-      <Value><![CDATA[2826.66#m]]></Value>
+      <Value><![CDATA[33919.80#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -23078,7 +23078,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>a3645938-9d88-49c4-bfe8-00d49505e280</ParID>
       <Order>3</Order>
-      <Value><![CDATA[n/a]]></Value>
+      <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -23198,7 +23198,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>b069c25b-b277-42b1-84af-92e66696e9a5</ParID>
       <Order>1</Order>
-      <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+      <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -23210,7 +23210,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>19c27a1a-6b95-4a01-8b38-e596cd050d8d</ParID>
       <Order>10</Order>
-      <Value><![CDATA[tin_simplificado]]></Value>
+      <Value><![CDATA[tin_s]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -23222,25 +23222,25 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>e3d1983e-386d-469f-a392-0bd68c782e61</ParID>
       <Order>2</Order>
-      <Value><![CDATA[1903.99#m]]></Value>
+      <Value><![CDATA[22847.76#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>17f7c1b4-3c81-4f98-a0a7-e082dca45bbd</ParID>
       <Order>8</Order>
-      <Value><![CDATA[4664.69#m]]></Value>
+      <Value><![CDATA[55976.16#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>510f3271-bda9-4af9-ac5c-a7c9a29504c6</ParID>
       <Order>6</Order>
-      <Value><![CDATA[3751.06#m]]></Value>
+      <Value><![CDATA[45012.60#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>fea7cd32-9a7d-4dfc-aeb2-8a45e80b5cbb</ParID>
       <Order>4</Order>
-      <Value><![CDATA[2826.66#m]]></Value>
+      <Value><![CDATA[33919.80#y]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>

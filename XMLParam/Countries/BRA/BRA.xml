@@ -7353,9 +7353,9 @@
             <ID>a3645938-9d88-49c4-bfe8-00d49505e280</ID>
             <FunctionID>620bc277-1d0a-4e66-a10a-38d04bba1127</FunctionID>
             <Name>base_simplificada</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -7658,7 +7658,7 @@
           <ID>ed8bcfbc-350a-4664-aa67-d1efd7c65f33</ID>
           <PolicyID>e068c8fc-ee29-49cb-b33d-381a1d560095</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
           <Order>11</Order>
           <Switch>on</Switch>
@@ -7668,9 +7668,9 @@
             <ID>b069c25b-b277-42b1-84af-92e66696e9a5</ID>
             <FunctionID>ed8bcfbc-350a-4664-aa67-d1efd7c65f33</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+            <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -7696,7 +7696,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tin_simplificado]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -7722,7 +7722,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[22847.76#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -7735,7 +7735,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4664.69#m]]></Value>
+            <Value><![CDATA[55976.16#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -7748,7 +7748,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[45012.60#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -7761,7 +7761,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[33919.80#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -15407,9 +15407,9 @@
             <ID>5f0cd19e-457e-4d04-91dc-9c5965721c75</ID>
             <FunctionID>3efaeee4-c2f6-4819-88db-031e1f2a7d18</FunctionID>
             <Name>base_simplificada</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -15712,7 +15712,7 @@
           <ID>85ba4f94-54b0-4eaf-9c3d-3ab5d361c32a</ID>
           <PolicyID>bb7858df-b420-416f-913e-69291b9c15af</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
           <Order>11</Order>
           <Switch>on</Switch>
@@ -15722,9 +15722,9 @@
             <ID>c01cb059-80c3-4528-ae8d-b705763ae52e</ID>
             <FunctionID>85ba4f94-54b0-4eaf-9c3d-3ab5d361c32a</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+            <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -15750,7 +15750,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tin_simplificado]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -15776,7 +15776,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[22847.76#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -15789,7 +15789,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4664.69#m]]></Value>
+            <Value><![CDATA[55976.16#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -15802,7 +15802,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[45012.60#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -15815,7 +15815,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[33919.80#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -23458,7 +23458,7 @@
             <ID>043e473f-382d-4cff-9636-628a09b71a1f</ID>
             <FunctionID>2a5f8b4c-07c4-4d80-87eb-2badf4328fa8</FunctionID>
             <Name>base_simplificada</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
             <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
             <Order>4</Order>
@@ -23763,7 +23763,7 @@
           <ID>4ffc6186-59cd-4e81-989d-c80b494f6acd</ID>
           <PolicyID>1f7139ba-513b-42ce-a3c3-10e4179c9bee</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
           <Order>11</Order>
           <Switch>on</Switch>
@@ -23773,7 +23773,7 @@
             <ID>2b6e4c05-94c9-4941-853e-1a33289ee346</ID>
             <FunctionID>4ffc6186-59cd-4e81-989d-c80b494f6acd</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
             <PrivateComment />
             <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
             <Order>0</Order>
@@ -31511,9 +31511,9 @@
             <ID>f5ea87e2-c68c-4557-90e3-6e6d7aed8480</ID>
             <FunctionID>27eed871-c65a-47c0-b28a-79e5114a26ed</FunctionID>
             <Name>base_simplificada</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -31816,7 +31816,7 @@
           <ID>e2fc6b8e-8e53-4de4-b8bb-15bf4fdb22aa</ID>
           <PolicyID>ec9632ba-85df-4eb5-a89f-3d4de33f3189</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
           <Order>11</Order>
           <Switch>on</Switch>
@@ -31826,9 +31826,9 @@
             <ID>7f2a5b8d-286e-472b-8604-ec4310d20219</ID>
             <FunctionID>e2fc6b8e-8e53-4de4-b8bb-15bf4fdb22aa</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+            <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -31854,7 +31854,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tin_simplificado]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -31880,7 +31880,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[22847.76#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -31893,7 +31893,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4664.69#m]]></Value>
+            <Value><![CDATA[55976.16#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -31906,7 +31906,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[45012.60#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -31919,7 +31919,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[33919.80#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -39560,9 +39560,9 @@
             <ID>8c605976-60a3-4c68-b359-c8b45aaa7779</ID>
             <FunctionID>1c26e5d0-d2d5-4f8b-9f36-e8c9f12deeef</FunctionID>
             <Name>base_simplificada</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -39865,7 +39865,7 @@
           <ID>b336b3f1-fe45-4ab6-8e41-7c10a4858f40</ID>
           <PolicyID>560a29f2-2adf-47ec-be4c-a9aa7d1621a3</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[Personal Income Tax Schedule - Simplified ]]></Comment>
+          <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
           <Order>11</Order>
           <Switch>on</Switch>
@@ -39875,9 +39875,9 @@
             <ID>4d318b40-4af0-4105-8b33-992633dab1d3</ID>
             <FunctionID>b336b3f1-fe45-4ab6-8e41-7c10a4858f40</FunctionID>
             <Name>Base</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax payer minimizes expenditure]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max (il_TaxableY - 16754#y, 0.8 * (il_TaxableY + tintaox_s))]]></Value>
+            <Value><![CDATA[min(base_simplificada, il_TaxableY)]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -39903,7 +39903,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tin_simplificado]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>9</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -39929,7 +39929,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1903.99#m]]></Value>
+            <Value><![CDATA[22847.76#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -39942,7 +39942,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4664.69#m]]></Value>
+            <Value><![CDATA[55976.16#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -39955,7 +39955,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3751.06#m]]></Value>
+            <Value><![CDATA[45012.60#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -39968,7 +39968,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2826.66#m]]></Value>
+            <Value><![CDATA[33919.80#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
