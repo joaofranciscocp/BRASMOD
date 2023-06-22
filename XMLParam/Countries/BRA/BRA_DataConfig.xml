@@ -1,236 +1,5 @@
 ﻿<DataConfig xmlns="http://euromod.com/DataConfig.xsd">
   <DataBase>
-    <ID>dcf82219-0c04-4d11-a8ea-602a939d360e</ID>
-    <Name>pnad2018 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
-      <SystemName>BRA_2018</SystemName>
-      <DataBaseID>dcf82219-0c04-4d11-a8ea-602a939d360e</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>no</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>f351c575-ece9-4308-962e-3c41300d6d8e</ID>
-    <Name>pnad2019 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-  </DataBase>
-  <DataBase>
-    <ID>a227fe03-a3bf-4b4b-a44f-861f7750ef10</ID>
-    <Name>pnad2018 euromod_1</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath />
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
-      <SystemName>BRA_2018</SystemName>
-      <DataBaseID>a227fe03-a3bf-4b4b-a44f-861f7750ef10</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>yes</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>5808592d-7669-4c7b-86a0-3170790795ea</ID>
-    <Name>pnad2019 euromod_2</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath />
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
-      <SystemName>BRA_2019</SystemName>
-      <DataBaseID>5808592d-7669-4c7b-86a0-3170790795ea</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>yes</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>545ea044-601d-4a0a-81b4-350ff9b975de</ID>
-    <Name>pnad2020 euromod_3</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath />
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
-      <SystemName>BRA_2020</SystemName>
-      <DataBaseID>545ea044-601d-4a0a-81b4-350ff9b975de</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>yes</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>4cccdaf7-c68b-4fd7-9238-c36735e2664d</ID>
-    <Name>pnad2021 euromod_4</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath />
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
-      <SystemName>BRA_2021</SystemName>
-      <DataBaseID>4cccdaf7-c68b-4fd7-9238-c36735e2664d</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>yes</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>bb105c4d-aeb7-48bf-9412-69f31950cb18</ID>
-    <Name>pnad2019 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
-      <SystemName>BRA_2019</SystemName>
-      <DataBaseID>bb105c4d-aeb7-48bf-9412-69f31950cb18</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>no</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>f45d9b1b-7463-4306-8441-7269bbce47b7</ID>
-    <Name>pnad2020 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
-      <SystemName>BRA_2020</SystemName>
-      <DataBaseID>f45d9b1b-7463-4306-8441-7269bbce47b7</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>no</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>c70ef20c-0ee7-4440-b39f-6c8c811093dc</ID>
-    <Name>pnad2021 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
-      <SystemName>BRA_2021</SystemName>
-      <DataBaseID>c70ef20c-0ee7-4440-b39f-6c8c811093dc</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>no</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
-    <ID>82c57197-4883-4cfc-b65a-7836e9f2ee70</ID>
-    <Name>pnad2022 euromod</Name>
-    <Comment><![CDATA[]]></Comment>
-    <YearCollection />
-    <YearInc />
-    <Currency>euro</Currency>
-    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
-    <DecimalSign>.</DecimalSign>
-    <Private>no</Private>
-    <UseCommonDefault>no</UseCommonDefault>
-    <ReadXVariables>no</ReadXVariables>
-    <ListStringOutVar />
-    <IndirectTaxTableYear />
-    <DBSystemConfig>
-      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
-      <SystemName>BRA_2022</SystemName>
-      <DataBaseID>82c57197-4883-4cfc-b65a-7836e9f2ee70</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>no</BestMatch>
-    </DBSystemConfig>
-  </DataBase>
-  <DataBase>
     <ID>79b0152d-b957-45db-870b-977238692c10</ID>
     <Name>income_tax_database</Name>
     <Comment><![CDATA[]]></Comment>
@@ -248,6 +17,402 @@
       <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
       <SystemName>BRA_2019</SystemName>
       <DataBaseID>79b0152d-b957-45db-870b-977238692c10</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>79b0152d-b957-45db-870b-977238692c10</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>79b0152d-b957-45db-870b-977238692c10</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>79b0152d-b957-45db-870b-977238692c10</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>79b0152d-b957-45db-870b-977238692c10</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>58d39a36-d59e-4df4-a12c-252608e4aa79</ID>
+    <Name>pnad2022 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>58d39a36-d59e-4df4-a12c-252608e4aa79</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>58d39a36-d59e-4df4-a12c-252608e4aa79</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>58d39a36-d59e-4df4-a12c-252608e4aa79</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>58d39a36-d59e-4df4-a12c-252608e4aa79</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>58d39a36-d59e-4df4-a12c-252608e4aa79</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</ID>
+    <Name>pnad2021 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>21fb8130-8b51-4bcb-9a35-5afb8c5255e1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>ea03b87b-13b0-453d-b417-c1c60733d4f5</ID>
+    <Name>pnad2020 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>ea03b87b-13b0-453d-b417-c1c60733d4f5</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>ea03b87b-13b0-453d-b417-c1c60733d4f5</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>ea03b87b-13b0-453d-b417-c1c60733d4f5</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>ea03b87b-13b0-453d-b417-c1c60733d4f5</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>ea03b87b-13b0-453d-b417-c1c60733d4f5</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</ID>
+    <Name>pnad2019 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>22fd1202-aca7-4960-ad6b-1eed4e2b71ac</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>a61cc94e-6531-4775-97bc-9e0eb6debf45</ID>
+    <Name>pnad2018 euromod</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath />
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>a61cc94e-6531-4775-97bc-9e0eb6debf45</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>a61cc94e-6531-4775-97bc-9e0eb6debf45</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>a61cc94e-6531-4775-97bc-9e0eb6debf45</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>a61cc94e-6531-4775-97bc-9e0eb6debf45</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>a61cc94e-6531-4775-97bc-9e0eb6debf45</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>95687cd4-61f7-4c42-9155-c4a31b0802d1</ID>
+    <Name>income_tax_database2</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>95687cd4-61f7-4c42-9155-c4a31b0802d1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+      <SystemName>BRA_2019</SystemName>
+      <DataBaseID>95687cd4-61f7-4c42-9155-c4a31b0802d1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+      <SystemName>BRA_2020</SystemName>
+      <DataBaseID>95687cd4-61f7-4c42-9155-c4a31b0802d1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+      <SystemName>BRA_2021</SystemName>
+      <DataBaseID>95687cd4-61f7-4c42-9155-c4a31b0802d1</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+      <SystemName>BRA_2022</SystemName>
+      <DataBaseID>95687cd4-61f7-4c42-9155-c4a31b0802d1</DataBaseID>
       <UseDefault />
       <UseCommonDefault>no</UseCommonDefault>
       <Uprate />
