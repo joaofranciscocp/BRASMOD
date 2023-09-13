@@ -1,0 +1,35 @@
+===== EUROMOD POLICY EFFECTS LOG =====
+Software-Version: 3.6.2
+Project: brasmod
+Start: terça-feira, 29 de agosto de 2023 10:26:12
+End: terça-feira, 29 de agosto de 2023 10:27:11
+Duration: 58,5244797s
+Output-Path: c:\users\lauro\documents\github\brasmod\output\
+-----------------------------------------------------------------------------------------------------------------------------------
+===== POLICY EFFECT SETTINGS =====
+Decomposition type: single combination (1 per dataset)
+Year1: 2018
+Year2: 2019
+Alpha(s): Custom = 1, CPI
+Decomposing on: Data1
+Selected Country: BRA with Data1='pnad2018 euromod'
+-----------------------------------------------------------------------------------------------------------------------------------
+===== RUN-LOG =====
+Run-Id	Status	System	Database	Start	End	Duration	Currency	Exchangerate	All Extension Switches	Non-Default Output-Path	Output-File	Output-Hash	Output-File	Output-Hash
+82b3fa4b-32f0-4aca-a9b3-dddcf10de3e5	finished	BRA_2018	pnad2018 euromod	terça-feira, 29 de agosto de 2023 10:26:12	terça-feira, 29 de agosto de 2023 10:27:11	58,5244797s	n/a	n/a	default-settings	-	bra_2018_std	2a151e34d7365e9fcb760f29c8e9ad9c	bra_2018_std_hh	9e0f7b686511280b4a45d365ecba5194
+-----------------------------------------------------------------------------------------------------------------------------------
+===== ERROR-LOG =====
+ERROR: There was a problem with creating BRA's decomposed systems: The CPI raw indices ('$HICP') were not found for the selected years!
+-----------------------------------------------------------------------------------------------------------------------------------
+Run-Id: 82b3fa4b-32f0-4aca-a9b3-dddcf10de3e5
+WARNING: 7.2.1 tscse_bra/BenCalc/Comp_Cond (0452029d-2e4f-42b5-8598-aa4877436299): use of not initialised variable tscer_s
+WARNING: 10.3.3 tscdw_bra/ArithOp/Output_Add_Var (8a10c3a3-10eb-4959-99c2-192dd364b804): use of not initialised variable tscer_s
+WARNING: 14.6.2 bpbf_bra/BenCalc/#_Level (92a8b3dc-1f37-4302-b8cb-def7251cb26c): unused footnote
+WARNING: 18.1.16 output_std_bra/DefOutput/DefIL (691fdf8a-847f-414c-b418-0e515fdc86bc): use of not initialised variable bot_s
+WARNING: No applicable Uprate function found
+WARNING: c:\users\lauro\documents\github\brasmod\input\pnad2018 euromod.txt: Variable(s) xhl, xed, xpp, xmp not found (zero is used as default)
+WARNING: 11.3.1 tin_bra/ArithOp/Formula (1fa0b886-7d68-4800-89d4-ef9f0a30e06d): HH 55595: 0 > -5,2704, upper limit overwrites lower limit
+WARNING: 11.3.1 tin_bra/ArithOp/Formula (1fa0b886-7d68-4800-89d4-ef9f0a30e06d): HH 74133: 0 > -3,9744, upper limit overwrites lower limit
+WARNING: 11.3.1 tin_bra/ArithOp/Formula (1fa0b886-7d68-4800-89d4-ef9f0a30e06d): HH 37121: 0 > -9,1584, upper limit overwrites lower limit
+WARNING: 11.3.1 tin_bra/ArithOp/Formula (1fa0b886-7d68-4800-89d4-ef9f0a30e06d): HH 74208: 0 > -2,6784, upper limit overwrites lower limit
+WARNING: 11.3.1 tin_bra/ArithOp/Formula (1fa0b886-7d68-4800-89d4-ef9f0a30e06d): HH 276: 0 > -9,1584, upper limit overwrites lower limit
