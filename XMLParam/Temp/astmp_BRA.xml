@@ -4372,7 +4372,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -4650,7 +4650,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -5063,7 +5063,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -5175,7 +5175,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -5400,7 +5400,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -5452,7 +5452,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -6941,7 +6941,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1425.56#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1425.56#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -12704,7 +12704,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -13117,7 +13117,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -13229,7 +13229,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -13454,7 +13454,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13506,7 +13506,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1) ]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1) ]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -14995,7 +14995,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1503.25#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1503.25#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -20477,7 +20477,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9)]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -21168,7 +21168,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -21280,7 +21280,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -21505,7 +21505,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -21557,7 +21557,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -23046,7 +23046,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=907.77#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=907.77#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -23111,7 +23111,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1364.43#m & yem>907.77#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1364.43#m & yem>907.77#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -24167,7 +24167,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_origy</HeadDefInc>
       <Private>no</Private>
-      <Order>2</Order>
+      <Order>3</Order>
       <Year>2018</Year>
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -28530,7 +28530,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -29221,7 +29221,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -29333,7 +29333,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -29558,7 +29558,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -29610,7 +29610,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -31099,7 +31099,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=877.67#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -31164,7 +31164,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -36857,7 +36857,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -37270,7 +37270,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -37382,7 +37382,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -37607,7 +37607,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -37659,7 +37659,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -39148,7 +39148,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1655.98#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1655.98#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -40269,7 +40269,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_origy</HeadDefInc>
       <Private>no</Private>
-      <Order>3</Order>
+      <Order>2</Order>
       <Year>2017</Year>
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -43068,7 +43068,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Previous values valid until June 2018 ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i*6/12]]></Value>
+            <Value><![CDATA[bpbf_i]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -44631,7 +44631,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les01=3 | les03=9]]></Value>
+            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -45322,7 +45322,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employer; 2) salary >=minimum wage; 3) no social contribution as self-employed or employee]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les02=2 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
+            <Value><![CDATA[los = 1 & yem>=minwage & ils_sicse=0 & ils_sicee=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -45434,7 +45434,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[les03=9 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[ldt = 1 & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -45659,7 +45659,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -45711,7 +45711,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les04=2 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
+            <Value><![CDATA[(lse = 1 & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.1)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -47200,7 +47200,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=877.67#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -47265,7 +47265,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | les03=9) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
