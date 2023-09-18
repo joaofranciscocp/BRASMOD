@@ -10708,7 +10708,7 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>4d5ec04d-5719-4399-bf7e-7ac478c3b9cd</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -10816,7 +10816,7 @@
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
       <ParID>82c8b4a3-a389-4d40-a5d0-fbae0d1897ca</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
@@ -13840,7 +13840,7 @@
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
       <ParID>82c8b4a3-a389-4d40-a5d0-fbae0d1897ca</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
@@ -16753,7 +16753,7 @@
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
       <ParID>4d5ec04d-5719-4399-bf7e-7ac478c3b9cd</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
@@ -18199,7 +18199,7 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>0f207824-ad0f-4ebb-b657-8056312a52fe</ParID>
       <Order>2</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -18211,19 +18211,19 @@
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>07f78738-c07e-4252-b6b2-24b1554ed933</ParID>
       <Order>4</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>011b7590-1d00-4fa0-8881-83af52f74283</ParID>
       <Order>5</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <ParID>45e04592-745b-418e-85d8-a07ae76d0229</ParID>
       <Order>6</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
@@ -22903,7 +22903,7 @@
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
       <ParID>82c8b4a3-a389-4d40-a5d0-fbae0d1897ca</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
@@ -25817,7 +25817,7 @@
       <SysID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SysID>
       <ParID>4d5ec04d-5719-4399-bf7e-7ac478c3b9cd</ParID>
       <Order>1</Order>
-      <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+      <Value><![CDATA[les = 3 & lpb = 0]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SysID>
@@ -27285,6 +27285,17 @@
       <UseCommonDefault>no</UseCommonDefault>
       <ReadXVariables>no</ReadXVariables>
     </DATA>
+    <DATA>
+      <ID>fcf49dc3-5f10-46d4-8369-a5746e5c09c6</ID>
+      <Name>pof2018 euromod new</Name>
+      <Comment><![CDATA[]]></Comment>
+      <Currency>euro</Currency>
+      <FilePath>C:\Users\joao.perez\Desktop\Projetos\POF\</FilePath>
+      <DecimalSign>.</DecimalSign>
+      <Private>no</Private>
+      <UseCommonDefault>no</UseCommonDefault>
+      <ReadXVariables>no</ReadXVariables>
+    </DATA>
   </DATAs>
   <SYS_DATAs>
     <SYS_DATA>
@@ -27499,6 +27510,11 @@
     </SYS_DATA>
     <SYS_DATA>
       <DataID>fff59c90-f872-4402-8d43-d27fd02b0c03</DataID>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>fcf49dc3-5f10-46d4-8369-a5746e5c09c6</DataID>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <BestMatch>no</BestMatch>
     </SYS_DATA>

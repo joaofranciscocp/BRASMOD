@@ -4372,7 +4372,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -4650,7 +4650,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -12704,7 +12704,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -20477,7 +20477,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -24360,7 +24360,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -24386,7 +24386,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -36857,7 +36857,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -40462,7 +40462,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -40488,7 +40488,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -44631,7 +44631,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[lpb = 0 | ldt = 1]]></Value>
+            <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group />
