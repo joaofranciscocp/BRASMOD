@@ -482,4 +482,28 @@
       <BestMatch>no</BestMatch>
     </DBSystemConfig>
   </DataBase>
+  <DataBase>
+    <ID>fff59c90-f872-4402-8d43-d27fd02b0c03</ID>
+    <Name>pnad2018 euromod new</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>euro</Currency>
+    <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+      <SystemName>BRA_2018</SystemName>
+      <DataBaseID>fff59c90-f872-4402-8d43-d27fd02b0c03</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
 </DataConfig>
