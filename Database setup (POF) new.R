@@ -1,7 +1,6 @@
 #PACKAGES USED
 library(tidyverse)
 library(readxl)
-library(PNADcIBGE)
 
 #TABLES FROM POF THAT WILL BE USED
 
@@ -262,7 +261,9 @@ labour_ocupation <- aggregate(
             NUM_UC = RENDIMENTO_TRABALHO$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
             COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
   FUN = function(x) paste(x[!is.na(x)], collapse = "")) %>% 
-  mutate(loc = gsub('[^0-9]', '', x))
+  mutate(loc = ifelse(x != "",
+                      yes = gsub('[^0-9]', '', x),
+                      no = 0))
 
 
 base_loc <- merge(base_les2,
@@ -326,11 +327,11 @@ base_yem <- merge(base_lhw,
 #Aggregate self-employment earnings by individual
 
 labour_self_employed <- aggregate(
-  RENDIMENTO_TRABALHO$V8500_DEFLA[RENDIMENTO_TRABALHO$V9001 %in% SELF_EMPLOYED],
-  by = list(COD_UPA = RENDIMENTO_TRABALHO$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% SELF_EMPLOYED],
-            NUM_DOM = RENDIMENTO_TRABALHO$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% SELF_EMPLOYED],
-            NUM_UC = RENDIMENTO_TRABALHO$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% SELF_EMPLOYED],
-            COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% SELF_EMPLOYED]),
+  RENDIMENTO_TRABALHO$V8500_DEFLA[RENDIMENTO_TRABALHO$V9001 %in% c(SELF_EMPLOYED, EMPLOYER)],
+  by = list(COD_UPA = RENDIMENTO_TRABALHO$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% c(SELF_EMPLOYED, EMPLOYER)],
+            NUM_DOM = RENDIMENTO_TRABALHO$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% c(SELF_EMPLOYED, EMPLOYER)],
+            NUM_UC = RENDIMENTO_TRABALHO$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% c(SELF_EMPLOYED, EMPLOYER)],
+            COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% c(SELF_EMPLOYED, EMPLOYER)]),
   FUN = sum, 
   na.rm = T) %>% 
   rename(yse = x) #yse for "income" (y) and "self-employment"
@@ -506,12 +507,21 @@ base_lpm <- merge(base_lem,
 
 #Select only variables for simulation
 
-base_final <- base_lpm %>% 
+base_final_pof <- base_lpm %>% 
   select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
          dec, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
+
+setwd("C:\\Users\\joao.perez\\Desktop\\Projetos\\POF")
+
+#Save base as a tab separated .txt 
+write.table(base_final_pof, file=paste0("pof2018 euromod new.txt"),
+            quote=FALSE, sep='\t', row.names=FALSE)
+
+
+
   
 
