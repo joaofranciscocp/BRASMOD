@@ -505,6 +505,11 @@ base_lpm <- merge(base_lem,
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
 
+
+#PART 2: ADD NON-MANDATORY VARIABLES (EXPENDITURE)
+
+#
+
 #Select only variables for simulation
 
 base_final_pof <- base_lpm %>% 
