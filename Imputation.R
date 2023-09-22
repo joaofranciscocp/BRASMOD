@@ -2,6 +2,10 @@
 library(tidyverse)
 library(readxl)
 library(data.table)
+library(fastmatrix)
+library(xgboost)
+library(neuralnet)
+library(caret)
 
 #READING THE DATA
 
@@ -191,7 +195,8 @@ shares_idhh_filtered <- shares_idhh %>%
              share_prev_priv           > 1 |
              share_pensoes             > 1)) %>% 
   group_by(idhh_old) %>% 
-  summarise(share_habitacao              =mean(share_habitacao         ),
+  summarise(idhh = mean(idhh.x),
+              share_habitacao            =mean(share_habitacao         ),
               share_despesas_diversas    =mean(share_despesas_diversas ),
               share_prestacao            =mean(share_prestacao         ),
               share_impostos             =mean(share_impostos          ),
@@ -212,12 +217,108 @@ shares_idhh_filtered <- shares_idhh %>%
               share_emprestimo           =mean(share_emprestimo        ),
               share_prev_priv            =mean(share_prev_priv         ),
               share_pensoes              =mean(share_pensoes           ))
+
+
+demographic_variables <-  readRDS("Dados_20221226\\MORADOR.rds") %>% 
+  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+  mutate(ishead = ifelse(V0306 == 1,
+                         yes = 1,
+                         no  = 0)) %>%
+  mutate(ismalehead = ifelse(ishead == 1 & V0404 == 1,
+                             yes = 1,
+                             no  = 0),
+         isfemalehead = ifelse(ishead == 1 & V0404 == 2,
+                               yes = 1,
+                               no  = 0)) %>%
+  group_by(idhh) %>%
+  mutate(femalehead = max(isfemalehead),
+         malehead   = max(ismalehead),
+         idhh       = cur_group_id()) %>% 
+  summarise(idhh                      = mean(idhh),
+            urban                     = ifelse(any(TIPO_SITUACAO_REG == 1),
+                                               yes = 1,
+                                               no = 0),
+            n_male_over_14            = sum(V0404 == 1 & V0403 >= 14),
+            n_under_14                = sum(V0403 <= 14),
+            n_between_15_29           = sum(V0403 %in% 15:29),
+            n_between_30_44           = sum(V0403 %in% 30:44),
+            n_between_45_59           = sum(V0403 %in% 45:59),
+            n_over_60                 = sum(V0403 >= 60),
+            n_employed                = sum(!is.na(V0407) & V0407 == 1),
+            n_students                = sum(!is.na(V0419)),
+            n_higher_education        = sum(INSTRUCAO >= 6),
+            avg_years_educ            = mean(ANOS_ESTUDO, na.rm = T),
+            malehead                  = mean(malehead),
+            weights                   = sum(PESO_FINAL),
+            region                    = (mean(as.numeric(substr(UF, 1,1)))),
+            north                     = ifelse(region == 1,
+                                               yes = 1,
+                                               no = 0),
+            northeast                 = ifelse(region == 2,
+                                               yes = 1,
+                                               no = 0),
+            southeast                 = ifelse(region == 3,
+                                               yes = 1,
+                                               no = 0),
+            south                     = ifelse(region == 4,
+                                               yes = 1,
+                                               no = 0))
+
+
+final_covariates <- merge(demographic_variables,
+                          pof_hh,
+                          by.x = "idhh",
+                          by.y = "idhh",
+                          all.x = T)
+
+final_base_pof <- merge(shares_idhh_filtered,
+                        final_covariates,
+                        by.x = "idhh",
+                        by.y = "idhh",
+                        all.y = T) %>% 
+  na.omit()
+
+#Training and testing
+per_train <- 0.85
+set.seed(2307)
+training_pof <- sample_n(final_base_pof, per_train*nrow(final_base_pof))
+
+share <- "share_alimentacao"
+
+training_y   <- training_pof %>% 
+  select(share)
+training_y   <- data.matrix(training_y)
+training_x   <- training_pof %>% 
+  select(colnames(demographic_variables), -idhh, ils_dispy)
+training_x   <- data.matrix(training_x)
+
+test_pof     <- anti_join(final_base_pof, training_pof)
+test_y       <- test_pof %>% 
+  select(share)
+test_y   <- data.matrix(test_y)
+test_x       <- test_pof %>% 
+  select(colnames(demographic_variables), -idhh, ils_dispy)
+test_x   <- data.matrix(test_x)
+
+
+xgb_train = xgb.DMatrix(data = training_x, label = training_y, 
+                        info = list(weight = training_pof$weights))
+
+xgb_test = xgb.DMatrix(data = test_x, label = test_y,info = list(weight = test_pof$weights))
+
   
+watchlist = list(train=xgb_train, test=xgb_test)
+
+model = xgb.train(data = xgb_train, max.depth = 2, watchlist=watchlist, nrounds = 100,
+                  params = list(booster = "gbtree", eta = 0.2, objective = "reg:squarederror",
+                                num_parallel_tree = 100,
+                                gamma = 2))
+
+model_xgboost = xgboost(data = xgb_train, max.depth = 3, 
+                        nrounds = which.min(model$evaluation_log$test_rmse), verbose = 0)
 
 
-
-
-
+#Results aren't that good, I think?
 
 
 
