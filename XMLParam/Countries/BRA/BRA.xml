@@ -7660,7 +7660,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7827,7 +7827,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8047,6 +8047,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>93545ab7-4131-407e-80e7-a90d3ff03cf8</ID>
+          <PolicyID>e068c8fc-ee29-49cb-b33d-381a1d560095</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>2b0ea951-06bd-4976-8e0f-c673de1a7042</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>099f8a7e-775f-444e-9f94-f132b732925e</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9823fba3-cee3-4b66-9e58-d1f92c9484da</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2c1ae6bf-e0ea-4c70-9c09-d57bd2c66083</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>391f14bc-1a91-40ff-8070-9b2001f35a3d</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>820dcbb8-a22f-455c-aff5-e92750051ec1</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c1d11286-3d45-4c89-aa02-8e50d211b442</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>77340e17-37c4-45c7-a75e-78271b38a241</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0b161ac0-4105-4879-a18d-022f233e9b71</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8695fefb-f104-42e8-88c6-e39e1e883621</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>57947744-58f6-4670-88f3-c23c04e5aba3</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ad03aff8-7a4f-40f9-a9e7-e15f1b8a9bc5</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eb748953-912c-40b0-a485-e162386db22c</ID>
+            <FunctionID>93545ab7-4131-407e-80e7-a90d3ff03cf8</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -15714,7 +15894,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15881,7 +16061,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16101,6 +16281,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>868d6b33-2501-487c-9634-9eb470d70800</ID>
+          <PolicyID>bb7858df-b420-416f-913e-69291b9c15af</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>f563cbb1-a583-416b-aabc-20c8b768ad21</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>03506f78-05b4-4131-bcaa-ba90859cf979</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2516e613-c743-4343-9dbb-ddf8cd0ae59b</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2f9c1e80-589d-4479-a07d-87c95048f98f</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2f012a6b-9ea0-4dee-9527-f10c417bc4ba</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>06cac9d0-a0c4-41fb-aeac-420bbe948616</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>49169e3e-1588-4269-af44-286a68018b32</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e0a4c1ff-fdc4-4703-8018-b8291c8cbf2b</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c3d50d64-d439-42e9-8482-6f6fe3db8eca</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c8d18162-52ec-4701-98ba-037e9107058f</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8e4bd7b2-9724-4da0-9464-1fcdd4962600</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e8f2fea7-ac6c-4a0b-a202-f92e7a0e799d</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>11b6d573-8abf-46fb-b4b6-51aefe7bba58</ID>
+            <FunctionID>868d6b33-2501-487c-9634-9eb470d70800</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -23765,7 +24125,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -23932,7 +24292,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -24152,6 +24512,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</ID>
+          <PolicyID>1f7139ba-513b-42ce-a3c3-10e4179c9bee</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>c32b8850-a987-40cc-bb08-78ce20983f01</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>73b433af-226e-45fc-a529-8b7610ffe8c7</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0f2686a4-14b0-40aa-91cc-19b786068ed3</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ad4cdb05-84b6-4aa0-b66f-77ff559ae823</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5c0d2736-f22a-4758-b4dc-535e96c89e16</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4069134a-aa2b-4300-9045-a4f27bccc716</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>790a384a-38fc-4f39-9e20-f5b6502cf5ef</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5d84d854-d2ed-4da2-9282-77b48768e911</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>60f60571-f25a-4d20-8b4c-5a767c9d90c8</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5af67b54-413f-456b-975a-4d0264eda54d</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c5e5b121-8645-4f0b-be64-8d0a85e9fb50</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>23fc62a3-5a31-4683-b8ca-e8da8c2bf90e</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>11a2deeb-0ec8-439f-8194-edd190a50556</ID>
+            <FunctionID>7eec2203-fbd0-4fef-b7a2-905b02f48baa</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -31818,7 +32358,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31985,7 +32525,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -32205,6 +32745,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>5e65a18e-7764-4e4f-a093-2839e91e1267</ID>
+          <PolicyID>ec9632ba-85df-4eb5-a89f-3d4de33f3189</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>7c78babe-d91f-4b0c-8325-de3aa696db56</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1a00e316-5cf5-4dc6-9dbf-59fc19359ac6</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0611e546-86e5-45ac-b346-3bdb018969d8</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>581dbc86-0fa6-42c5-9720-7ed736a0927c</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4412b201-7dfd-4171-bbfe-252a71407cb0</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5fac29f6-0799-43c1-9bef-751421af3589</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f1270c4d-f6d1-4abe-a720-aad9c5bdb2d6</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e201bb6c-5460-4f71-a1d9-6e1adf42b615</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5e3249b3-4965-49e0-b430-69c8e02248f1</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>345944b2-590f-4ecf-a3c6-75eaf87d6f94</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1ebecb5b-ee97-4395-ae54-0e02f5a4d110</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fb8f0f4c-e97f-4ed8-9b6a-649fbfae5094</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6534aa0b-9f4e-4109-87c8-79e89a809bad</ID>
+            <FunctionID>5e65a18e-7764-4e4f-a093-2839e91e1267</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -39867,7 +40587,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40034,7 +40754,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40254,6 +40974,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>c9de5685-f21e-48ed-8081-758ab91586c4</ID>
+          <PolicyID>560a29f2-2adf-47ec-be4c-a9aa7d1621a3</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>74a2d597-7eda-4497-9adf-754f28202867</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0d329b5c-8677-409d-9938-c02538299c80</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8b6abdd3-9aea-4008-9163-77ac25b33524</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d6247e4c-e3c5-4714-b4bc-165e6fe4d41f</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1957a82b-9329-4414-bd63-c94c9075b007</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>597cddc4-f1eb-400e-94bc-599d0cee903f</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>09ca0a3a-d4b0-4cba-8d46-be2251c6a2e3</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2287593d-b302-46f7-a0fc-e445b982fa66</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>47403be7-2106-461d-94bd-c01c57e59a84</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>cebd9377-963c-4eea-b13b-730e30db5fe2</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>02869227-b4ff-406a-829e-74f450089e7c</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0f5c0780-73ef-49fb-8c4b-b9bde21d330c</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3085d104-3761-463b-ac14-292a4cb55f05</ID>
+            <FunctionID>c9de5685-f21e-48ed-8081-758ab91586c4</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -47919,7 +48819,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -48086,7 +48986,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -48306,6 +49206,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>b966cd25-0d58-4bff-952e-797026c73489</ID>
+          <PolicyID>dd26e9bb-2920-4c7e-851b-b1d27b3bea17</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>411db2f5-c384-47fe-8b17-9e52e3ac0d29</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0957102d-fd2b-4a8e-b9ba-5baf0fc029c6</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3d90969b-c7f9-4c75-bcce-da6652ffcfe9</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dc7fee1c-fe92-4186-a43f-332d683d221e</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>399e5f69-c55f-40b1-890b-ce42c2066f7e</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dd7f06c9-45f3-4532-9c59-5b977708df81</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8ceea991-7def-4467-9565-0df062339ab5</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ea85c09c-0ba9-4c27-babe-b173a83e40fc</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4f6741cb-c671-4ebd-b23f-6f4e7165f86e</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b896ca9e-59ef-4a6c-a90f-bd43476753b1</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>610856de-f044-4a96-bca4-6aec5466d013</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d704bb77-74dd-4dce-b84a-90511d2fd039</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d5285103-85fb-440f-87ef-f9570596235a</ID>
+            <FunctionID>b966cd25-0d58-4bff-952e-797026c73489</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -55971,7 +57051,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -56138,7 +57218,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -56358,6 +57438,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7d278a38-6fdb-4233-91b0-c688fd1fa400</ID>
+          <PolicyID>cc2137dc-e892-4c43-a1d7-1632083f8ddb</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9f2d9f52-618c-4774-91b2-7adfb08b2e1a</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0c7d8c9e-1689-4df8-adfb-7325f1136eee</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3f7bd259-e2a4-49da-956a-09e4050ba18f</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>61b227c2-9202-4013-99b9-033cf2ab6bad</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>38268872-b5df-41ee-94b5-677b8f5aa9ee</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>618f5f56-163b-4fb7-a7af-ad8d437056ec</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c3f5877e-f99a-424e-923a-1f556e9e6a38</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>673d7610-4f45-451f-9abf-04297bd11651</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a660554f-23d3-49b5-ba8e-bab99ee18f14</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3cf70651-8e66-4195-9caa-308d8535c96a</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>67d4253a-20da-4209-98b4-dc4a69f43e65</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bc452338-8594-4818-818a-16bc43e9e585</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>112abe38-5546-4ca9-aa1a-02debdca11a1</ID>
+            <FunctionID>7d278a38-6fdb-4233-91b0-c688fd1fa400</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -64023,7 +65283,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -64085,7 +65345,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[22847.76#y]]></Value>
+            <Value><![CDATA[22499.13#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -64098,7 +65358,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[55976.16#y]]></Value>
+            <Value><![CDATA[55373.55#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -64111,7 +65371,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[45012.60#y]]></Value>
+            <Value><![CDATA[44476.75#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -64124,7 +65384,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[33919.80#y]]></Value>
+            <Value><![CDATA[33477.73#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -64190,7 +65450,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Tax regime choice]]></Comment>
           <PrivateComment />
-          <Order>18</Order>
+          <Order>19</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -64410,6 +65670,186 @@
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</ID>
+          <PolicyID>46020864-dbe4-43f6-8951-24269620effa</PolicyID>
+          <Name>SchedCalc</Name>
+          <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
+          <PrivateComment />
+          <Order>11</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>5e1c7eb0-2f39-4733-a74d-8abbeabd09b5</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Base</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[il_TaxableY]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e579a92b-8115-40cc-a96a-c529d9b3b058</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>49a86839-600a-4aab-b54d-145cd79c63b6</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Output_Add_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tin_completo]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a62afb06-469c-4925-bfa6-490512a79ffb</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Order>12</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2d11b8cb-ce95-404e-97ea-7691b5857b8a</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0.075]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a7d9c9bc-47a2-4afa-917f-9543562ad23a</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0.15]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>155e055d-3d5d-40d3-9135-637b7c2428d0</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0.225]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4835d94e-544c-4502-85d2-e4d1cc7dc29e</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[2679.29#m]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>47e1184e-f91b-4754-837b-8c3226d9d6bd</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[3572.43#m]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8d4aa843-dcb0-4e4f-a770-bd79b355396c</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[4463.81#m]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>626439a0-27c4-4b33-81b3-a47018608a15</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_UpLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[1787.77#m]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>348f2791-6f64-4ef6-b8fb-f7536d70fa24</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>Band_Rate</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0.275]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6b0377ac-2f4f-4259-b475-62b7a48d1b53</ID>
+            <FunctionID>f4b4a4df-048f-4ed5-bb46-9ec8d46b90c3</FunctionID>
+            <Name>LowLim</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
             <Color>-1</Color>
             <Private />
           </Parameter>
