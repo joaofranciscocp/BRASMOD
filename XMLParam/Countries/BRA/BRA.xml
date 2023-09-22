@@ -23460,7 +23460,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -31513,7 +31513,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -47614,7 +47614,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -53599,7 +53599,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[937.00#m]]></Value>
+            <Value><![CDATA[880.00#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -55666,7 +55666,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
