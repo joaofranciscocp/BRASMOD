@@ -64564,7 +64564,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=725.02#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -64577,7 +64577,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 41.37#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 37.18#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -64616,7 +64616,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 29.16#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 29.20#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -64629,7 +64629,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1212.64#m & yem>806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1089.72#m & yem>725.03#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
