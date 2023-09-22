@@ -59745,7 +59745,7 @@
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
           <Order>9</Order>
-          <Switch>on</Switch>
+          <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -59754,7 +59754,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -59767,7 +59767,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -59780,7 +59780,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 0-15, with children aged 6-15 in school... ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag <=15 & ((dag < 6) | ( dag >= 6 & dec > 0)) & IsNtoMchild#2 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -59793,7 +59793,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[If per capita household income is below the extreme poverty line, ...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $extrempovline]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -59806,7 +59806,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[...household receives BV (max is five). ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$bpbf_bv]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -59819,7 +59819,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -59832,7 +59832,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[5]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>5</Order>
             <ValueType>amount</ValueType>
             <Group>2</Group>
@@ -59845,7 +59845,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[... household receives the base benefit. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$bpbf_bb]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -59858,7 +59858,7 @@
             <Name>#_m</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>9</Order>
             <ValueType>amount</ValueType>
             <Group>3</Group>
@@ -59871,7 +59871,7 @@
             <Name>#_n</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>8</Order>
             <ValueType>amount</ValueType>
             <Group>3</Group>
@@ -59884,7 +59884,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[...household receives BVJ (max is two).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[$bpbf_bvj]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>10</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -59897,7 +59897,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[For each poor or extremely poor child aged 16-18 in school...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IsDepChild & dag>15 & dag<18 & dec > 0 & IsNtoMchild#3 & IF(cadunico_rand < per_sub, il_pbf_sub/nPersInUnit, il_pbf/nPersInUnit) <= $povline]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>7</Order>
             <ValueType>condition</ValueType>
             <Group>3</Group>
@@ -59912,7 +59912,7 @@
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
           <Order>10</Order>
-          <Switch>on</Switch>
+          <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -59921,7 +59921,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Obsevations: in 2019 there was a christmas bonus (double the value in december); for 2020 and 2021 there was the Covid Benefit. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i*6/12]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -59934,7 +59934,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[*conferir se mantemos essa duração de acordo com o AE ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bfa01_s]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -59947,7 +59947,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -60347,7 +60347,7 @@
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
           <Order>8</Order>
-          <Switch>on</Switch>
+          <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -60356,7 +60356,7 @@
             <Name>$bpbf_bb</Name>
             <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[85#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -60369,7 +60369,7 @@
             <Name>$bpbf_bv</Name>
             <Comment><![CDATA[Benefit value for children aged 0-15 ("Benefício Variável" - BV).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[39#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -60382,7 +60382,7 @@
             <Name>$bpbf_bvj</Name>
             <Comment><![CDATA[Benefit value for children aged 16-18 who are in school ("Benefício Variável Jovem" - BVJ).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[46#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -60395,7 +60395,7 @@
             <Name>$extrempovline</Name>
             <Comment><![CDATA[Extreme poverty line cut-off defined by Brazilian law (in monthly per capita household income).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[85#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -60408,7 +60408,7 @@
             <Name>$povline</Name>
             <Comment><![CDATA[Poverty line cut-off defined by Brazilian law (in monthly per capita household income).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[170#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
@@ -60432,7 +60432,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Previous values valid until June 2018 ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i*6/12]]></Value>
+            <Value><![CDATA[bpbf_i]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -61601,7 +61601,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[880#m]]></Value>
+            <Value><![CDATA[788#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -64564,7 +64564,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=725.02#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -64577,7 +64577,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 41.37#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 37.18#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -64616,7 +64616,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 29.16#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 29.20#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -64629,7 +64629,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1212.64#m & yem>806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1089.72#m & yem>725.03#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
