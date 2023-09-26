@@ -125,16 +125,17 @@ base_ids <- base_ids %>%
                             no = idpartner)) #if not, keep it as it is
 
 
-#COUNTRY, WEIGHTS, AGE, GENDER AND MARITAL STATUS
+#COUNTRY, WEIGHTS, AGE, GENDER, URBAN AND MARITAL STATUS
 
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-#Create sample weight (dwt), age (dag), and gender (gdn) variables
+#Create sample weight (dwt), age (dag),gender (gdn), and urban region (drgur) variables
 base_ids <- base_ids %>% 
   rename(dwt = PESO_FINAL,
          dag = V0403,
-         dgn = V0404)
+         dgn = V0404,
+         drgur = TIPO_SITUACAO_REG)
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -168,6 +169,26 @@ base_dec <- base_ids %>%
                          V0419 == 5 ~ 3,
                          V0419 == 7 ~ 4))
 
+#Create highest education status (deh) variable
+
+base_deh <- base_dec %>% 
+  mutate(deh = case_when((is.na(V0425) & dec == 0) ~ 0,
+                         (is.na(V0425) & dec != 0) ~ dec,
+                         V0425 == 1 ~ 0,
+                         V0425 == 2 ~ 1,
+                         V0425 == 3 ~ 2,
+                         V0425 == 4 ~ 2,
+                         V0425 == 5 ~ 2,
+                         V0425 == 6 ~ 3,
+                         V0425 == 7 ~ 3,
+                         V0425 == 8 ~ 3,
+                         V0425 == 9 ~ 4,
+                         V0425 == 10 ~ 4,
+                         V0425 == 11 ~ 4,
+                         V0425 == 12 ~ 5,
+                         V0425 == 13 ~ 5,
+                         V0425 == 14 ~ 6,
+                         V0425 == 15 ~ 6))
 
 #LABOUR
 
@@ -191,7 +212,7 @@ labour_status <- aggregate(
             COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
   FUN = function(x) paste(x[!is.na(x)], collapse = ""))
 
-base_les <- merge(base_dec,
+base_les <- merge(base_deh,
                   labour_status,
                   by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
@@ -514,7 +535,7 @@ base_lpm <- merge(base_lem,
 
 base_final_pof <- base_lpm %>% 
   select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
-         dec, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+         dec, deh, les, lem, lpb, ldt, los, lse, yem, dgn, drgur, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),
