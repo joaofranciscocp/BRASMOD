@@ -6,6 +6,8 @@ library(fastmatrix)
 library(xgboost)
 library(neuralnet)
 library(caret)
+library(stats)
+library(MatchIt)
 
 #READING THE DATA
 
@@ -58,10 +60,9 @@ DESPESA_INDIVIDUAL <- readRDS("Dados_20221226\\DESPESA_INDIVIDUAL.rds") %>%
 CADERNETA_COLETIVA <- readRDS("Dados_20221226\\CADERNETA_COLETIVA.rds") %>%
   mutate(V9001 = substr(V9001, 1, 5)) %>%
   mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
-  filter(substr(V9001,2,5) != "999" &
+  filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
-  select(idhh, V9001, V8000_DEFLA, UF) %>% 
-  mutate(V8000_DEFLA_new = V8000_DEFLA) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
   select(idhh, V9001, V8000_DEFLA_new, UF)
 
 base_pof <- do.call(rbind,
@@ -169,7 +170,71 @@ shares_idhh <- expenditures_idhh %>%
          share_vestuario            = mean(vestuario)/sum(ils_dispy),            
          share_emprestimo           = mean(emprestimo)/sum(ils_dispy),           
          share_prev_priv            = mean(prev_priv)/sum(ils_dispy),            
-         share_pensoes              = mean(pensoes)/sum(ils_dispy))
+         share_pensoes              = mean(pensoes)/sum(ils_dispy)) %>% 
+  mutate(
+    bin_habitacao            = ifelse(habitacao > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_despesas_diversas    = ifelse(despesas_diversas > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_prestacao            = ifelse(prestacao > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_impostos             = ifelse(impostos > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_imovel               = ifelse(imovel > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_outras               = ifelse(outras > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_investimentos        = ifelse(habitacao > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_cultura              = ifelse(cultura > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_contribuicoes_trab   = ifelse(contribuicoes_trab > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_fumo                 = ifelse(fumo > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_transporte           = ifelse(transporte > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_alimentacao          = ifelse(alimentacao > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_serv_banc            = ifelse(serv_banc > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_serv_pess            = ifelse(serv_pess > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_assist_saude         = ifelse(assist_saude > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_higiene              = ifelse(higiene > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_educacao             = ifelse(educacao > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_vestuario            = ifelse(vestuario > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_emprestimo           = ifelse(emprestimo > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_prev_priv            = ifelse(prev_priv > 0,
+                                      yes = 1,
+                                      no = 0),
+    bin_pensoes              = ifelse(pensoes > 0,
+                                      yes = 1,
+                                      no = 0))
 
 
 shares_idhh_filtered <- shares_idhh %>% 
@@ -216,7 +281,28 @@ shares_idhh_filtered <- shares_idhh %>%
               share_vestuario            =mean(share_vestuario         ),
               share_emprestimo           =mean(share_emprestimo        ),
               share_prev_priv            =mean(share_prev_priv         ),
-              share_pensoes              =mean(share_pensoes           ))
+              share_pensoes              =mean(share_pensoes           ),
+              bin_habitacao              =mean(bin_habitacao         ),
+              bin_despesas_diversas      =mean(bin_despesas_diversas ),
+              bin_prestacao              =mean(bin_prestacao         ),
+              bin_impostos               =mean(bin_impostos          ),
+              bin_imovel                 =mean(bin_imovel            ),
+              bin_outras                 =mean(bin_outras            ),
+              bin_investimentos          =mean(bin_investimentos     ),
+              bin_cultura                =mean(bin_cultura           ),
+              bin_contribuicoes_trab     =mean(bin_contribuicoes_trab),
+              bin_fumo                   =mean(bin_fumo              ),
+              bin_transporte             =mean(bin_transporte        ),
+              bin_alimentacao            =mean(bin_alimentacao       ),
+              bin_serv_banc              =mean(bin_serv_banc         ),
+              bin_serv_pess              =mean(bin_serv_pess         ),
+              bin_assist_saude           =mean(bin_assist_saude      ),
+              bin_higiene                =mean(bin_higiene           ),
+              bin_educacao               =mean(bin_educacao          ),
+              bin_vestuario              =mean(bin_vestuario         ),
+              bin_emprestimo             =mean(bin_emprestimo        ),
+              bin_prev_priv              =mean(bin_prev_priv         ),
+              bin_pensoes                =mean(bin_pensoes           ))
 
 
 demographic_variables <-  readRDS("Dados_20221226\\MORADOR.rds") %>% 
@@ -277,6 +363,166 @@ final_base_pof <- merge(shares_idhh_filtered,
                         by.y = "idhh",
                         all.y = T) %>% 
   na.omit()
+
+
+#REGRESSIONS
+
+#Create vector of dependent variables
+
+share_vars <- c("share_habitacao"         ,
+                "share_despesas_diversas" ,
+                "share_prestacao"         ,
+                "share_impostos"          ,
+                "share_imovel"            ,
+                "share_outras"            ,
+                "share_investimentos"     ,
+                "share_cultura"           ,
+                "share_contribuicoes_trab",
+                "share_fumo"              ,
+                "share_transporte"        ,
+                "share_alimentacao"       ,
+                "share_serv_banc"         ,
+                "share_serv_pess"         ,
+                "share_assist_saude"      ,
+                "share_higiene"           ,
+                "share_educacao"          ,
+                "share_vestuario"         ,
+                "share_emprestimo"        ,
+                "share_prev_priv"         ,
+                "share_pensoes"           )
+
+
+#Create vector of independent variables
+
+dependent_vars <- demographic_variables %>% 
+  select(-c("idhh", "weights", "region")) %>% 
+  names()
+
+#Loop to create and run models for each share variable
+
+probit_models <- list()
+ols_models <- list()
+
+for(var in share_vars){
+  model_number <- which(share_vars == var)
+  
+  model <- reformulate(termlabels =  dependent_vars,
+                       response = var)
+  
+  probit <- glm(model, family = binomial(link = "probit"),
+                data = final_base_pof)
+  
+  probit_models[[model_number]] <- probit
+  
+  ols <- lm(model, data = final_base_pof%>% 
+              filter(get(var) > 0))
+  
+  ols_models[[model_number]] <- ols
+}
+
+
+#Prediciton for POF
+
+covariates_pof <- demographic_variables %>% 
+  select(-idhh, -weights, -region) %>% 
+  na.omit()
+  
+
+pof_shares_hat <- demographic_variables %>%
+  na.omit() %>% 
+  select(idhh)
+
+
+for(var in share_vars){
+  model_number <- which(share_vars == var)
+  
+  share_hat <- predict(ols_models[[model_number]],
+                       newdata = covariates_pof)
+  
+  prob_hat <- predict(probit_models[[model_number]], 
+                      newdata = covariates_pof, type="response")
+  
+  pof_shares_hat[, ncol(pof_shares_hat) + 1] <- prob_hat*share_hat
+  
+  colnames(pof_shares_hat)[ncol(pof_shares_hat)] <- paste0(var, "_hat")
+}
+
+
+#Prediction for PNAD
+
+covariates_pnad <- pnad_individual %>% 
+  group_by(idhh) %>% 
+  mutate(idhead = first(idperson)) %>% 
+  ungroup(idhh) %>% 
+  mutate(ismalehead = ifelse(idperson == idhead & dgn == 1,
+                             yes = 1,
+                             no = 0)) %>%
+  group_by(idhh) %>% 
+  summarise(
+    idhh                      = mean(idhh),
+    urban                     = ifelse(any(drgur == 1),
+                                       yes = 1,
+                                       no = 0),
+    n_male_over_14            = sum(dgn == 1 & dag >= 14),
+    n_under_14                = sum(dag <= 14),
+    n_between_15_29           = sum(dag %in% 15:29),
+    n_between_30_44           = sum(dag %in% 30:44),
+    n_between_45_59           = sum(dag %in% 45:59),
+    n_over_60                 = sum(dag >= 60),
+    n_employed                = sum(les == 2 | les == 3),
+    n_students                = sum(les == 6),
+    n_higher_education        = sum(deh >= 5),
+    avg_years_educ            = mean(dey),
+    malehead                  = max(ismalehead),
+    weights                   = sum(dwt),
+    region                    = mean(drgn1),
+    north                     = ifelse(region == 1,
+                                       yes = 1,
+                                       no = 0),
+    northeast                 = ifelse(region == 2,
+                                       yes = 1,
+                                       no = 0),
+    southeast                 = ifelse(region == 3,
+                                       yes = 1,
+                                       no = 0),
+    south                     = ifelse(region == 4,
+                                       yes = 1,
+                                       no = 0)) %>% 
+  select(-idhh, -weights, -region)
+
+pnad_shares_hat <- pnad_hh %>% 
+  select(idhh) %>% 
+  as_tibble()
+
+for(var in share_vars){
+  model_number <- which(share_vars == var)
+  
+  share_hat <- predict(ols_models[[model_number]],
+                       newdata = covariates_pnad)
+  
+  prob_hat <- predict(probit_models[[model_number]], 
+                      newdata = covariates_pnad, type="response")
+  
+  pnad_shares_hat[, ncol(pnad_shares_hat) + 1] <- prob_hat*share_hat
+  
+  colnames(pnad_shares_hat)[ncol(pnad_shares_hat)] <- paste0(var, "_hat")
+}
+
+pnad_shares_hat <- pnad_shares_hat %>% 
+  mutate(pof = 0)
+
+pof_shares_hat <- pof_shares_hat %>% 
+  mutate(pof = 1)
+
+base_matching <- rbind(pnad_shares_hat,
+                    pof_shares_hat)
+
+matching_formula <- reformulate(termlabels =  colnames(pnad_shares_hat %>% select(-idhh, -pof)),
+                                response = "pof")
+
+macthing <- matchit(formula = matching_formula,
+                    distance = "mahalanobis",
+                    data = base_matching)
 
 #Training and testing
 per_train <- 0.85
