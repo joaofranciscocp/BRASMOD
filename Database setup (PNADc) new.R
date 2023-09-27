@@ -118,18 +118,21 @@ base_ids <- base_ids %>%
                             no = idpartner)) #if not, keep it as it is
 
 
-#COUNTRY, WEIGHTS, AGE, GENDER AND MARITAL STATUS
+#COUNTRY, WEIGHTS, AGE, GENDER, URBAN AND MARITAL STATUS
 
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-#Create sample weight (dwt), age (dag), and gender (gdn) variables
+#Create sample weight (dwt), age (dag), urban (drgur) and gender (gdn) variables
 base_ids <- base_ids %>% 
   rename(dwt = V1032,
          dag = V2009,
          dgn = V2007) %>% 
   mutate(dgn = case_when(dgn == "Homem" ~ 1,
-                         dgn == "Mulher" ~ 2))
+                         dgn == "Mulher" ~ 2),
+         drgur = ifelse(V1022 == "Urbana",
+                        yes = 1,
+                        no = 0))
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -137,6 +140,13 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
                                    yes = 2, #"married"
                                    no = 1) #single
 
+#Create region NUTS level 1 (drgn1) and 2 (drgn2) variables
+#We consider that level 1 regions are the IBGE-defined regions in BR (North, Northeast, South, Southeast and Central-West),
+#and that level 2 is the states
+
+base_drgn <- base_ids %>% 
+  mutate(drgn1 = substr(UPA, 1, 1),
+         drgn2 = substr(UPA, 1, 2))
 
 #EDUCATION
 
@@ -149,7 +159,7 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
 #5: Post-secondary education 
 #6: Tertiary education 
 
-base_dec <- base_ids %>% 
+base_dec <- base_drgn %>% 
   mutate(dec = case_when(is.na(V3003A) ~ 0,
                          V3003A == "Pré-escola" ~ 1,
                          V3003A == "Alfabetização de jovens e adultos" ~ 2,
@@ -162,6 +172,29 @@ base_dec <- base_ids %>%
                          V3003A == "Doutorado" ~ 6,
                          V3003A == "Educação de jovens e adultos (EJA) do ensino fundamental" ~ 3,
                          V3003A == "Educação de jovens e adultos (EJA) do ensino médio" ~ 4))
+
+#Create years of education (dey) variable 
+
+base_dey <- base_dec %>% 
+  mutate(dey = ifelse(!is.na(VD3005),
+                      yes = as.numeric(gsub('[^0-9]', '', VD3005)),
+                      no = 0))
+
+#Create highest education status (deh) variable
+
+base_deh <- base_dey %>% 
+  mutate(deh = case_when((is.na(VD3004) & dec == 0) ~ 0,
+                         (is.na(VD3004) & dec != 0) ~ dec,
+                         VD3004 == "Sem instrução e menos de 1 ano de estudo" ~ 0,
+                         (VD3004 == "Fundamental incompleto ou equivalente" & dey < 5) ~ 1,
+                         (VD3004 == "Fundamental incompleto ou equivalente" & dey >= 5) ~ 2,
+                         VD3004 == "Fundamental completo ou equivalente" ~ 3,
+                         VD3004 == "Médio incompleto ou equivalente" ~ 3,
+                         VD3004 == "Médio completo ou equivalente" ~ 4,
+                         VD3004 == "Médio completo ou equivalente" ~ 4,
+                         VD3004 == "Superior incompleto ou equivalente" ~ 4,
+                         (VD3004 == "Superior completo" & dec <= 5) ~ 5,
+                         (VD3004 == "Superior completo" & dec > 5) ~ 6))
 
 #LABOUR
 
@@ -177,7 +210,7 @@ base_dec <- base_ids %>%
 #8: Sick or disabled 
 #9: Other 
 
-base_les <- base_dec %>% 
+base_les <- base_deh %>% 
   mutate(les = case_when(V4012 == "Empregado do setor privado" ~ 3,
                          V4012 == "Empregado do setor público (inclusive empresas de economia mista)" ~ 3,
                          V4012 == "Conta própria" ~ 2,
@@ -331,8 +364,8 @@ base <- base_lem
 
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
-  select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
-         dec, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+  select(idhh, idperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
