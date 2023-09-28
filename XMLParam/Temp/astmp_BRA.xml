@@ -69318,7 +69318,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[788.00#m]]></Value>
+            <Value><![CDATA[724.00#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -69703,7 +69703,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[788.00#m]]></Value>
+            <Value><![CDATA[724.00#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -69791,7 +69791,7 @@
             <Name>$ceiling</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[932.75#m]]></Value>
+            <Value><![CDATA[878.05#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
@@ -71631,7 +71631,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenInTu * 2275.08#y]]></Value>
+            <Value><![CDATA[nDepChildrenInTu * 2156.52#y]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -71770,7 +71770,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 15880.89#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -71920,7 +71920,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[xed<= 3561.50#y]]></Value>
+            <Value><![CDATA[xed<= 3375.83#y]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -71972,7 +71972,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3561.50#y]]></Value>
+            <Value><![CDATA[3375.83#y]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -71985,7 +71985,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[xed > 3561.50#y]]></Value>
+            <Value><![CDATA[xed > 3375.83#y]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>

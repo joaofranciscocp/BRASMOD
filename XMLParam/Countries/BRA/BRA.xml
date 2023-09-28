@@ -7319,7 +7319,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7660,7 +7660,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7827,7 +7827,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -7877,7 +7877,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -8046,6 +8046,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0d9bd10a-3e8f-4433-bc66-cc0da3cf88ee</ID>
+          <PolicyID>e068c8fc-ee29-49cb-b33d-381a1d560095</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>0c07677d-3ed4-4b76-98b1-469e3ed6bf7e</ID>
+            <FunctionID>0d9bd10a-3e8f-4433-bc66-cc0da3cf88ee</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6fe6b618-38b0-4985-9f8f-14b9ae174920</ID>
+            <FunctionID>0d9bd10a-3e8f-4433-bc66-cc0da3cf88ee</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>25927937-ab76-4d2d-b02e-14050daeda7b</ID>
+            <FunctionID>0d9bd10a-3e8f-4433-bc66-cc0da3cf88ee</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -15373,7 +15423,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15714,7 +15764,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15881,7 +15931,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -15931,7 +15981,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -16100,6 +16150,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>a5fea3f1-b177-4da6-9e43-4e673c6a8724</ID>
+          <PolicyID>bb7858df-b420-416f-913e-69291b9c15af</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>44653e87-86b8-4177-b673-033e7e365ea6</ID>
+            <FunctionID>a5fea3f1-b177-4da6-9e43-4e673c6a8724</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d35e030e-a5fb-43e1-bcea-b8d9c8b8ba4a</ID>
+            <FunctionID>a5fea3f1-b177-4da6-9e43-4e673c6a8724</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bb381d9b-7cec-47f1-9a0e-ee143bae9937</ID>
+            <FunctionID>a5fea3f1-b177-4da6-9e43-4e673c6a8724</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -23424,7 +23524,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -23765,7 +23865,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -23932,7 +24032,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>off</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -23982,7 +24082,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -24151,6 +24251,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>895dac4a-f018-419b-82b6-b8fee92b362d</ID>
+          <PolicyID>1f7139ba-513b-42ce-a3c3-10e4179c9bee</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>347dfb5e-b33d-489e-a7c5-1d487e78f49f</ID>
+            <FunctionID>895dac4a-f018-419b-82b6-b8fee92b362d</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>78189c6e-c78d-45e0-a0b8-d9bdfcd467f6</ID>
+            <FunctionID>895dac4a-f018-419b-82b6-b8fee92b362d</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dbe4bd43-6656-495a-af90-330b97638133</ID>
+            <FunctionID>895dac4a-f018-419b-82b6-b8fee92b362d</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -31477,7 +31627,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31818,7 +31968,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -31985,7 +32135,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -32035,7 +32185,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -32204,6 +32354,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>48758e5d-7562-4e48-92e6-2a696ac2bb70</ID>
+          <PolicyID>ec9632ba-85df-4eb5-a89f-3d4de33f3189</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>f55b8bce-6809-49e3-b122-e541bc1ee4d1</ID>
+            <FunctionID>48758e5d-7562-4e48-92e6-2a696ac2bb70</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>932d9fc7-f1c9-48c7-b015-4b10b72f6d5f</ID>
+            <FunctionID>48758e5d-7562-4e48-92e6-2a696ac2bb70</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>03f844d1-6dc4-4325-98a8-12d584198145</ID>
+            <FunctionID>48758e5d-7562-4e48-92e6-2a696ac2bb70</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -39526,7 +39726,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -39867,7 +40067,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40034,7 +40234,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40084,7 +40284,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -40253,6 +40453,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>94b6276d-50a2-464c-a9e2-98dda10ba050</ID>
+          <PolicyID>560a29f2-2adf-47ec-be4c-a9aa7d1621a3</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8a208363-4ec4-4b22-9667-5ca2c1ac87b5</ID>
+            <FunctionID>94b6276d-50a2-464c-a9e2-98dda10ba050</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5c67f734-f123-412d-a087-7dedb7904483</ID>
+            <FunctionID>94b6276d-50a2-464c-a9e2-98dda10ba050</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aa2cb6e1-12fd-41b3-8a99-05c1bf485648</ID>
+            <FunctionID>94b6276d-50a2-464c-a9e2-98dda10ba050</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -47578,7 +47828,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -47919,7 +48169,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -48086,7 +48336,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -48136,7 +48386,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -48305,6 +48555,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>995414ca-424e-44ae-8388-fef124d669ce</ID>
+          <PolicyID>dd26e9bb-2920-4c7e-851b-b1d27b3bea17</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>14998c3a-dd55-4f20-8ad9-40a0d1f2dba1</ID>
+            <FunctionID>995414ca-424e-44ae-8388-fef124d669ce</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>629b9378-ae95-4948-8861-bcd0a688baeb</ID>
+            <FunctionID>995414ca-424e-44ae-8388-fef124d669ce</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>016633d9-9f81-4aec-b9b2-990f18e62aaf</ID>
+            <FunctionID>995414ca-424e-44ae-8388-fef124d669ce</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -55630,7 +55930,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -55971,7 +56271,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -56138,7 +56438,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -56188,7 +56488,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -56357,6 +56657,56 @@
             <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>5180a1db-07d8-4cba-ac4b-7025c9783ba4</ID>
+          <PolicyID>cc2137dc-e892-4c43-a1d7-1632083f8ddb</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>39bccedf-6854-463d-b1fa-749e79f562f3</ID>
+            <FunctionID>5180a1db-07d8-4cba-ac4b-7025c9783ba4</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b88085c1-87f2-4d4b-b708-aade7acfe0cc</ID>
+            <FunctionID>5180a1db-07d8-4cba-ac4b-7025c9783ba4</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>acc5216b-8a65-4584-9977-bd37df7c24f6</ID>
+            <FunctionID>5180a1db-07d8-4cba-ac4b-7025c9783ba4</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -63682,7 +64032,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -64023,7 +64373,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -64190,8 +64540,8 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
-          <Switch>n/a</Switch>
+          <Order>8</Order>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -64240,7 +64590,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -64409,6 +64759,56 @@
             <Value><![CDATA[0]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0f4ae191-0f0c-4509-956a-8ab83cc5f7e5</ID>
+          <PolicyID>46020864-dbe4-43f6-8951-24269620effa</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>161311de-42fd-4e52-bac8-646c9183fe05</ID>
+            <FunctionID>0f4ae191-0f0c-4509-956a-8ab83cc5f7e5</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>086fd6e1-62eb-4a39-9145-e845f682746a</ID>
+            <FunctionID>0f4ae191-0f0c-4509-956a-8ab83cc5f7e5</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5b2e1cdb-4a09-4ac3-b65f-33df48ff9dab</ID>
+            <FunctionID>0f4ae191-0f0c-4509-956a-8ab83cc5f7e5</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
@@ -71631,7 +72031,7 @@
             <Name>Comp_perTU</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenInTu * 2275.08#y]]></Value>
+            <Value><![CDATA[nDepChildrenInTu * 2156.52#y]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -71734,7 +72134,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables]]></Comment>
           <PrivateComment />
-          <Order>7</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -71770,7 +72170,7 @@
             <Name>base_simplificada</Name>
             <Comment><![CDATA[Tax regime choice]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 16754.34#y)]]></Value>
+            <Value><![CDATA[max(0.8*(il_TaxableY + tintaox_s), il_TaxableY +tintaox_s - 15880.89#y)]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -71920,7 +72320,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[xed<= 3561.50#y]]></Value>
+            <Value><![CDATA[xed<= 3375.83#y]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -71972,7 +72372,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3561.50#y]]></Value>
+            <Value><![CDATA[3375.83#y]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -71985,7 +72385,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[xed > 3561.50#y]]></Value>
+            <Value><![CDATA[xed > 3375.83#y]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -72075,7 +72475,7 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[Personal Income Tax Schedule]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -72137,7 +72537,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[Income up to this yearly amount is taxed...]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[22499.13#y]]></Value>
+            <Value><![CDATA[21453.24#y]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -72150,7 +72550,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[Income above the previous yearly amount and up to this yearly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[55373.55#y]]></Value>
+            <Value><![CDATA[53565.72#y]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -72163,7 +72563,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[Income above the previous yearly amount and up to this yearly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[44476.75#y]]></Value>
+            <Value><![CDATA[42869.17#y]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -72176,7 +72576,7 @@
             <Name>Band_LowLim</Name>
             <Comment><![CDATA[Income above the previous yearly amount and up to this yearly amount is taxed…]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[33477.73#y]]></Value>
+            <Value><![CDATA[32151.49#y]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -72242,7 +72642,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
-          <Order>19</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -72292,8 +72692,8 @@
           <Name>SchedCalc</Name>
           <Comment><![CDATA[In 2015, the following personal income tax schedule was valid for the first three months of the year...]]></Comment>
           <PrivateComment />
-          <Order>11</Order>
-          <Switch>on</Switch>
+          <Order>7</Order>
+          <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
@@ -72302,7 +72702,7 @@
             <Name>Base</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[il_TaxableY]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -72315,7 +72715,7 @@
             <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -72328,7 +72728,7 @@
             <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tin_completo]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>10</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -72341,7 +72741,7 @@
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[tu_individual_bra]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>12</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -72354,7 +72754,7 @@
             <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0.075]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -72367,7 +72767,7 @@
             <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0.15]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -72380,7 +72780,7 @@
             <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0.225]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>8</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -72393,7 +72793,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2679.29#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -72406,7 +72806,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[3572.43#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>5</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -72419,7 +72819,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4463.81#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>7</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
@@ -72432,7 +72832,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1787.77#m]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -72445,7 +72845,7 @@
             <Name>Band_Rate</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0.275]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>9</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
@@ -72458,9 +72858,59 @@
             <Name>LowLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[0]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>11</Order>
             <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>baa1442b-2ac0-4619-8733-ca34b80042b0</ID>
+          <PolicyID>3eb7dff2-b280-4abf-ae5d-5015d0d6069a</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>10</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>f097e29e-330a-4089-b77a-1612fe396d10</ID>
+            <FunctionID>baa1442b-2ac0-4619-8733-ca34b80042b0</FunctionID>
+            <Name>Formula</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a2978d13-19aa-4dcf-b2ac-f18ec9598334</ID>
+            <FunctionID>baa1442b-2ac0-4619-8733-ca34b80042b0</FunctionID>
+            <Name>Output_Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>97f095a0-c2ce-49dd-bd58-21a5103dbf0d</ID>
+            <FunctionID>baa1442b-2ac0-4619-8733-ca34b80042b0</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
             <Group />
             <Color>-1</Color>
             <Private />
