@@ -170,71 +170,7 @@ shares_idhh <- expenditures_idhh %>%
          share_vestuario            = mean(vestuario)/sum(ils_dispy),            
          share_emprestimo           = mean(emprestimo)/sum(ils_dispy),           
          share_prev_priv            = mean(prev_priv)/sum(ils_dispy),            
-         share_pensoes              = mean(pensoes)/sum(ils_dispy)) %>% 
-  mutate(
-    bin_habitacao            = ifelse(habitacao > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_despesas_diversas    = ifelse(despesas_diversas > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_prestacao            = ifelse(prestacao > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_impostos             = ifelse(impostos > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_imovel               = ifelse(imovel > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_outras               = ifelse(outras > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_investimentos        = ifelse(habitacao > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_cultura              = ifelse(cultura > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_contribuicoes_trab   = ifelse(contribuicoes_trab > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_fumo                 = ifelse(fumo > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_transporte           = ifelse(transporte > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_alimentacao          = ifelse(alimentacao > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_serv_banc            = ifelse(serv_banc > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_serv_pess            = ifelse(serv_pess > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_assist_saude         = ifelse(assist_saude > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_higiene              = ifelse(higiene > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_educacao             = ifelse(educacao > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_vestuario            = ifelse(vestuario > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_emprestimo           = ifelse(emprestimo > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_prev_priv            = ifelse(prev_priv > 0,
-                                      yes = 1,
-                                      no = 0),
-    bin_pensoes              = ifelse(pensoes > 0,
-                                      yes = 1,
-                                      no = 0))
+         share_pensoes              = mean(pensoes)/sum(ils_dispy))
 
 
 shares_idhh_filtered <- shares_idhh %>% 
@@ -281,28 +217,7 @@ shares_idhh_filtered <- shares_idhh %>%
               share_vestuario            =mean(share_vestuario         ),
               share_emprestimo           =mean(share_emprestimo        ),
               share_prev_priv            =mean(share_prev_priv         ),
-              share_pensoes              =mean(share_pensoes           ),
-              bin_habitacao              =mean(bin_habitacao         ),
-              bin_despesas_diversas      =mean(bin_despesas_diversas ),
-              bin_prestacao              =mean(bin_prestacao         ),
-              bin_impostos               =mean(bin_impostos          ),
-              bin_imovel                 =mean(bin_imovel            ),
-              bin_outras                 =mean(bin_outras            ),
-              bin_investimentos          =mean(bin_investimentos     ),
-              bin_cultura                =mean(bin_cultura           ),
-              bin_contribuicoes_trab     =mean(bin_contribuicoes_trab),
-              bin_fumo                   =mean(bin_fumo              ),
-              bin_transporte             =mean(bin_transporte        ),
-              bin_alimentacao            =mean(bin_alimentacao       ),
-              bin_serv_banc              =mean(bin_serv_banc         ),
-              bin_serv_pess              =mean(bin_serv_pess         ),
-              bin_assist_saude           =mean(bin_assist_saude      ),
-              bin_higiene                =mean(bin_higiene           ),
-              bin_educacao               =mean(bin_educacao          ),
-              bin_vestuario              =mean(bin_vestuario         ),
-              bin_emprestimo             =mean(bin_emprestimo        ),
-              bin_prev_priv              =mean(bin_prev_priv         ),
-              bin_pensoes                =mean(bin_pensoes           ))
+              share_pensoes              =mean(share_pensoes           ))
 
 
 demographic_variables <-  readRDS("Dados_20221226\\MORADOR.rds") %>% 
@@ -423,7 +338,8 @@ for(var in share_vars){
 
 #Prediciton for POF
 
-covariates_pof <- demographic_variables %>% 
+covariates_pof <- demographic_variables %>%
+  filter(idhh %in% shares_idhh_filtered$idhh) %>% 
   select(-idhh, -weights, -region) %>% 
   na.omit()
   
@@ -509,62 +425,78 @@ for(var in share_vars){
 }
 
 pnad_shares_hat <- pnad_shares_hat %>% 
-  mutate(pof = 0)
+  mutate(pnad = 1)
 
 pof_shares_hat <- pof_shares_hat %>% 
-  mutate(pof = 1)
+  mutate(pnad = 0) 
 
 base_matching <- rbind(pnad_shares_hat,
                     pof_shares_hat)
 
-matching_formula <- reformulate(termlabels =  colnames(pnad_shares_hat %>% select(-idhh, -pof)),
-                                response = "pof")
+matching_formula <- reformulate(termlabels =  colnames(pnad_shares_hat %>% select(-idhh, -pnad)),
+                                response = "pnad")
 
-macthing <- matchit(formula = matching_formula,
+matching <- matchit(formula = matching_formula,
                     distance = "mahalanobis",
-                    data = base_matching)
+                    method = "nearest",
+                    data = base_matching,
+                    replace = TRUE) #there are more treated than control observations
 
-#Training and testing
-per_train <- 0.85
-set.seed(2307)
-training_pof <- sample_n(final_base_pof, per_train*nrow(final_base_pof))
+matching_matrix <- as.data.frame(matching$match.matrix) %>% 
+  mutate(across(everything(), as.numeric)) %>% 
+  mutate(idhh = row_number(),
+         idhh_match = V1 - nrow(pnad_shares_hat)) %>% 
+  select(idhh, idhh_match)
 
-share <- "share_alimentacao"
+#Constructing PNAD expenditure data by getting expenditure at the lowest aggregation level
+#of matched households
 
-training_y   <- training_pof %>% 
-  select(share)
-training_y   <- data.matrix(training_y)
-training_x   <- training_pof %>% 
-  select(colnames(demographic_variables), -idhh, ils_dispy)
-training_x   <- data.matrix(training_x)
+pnad_expenditures <- data.frame()
 
-test_pof     <- anti_join(final_base_pof, training_pof)
-test_y       <- test_pof %>% 
-  select(share)
-test_y   <- data.matrix(test_y)
-test_x       <- test_pof %>% 
-  select(colnames(demographic_variables), -idhh, ils_dispy)
-test_x   <- data.matrix(test_x)
+for(idhh in matching_matrix$idhh){
+  idhh_expenditures <- base_pof %>% 
+    filter(idhh == idhh)
+  
+  
+}
 
+pnad_expenditures <- merge(matching_matrix,
+                           pnad_hh,
+                           by.x = "idhh",
+                           by.y = "idhh")
 
-xgb_train = xgb.DMatrix(data = training_x, label = training_y, 
-                        info = list(weight = training_pof$weights))
+pof_expenditures <- shares_idhh %>% 
+  group_by(idhh.x) %>% 
+  summarise(idhh = mean(idhh.x),
+            share_habitacao            =mean(share_habitacao         ),
+            share_despesas_diversas    =mean(share_despesas_diversas ),
+            share_prestacao            =mean(share_prestacao         ),
+            share_impostos             =mean(share_impostos          ),
+            share_imovel               =mean(share_imovel            ),
+            share_outras               =mean(share_outras            ),
+            share_investimentos        =mean(share_investimentos     ),
+            share_cultura              =mean(share_cultura           ),
+            share_contribuicoes_trab   =mean(share_contribuicoes_trab),
+            share_fumo                 =mean(share_fumo              ),
+            share_transporte           =mean(share_transporte        ),
+            share_alimentacao          =mean(share_alimentacao       ),
+            share_serv_banc            =mean(share_serv_banc         ),
+            share_serv_pess            =mean(share_serv_pess         ),
+            share_assist_saude         =mean(share_assist_saude      ),
+            share_higiene              =mean(share_higiene           ),
+            share_educacao             =mean(share_educacao          ),
+            share_vestuario            =mean(share_vestuario         ),
+            share_emprestimo           =mean(share_emprestimo        ),
+            share_prev_priv            =mean(share_prev_priv         ),
+            share_pensoes              =mean(share_pensoes           )) %>% 
+  ungroup(idhh.x) 
 
-xgb_test = xgb.DMatrix(data = test_x, label = test_y,info = list(weight = test_pof$weights))
 
   
-watchlist = list(train=xgb_train, test=xgb_test)
-
-model = xgb.train(data = xgb_train, max.depth = 2, watchlist=watchlist, nrounds = 100,
-                  params = list(booster = "gbtree", eta = 0.2, objective = "reg:squarederror",
-                                num_parallel_tree = 100,
-                                gamma = 2))
-
-model_xgboost = xgboost(data = xgb_train, max.depth = 3, 
-                        nrounds = which.min(model$evaluation_log$test_rmse), verbose = 0)
 
 
-#Results aren't that good, I think?
+
+
 
 
 
