@@ -174,7 +174,7 @@ shares_idhh <- expenditures_idhh %>%
 
 
 shares_idhh_filtered <- shares_idhh %>% 
-  filter(!(share_habitacao           > 1 |
+  filter(!(share_habitacao             > 1 |
              share_despesas_diversas   > 1 |
              share_prestacao           > 1 |
              share_impostos            > 1 |
@@ -339,12 +339,13 @@ for(var in share_vars){
 #Prediciton for POF
 
 covariates_pof <- demographic_variables %>%
-  filter(idhh %in% shares_idhh_filtered$idhh) %>% 
+  filter(idhh %in% shares_idhh_filtered$idhh) %>% #We're only going to use the "reasonable" households for matching
   select(-idhh, -weights, -region) %>% 
   na.omit()
   
 
 pof_shares_hat <- demographic_variables %>%
+  filter(idhh %in% shares_idhh_filtered$idhh) %>%
   na.omit() %>% 
   select(idhh)
 
@@ -451,11 +452,18 @@ matching_matrix <- as.data.frame(matching$match.matrix) %>%
 #Constructing PNAD expenditure data by getting expenditure at the lowest aggregation level
 #of matched households
 
-pnad_expenditures <- data.frame()
+pnad_expenditures <- data.frame(matrix(ncol=3,nrow=0, 
+                                       dimnames=list(NULL, c("idhh", "category", "value"))))
 
-for(idhh in matching_matrix$idhh){
+
+
+for(idhh_pnad in matching_matrix$idhh){
+  idhh_pof <- matching_matrix$idhh_match[idhh_pnad]
+  
   idhh_expenditures <- base_pof %>% 
-    filter(idhh == idhh)
+    filter(idhh == idhh_pof)
+  
+  
   
   
 }
