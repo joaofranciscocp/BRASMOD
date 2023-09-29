@@ -67217,7 +67217,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Obsevations: in 2019 there was a christmas bonus (double the value in december); for 2020 and 2021 there was the Covid Benefit. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i*7/12]]></Value>
+            <Value><![CDATA[bpbf_i*8/12]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -67267,7 +67267,7 @@
             <Name>$bpbf_bb</Name>
             <Comment><![CDATA[Base benefit for households in extreme poverty, equivalent to its cut-off.]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[77#m]]></Value>
+            <Value><![CDATA[70#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -67280,7 +67280,7 @@
             <Name>$bpbf_bv</Name>
             <Comment><![CDATA[Benefit value for children aged 0-15 ("Benefício Variável" - BV). ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[35#m]]></Value>
+            <Value><![CDATA[32#m]]></Value>
             <Order>3</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -67293,7 +67293,7 @@
             <Name>$bpbf_bvj</Name>
             <Comment><![CDATA[Benefit value for children aged 16-18 who are in school ("Benefício Variável Jovem" - BVJ).]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[42#m]]></Value>
+            <Value><![CDATA[38#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -67319,7 +67319,7 @@
             <Name>$povline</Name>
             <Comment><![CDATA[Poverty line cut-off defined by Brazilian law (in monthly per capita household income). ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[154#m]]></Value>
+            <Value><![CDATA[140#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
@@ -67728,7 +67728,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[Previous values valid until June 2018 ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[bpbf_i]]></Value>
+            <Value><![CDATA[bpbf_i*4/12]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
