@@ -4320,7 +4320,7 @@
             <ID>ae43b1cc-f5bb-43e9-87be-4f595037ceb1</ID>
             <FunctionID>45eefb6b-11e7-4615-b331-60c7e2baff2f</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1045.00#m]]></Value>
             <Order>1</Order>
@@ -4370,7 +4370,7 @@
             <ID>4d5ec04d-5719-4399-bf7e-7ac478c3b9cd</ID>
             <FunctionID>a0f0f2dd-414a-443c-8b60-107b448d53d6</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -4852,7 +4852,7 @@
             <ID>7afb937d-c618-4c31-a510-c41124dadf52</ID>
             <FunctionID>36a30e4c-bc75-4f5e-8910-6af9c1c2e21b</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -12437,7 +12437,7 @@
             <ID>e4fdfb31-b4f6-4c79-910e-715c6dd362cd</ID>
             <FunctionID>20ff4ad8-5a99-4dbc-bc4b-06a1d58131b6</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1100.00#m]]></Value>
             <Order>1</Order>
@@ -12487,7 +12487,7 @@
             <ID>e93b4b73-f4a4-43d0-9374-198828a8a122</ID>
             <FunctionID>b9a1bc28-b439-461a-af53-db9d5b399ee9</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -12969,7 +12969,7 @@
             <ID>e6ca3f1d-757e-4c34-8e1a-d819c6d94e6e</ID>
             <FunctionID>a06c92a4-402f-4e64-a989-c294a6cc400f</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -20551,7 +20551,7 @@
             <ID>6b399f74-1ac2-4a5d-beb2-bf4932cfc644</ID>
             <FunctionID>d2e775ce-e2d5-4ac8-852c-91f2db76c888</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[998.00#m]]></Value>
             <Order>1</Order>
@@ -20601,7 +20601,7 @@
             <ID>b653983a-db31-4663-874e-5c00aee0b499</ID>
             <FunctionID>7a3c824e-74d4-4bb2-87b4-071167767592</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -21083,7 +21083,7 @@
             <ID>e94726e1-0042-4ff7-8cf8-0f84d6f69075</ID>
             <FunctionID>e09ae4e8-521f-4fb8-8021-27396019bff7</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -28667,7 +28667,7 @@
             <ID>f6c6c4f9-1e3e-4953-8019-158e8ef1cbdf</ID>
             <FunctionID>de1e6063-cb26-48ac-ae91-5e952016a06c</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[954.00#m]]></Value>
             <Order>1</Order>
@@ -28717,7 +28717,7 @@
             <ID>f8b4e1b6-e492-47b5-9f9a-9013465ed33a</ID>
             <FunctionID>3c7d7e95-8046-4784-8ab2-3eb97187e03a</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -29199,7 +29199,7 @@
             <ID>7a674f98-0350-4766-88c5-20d4098e71a7</ID>
             <FunctionID>37f61328-bf5f-49b9-a1c3-23f31e25901a</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -36779,7 +36779,7 @@
             <ID>4be9ee49-1a37-4ba2-bac5-dd0b95fc019d</ID>
             <FunctionID>4767ad4a-3315-4556-82b6-282f71f3f607</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1212.00#m]]></Value>
             <Order>1</Order>
@@ -36829,7 +36829,7 @@
             <ID>a5268f03-1199-44e4-8db6-2b08e9baad69</ID>
             <FunctionID>4ef2afb0-119b-4686-a3ff-88444fbf2b4a</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
@@ -37311,7 +37311,7 @@
             <ID>fd8492dd-966b-4b81-8703-78429c767f4c</ID>
             <FunctionID>fe09f663-adb2-42fe-83e8-80062db53118</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -44894,7 +44894,7 @@
             <ID>02c28014-1d1b-420c-8341-e8479f7e7350</ID>
             <FunctionID>dd28b38c-bea5-4640-8c30-5c65e89a1b5e</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[937.00#m]]></Value>
             <Order>1</Order>
@@ -44944,7 +44944,7 @@
             <ID>c2553dab-450b-4a0a-a16d-ef905cbc9bcc</ID>
             <FunctionID>4ca36e4c-0592-437e-829a-5f3a5e2393f8</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -45426,7 +45426,7 @@
             <ID>cec5ee17-1525-4407-888d-888a63d8f361</ID>
             <FunctionID>bb393f61-64a6-4684-9ca6-b0b8564702a7</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -53009,7 +53009,7 @@
             <ID>43fb583e-4f9e-4d47-ad87-604515813708</ID>
             <FunctionID>0c62eb9f-b83e-4d22-b1c2-ad967b40d152</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[880.00#m]]></Value>
             <Order>1</Order>
@@ -53059,7 +53059,7 @@
             <ID>ef78f4ac-0478-419a-8cc0-44410c311614</ID>
             <FunctionID>2bb4fc60-257a-4d8c-aa6f-b3b2a8ecac66</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -53541,7 +53541,7 @@
             <ID>3f08a0a3-1819-4675-adf3-856534da822d</ID>
             <FunctionID>c9ba6d9a-6045-4034-96b7-ae2b762ec589</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -61124,7 +61124,7 @@
             <ID>34557515-e48d-4b90-b301-4ff2a1d51440</ID>
             <FunctionID>2c48a372-4908-4578-a9d1-562172f68043</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[788.00#m]]></Value>
             <Order>1</Order>
@@ -61174,7 +61174,7 @@
             <ID>2e331c8b-cc42-4149-bbb5-3a5cee3ebb51</ID>
             <FunctionID>1bd1584e-1f3a-4675-9953-bd3fe50816f5</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -61656,7 +61656,7 @@
             <ID>71b031d7-7a56-411d-959f-35d74f0f4d14</ID>
             <FunctionID>0a0ad454-2ef8-4053-80c3-37398ad4dfb4</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -64929,7 +64929,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_origy</HeadDefInc>
       <Private>no</Private>
-      <Order>2</Order>
+      <Order>3</Order>
       <Year>2014</Year>
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -69239,7 +69239,7 @@
             <ID>beb53e38-0283-40d8-acfd-708e4b81d7dd</ID>
             <FunctionID>95669225-a431-4cf2-8269-ad6cae5fcd9d</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
             <Value><![CDATA[724.00#m]]></Value>
             <Order>1</Order>
@@ -69289,7 +69289,7 @@
             <ID>3feb3e80-2e0b-48ce-9bcb-f1df848454ee</ID>
             <FunctionID>fded0e04-7d9f-4063-ac28-31ebd2a69008</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -69771,7 +69771,7 @@
             <ID>944e7ebe-cb81-45dd-9c80-a06dc867b414</ID>
             <FunctionID>d2650186-2aa9-400a-862a-4f24f840748e</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -73044,7 +73044,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_origy</HeadDefInc>
       <Private>no</Private>
-      <Order>3</Order>
+      <Order>2</Order>
       <Year>2013</Year>
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -77354,9 +77354,9 @@
             <ID>797797f0-f7e9-455d-a04b-56ae48fd0908</ID>
             <FunctionID>1bc423ac-8054-4eb6-a14c-ad5c0736c1c7</FunctionID>
             <Name>minwage</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[724.00#m]]></Value>
+            <Value><![CDATA[678.00#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -77404,7 +77404,7 @@
             <ID>8bbb14fb-8842-44bc-8e83-f1eb1c92ef9b</ID>
             <FunctionID>26123f1b-b782-4860-bb65-2c2ccb9ec769</FunctionID>
             <Name>Elig_Cond</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Eligibility conditions]]></Comment>
             <PrivateComment />
             <Value><![CDATA[les = 3 & lpb = 0]]></Value>
             <Order>1</Order>
@@ -77621,7 +77621,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[1317.07#m]]></Value>
+            <Value><![CDATA[1247.70#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -77634,7 +77634,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[2195.12#m]]></Value>
+            <Value><![CDATA[2079.50#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -77647,7 +77647,7 @@
             <Name>Band_UpLim</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[4390.24#m]]></Value>
+            <Value><![CDATA[4159.00#m]]></Value>
             <Order>6</Order>
             <ValueType>formula</ValueType>
             <Group>3</Group>
@@ -77886,7 +77886,7 @@
             <ID>f2d1ef31-3d30-4d99-a0ef-81ba1521e202</ID>
             <FunctionID>926b3649-71e8-4fcb-bcab-3a8562e605e9</FunctionID>
             <Name>base_tscee</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
             <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
             <Order>1</Order>
@@ -80089,7 +80089,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[724#m]]></Value>
+            <Value><![CDATA[678#m]]></Value>
             <Order>0</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
