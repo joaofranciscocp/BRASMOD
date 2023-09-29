@@ -7362,6 +7362,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>f7d43a44-ef68-4ed5-9c74-4dfaf60806a5</ID>
+            <FunctionID>620bc277-1d0a-4e66-a10a-38d04bba1127</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>91a2a0fa-7aea-4e73-a8b2-e6459c2451ce</ID>
@@ -8077,7 +8090,7 @@
           <Parameter>
             <ID>6fe6b618-38b0-4985-9f8f-14b9ae174920</ID>
             <FunctionID>0d9bd10a-3e8f-4433-bc66-cc0da3cf88ee</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -15466,6 +15479,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>ab769b0d-6912-4743-8749-e35003a73854</ID>
+            <FunctionID>3efaeee4-c2f6-4819-88db-031e1f2a7d18</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>cf533c76-b8be-4380-a0e8-4c571cc40d56</ID>
@@ -16181,7 +16207,7 @@
           <Parameter>
             <ID>d35e030e-a5fb-43e1-bcea-b8d9c8b8ba4a</ID>
             <FunctionID>a5fea3f1-b177-4da6-9e43-4e673c6a8724</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -23567,6 +23593,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>51e1b2f7-f4f1-4ae6-83d2-19cbb11a2a40</ID>
+            <FunctionID>2a5f8b4c-07c4-4d80-87eb-2badf4328fa8</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>b9c77a7a-5241-460e-9fe1-dc89b8fffbf4</ID>
@@ -24282,7 +24321,7 @@
           <Parameter>
             <ID>78189c6e-c78d-45e0-a0b8-d9bdfcd467f6</ID>
             <FunctionID>895dac4a-f018-419b-82b6-b8fee92b362d</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -31670,6 +31709,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>b102a3f7-0373-4e2d-ad2c-ecdae9d8d37a</ID>
+            <FunctionID>27eed871-c65a-47c0-b28a-79e5114a26ed</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>4e81173b-b4cc-4448-a9f8-58d05bb5498c</ID>
@@ -32385,7 +32437,7 @@
           <Parameter>
             <ID>932d9fc7-f1c9-48c7-b015-4b10b72f6d5f</ID>
             <FunctionID>48758e5d-7562-4e48-92e6-2a696ac2bb70</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -39769,6 +39821,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>40c9b70e-cf9a-48df-9474-cc3dcfae67bc</ID>
+            <FunctionID>1c26e5d0-d2d5-4f8b-9f36-e8c9f12deeef</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>5eaa9562-8efc-4af1-9df5-9cec54a52070</ID>
@@ -40484,7 +40549,7 @@
           <Parameter>
             <ID>5c67f734-f123-412d-a087-7dedb7904483</ID>
             <FunctionID>94b6276d-50a2-464c-a9e2-98dda10ba050</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -47871,6 +47936,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>b56dcb1e-d513-48cd-96d8-4960f7711161</ID>
+            <FunctionID>5bcaa104-eb66-471d-98a1-2c5c333f8ad4</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>3444e719-824f-4f5b-8791-e6f1c9e42fd5</ID>
@@ -48586,7 +48664,7 @@
           <Parameter>
             <ID>629b9378-ae95-4948-8861-bcd0a688baeb</ID>
             <FunctionID>995414ca-424e-44ae-8388-fef124d669ce</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -55973,6 +56051,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>81fb93aa-847d-460e-8422-222dcb591225</ID>
+            <FunctionID>6c2b3a01-50a6-46f1-8e71-5c8fba80643e</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>8efae28b-2e52-4ce0-b002-79969cd138b1</ID>
@@ -56688,7 +56779,7 @@
           <Parameter>
             <ID>b88085c1-87f2-4d4b-b708-aade7acfe0cc</ID>
             <FunctionID>5180a1db-07d8-4cba-ac4b-7025c9783ba4</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
@@ -64075,6 +64166,19 @@
             <Color>-1</Color>
             <Private />
           </Parameter>
+          <Parameter>
+            <ID>0c3d3bf2-7c56-4560-a6a8-7d356febd50f</ID>
+            <FunctionID>3e48ee31-f01e-4313-9dfa-ca8db4641aef</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
         </Function>
         <Function>
           <ID>8012cde3-794e-415b-9583-73e3f3800657</ID>
@@ -64550,7 +64654,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tin_i*3/12]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -64563,7 +64667,7 @@
             <Name>Output_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -64780,7 +64884,7 @@
             <Name>Formula</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tin_i*9/12]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group />
@@ -64790,10 +64894,10 @@
           <Parameter>
             <ID>086fd6e1-62eb-4a39-9145-e845f682746a</ID>
             <FunctionID>0f4ae191-0f0c-4509-956a-8ab83cc5f7e5</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[tin_s]]></Value>
             <Order>2</Order>
             <ValueType>variable</ValueType>
             <Group />
@@ -71756,7 +71860,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=725.02#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=682.50#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -71769,7 +71873,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 37.18#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 35.00#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -71808,7 +71912,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 29.20#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 24.66#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -71821,7 +71925,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1089.72#m & yem>725.03#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1025.81#m & yem>682.51#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -72174,6 +72278,19 @@
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dd77d577-5f6c-41f8-9c82-9e7dae3ddb93</ID>
+            <FunctionID>f2410e3f-2750-45f7-a3f7-7cfdcdeabdbf</FunctionID>
+            <Name>tin_i</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
             <Color>-1</Color>
             <Private />
           </Parameter>
@@ -72892,7 +73009,7 @@
           <Parameter>
             <ID>a2978d13-19aa-4dcf-b2ac-f18ec9598334</ID>
             <FunctionID>baa1442b-2ac0-4619-8733-ca34b80042b0</FunctionID>
-            <Name>Output_Var</Name>
+            <Name>Output_Add_Var</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
