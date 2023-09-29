@@ -4497,7 +4497,7 @@
           <ID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</ID>
           <PolicyID>a708ddc5-a63d-4a4b-9f44-6d879e1b9d59</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -4520,7 +4520,7 @@
             <ID>4a368bd9-5096-4395-81fd-5c61495f9382</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -4559,7 +4559,7 @@
             <ID>9895f1c4-f520-45c0-9281-e8485c9d60cf</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -4572,7 +4572,7 @@
             <ID>365bb3df-023f-4157-8299-3272c29477d1</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -4585,7 +4585,7 @@
             <ID>a000dbca-2e37-4a8a-aad8-d6464643eac3</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1830.29#m]]></Value>
             <Order>2</Order>
@@ -4598,7 +4598,7 @@
             <ID>f2f88af1-61ae-4194-97fd-fbd73380f4dc</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[3050.52#m]]></Value>
             <Order>4</Order>
@@ -4611,7 +4611,7 @@
             <ID>0d39e058-41c8-4b54-97f9-450b09cf3849</ID>
             <FunctionID>12c4b7b3-92c5-45f8-bb74-74536e8bc8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[6101.06#m]]></Value>
             <Order>6</Order>
@@ -5348,7 +5348,7 @@
             <ID>9956b39a-adbc-4943-855a-f2ff07474f20</ID>
             <FunctionID>24956698-017b-4f32-b49f-ed9097566df4</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -5361,7 +5361,7 @@
             <ID>75484d45-c495-44d8-acb8-174d85d7b26f</ID>
             <FunctionID>24956698-017b-4f32-b49f-ed9097566df4</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -12614,7 +12614,7 @@
           <ID>34bb6bfc-2af1-477d-9070-6353d8323579</ID>
           <PolicyID>54d79d4f-6f24-4c33-a559-fd94a516f3ec</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>n/a</Switch>
@@ -12637,7 +12637,7 @@
             <ID>267cc5a1-18b7-46e4-a5b0-e1aa65e05271</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
@@ -12676,7 +12676,7 @@
             <ID>0792d20a-c5b2-4dce-ac88-b8bbf7800a57</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>5</Order>
@@ -12689,7 +12689,7 @@
             <ID>4a4c861b-1cf6-4c3f-bd23-74faf214efb5</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>7</Order>
@@ -12702,7 +12702,7 @@
             <ID>cfd7bb4e-2ed7-4274-96ad-9fc3a8241684</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
@@ -12715,7 +12715,7 @@
             <ID>2ff855a0-6532-4b52-87d3-e107f04e7500</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
@@ -12728,7 +12728,7 @@
             <ID>fc674ed8-dc3c-4157-9b89-e6ae1b8575a6</ID>
             <FunctionID>34bb6bfc-2af1-477d-9070-6353d8323579</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>6</Order>
@@ -13465,7 +13465,7 @@
             <ID>270a3d4e-35e5-4398-b824-6940ee198f3c</ID>
             <FunctionID>3dcc66e7-696f-4d7d-8527-dce89b198998</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -13478,7 +13478,7 @@
             <ID>d2dd4e1c-661a-423e-bd00-19782f9857a2</ID>
             <FunctionID>3dcc66e7-696f-4d7d-8527-dce89b198998</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -20728,7 +20728,7 @@
           <ID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</ID>
           <PolicyID>bd571848-0ee1-49dd-b069-a2c22849dad0</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -20751,7 +20751,7 @@
             <ID>41b443a4-896f-4da8-8fe4-3d00009d9472</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -20790,7 +20790,7 @@
             <ID>bbbf93fd-fce4-4184-a54d-e8f7c1bde445</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -20803,7 +20803,7 @@
             <ID>7ae5b18a-dab3-448a-a4c1-4b77b555e587</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -20816,7 +20816,7 @@
             <ID>8ecc07c5-5f3f-4fc6-a42f-95e533a28e44</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1751.81#m]]></Value>
             <Order>2</Order>
@@ -20829,7 +20829,7 @@
             <ID>d2f6b6ec-981b-441f-a887-e01ad51cccca</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2919.72#m]]></Value>
             <Order>4</Order>
@@ -20842,7 +20842,7 @@
             <ID>f6fa6ccf-df66-42de-b3fd-5f5dd0760455</ID>
             <FunctionID>bcb6d2f0-3a69-4cd5-b671-3f8533015381</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[5839.45#m]]></Value>
             <Order>6</Order>
@@ -21579,7 +21579,7 @@
             <ID>cb3823a4-bbb8-4643-97c0-941908880de9</ID>
             <FunctionID>46d4bf9c-08ff-4c95-8f3b-68f512120d37</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -21592,7 +21592,7 @@
             <ID>1218dd4e-8113-472f-85cc-5e3443f0dca8</ID>
             <FunctionID>46d4bf9c-08ff-4c95-8f3b-68f512120d37</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -28844,7 +28844,7 @@
           <ID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</ID>
           <PolicyID>c09a9be3-c981-423d-9896-7540b2cbb5ca</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -28867,7 +28867,7 @@
             <ID>ef864d92-1de2-41a3-a484-358573b01635</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -28906,7 +28906,7 @@
             <ID>a9b3231f-7b45-47cc-a1f1-5ab169e213cb</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -28919,7 +28919,7 @@
             <ID>c40dc22e-88c5-425a-8ec4-1768667d54cd</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -28932,7 +28932,7 @@
             <ID>3c365bc3-6660-4ede-b709-d67c2cd3cb05</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1693.72#m]]></Value>
             <Order>2</Order>
@@ -28945,7 +28945,7 @@
             <ID>c3096422-7cfa-497f-9acd-8142a785460a</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2822.90#m]]></Value>
             <Order>4</Order>
@@ -28958,7 +28958,7 @@
             <ID>20a46648-ecd4-451a-949a-69373de23a47</ID>
             <FunctionID>d88cfc8c-6fe3-4782-ac8c-17ef02763034</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[5645.80#m]]></Value>
             <Order>6</Order>
@@ -29695,7 +29695,7 @@
             <ID>cb29447b-cef3-4832-8b43-38634eba526f</ID>
             <FunctionID>43aebddc-abcc-4801-b140-b8484cf3702f</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -29708,7 +29708,7 @@
             <ID>84e303a1-3725-4bd4-aa56-efc1fa9c965d</ID>
             <FunctionID>43aebddc-abcc-4801-b140-b8484cf3702f</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -36956,7 +36956,7 @@
           <ID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</ID>
           <PolicyID>23fdcc88-08d0-4764-a636-0940d39db178</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>n/a</Switch>
@@ -36979,7 +36979,7 @@
             <ID>ea145bec-d333-4cf5-8b59-42da48f6bf61</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
@@ -37018,7 +37018,7 @@
             <ID>59d693ac-fcfc-4b82-bed5-1fecee3e4e63</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>5</Order>
@@ -37031,7 +37031,7 @@
             <ID>c952242a-57ae-4292-8e0d-dd314794859e</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>7</Order>
@@ -37044,7 +37044,7 @@
             <ID>394f0542-a6f6-42d8-9046-24f298312b34</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>2</Order>
@@ -37057,7 +37057,7 @@
             <ID>f7a24c76-4dd6-4348-a1a3-1c0004470af4</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
@@ -37070,7 +37070,7 @@
             <ID>ec4e8db2-1e10-46f5-95f7-1eb2c1e71bae</ID>
             <FunctionID>ee70ea6e-4dd1-4107-960b-cf1d35d8c7d8</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[n/a]]></Value>
             <Order>6</Order>
@@ -37807,7 +37807,7 @@
             <ID>1939db49-65a6-4486-9b96-1dc8513ddcb4</ID>
             <FunctionID>a43671d4-55d2-4f78-a322-497abbd746b8</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -37820,7 +37820,7 @@
             <ID>bb7b50a1-eeef-4bb1-b698-4e590643a06e</ID>
             <FunctionID>a43671d4-55d2-4f78-a322-497abbd746b8</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -45071,7 +45071,7 @@
           <ID>0839f353-2855-46d2-a598-45e43e3d21da</ID>
           <PolicyID>ad7d3f23-2fbd-41ea-80b0-bebaa142f02e</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -45094,7 +45094,7 @@
             <ID>479ec813-d5b1-4128-a9d9-b92ce699fbb8</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -45133,7 +45133,7 @@
             <ID>a8d5c5b0-cb4f-4d1e-b503-2d0638f85fb2</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -45146,7 +45146,7 @@
             <ID>a4a9a4d3-ef91-4e4b-a481-c0afaaad5a2b</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -45159,7 +45159,7 @@
             <ID>3af8d8ec-e247-414c-b98d-45c57197bda2</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1659.38#m]]></Value>
             <Order>2</Order>
@@ -45172,7 +45172,7 @@
             <ID>78d571ec-f3a4-41f0-9950-dc4505bd72da</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2765.66#m]]></Value>
             <Order>4</Order>
@@ -45185,7 +45185,7 @@
             <ID>3e6e7888-0994-48b2-aaec-cf3344124093</ID>
             <FunctionID>0839f353-2855-46d2-a598-45e43e3d21da</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[5531.31#m]]></Value>
             <Order>6</Order>
@@ -45922,7 +45922,7 @@
             <ID>b3e80fcc-6250-4414-85dd-4392de747d65</ID>
             <FunctionID>0b85416d-7dc0-46f4-a324-8542408c2484</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -45935,7 +45935,7 @@
             <ID>49156723-85cc-40ca-a6dc-a72581d2d3dd</ID>
             <FunctionID>0b85416d-7dc0-46f4-a324-8542408c2484</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -53186,7 +53186,7 @@
           <ID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</ID>
           <PolicyID>bad05e3b-0619-4834-a660-484cc55a2e72</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -53209,7 +53209,7 @@
             <ID>01b7dd7b-07f7-46f0-8dc4-8da1be8d176c</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -53248,7 +53248,7 @@
             <ID>27224d13-8a42-466d-b213-6c58b073118a</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -53261,7 +53261,7 @@
             <ID>99dbb5e5-fe5b-4771-9ee4-d99a3a1bb066</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -53274,7 +53274,7 @@
             <ID>b9e5ec00-7d23-4830-9b8e-746a0b4143b9</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1556.94#m]]></Value>
             <Order>2</Order>
@@ -53287,7 +53287,7 @@
             <ID>cedda7c2-b5c7-4070-b4d3-045e20cade1c</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2594.92#m]]></Value>
             <Order>4</Order>
@@ -53300,7 +53300,7 @@
             <ID>10dd7137-a87a-4241-ac3b-994b68b99381</ID>
             <FunctionID>94234d44-2dd8-40e8-bb41-a14a37a3d5a4</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[5189.82#m]]></Value>
             <Order>6</Order>
@@ -54037,7 +54037,7 @@
             <ID>8e5b2046-c646-40d8-ba1f-9c3d93af2ebd</ID>
             <FunctionID>5de7b270-b66c-43a5-8642-a8ef8e073ac1</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -54050,7 +54050,7 @@
             <ID>9f81fa3a-096f-4657-85c3-438fc23e2972</ID>
             <FunctionID>5de7b270-b66c-43a5-8642-a8ef8e073ac1</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -61301,7 +61301,7 @@
           <ID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</ID>
           <PolicyID>e4ecd92e-709d-4ad9-957c-92420cc5208a</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -61324,7 +61324,7 @@
             <ID>a827fa5f-f836-4601-87c6-192b1fb91f62</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -61363,7 +61363,7 @@
             <ID>06101cd9-5761-4305-8cfc-0c0c8ac012e6</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -61376,7 +61376,7 @@
             <ID>cb1d2b5f-e64b-412e-8885-f4256d7f83e5</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -61389,7 +61389,7 @@
             <ID>e4ccf4c9-7e09-46b1-bfda-3b4e18666a2f</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1399.12#m]]></Value>
             <Order>2</Order>
@@ -61402,7 +61402,7 @@
             <ID>714de44b-cb86-4a67-a25a-bf1b00b9b43f</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2331.88#m]]></Value>
             <Order>4</Order>
@@ -61415,7 +61415,7 @@
             <ID>7d712ce5-2bd4-421b-872c-a5b22caf543d</ID>
             <FunctionID>11bea123-08fb-4ec8-bd2f-1d714e10d8dc</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4663.75#m]]></Value>
             <Order>6</Order>
@@ -62152,7 +62152,7 @@
             <ID>ae1aba1b-c92f-4dc5-9099-c2bf6fe6a9c9</ID>
             <FunctionID>ffcb4086-ea58-48d4-9741-1aa314af12c5</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -62165,7 +62165,7 @@
             <ID>6c9142da-653c-470b-b838-0e1313b035b6</ID>
             <FunctionID>ffcb4086-ea58-48d4-9741-1aa314af12c5</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -69416,7 +69416,7 @@
           <ID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</ID>
           <PolicyID>c35ba3b5-1add-43fd-b331-7eb2da52586b</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -69439,7 +69439,7 @@
             <ID>dfb91adb-2273-45ad-9438-951668d8311a</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -69478,7 +69478,7 @@
             <ID>b23582d5-a24b-4c8e-8f27-3a2e927fb0b1</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -69491,7 +69491,7 @@
             <ID>dfbcbd15-6c11-423b-b61d-448906aaf317</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -69504,7 +69504,7 @@
             <ID>46f32b32-fdca-471c-9681-97d5e3b33933</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1317.07#m]]></Value>
             <Order>2</Order>
@@ -69517,7 +69517,7 @@
             <ID>e278cc35-64ea-4d39-8706-4fea94e86db6</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2195.12#m]]></Value>
             <Order>4</Order>
@@ -69530,7 +69530,7 @@
             <ID>86a91565-6598-4bd3-b9d8-18ddd88e0959</ID>
             <FunctionID>bc6c6b9b-80e2-4e4c-8213-e41d50f3ab3c</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4390.24#m]]></Value>
             <Order>6</Order>
@@ -70267,7 +70267,7 @@
             <ID>07000eba-da00-465c-a523-cdaf7cddb533</ID>
             <FunctionID>e1b70d4f-c332-4ea8-9ffb-b94ebe914889</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -70280,7 +70280,7 @@
             <ID>509c9b85-e70f-4b64-8d37-fc0759358116</ID>
             <FunctionID>e1b70d4f-c332-4ea8-9ffb-b94ebe914889</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -77531,7 +77531,7 @@
           <ID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</ID>
           <PolicyID>052e9ec6-9e62-4997-b868-f7466defd043</PolicyID>
           <Name>SchedCalc</Name>
-          <Comment><![CDATA[employee's contribution]]></Comment>
+          <Comment><![CDATA[Employee's contribution]]></Comment>
           <PrivateComment>""</PrivateComment>
           <Order>4</Order>
           <Switch>on</Switch>
@@ -77554,7 +77554,7 @@
             <ID>a061fc3c-b63b-4db3-807e-05df97a6ba48</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>band_rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 1]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[0.08]]></Value>
             <Order>3</Order>
@@ -77593,7 +77593,7 @@
             <ID>6907d0b3-8f09-451c-a05f-dc8076ccce3b</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.09]]></Value>
             <Order>5</Order>
@@ -77606,7 +77606,7 @@
             <ID>8f0e7038-ba2d-4395-b47a-1950962e579b</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>Band_Rate</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax band 3]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.11]]></Value>
             <Order>7</Order>
@@ -77619,7 +77619,7 @@
             <ID>dd3e7f48-fcad-4689-be80-64158e76cdf0</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 1)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[1247.70#m]]></Value>
             <Order>2</Order>
@@ -77632,7 +77632,7 @@
             <ID>27e671c6-d35b-48f9-b63a-d6ca81cc5777</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 2)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[2079.50#m]]></Value>
             <Order>4</Order>
@@ -77645,7 +77645,7 @@
             <ID>175d1d29-b3ac-45cd-a459-9c21aaa8fb20</ID>
             <FunctionID>9596daa5-f37a-40c8-a4bb-4ba563e49beb</FunctionID>
             <Name>Band_UpLim</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Contribution wage (upper limit 3)]]></Comment>
             <PrivateComment />
             <Value><![CDATA[4159.00#m]]></Value>
             <Order>6</Order>
@@ -78382,7 +78382,7 @@
             <ID>334f5d83-d90b-484e-b52b-7f178fd7a957</ID>
             <FunctionID>9bd0bd38-2cb1-4a45-9914-7bcabb9b3779</FunctionID>
             <Name>$tscse01</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 1]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.05]]></Value>
             <Order>2</Order>
@@ -78395,7 +78395,7 @@
             <ID>207986a9-3a9f-4846-ba4d-8dbab462f1a6</ID>
             <FunctionID>9bd0bd38-2cb1-4a45-9914-7bcabb9b3779</FunctionID>
             <Name>$tscse02</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[Tax rate 2]]></Comment>
             <PrivateComment />
             <Value><![CDATA[0.20]]></Value>
             <Order>3</Order>
@@ -78410,7 +78410,7 @@
             <Name>$ceiling</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[878.05#m]]></Value>
+            <Value><![CDATA[831.80#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>5</Group>
