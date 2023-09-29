@@ -74375,7 +74375,7 @@
             <Name>minwage</Name>
             <Comment><![CDATA[Prevalent minimum wage]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[724#m]]></Value>
+            <Value><![CDATA[678#m]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -77338,7 +77338,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=682.50#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=646.55#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -77351,7 +77351,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 35.00#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 33.16#m]]></Value>
             <Order>2</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -77390,7 +77390,7 @@
             <Name>Comp_perElig</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[nDepChildrenOfCouple * 24.66#m]]></Value>
+            <Value><![CDATA[nDepChildrenOfCouple * 23.36#m]]></Value>
             <Order>4</Order>
             <ValueType>formula</ValueType>
             <Group>2</Group>
@@ -77403,7 +77403,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1025.81#m & yem>682.51#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=971.78#m & yem>646.55#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
