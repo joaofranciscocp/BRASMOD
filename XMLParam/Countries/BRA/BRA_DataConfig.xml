@@ -5,7 +5,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -110,7 +110,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -215,7 +215,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -320,7 +320,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -425,7 +425,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -530,7 +530,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -635,7 +635,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -740,7 +740,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath>C:\Users\joao.perez\Desktop\Projetos\PNAD\</FilePath>
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -757,6 +757,15 @@
       <Uprate />
       <BestMatch>no</BestMatch>
     </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SystemID>
+      <SystemName>BRA_2016</SystemName>
+      <DataBaseID>fff59c90-f872-4402-8d43-d27fd02b0c03</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
+    </DBSystemConfig>
   </DataBase>
   <DataBase>
     <ID>9713db85-924e-4aec-b012-256b4eda14c0</ID>
@@ -764,7 +773,7 @@
     <Comment><![CDATA[]]></Comment>
     <YearCollection />
     <YearInc />
-    <Currency>euro</Currency>
+    <Currency>national</Currency>
     <FilePath />
     <DecimalSign>.</DecimalSign>
     <Private>no</Private>
@@ -861,6 +870,30 @@
       <UseCommonDefault>no</UseCommonDefault>
       <Uprate />
       <BestMatch>no</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>8e11416c-b160-479e-8c71-0c31eeabd0f3</ID>
+    <Name>pnad2016 euromod new</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>national</Currency>
+    <FilePath>C:\Users\lauro\Desktop\brasmod_2023\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SystemID>
+      <SystemName>BRA_2016</SystemName>
+      <DataBaseID>8e11416c-b160-479e-8c71-0c31eeabd0f3</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
     </DBSystemConfig>
   </DataBase>
 </DataConfig>
