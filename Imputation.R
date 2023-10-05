@@ -3,9 +3,6 @@ library(tidyverse)
 library(readxl)
 library(data.table)
 library(fastmatrix)
-library(xgboost)
-library(neuralnet)
-library(caret)
 library(stats)
 library(MatchIt)
 
@@ -41,31 +38,31 @@ pof_hh <- fread("output pof2018 hh.txt", sep = "\t",
 
 DESPESA_COLETIVA <- readRDS("Dados_20221226\\DESPESA_COLETIVA.rds") %>%  
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
-  select(idhh, V9001, V8000_DEFLA_new, UF)
+  select(idorighh, V9001, V8000_DEFLA_new, UF)
 
 DESPESA_INDIVIDUAL <- readRDS("Dados_20221226\\DESPESA_INDIVIDUAL.rds") %>% 
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
-  select(idhh, V9001, V8000_DEFLA_new, UF)
+  select(idorighh, V9001, V8000_DEFLA_new, UF)
 
 CADERNETA_COLETIVA <- readRDS("Dados_20221226\\CADERNETA_COLETIVA.rds") %>%
   mutate(V9001 = substr(V9001, 1, 5)) %>%
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
-  select(idhh, V9001, V8000_DEFLA_new, UF)
+  select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-base_pof <- do.call(rbind,
+tables_pof <- do.call(rbind,
                     list(DESPESA_COLETIVA, 
                          DESPESA_INDIVIDUAL,
                          CADERNETA_COLETIVA))
@@ -97,8 +94,8 @@ emprestimo         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Empréstimo"
 prev_priv          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Previdência privada"]
 pensoes            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Pensões, mesadas e doações"]
 
-expenditures_pof <- base_pof %>%
-  group_by(idhh) %>% 
+expenditures_pof <- tables_pof %>%
+  group_by(idorighh) %>% 
   summarise(
     habitacao            = sum(V8000_DEFLA_new[V9001 %in% habitacao]),       
     despesas_diversas    = sum(V8000_DEFLA_new[V9001 %in% despesas_diversas]),
@@ -120,35 +117,18 @@ expenditures_pof <- base_pof %>%
     vestuario            = sum(V8000_DEFLA_new[V9001 %in% vestuario]),        
     emprestimo           = sum(V8000_DEFLA_new[V9001 %in% emprestimo]),       
     prev_priv            = sum(V8000_DEFLA_new[V9001 %in% prev_priv]),        
-    pensoes              = sum(V8000_DEFLA_new[V9001 %in% pensoes]),
-    region               = as.factor(mean(as.numeric(substr(UF, 1,1)))))
+    pensoes              = sum(V8000_DEFLA_new[V9001 %in% pensoes])) %>% 
+  mutate(across(everything(), as.numeric)) 
+  
+base_pof <- merge(pof_individual,
+                  expenditures_pof,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = TRUE) %>% 
+  na.omit()
 
-
-#Individual data (just to be able to match BRASMOD idhhs to old unsorted idhh)
-
-MORADOR <- readRDS("Dados_20221226\\MORADOR.rds") %>% 
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+base_shares <- base_pof %>%
   group_by(idhh) %>%
-  mutate(idhh_sorted = cur_group_id(),
-            idperson_sorted = paste0(idhh_sorted, "0", row_number())) %>% 
-  select(idhh_sorted, idperson_sorted) %>% 
-  mutate(across(everything(), as.numeric))
-
-pof_individual_ids <- merge(pof_individual,
-                            MORADOR,
-                            by.x = "idperson",
-                            by.y = "idperson_sorted",
-                            all.x = T) %>% 
-  rename(idhh_old = idhh.y)
-
-expenditures_idhh <- merge(x = pof_individual_ids,
-                           y = expenditures_pof,
-                           by.x = "idhh_old",
-                           by.y = "idhh",
-                           all.x = T)
-
-shares_idhh <- expenditures_idhh %>%
-  group_by(idhh_old) %>%
   filter(sum(ils_dispy) > 0) %>% 
   mutate(share_habitacao            = mean(habitacao)/sum(ils_dispy),            
          share_despesas_diversas    = mean(despesas_diversas)/sum(ils_dispy),    
@@ -172,8 +152,7 @@ shares_idhh <- expenditures_idhh %>%
          share_prev_priv            = mean(prev_priv)/sum(ils_dispy),            
          share_pensoes              = mean(pensoes)/sum(ils_dispy))
 
-
-shares_idhh_filtered <- shares_idhh %>% 
+base_shares_filtered <- base_shares %>% 
   filter(!(share_habitacao             > 1 |
              share_despesas_diversas   > 1 |
              share_prestacao           > 1 |
@@ -194,77 +173,55 @@ shares_idhh_filtered <- shares_idhh %>%
              share_vestuario           > 1 |
              share_emprestimo          > 1 |
              share_prev_priv           > 1 |
-             share_pensoes             > 1)) %>% 
-  group_by(idhh_old) %>% 
-  summarise(idhh = mean(idhh.x),
-              share_habitacao            =mean(share_habitacao         ),
-              share_despesas_diversas    =mean(share_despesas_diversas ),
-              share_prestacao            =mean(share_prestacao         ),
-              share_impostos             =mean(share_impostos          ),
-              share_imovel               =mean(share_imovel            ),
-              share_outras               =mean(share_outras            ),
-              share_investimentos        =mean(share_investimentos     ),
-              share_cultura              =mean(share_cultura           ),
-              share_contribuicoes_trab   =mean(share_contribuicoes_trab),
-              share_fumo                 =mean(share_fumo              ),
-              share_transporte           =mean(share_transporte        ),
-              share_alimentacao          =mean(share_alimentacao       ),
-              share_serv_banc            =mean(share_serv_banc         ),
-              share_serv_pess            =mean(share_serv_pess         ),
-              share_assist_saude         =mean(share_assist_saude      ),
-              share_higiene              =mean(share_higiene           ),
-              share_educacao             =mean(share_educacao          ),
-              share_vestuario            =mean(share_vestuario         ),
-              share_emprestimo           =mean(share_emprestimo        ),
-              share_prev_priv            =mean(share_prev_priv         ),
-              share_pensoes              =mean(share_pensoes           ))
+             share_pensoes             > 1))
 
-
-demographic_variables <-  readRDS("Dados_20221226\\MORADOR.rds") %>% 
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
-  mutate(ishead = ifelse(V0306 == 1,
-                         yes = 1,
-                         no  = 0)) %>%
-  mutate(ismalehead = ifelse(ishead == 1 & V0404 == 1,
+base_shares_final <- base_shares_filtered %>%
+  group_by(idhh) %>% 
+  mutate(idhead = first(idperson)) %>% 
+  ungroup(idhh) %>% 
+  mutate(ismalehead = ifelse(idperson == idhead & dgn == 1,
                              yes = 1,
-                             no  = 0),
-         isfemalehead = ifelse(ishead == 1 & V0404 == 2,
-                               yes = 1,
-                               no  = 0)) %>%
-  group_by(idhh) %>%
-  mutate(femalehead = max(isfemalehead),
-         malehead   = max(ismalehead),
-         idhh       = cur_group_id()) %>% 
-  summarise(idhh                      = mean(idhh),
-            urban                     = ifelse(any(TIPO_SITUACAO_REG == 1),
-                                               yes = 1,
-                                               no = 0),
-            n_male_over_14            = sum(V0404 == 1 & V0403 >= 14),
-            n_under_14                = sum(V0403 <= 14),
-            n_between_15_29           = sum(V0403 %in% 15:29),
-            n_between_30_44           = sum(V0403 %in% 30:44),
-            n_between_45_59           = sum(V0403 %in% 45:59),
-            n_over_60                 = sum(V0403 >= 60),
-            n_employed                = sum(!is.na(V0407) & V0407 == 1),
-            n_students                = sum(!is.na(V0419)),
-            n_higher_education        = sum(INSTRUCAO >= 6),
-            avg_years_educ            = mean(ANOS_ESTUDO, na.rm = T),
-            malehead                  = mean(malehead),
-            weights                   = sum(PESO_FINAL),
-            region                    = (mean(as.numeric(substr(UF, 1,1)))),
-            north                     = ifelse(region == 1,
-                                               yes = 1,
-                                               no = 0),
-            northeast                 = ifelse(region == 2,
-                                               yes = 1,
-                                               no = 0),
-            southeast                 = ifelse(region == 3,
-                                               yes = 1,
-                                               no = 0),
-            south                     = ifelse(region == 4,
-                                               yes = 1,
-                                               no = 0))
-
+                             no = 0)) %>% 
+  group_by(idhh) %>% 
+  summarise(idhh                       = mean(idhh),
+            idorighh                   = mean(idorighh),
+            urban                      = ifelse(any(drgur == 1),
+                                                yes = 1,
+                                                no = 0),
+            n_male_over_14             = sum(dgn == 1 & dag >= 14),
+            n_under_14                 = sum(dag <= 14),
+            n_between_15_29            = sum(dag %in% 15:29),
+            n_between_30_44            = sum(dag %in% 30:44),
+            n_between_45_59            = sum(dag %in% 45:59),
+            n_over_60                  = sum(dag >= 60),
+            n_employed                 = sum(les == 2 | les == 3),
+            n_students                 = sum(les == 6),
+            n_higher_education         = sum(deh >= 5),
+            avg_years_educ             = mean(dey),
+            malehead                   = max(ismalehead),
+            weights                    = sum(dwt),
+            region                     = as.factor(mean(drgn1)),
+            share_habitacao            = mean(share_habitacao         ),
+            share_despesas_diversas    = mean(share_despesas_diversas ),
+            share_prestacao            = mean(share_prestacao         ),
+            share_impostos             = mean(share_impostos          ),
+            share_imovel               = mean(share_imovel            ),
+            share_outras               = mean(share_outras            ),
+            share_investimentos        = mean(share_investimentos     ),
+            share_cultura              = mean(share_cultura           ),
+            share_contribuicoes_trab   = mean(share_contribuicoes_trab),
+            share_fumo                 = mean(share_fumo              ),
+            share_transporte           = mean(share_transporte        ),
+            share_alimentacao          = mean(share_alimentacao       ),
+            share_serv_banc            = mean(share_serv_banc         ),
+            share_serv_pess            = mean(share_serv_pess         ),
+            share_assist_saude         = mean(share_assist_saude      ),
+            share_higiene              = mean(share_higiene           ),
+            share_educacao             = mean(share_educacao          ),
+            share_vestuario            = mean(share_vestuario         ),
+            share_emprestimo           = mean(share_emprestimo        ),
+            share_prev_priv            = mean(share_prev_priv         ),
+            share_pensoes              = mean(share_pensoes           ))
 
 final_covariates <- merge(demographic_variables,
                           pof_hh,
@@ -309,8 +266,8 @@ share_vars <- c("share_habitacao"         ,
 
 #Create vector of independent variables
 
-dependent_vars <- demographic_variables %>% 
-  select(-c("idhh", "weights", "region")) %>% 
+independent_vars <- base_shares_final %>% 
+  select(-contains("share"), -weights, -idhh, -idorighh) %>% 
   names()
 
 #Loop to create and run models for each share variable
@@ -321,15 +278,15 @@ ols_models <- list()
 for(var in share_vars){
   model_number <- which(share_vars == var)
   
-  model <- reformulate(termlabels =  dependent_vars,
+  model <- reformulate(termlabels =  independent_vars,
                        response = var)
   
   probit <- glm(model, family = binomial(link = "probit"),
-                data = final_base_pof)
+                data = base_shares_final)
   
   probit_models[[model_number]] <- probit
   
-  ols <- lm(model, data = final_base_pof%>% 
+  ols <- lm(model, data = base_shares_final%>% 
               filter(get(var) > 0))
   
   ols_models[[model_number]] <- ols
@@ -338,26 +295,16 @@ for(var in share_vars){
 
 #Prediciton for POF
 
-covariates_pof <- demographic_variables %>%
-  filter(idhh %in% shares_idhh_filtered$idhh) %>% #We're only going to use the "reasonable" households for matching
-  select(-idhh, -weights, -region) %>% 
-  na.omit()
-  
-
-pof_shares_hat <- demographic_variables %>%
-  filter(idhh %in% shares_idhh_filtered$idhh) %>%
-  na.omit() %>% 
+pof_shares_hat <- base_shares_final %>% 
   select(idhh)
 
 
 for(var in share_vars){
   model_number <- which(share_vars == var)
   
-  share_hat <- predict(ols_models[[model_number]],
-                       newdata = covariates_pof)
+  share_hat <- ols_models[[model_number]]$fitted.values
   
-  prob_hat <- predict(probit_models[[model_number]], 
-                      newdata = covariates_pof, type="response")
+  prob_hat <- probit_models[[model_number]]$fitted.values
   
   pof_shares_hat[, ncol(pof_shares_hat) + 1] <- prob_hat*share_hat
   
@@ -392,20 +339,8 @@ covariates_pnad <- pnad_individual %>%
     avg_years_educ            = mean(dey),
     malehead                  = max(ismalehead),
     weights                   = sum(dwt),
-    region                    = mean(drgn1),
-    north                     = ifelse(region == 1,
-                                       yes = 1,
-                                       no = 0),
-    northeast                 = ifelse(region == 2,
-                                       yes = 1,
-                                       no = 0),
-    southeast                 = ifelse(region == 3,
-                                       yes = 1,
-                                       no = 0),
-    south                     = ifelse(region == 4,
-                                       yes = 1,
-                                       no = 0)) %>% 
-  select(-idhh, -weights, -region)
+    region                    = as.factor(mean(drgn1))) %>% 
+  select(-idhh, -weights)
 
 pnad_shares_hat <- pnad_hh %>% 
   select(idhh) %>% 
@@ -452,20 +387,31 @@ matching_matrix <- as.data.frame(matching$match.matrix) %>%
 #Constructing PNAD expenditure data by getting expenditure at the lowest aggregation level
 #of matched households
 
+matching_orighh <- merge(matching_matrix,
+                           pof_hh %>% select(idhh, idorighh),
+                           by.x = "idhh_match",
+                           by.y = "idhh",
+                           all.x = TRUE)
+  
+
+#Muito ineficiente; deve ter um jeito mais rápido
+
 pnad_expenditures <- data.frame(matrix(ncol=3,nrow=0, 
                                        dimnames=list(NULL, c("idhh", "category", "value"))))
 
 
 
 for(idhh_pnad in matching_matrix$idhh){
-  idhh_pof <- matching_matrix$idhh_match[idhh_pnad]
+  idhh_pof <- matching_orighh$idorighh[idhh_pnad]
   
-  idhh_expenditures <- base_pof %>% 
-    filter(idhh == idhh_pof)
+  idhh_expenditures <- tables_pof %>% 
+    filter(idorighh == idhh_pof) %>% 
+    rename(category = V9001, value = V8000_DEFLA_new) %>% 
+    mutate(idhh = idhh_pnad) %>% 
+    select(idhh, category, value)
   
-  
-  
-  
+  pnad_expenditures <- rbind(pnad_expenditures, idhh_expenditures)
+
 }
 
 pnad_expenditures <- merge(matching_matrix,

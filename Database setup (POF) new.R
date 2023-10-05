@@ -37,16 +37,14 @@ translator_earnings <- translator_earnings[-nrow(translator_earnings),]
 #We create household and individual IDs based on POF variables,
 #then sort them
 base_ids <- MORADOR %>% 
-  mutate(idhh = paste0(COD_UPA, NUM_DOM, NUM_UC),
-         idperson = paste0(idhh, COD_INFORMANTE)) %>% 
-  group_by(idhh) %>% 
-  mutate(idhh_sorted = cur_group_id(), #the new household ID is the group's ID
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC),
+         idorigperson = paste0(idorighh, COD_INFORMANTE)) %>% 
+  group_by(idorighh) %>% 
+  mutate(idhh = cur_group_id(), #the new household ID is the group's ID
          #the individual ID is just the new idhh + "0" + the row number within the household
          #so first individual in HH 1 is 101, second individual is 102, etc
-         idperson_sorted = paste0(idhh_sorted, "0", row_number())) %>% 
-  ungroup(idhh) %>% 
-  mutate(idhh = idhh_sorted,
-         idperson = idperson_sorted) %>% 
+         idperson = paste0(idhh, "0", row_number())) %>% 
+  ungroup(idorighh) %>% 
   arrange(as.numeric(idhh)) %>% 
   select(idhh, idperson, everything())
 
@@ -143,6 +141,14 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
                        yes = 2, #"married"
                        no = 1) #single
 
+#Create region NUTS level 1 (drgn1) and 2 (drgn2) variables
+#We consider that level 1 regions are the IBGE-defined regions in BR (North, Northeast, South, Southeast and Central-West),
+#and that level 2 is the states
+
+base_drgn <- base_ids %>% 
+  mutate(drgn1 = substr(UF, 1, 1),
+         drgn2 = substr(UF, 1, 2))
+
 #EDUCATION
 
 #Create education status (dec) variable:
@@ -154,7 +160,7 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
 #5: Post-secondary education 
 #6: Tertiary education 
 
-base_dec <- base_ids %>% 
+base_dec <- base_drgn %>% 
   mutate(dec = case_when(is.na(V0419) ~ 0,
                          V0419 == 1 ~ 1,
                          V0419 == 2 ~ 1,
@@ -169,9 +175,14 @@ base_dec <- base_ids %>%
                          V0419 == 5 ~ 3,
                          V0419 == 7 ~ 4))
 
+#Create years of education (dey) variable 
+
+base_dey <- base_dec %>% 
+  mutate(dey = ANOS_ESTUDO)
+
 #Create highest education status (deh) variable
 
-base_deh <- base_dec %>% 
+base_deh <- base_dey %>% 
   mutate(deh = case_when((is.na(V0425) & dec == 0) ~ 0,
                          (is.na(V0425) & dec != 0) ~ dec,
                          V0425 == 1 ~ 0,
@@ -534,8 +545,8 @@ base_lpm <- merge(base_lem,
 #Select only variables for simulation
 
 base_final_pof <- base_lpm %>% 
-  select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
-         dec, deh, les, lem, lpb, ldt, los, lse, yem, dgn, drgur, lhw, dms, loc, 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),

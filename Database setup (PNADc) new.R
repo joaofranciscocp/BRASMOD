@@ -21,20 +21,18 @@ pnad <- pnad_raw$variables
 
 #Create household and individual IDs from PNAD variables
 base_ids <- pnad %>% 
-  mutate(idhh = paste0(UPA, V1008, V1014),
-         idperson = paste0(idhh, V2003))
+  mutate(idorighh = paste0(UPA, V1008, V1014),
+         idorigperson = paste0(idorighh, V2003))
 
 #We create new sorted household and individual IDs
 
 base_ids <- base_ids %>% 
-  group_by(idhh) %>% #we group by household
-  mutate(idhh_sorted = cur_group_id(), #the new household ID is the group's ID
+  group_by(idorighh) %>% #we group by household
+  mutate(idhh = cur_group_id(), #the new household ID is the group's ID
          #the individual ID is just the new idhh + "0" + the row number within the household
          #so first individual in HH 1 is 101, second individual is 102, etc
-         idperson_sorted = paste0(idhh_sorted, "0", row_number())) %>% 
-  ungroup(idhh) %>% 
-  mutate(idhh = idhh_sorted,
-         idperson = idperson_sorted) %>% 
+         idperson = paste0(idhh, "0", row_number())) %>% 
+  ungroup(idorighh)%>% 
   arrange(as.numeric(idhh)) #arrange in order
 
 
@@ -364,7 +362,7 @@ base <- base_lem
 
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
-  select(idhh, idperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
          dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
@@ -373,7 +371,7 @@ base_final_pnad <- base %>%
 setwd("C:\\Users\\joao.perez\\Desktop\\Projetos\\PNAD")
 
 #Save base as a tab separated .txt 
-write.table(base_final, file=paste0("pnad", as.character(year), " euromod new.txt"),
+write.table(base_final_pnad, file=paste0("pnad", as.character(year), " euromod new.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
 #Save a version with all variables to add more in the future
