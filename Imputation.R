@@ -6,6 +6,7 @@ library(fastmatrix)
 library(stats)
 library(MatchIt)
 
+
 #READING THE DATA
 
 #PNAD
@@ -223,20 +224,6 @@ base_shares_final <- base_shares_filtered %>%
             share_prev_priv            = mean(share_prev_priv         ),
             share_pensoes              = mean(share_pensoes           ))
 
-final_covariates <- merge(demographic_variables,
-                          pof_hh,
-                          by.x = "idhh",
-                          by.y = "idhh",
-                          all.x = T)
-
-final_base_pof <- merge(shares_idhh_filtered,
-                        final_covariates,
-                        by.x = "idhh",
-                        by.y = "idhh",
-                        all.y = T) %>% 
-  na.omit()
-
-
 #REGRESSIONS
 
 #Create vector of dependent variables
@@ -392,7 +379,31 @@ matching_orighh <- merge(matching_matrix,
                            by.x = "idhh_match",
                            by.y = "idhh",
                            all.x = TRUE)
+
+
+#Stacking dataframes together
+
+pnad_expenditures_list <- list()
+
+i <- 1
+
+for(idhh_pnad in matching_matrix$idhh){
+  idhh_pof <- matching_orighh$idorighh[idhh_pnad]
   
+  
+  idhh_expenditures <- tables_pof %>% 
+    filter(idorighh == idhh_pof) %>% 
+    rename(category = V9001, value = V8000_DEFLA_new) %>% 
+    mutate(idhh = idhh_pnad) %>% 
+    select(idhh, category, value)
+  
+  pnad_expenditures_list[[i]] <- idhh_expenditures
+  
+  i <- i + 1
+  
+}
+
+
 
 #Muito ineficiente; deve ter um jeito mais rápido
 
@@ -400,8 +411,8 @@ pnad_expenditures <- data.frame(matrix(ncol=3,nrow=0,
                                        dimnames=list(NULL, c("idhh", "category", "value"))))
 
 
-
 for(idhh_pnad in matching_matrix$idhh){
+  print(idhh_pnad)
   idhh_pof <- matching_orighh$idorighh[idhh_pnad]
   
   idhh_expenditures <- tables_pof %>% 
@@ -410,7 +421,7 @@ for(idhh_pnad in matching_matrix$idhh){
     mutate(idhh = idhh_pnad) %>% 
     select(idhh, category, value)
   
-  pnad_expenditures <- rbind(pnad_expenditures, idhh_expenditures)
+  pnad_expenditures <- rbind(list(pnad_expenditures, idhh_expenditures))
 
 }
 
