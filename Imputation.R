@@ -2,8 +2,6 @@
 library(tidyverse)
 library(readxl)
 library(data.table)
-library(fastmatrix)
-library(stats)
 library(MatchIt)
 
 
@@ -66,7 +64,8 @@ CADERNETA_COLETIVA <- readRDS("Dados_20221226\\CADERNETA_COLETIVA.rds") %>%
 tables_pof <- do.call(rbind,
                     list(DESPESA_COLETIVA, 
                          DESPESA_INDIVIDUAL,
-                         CADERNETA_COLETIVA))
+                         CADERNETA_COLETIVA)) %>% 
+  mutate(across(everything(), as.numeric))
 
 #Codes for expenditure categories (already taken from POF's own categorization)
 
@@ -119,8 +118,8 @@ expenditures_pof <- tables_pof %>%
     emprestimo           = sum(V8000_DEFLA_new[V9001 %in% emprestimo]),       
     prev_priv            = sum(V8000_DEFLA_new[V9001 %in% prev_priv]),        
     pensoes              = sum(V8000_DEFLA_new[V9001 %in% pensoes])) %>% 
-  mutate(across(everything(), as.numeric)) 
-  
+  mutate(across(everything(), as.numeric))
+
 base_pof <- merge(pof_individual,
                   expenditures_pof,
                   by.x = "idorighh",
@@ -367,9 +366,9 @@ matching <- matchit(formula = matching_formula,
 
 matching_matrix <- as.data.frame(matching$match.matrix) %>% 
   mutate(across(everything(), as.numeric)) %>% 
-  mutate(idhh = row_number(),
-         idhh_match = V1 - nrow(pnad_shares_hat)) %>% 
-  select(idhh, idhh_match)
+  mutate(idhh_pnad = row_number(),
+         idhh_match = base_matching$idhh[V1]) %>% 
+  select(idhh_pnad, idhh_match)
 
 #Constructing PNAD expenditure data by getting expenditure at the lowest aggregation level
 #of matched households
@@ -380,107 +379,59 @@ matching_orighh <- merge(matching_matrix,
                            by.y = "idhh",
                            all.x = TRUE)
 
-
-#Stacking dataframes together
-
-pnad_expenditures_list <- list()
-
-i <- 1
-
-for(idhh_pnad in matching_matrix$idhh){
-  idhh_pof <- matching_orighh$idorighh[idhh_pnad]
-  
-  
-  idhh_expenditures <- tables_pof %>% 
-    filter(idorighh == idhh_pof) %>% 
-    rename(category = V9001, value = V8000_DEFLA_new) %>% 
-    mutate(idhh = idhh_pnad) %>% 
-    select(idhh, category, value)
-  
-  pnad_expenditures_list[[i]] <- idhh_expenditures
-  
-  i <- i + 1
-  
-}
+tables_pof_share <- merge(tables_pof,
+                          pof_hh %>% select(idorighh, ils_dispy),
+                          by = "idorighh",
+                          all.x = TRUE) %>%
+  filter(ils_dispy >0) %>% 
+  mutate(value_share = V8000_DEFLA_new/ils_dispy)
 
 
 
-#Muito ineficiente; deve ter um jeito mais rápido
+tables_pnad_shares <- inner_join(matching_orighh,
+                          tables_pof_share,
+                          by= "idorighh",
+                          relationship = "many-to-many",
+                          ) %>% 
+  select(idhh_pnad, V9001, value_share) %>% 
+  rename(product_code = V9001) %>% 
+  arrange(idhh_pnad)
 
-pnad_expenditures <- data.frame(matrix(ncol=3,nrow=0, 
-                                       dimnames=list(NULL, c("idhh", "category", "value"))))
+tables_pnad_totals <- merge(tables_pnad_shares,
+                            pnad_hh %>% select(idhh, ils_dispy),
+                            by.x = "idhh_pnad",
+                            by.y = "idhh",
+                            all.x = T) %>% 
+  mutate(value = value_share*ils_dispy)
 
+expenditures_pnad <- tables_pnad_totals %>%
+  group_by(idhh_pnad) %>% 
+  summarise(
+    habitacao            = sum(value[product_code %in% habitacao]),       
+    despesas_diversas    = sum(value[product_code %in% despesas_diversas]),
+    prestacao            = sum(value[product_code %in% prestacao]),        
+    impostos             = sum(value[product_code %in% impostos]),           
+    imovel               = sum(value[product_code %in% imovel]),           
+    outras               = sum(value[product_code %in% outras]),
+    investimentos        = sum(value[product_code %in% investimentos]),
+    cultura              = sum(value[product_code %in% cultura]),            
+    contribuicoes_trab   = sum(value[product_code %in% contribuicoes_trab]),
+    fumo                 = sum(value[product_code %in% fumo]),
+    transporte           = sum(value[product_code %in% transporte]),       
+    alimentacao          = sum(value[product_code %in% alimentacao]),    
+    serv_banc            = sum(value[product_code %in% serv_banc]),        
+    serv_pess            = sum(value[product_code %in% serv_pess]),        
+    assist_saude         = sum(value[product_code %in% assist_saude]),   
+    higiene              = sum(value[product_code %in% higiene]),           
+    educacao             = sum(value[product_code %in% educacao]),          
+    vestuario            = sum(value[product_code %in% vestuario]),        
+    emprestimo           = sum(value[product_code %in% emprestimo]),       
+    prev_priv            = sum(value[product_code %in% prev_priv]),        
+    pensoes              = sum(value[product_code %in% pensoes]))
 
-for(idhh_pnad in matching_matrix$idhh){
-  print(idhh_pnad)
-  idhh_pof <- matching_orighh$idorighh[idhh_pnad]
-  
-  idhh_expenditures <- tables_pof %>% 
-    filter(idorighh == idhh_pof) %>% 
-    rename(category = V9001, value = V8000_DEFLA_new) %>% 
-    mutate(idhh = idhh_pnad) %>% 
-    select(idhh, category, value)
-  
-  pnad_expenditures <- rbind(list(pnad_expenditures, idhh_expenditures))
-
-}
-
-pnad_expenditures <- merge(matching_matrix,
-                           pnad_hh,
-                           by.x = "idhh",
-                           by.y = "idhh")
-
-pof_expenditures <- shares_idhh %>% 
-  group_by(idhh.x) %>% 
-  summarise(idhh = mean(idhh.x),
-            share_habitacao            =mean(share_habitacao         ),
-            share_despesas_diversas    =mean(share_despesas_diversas ),
-            share_prestacao            =mean(share_prestacao         ),
-            share_impostos             =mean(share_impostos          ),
-            share_imovel               =mean(share_imovel            ),
-            share_outras               =mean(share_outras            ),
-            share_investimentos        =mean(share_investimentos     ),
-            share_cultura              =mean(share_cultura           ),
-            share_contribuicoes_trab   =mean(share_contribuicoes_trab),
-            share_fumo                 =mean(share_fumo              ),
-            share_transporte           =mean(share_transporte        ),
-            share_alimentacao          =mean(share_alimentacao       ),
-            share_serv_banc            =mean(share_serv_banc         ),
-            share_serv_pess            =mean(share_serv_pess         ),
-            share_assist_saude         =mean(share_assist_saude      ),
-            share_higiene              =mean(share_higiene           ),
-            share_educacao             =mean(share_educacao          ),
-            share_vestuario            =mean(share_vestuario         ),
-            share_emprestimo           =mean(share_emprestimo        ),
-            share_prev_priv            =mean(share_prev_priv         ),
-            share_pensoes              =mean(share_pensoes           )) %>% 
-  ungroup(idhh.x) 
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+base_pnad <- merge(pnad_individual,
+                  expenditures_pnad,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = TRUE) %>% 
+  na.omit()
