@@ -32634,7 +32634,7 @@
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
       <ParID>0f207824-ad0f-4ebb-b657-8056312a52fe</ParID>
       <Order>2</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
@@ -32646,19 +32646,19 @@
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
       <ParID>07f78738-c07e-4252-b6b2-24b1554ed933</ParID>
       <Order>4</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
       <ParID>011b7590-1d00-4fa0-8881-83af52f74283</ParID>
       <Order>5</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
       <ParID>45e04592-745b-418e-85d8-a07ae76d0229</ParID>
       <Order>6</Order>
-      <Value><![CDATA[+]]></Value>
+      <Value><![CDATA[n/a]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
@@ -41457,6 +41457,28 @@
       <UseCommonDefault>no</UseCommonDefault>
       <ReadXVariables>no</ReadXVariables>
     </DATA>
+    <DATA>
+      <ID>43cfb999-19a4-40f4-97cf-221111b2a78f</ID>
+      <Name>pnad2015 euromod new</Name>
+      <Comment><![CDATA[]]></Comment>
+      <Currency>national</Currency>
+      <FilePath>C:\Users\lauro\Desktop\brasmod_2023\</FilePath>
+      <DecimalSign>.</DecimalSign>
+      <Private>no</Private>
+      <UseCommonDefault>no</UseCommonDefault>
+      <ReadXVariables>no</ReadXVariables>
+    </DATA>
+    <DATA>
+      <ID>5f791019-ecc9-4a32-a505-bb8673f3264b</ID>
+      <Name>pnad2014 euromod new</Name>
+      <Comment><![CDATA[]]></Comment>
+      <Currency>national</Currency>
+      <FilePath>C:\Users\lauro\Desktop\brasmod_2023\</FilePath>
+      <DecimalSign>.</DecimalSign>
+      <Private>no</Private>
+      <UseCommonDefault>no</UseCommonDefault>
+      <ReadXVariables>no</ReadXVariables>
+    </DATA>
   </DATAs>
   <SYS_DATAs>
     <SYS_DATA>
@@ -41873,6 +41895,106 @@
       <DataID>8e11416c-b160-479e-8c71-0c31eeabd0f3</DataID>
       <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
       <BestMatch>yes</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
+      <BestMatch>yes</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>8a8011d9-def7-4c18-ad2d-c01ab4803051</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>558ac7dc-ffbd-4ae2-a8da-1ffaa1b01804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>43cfb999-19a4-40f4-97cf-221111b2a78f</DataID>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>8a8011d9-def7-4c18-ad2d-c01ab4803051</SysID>
+      <BestMatch>yes</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>558ac7dc-ffbd-4ae2-a8da-1ffaa1b01804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>5f791019-ecc9-4a32-a505-bb8673f3264b</DataID>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <BestMatch>no</BestMatch>
     </SYS_DATA>
   </SYS_DATAs>
   <EXTENSIONs />
