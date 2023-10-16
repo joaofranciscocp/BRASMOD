@@ -158,7 +158,7 @@ base_drgn <- base_ids %>%
 #6: Tertiary education 
 
 base_dec <- base_drgn %>% 
-  mutate(dec = case_when(is.na(V3003A) ~ 0,
+    mutate(dec = case_when(is.na(V3003A) ~ 0,
                          V3003A == "Pré-escola" ~ 1,
                          V3003A == "Alfabetização de jovens e adultos" ~ 2,
                          (V3003A == "Regular do ensino fundamental" & dag < 12) ~ 2,
@@ -377,3 +377,70 @@ write.table(base_final_pnad, file=paste0("pnad", as.character(year), " euromod n
 #Save a version with all variables to add more in the future
 write.table(base, file=paste0("pnad", as.character(year), " euromod raw.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
+
+
+#IMPUTE EXPENDITURE VARIABLES
+
+tables_expenditure_pnad <- read_rds("tables_pnad_totals.rds")
+
+
+#Healthcare expenditures
+pnad_xhl <- tables_expenditure_pnad %>% 
+  filter(product_code %in% assist_saude) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xhl = sum(value))
+
+#Education expenditures
+pnad_xed <- tables_expenditure_pnad %>% 
+  filter(product_code %in% educacao) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xed = sum(value))
+
+#Private pension expenditures
+pnad_xpp <- tables_expenditure_pnad %>% 
+  filter(product_code %in% prev_priv) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xpp = sum(value))
+
+#Alimony expenditures
+pnad_xmp <- tables_expenditure_pnad %>% 
+  filter(product_code == 48009) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xmp = sum(value))
+
+
+pnad_input <- fread("C:\\Users\\joaofrancisco\\Desktop\\USP\\Economia\\LabPub\\BRASMOD\\Input\\pnad2018 euromod new.txt")
+
+base_xhl<- merge(pnad_input,
+                 pnad_xhl,
+                 by.x = "idhh",
+                 by.y = "idhh_pnad",
+                 all.x = T) %>% 
+  mutate(xhl = replace_na(xhl, 0))
+
+
+base_xed <- merge(base_xhl,
+                  pnad_xed,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xed = replace_na(xed, 0))
+
+base_xpp <- merge(base_xed,
+                  pnad_xpp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xpp = replace_na(xpp, 0))
+
+base_xmp <- merge(base_xpp,
+                  pnad_xmp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xmp = replace_na(xmp, 0))
+
+
+
+
+

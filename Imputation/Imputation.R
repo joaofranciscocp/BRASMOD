@@ -69,7 +69,7 @@ tables_pof <- do.call(rbind,
 
 #Codes for expenditure categories (already taken from POF's own categorization)
 
-tradutor <- readxl::read_xls("Tradutores_20210304\\Tradutor_Despesa_Geral_novo.xls", )
+tradutor <- readxl::read_xls("C:\\Users\\joaofrancisco\\Downloads\\Tradutor_Despesa_Geral_novo.xls", )
 
 habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
 despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
