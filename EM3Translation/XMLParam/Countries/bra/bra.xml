@@ -27706,6 +27706,16 @@
       <UseCommonDefault>no</UseCommonDefault>
       <ReadXVariables>no</ReadXVariables>
     </DATA>
+    <DATA>
+      <ID>4cd20c7c-4dab-4498-a2c4-4598c2269302</ID>
+      <Name>pnad2018 euromod expenditures</Name>
+      <Comment><![CDATA[]]></Comment>
+      <Currency>euro</Currency>
+      <DecimalSign>.</DecimalSign>
+      <Private>no</Private>
+      <UseCommonDefault>no</UseCommonDefault>
+      <ReadXVariables>no</ReadXVariables>
+    </DATA>
   </DATAs>
   <SYS_DATAs>
     <SYS_DATA>
@@ -27895,6 +27905,11 @@
     </SYS_DATA>
     <SYS_DATA>
       <DataID>1df9e4a0-eacf-44ad-bac9-f5972e24a125</DataID>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <BestMatch>no</BestMatch>
+    </SYS_DATA>
+    <SYS_DATA>
+      <DataID>4cd20c7c-4dab-4498-a2c4-4598c2269302</DataID>
       <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
       <BestMatch>no</BestMatch>
     </SYS_DATA>

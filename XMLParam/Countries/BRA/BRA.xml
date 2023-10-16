@@ -23,7 +23,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -850,7 +850,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -1012,7 +1012,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -1594,7 +1594,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -1877,7 +1877,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -2206,7 +2206,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -3156,7 +3156,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -4012,7 +4012,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -4148,7 +4148,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -4432,7 +4432,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -5000,7 +5000,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -5149,7 +5149,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -5285,7 +5285,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -5434,7 +5434,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -5624,7 +5624,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -7051,7 +7051,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -7152,7 +7152,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -7201,7 +7201,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -7313,7 +7313,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -8182,6 +8182,42 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>c8e4868a-4ec5-4b49-a630-b5f9566552f7</ID>
+        <SystemID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>52747e97-1290-46fe-9cc3-74f2f1cd22ce</ID>
+          <PolicyID>c8e4868a-4ec5-4b49-a630-b5f9566552f7</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e6cc946a-ccd1-4e3e-83a8-ad6835765a11</ID>
+            <FunctionID>52747e97-1290-46fe-9cc3-74f2f1cd22ce</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
     <System>
       <ID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</ID>
@@ -8202,7 +8238,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -9029,7 +9065,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -9191,7 +9227,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -9773,7 +9809,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -10056,7 +10092,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -10385,7 +10421,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -11335,7 +11371,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -12196,7 +12232,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -12332,7 +12368,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -12616,7 +12652,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -13184,7 +13220,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -13333,7 +13369,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -13469,7 +13505,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -13618,7 +13654,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -13808,7 +13844,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -15235,7 +15271,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -15336,7 +15372,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -15385,7 +15421,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>off</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -15497,7 +15533,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -16366,6 +16402,42 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>ffcb56dc-b022-493a-937c-8c4e5d16f7e7</ID>
+        <SystemID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>09ff4b83-27b4-4ff8-b9bc-6ab6ee476cff</ID>
+          <PolicyID>ffcb56dc-b022-493a-937c-8c4e5d16f7e7</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e344a9af-5ae6-4c73-a677-5fbd517c9380</ID>
+            <FunctionID>09ff4b83-27b4-4ff8-b9bc-6ab6ee476cff</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
     <System>
       <ID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</ID>
@@ -16386,7 +16458,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -17213,7 +17285,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -17375,7 +17447,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -17957,7 +18029,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -18240,7 +18312,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -18569,7 +18641,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -19521,7 +19593,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -20377,7 +20449,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -20513,7 +20585,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -20797,7 +20869,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -21365,7 +21437,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -21514,7 +21586,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -21650,7 +21722,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -21799,7 +21871,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -21989,7 +22061,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -23416,7 +23488,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -23517,7 +23589,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -23566,7 +23638,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -23678,7 +23750,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -24547,6 +24619,42 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>4f363d28-a4c5-4ad0-82da-8b1a1bb07453</ID>
+        <SystemID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>189b58dc-42c0-46ea-b664-e2fd4f5fe4cd</ID>
+          <PolicyID>4f363d28-a4c5-4ad0-82da-8b1a1bb07453</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>cf2304e0-bda8-4391-937f-c77d7ff402c4</ID>
+            <FunctionID>189b58dc-42c0-46ea-b664-e2fd4f5fe4cd</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
     <System>
       <ID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</ID>
@@ -24567,7 +24675,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -25394,7 +25502,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -25556,7 +25664,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -26138,7 +26246,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -26421,7 +26529,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -26750,7 +26858,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -27704,7 +27812,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -28560,7 +28668,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -28696,7 +28804,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -28980,7 +29088,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -29548,7 +29656,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -29697,7 +29805,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -29833,7 +29941,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -29982,7 +30090,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -30172,7 +30280,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -31599,7 +31707,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -31700,7 +31808,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -31749,7 +31857,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -31861,7 +31969,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -32730,6 +32838,42 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>1ff3022b-4f65-45ed-95a6-fdb953206af4</ID>
+        <SystemID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>6b245f83-149a-44a7-9a71-6da34c1fc4ce</ID>
+          <PolicyID>1ff3022b-4f65-45ed-95a6-fdb953206af4</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>f9528359-873c-462c-9fec-7fac408ed1d6</ID>
+            <FunctionID>6b245f83-149a-44a7-9a71-6da34c1fc4ce</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[BR_2018_a1]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
     <System>
       <ID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</ID>
@@ -32750,7 +32894,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -33577,7 +33721,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -33739,7 +33883,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -34321,7 +34465,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -34604,7 +34748,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -34933,7 +35077,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -35882,7 +36026,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -36739,7 +36883,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -36875,7 +37019,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -37159,7 +37303,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -37727,7 +37871,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -37876,7 +38020,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -38012,7 +38156,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -38161,7 +38305,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -38351,7 +38495,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -39778,7 +39922,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -39879,7 +40023,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -39928,7 +40072,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -40040,7 +40184,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -40909,6 +41053,42 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>c1df349b-9718-41dc-9d75-bf23e7881296</ID>
+        <SystemID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>e63e2499-1788-46f2-aef9-aaabc35cce51</ID>
+          <PolicyID>c1df349b-9718-41dc-9d75-bf23e7881296</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>bdfb6d8e-24ed-493b-afa6-a0be9879d942</ID>
+            <FunctionID>e63e2499-1788-46f2-aef9-aaabc35cce51</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
     <System>
       <ID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</ID>
@@ -40929,7 +41109,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>10</Order>
+        <Order>11</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -41756,7 +41936,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: ASSESSMENT UNITS]]></Comment>
         <PrivateComment />
-        <Order>12</Order>
+        <Order>13</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -41918,7 +42098,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT INDIVIDUAL LEVEL]]></Comment>
         <PrivateComment />
-        <Order>29</Order>
+        <Order>30</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -42500,7 +42680,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: STANDARD OUTPUT HOUSEHOLD LEVEL]]></Comment>
         <PrivateComment />
-        <Order>30</Order>
+        <Order>31</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -42783,7 +42963,7 @@
         <Type>inc</Type>
         <Comment><![CDATA[DEF: SPECIFIC INCOME CONCEPTS]]></Comment>
         <PrivateComment />
-        <Order>11</Order>
+        <Order>12</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -43112,7 +43292,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
-        <Order>25</Order>
+        <Order>26</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -44065,7 +44245,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
-        <Order>26</Order>
+        <Order>27</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -44921,7 +45101,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
-        <Order>24</Order>
+        <Order>25</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -45057,7 +45237,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Random variables for policy simulation]]></Comment>
         <PrivateComment />
-        <Order>14</Order>
+        <Order>15</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -45341,7 +45521,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employee social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>15</Order>
+        <Order>16</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -45909,7 +46089,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Employer social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>17</Order>
+        <Order>18</Order>
         <Switch>on</Switch>
         <Private />
         <Color>-1</Color>
@@ -46058,7 +46238,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Entrepreneur social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>18</Order>
+        <Order>19</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -46194,7 +46374,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Domestic worker social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>19</Order>
+        <Order>20</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -46343,7 +46523,7 @@
         <Type>sic</Type>
         <Comment><![CDATA[SIC: Self-Employed social insurance contributions]]></Comment>
         <PrivateComment />
-        <Order>16</Order>
+        <Order>17</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -46533,7 +46713,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Covid related social assistance benefit (Auxílio Emergencial)]]></Comment>
         <PrivateComment />
-        <Order>27</Order>
+        <Order>28</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -47960,7 +48140,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
-        <Order>23</Order>
+        <Order>24</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -48061,7 +48241,7 @@
         <Type>def</Type>
         <Comment><![CDATA[DEF: Constants used in policies]]></Comment>
         <PrivateComment />
-        <Order>13</Order>
+        <Order>14</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -48110,7 +48290,7 @@
         <Type>ben</Type>
         <Comment><![CDATA[BEN: Compatibilization between AE and PBF]]></Comment>
         <PrivateComment />
-        <Order>28</Order>
+        <Order>29</Order>
         <Switch>n/a</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -48222,7 +48402,7 @@
         <Type>tax</Type>
         <Comment><![CDATA[TAX: Personal Income Tax (Imposto de Renda da Pessoa Física) ]]></Comment>
         <PrivateComment />
-        <Order>22</Order>
+        <Order>23</Order>
         <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
@@ -49091,6 +49271,49 @@
           </Parameter>
         </Function>
       </Policy>
+      <Policy>
+        <ID>3fee402e-b924-4695-8da3-2934176775b5</ID>
+        <SystemID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SystemID>
+        <Name>Uprate_bra</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: UPRATING]]></Comment>
+        <PrivateComment />
+        <Order>10</Order>
+        <Switch>on</Switch>
+        <Private>no</Private>
+        <Color>-1</Color>
+        <Function>
+          <ID>da1365b9-2594-4e1f-9dbe-df89c0758513</ID>
+          <PolicyID>3fee402e-b924-4695-8da3-2934176775b5</PolicyID>
+          <Name>Uprate</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>5e303269-5be7-46e1-ba9f-7d876cbeda77</ID>
+            <FunctionID>da1365b9-2594-4e1f-9dbe-df89c0758513</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
     </System>
   </Country>
+  <UpratingIndex>
+    <ID>0f511ffd-893d-4d8c-8368-c998d8726207</ID>
+    <Description>CPI: IPCA - Índice Nacional de Preços ao Consumidor Amplo (2018 = 100)</Description>
+    <Reference>$CPI_IPCA</Reference>
+    <Comment><![CDATA[National Statistical Institute (IBGE - Data: http://www.ipeadata.gov.br/Default.aspx)]]></Comment>
+    <YearValues>2002|39.99°2003|43.71°2004|47.03°2005|49.7°2006|51.27°2007|53.55°2008|56.72°2009|59.16°2010|62.66°2011|66.73°2012|70.63°2013|74.8°2014|79.6°2015|88.1°2016|93.63°2017|96.39°2018|100°2019|104.31°2020|109.02°2021|119.97°2022|126.93</YearValues>
+  </UpratingIndex>
 </CountryConfig>
