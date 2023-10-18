@@ -8200,17 +8200,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>e6cc946a-ccd1-4e3e-83a8-ad6835765a11</ID>
             <FunctionID>52747e97-1290-46fe-9cc3-74f2f1cd22ce</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d92939bc-cd1a-408e-9206-cbbeb5b36680</ID>
+            <FunctionID>52747e97-1290-46fe-9cc3-74f2f1cd22ce</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -10422,7 +10435,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
         <PrivateComment />
         <Order>26</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -12233,7 +12246,7 @@
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
         <Order>25</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -15272,7 +15285,7 @@
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
         <Order>24</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -16420,17 +16433,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>e344a9af-5ae6-4c73-a677-5fbd517c9380</ID>
             <FunctionID>09ff4b83-27b4-4ff8-b9bc-6ab6ee476cff</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8743cff6-dd97-4da7-9c64-e1fa63f4a1cf</ID>
+            <FunctionID>09ff4b83-27b4-4ff8-b9bc-6ab6ee476cff</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -24637,17 +24663,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>cf2304e0-bda8-4391-937f-c77d7ff402c4</ID>
             <FunctionID>189b58dc-42c0-46ea-b664-e2fd4f5fe4cd</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2c77866a-a255-45ab-98a8-3cc3172faefc</ID>
+            <FunctionID>189b58dc-42c0-46ea-b664-e2fd4f5fe4cd</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -32856,17 +32895,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>f9528359-873c-462c-9fec-7fac408ed1d6</ID>
             <FunctionID>6b245f83-149a-44a7-9a71-6da34c1fc4ce</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[BR_2018_a1]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1f3b5916-9500-4169-be5a-f4574e9ed4ea</ID>
+            <FunctionID>6b245f83-149a-44a7-9a71-6da34c1fc4ce</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -41071,17 +41123,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>bdfb6d8e-24ed-493b-afa6-a0be9879d942</ID>
             <FunctionID>e63e2499-1788-46f2-aef9-aaabc35cce51</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7bf2042f-1b4f-4e4f-ac7e-ac16ba13efa8</ID>
+            <FunctionID>e63e2499-1788-46f2-aef9-aaabc35cce51</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>
@@ -49289,17 +49354,30 @@
           <Comment><![CDATA[]]></Comment>
           <PrivateComment />
           <Order>1</Order>
-          <Switch>n/a</Switch>
+          <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
           <Parameter>
             <ID>5e303269-5be7-46e1-ba9f-7d876cbeda77</ID>
             <FunctionID>da1365b9-2594-4e1f-9dbe-df89c0758513</FunctionID>
             <Name>Dataset</Name>
-            <Comment><![CDATA[]]></Comment>
+            <Comment><![CDATA[POF database]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[BR_2018_b1]]></Value>
             <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3a6ecef8-5b9c-454a-877c-50948ff3edd1</ID>
+            <FunctionID>da1365b9-2594-4e1f-9dbe-df89c0758513</FunctionID>
+            <Name>Def_Factor</Name>
+            <Comment><![CDATA[Adjust for CPI (IPCA) for all monetary variables]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[$CPI_IPCA]]></Value>
+            <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
             <Color>-1</Color>

@@ -10,61 +10,68 @@ library(MatchIt)
 
 setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
+#Set year for imputation
+
+year = 2017
 
 #READING THE DATA
 
 #PNAD
 
-#Set year for imputation
-
-year = 2019
-
 #Outputs from BRASMOD
-pnad_individual <- fread(paste0("Output\\bra_", as.character(year), "_std.txt"), sep = "\t", 
+pnad_individual <- fread(paste0("Expenditure imputation\\PNAD data\\bra_", as.character(year), "_std.txt"), 
+                         sep = "\t", 
                          header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pnad_hh <- fread(paste0("Output\\bra_", as.character(year), "_std_hh.txt"), sep = "\t", 
+pnad_hh <- fread(paste0("Expenditure imputation\\PNAD data\\bra_", as.character(year), "_std_hh.txt"), sep = "\t", 
                  header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
 #POF
 
 #Outputs from BRASMOD (they're fixed)
-pof_individual <- fread("output pof2018 individual.txt", sep = "\t", 
+pof_individual <- fread(paste0("Expenditure imputation\\POF data\\bra_", as.character(year), "_std.txt"), 
+                               sep = "\t", 
                         header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pof_hh <- fread("output pof2018 hh.txt", sep = "\t", 
+pof_hh <- fread(paste0("Expenditure imputation\\POF data\\bra_", as.character(year), "_std_hh.txt"), 
+                sep = "\t", 
                 header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
+#Correction for inflation
+
+cpi <- read_xls("Expenditure imputation\\CPI (IPCA).xls")
+inflation_correction <- cpi$price_level[cpi$year == year]
+
 #Expenditure data
 
-DESPESA_COLETIVA <- readRDS("POF expenditure data\\DESPESA_COLETIVA.rds") %>%  
+DESPESA_COLETIVA <- readRDS("Expenditure imputation\\POF data\\DESPESA_COLETIVA.rds") %>%  
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
-  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-DESPESA_INDIVIDUAL <- readRDS("POF expenditure data\\DESPESA_INDIVIDUAL.rds") %>% 
+DESPESA_INDIVIDUAL <- readRDS("Expenditure imputation\\POF data\\DESPESA_INDIVIDUAL.rds") %>% 
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
-  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-CADERNETA_COLETIVA <- readRDS("POF expenditure data\\CADERNETA_COLETIVA.rds") %>%
+CADERNETA_COLETIVA <- readRDS("Expenditure imputation\\POF data\\CADERNETA_COLETIVA.rds") %>%
   mutate(V9001 = substr(V9001, 1, 5)) %>%
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   filter(str_sub(V9001,-3) != "999" &
            as.numeric(V9002) <= 6) %>% 
-  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
 tables_pof <- do.call(rbind,
@@ -75,7 +82,7 @@ tables_pof <- do.call(rbind,
 
 #Codes for expenditure categories (already taken from POF's own categorization)
 
-tradutor <- readxl::read_xls("C:\\Users\\joaofrancisco\\Downloads\\Tradutor_Despesa_Geral_novo.xls", )
+tradutor <- read_xls("Expenditure imputation\\general_expenditure_translator.xls", )
 
 habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
 despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
@@ -368,7 +375,7 @@ matching <- matchit(formula = matching_formula,
                     distance = "mahalanobis",
                     method = "nearest",
                     data = base_matching,
-                    replace = TRUE) #there are more treated than control observations
+                    replace = TRUE) #there are more "treated" than "control" observations
 
 matching_matrix <- as.data.frame(matching$match.matrix) %>% 
   mutate(across(everything(), as.numeric)) %>% 
@@ -392,12 +399,9 @@ tables_pof_share <- merge(tables_pof,
   filter(ils_dispy >0) %>% 
   mutate(value_share = V8000_DEFLA_new/ils_dispy)
 
-
-
 tables_pnad_shares <- inner_join(matching_orighh,
                           tables_pof_share,
                           by= "idorighh",
-                          relationship = "many-to-many",
                           ) %>% 
   select(idhh_pnad, V9001, value_share) %>% 
   rename(product_code = V9001) %>% 
@@ -409,6 +413,91 @@ tables_pnad_totals <- merge(tables_pnad_shares,
                             by.y = "idhh",
                             all.x = T) %>% 
   mutate(value = value_share*ils_dispy)
+
+
+#Save imputed expenditure values at the lowest level of aggregation
+#This whole process takes a long time, so it's worth saving the result
+
+saveRDS(tables_pnad_totals, 
+        paste0("Expenditure imputation\\tables_pnad_totals_", as.character(year), ".rds"))
+
+#Impute values into input file
+
+#Aggregate by expenditure category
+
+#Healthcare expenditures
+pnad_xhl <- tables_pnad_totals %>% 
+  filter(product_code %in% assist_saude) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xhl = sum(value))
+
+#Education expenditures
+pnad_xed <- tables_pnad_totals %>% 
+  filter(product_code %in% educacao) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xed = sum(value))
+
+#Private pension expenditures
+pnad_xpp <- tables_pnad_totals %>% 
+  filter(product_code %in% prev_priv) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xpp = sum(value))
+
+#Alimony expenditures
+pnad_xmp <- tables_pnad_totals %>% 
+  filter(product_code == 48009) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xmp = sum(value))
+
+
+#Get PNAD input database for BRASMOD
+pnad_input <- fread(paste0("Input\\BR_", as.character(year), "_a1.txt"))
+
+base_xhl<- merge(pnad_input,
+                 pnad_xhl,
+                 by.x = "idhh",
+                 by.y = "idhh_pnad",
+                 all.x = T) %>% 
+  mutate(xhl = ifelse(xhl > 0,
+                      yes = replace_na(xhl, 0),
+                      no = 0))
+
+
+base_xed <- merge(base_xhl,
+                  pnad_xed,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xed = ifelse(xed > 0,
+                      yes = replace_na(xed, 0),
+                      no = 0))
+
+base_xpp <- merge(base_xed,
+                  pnad_xpp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xpp = ifelse(xpp > 0,
+                      yes = replace_na(xpp, 0),
+                      no = 0))
+
+base_xmp <- merge(base_xpp,
+                  pnad_xmp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xmp = ifelse(xmp > 0 & !is.na(xmp),
+                      yes = replace_na(xmp, 0),
+                      no = 0))
+
+base_final_pnad_expenditures <- base_xmp %>% 
+  mutate_all(~replace(., is.na(.), 0))
+
+
+#Save new input database as a tab separated .txt 
+write.table(base_final_pnad_expenditures, file=paste0("Input\\BR_", as.character(year), "_a2.txt"),
+            quote=FALSE, sep='\t', row.names=FALSE)
+
 
 expenditures_pnad <- tables_pnad_totals %>%
   group_by(idhh_pnad) %>% 

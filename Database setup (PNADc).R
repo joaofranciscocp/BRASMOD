@@ -12,7 +12,7 @@ library(PNADcIBGE)
 setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #CHOOSE YEAR FOR PNAD SURVEY
-year = 2022
+year = 2017
 
 pnad_raw <- get_pnadc(year = year,
                       interview = 5)
@@ -376,7 +376,7 @@ base_final_pnad <- base %>%
          across(everything(), ~replace_na(.x, "0")))
 
 #Save base as a tab separated .txt 
-write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "a1.txt"),
+write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
 #

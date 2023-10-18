@@ -14,15 +14,9 @@ setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 MORADOR <- readRDS("Expenditure imputation\\POF data\\MORADOR.rds")
 
-RENDIMENTO_TRABALHO <- readRDS("Expenditure imputation\\POF data\\RENDIMENTO_TRABALHO.rds") %>% 
-  mutate(V9001 = substr(V9001, 1, 5))
-
-RENDIMENTO_TRABALHO$V9001 <- substr(RENDIMENTO_TRABALHO$V9001, 1, 5)
+RENDIMENTO_TRABALHO <- readRDS("Expenditure imputation\\POF data\\RENDIMENTO_TRABALHO.rds")
 
 OUTROS_RENDIMENTOS <- readRDS("Expenditure imputation\\POF data\\OUTROS_RENDIMENTOS.rds")
-
-DESPESA_INDIVIDUAL <- readRDS("Expenditure imputation\\POF data\\DESPESA_INDIVIDUAL.rds")
-
 
 #DATA TRANSLATORS 
 #(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
@@ -219,12 +213,15 @@ EMPLOYER <- 53005
 
 LABOUR_CODES <- c(EMPLOYED, SELF_EMPLOYED, EMPLOYER)
 
+#Take only first 5 digits of codes
+RENDIMENTO_TRABALHO$V9001 <- substr(RENDIMENTO_TRABALHO$V9001, 1, 5)
+
 labour_status <- aggregate(
-  RENDIMENTO_TRABALHO$V5302[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-  by = list(COD_UPA = RENDIMENTO_TRABALHO$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_DOM = RENDIMENTO_TRABALHO$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_UC = RENDIMENTO_TRABALHO$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
+  (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$V5302[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+  by = list(COD_UPA = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            NUM_DOM = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            NUM_UC = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            COD_INFORMANTE = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
   FUN = function(x) paste(x[!is.na(x)], collapse = ""))
 
 base_les <- merge(base_deh,
@@ -277,7 +274,7 @@ base_lse <- base_los %>%
 #9: Other 
 
 base_les2 <- base_lse %>% 
-  mutate(les = case_when(les   == 3 ~ 3,
+  mutate(les = case_when(les == 3 ~ 3,
                          les == 4 ~ 3,
                          les == 6 ~ 2,
                          les == 2 ~ 3,
@@ -328,10 +325,6 @@ base_lhw <- merge(base_loc,
 
 
 #INCOME
-
-
-#Take only first 5 digits of codes
-RENDIMENTO_TRABALHO$V9001 <- substr(RENDIMENTO_TRABALHO$V9001, 1, 5)
 
 #Substitute NAs in "# of months earned" for 1 
 RENDIMENTO_TRABALHO$V9011[is.na(RENDIMENTO_TRABALHO$V9011)] <- 1
@@ -386,6 +379,14 @@ base_yse <- merge(base_yem,
 INVESTMENTS <- c(5401401, 5501201, 5501301, 5501601, 5501602, 5594401,
                    5504801, 5506001, 5506101, 5600101, 5600201, 5600301,
                    5600401, 5700101, 5700201, 5700301, 5700401)
+
+#Substitute NAs in "# of months earned" for 1 
+OUTROS_RENDIMENTOS$V9011[is.na(OUTROS_RENDIMENTOS$V9011)] <- 1
+
+#Annualize and correct earnings for inflation
+OUTROS_RENDIMENTOS[, c('V8500','V8500_DEFLA')] <- apply(
+  OUTROS_RENDIMENTOS[, c('V8500','V8500_DEFLA')],2,
+  function(vetor) (vetor * OUTROS_RENDIMENTOS$V9011 * OUTROS_RENDIMENTOS$FATOR_ANUALIZACAO)/12)
 
 
 investiment_earnings <- aggregate(
