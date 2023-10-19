@@ -12,7 +12,7 @@ setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #Set year for imputation
 
-year = 2017
+year = 2021
 
 #READING THE DATA
 
@@ -30,7 +30,7 @@ pnad_hh <- fread(paste0("Expenditure imputation\\PNAD data\\bra_", as.character(
 
 #POF
 
-#Outputs from BRASMOD (they're fixed)
+#Outputs from BRASMOD
 pof_individual <- fread(paste0("Expenditure imputation\\POF data\\bra_", as.character(year), "_std.txt"), 
                                sep = "\t", 
                         header = T, dec = ",") %>% 
