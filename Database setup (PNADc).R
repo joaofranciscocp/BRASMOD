@@ -1,13 +1,18 @@
 #PACKAGES USED
 library(tidyverse)
 library(readxl)
+library(data.table)
 library(PNADcIBGE)
 
-#SET WORKING DIRECTORY (WHERE TO SAVE THE DATA)
-setwd("...")
+
+#SET WORKING DIRECTORY
+
+#Set it to where the BRASMOD folder is
+
+setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #CHOOSE YEAR FOR PNAD SURVEY
-year = 2022
+year = 2016
 
 pnad_raw <- get_pnadc(year = year,
                       interview = 5)
@@ -20,20 +25,18 @@ pnad <- pnad_raw$variables
 
 #Create household and individual IDs from PNAD variables
 base_ids <- pnad %>% 
-  mutate(idhh = paste0(UPA, V1008, V1014),
-         idperson = paste0(idhh, V2003))
+  mutate(idorighh = paste0(UPA, V1008, V1014),
+         idorigperson = paste0(idorighh, V2003))
 
 #We create new sorted household and individual IDs
 
 base_ids <- base_ids %>% 
-  group_by(idhh) %>% #we group by household
-  mutate(idhh_sorted = cur_group_id(), #the new household ID is the group's ID
+  group_by(idorighh) %>% #we group by household
+  mutate(idhh = cur_group_id(), #the new household ID is the group's ID
          #the individual ID is just the new idhh + "0" + the row number within the household
          #so first individual in HH 1 is 101, second individual is 102, etc
-         idperson_sorted = paste0(idhh_sorted, "0", row_number())) %>% 
-  ungroup(idhh) %>% 
-  mutate(idhh = idhh_sorted,
-         idperson = idperson_sorted) %>% 
+         idperson = paste0(idhh, "0", row_number())) %>% 
+  ungroup(idorighh)%>% 
   arrange(as.numeric(idhh)) #arrange in order
 
 
@@ -83,9 +86,6 @@ base_ids <- base_ids %>%
          idfemalehead = as.character(max(idfemalehead))) %>% 
   ungroup(idhh)
 
-y2 <- base_ids
-base_ids <- y2
-
 #Identify household members with respect to head
 base_ids <- base_ids %>% 
   mutate(idpartner = ifelse(V2005 == "Cônjuge ou companheiro(a) de sexo diferente" |
@@ -120,18 +120,21 @@ base_ids <- base_ids %>%
                             no = idpartner)) #if not, keep it as it is
 
 
-#COUNTRY, WEIGHTS, AGE, GENDER AND MARITAL STATUS
+#COUNTRY, WEIGHTS, AGE, GENDER, URBAN AND MARITAL STATUS
 
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-#Create sample weight (dwt), age (dag), and gender (gdn) variables
+#Create sample weight (dwt), age (dag), urban (drgur) and gender (gdn) variables
 base_ids <- base_ids %>% 
   rename(dwt = V1032,
          dag = V2009,
          dgn = V2007) %>% 
   mutate(dgn = case_when(dgn == "Homem" ~ 1,
-                         dgn == "Mulher" ~ 2))
+                         dgn == "Mulher" ~ 2),
+         drgur = ifelse(V1022 == "Urbana",
+                        yes = 1,
+                        no = 0))
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -139,6 +142,13 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
                                    yes = 2, #"married"
                                    no = 1) #single
 
+#Create region NUTS level 1 (drgn1) and 2 (drgn2) variables
+#We consider that level 1 regions are the IBGE-defined regions in BR (North, Northeast, South, Southeast and Central-West),
+#and that level 2 is the states
+
+base_drgn <- base_ids %>% 
+  mutate(drgn1 = substr(UPA, 1, 1),
+         drgn2 = substr(UPA, 1, 2))
 
 #EDUCATION
 
@@ -151,8 +161,8 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
 #5: Post-secondary education 
 #6: Tertiary education 
 
-base_dec <- base_ids %>% 
-  mutate(dec = case_when(is.na(V3003A) ~ 0,
+base_dec <- base_drgn %>% 
+    mutate(dec = case_when(is.na(V3003A) ~ 0,
                          V3003A == "Pré-escola" ~ 1,
                          V3003A == "Alfabetização de jovens e adultos" ~ 2,
                          (V3003A == "Regular do ensino fundamental" & dag < 12) ~ 2,
@@ -164,6 +174,29 @@ base_dec <- base_ids %>%
                          V3003A == "Doutorado" ~ 6,
                          V3003A == "Educação de jovens e adultos (EJA) do ensino fundamental" ~ 3,
                          V3003A == "Educação de jovens e adultos (EJA) do ensino médio" ~ 4))
+
+#Create years of education (dey) variable 
+
+base_dey <- base_dec %>% 
+  mutate(dey = ifelse(!is.na(VD3005),
+                      yes = as.numeric(gsub('[^0-9]', '', VD3005)),
+                      no = 0))
+
+#Create highest education status (deh) variable
+
+base_deh <- base_dey %>% 
+  mutate(deh = case_when((is.na(VD3004) & dec == 0) ~ 0,
+                         (is.na(VD3004) & dec != 0) ~ dec,
+                         VD3004 == "Sem instrução e menos de 1 ano de estudo" ~ 0,
+                         (VD3004 == "Fundamental incompleto ou equivalente" & dey < 5) ~ 1,
+                         (VD3004 == "Fundamental incompleto ou equivalente" & dey >= 5) ~ 2,
+                         VD3004 == "Fundamental completo ou equivalente" ~ 3,
+                         VD3004 == "Médio incompleto ou equivalente" ~ 3,
+                         VD3004 == "Médio completo ou equivalente" ~ 4,
+                         VD3004 == "Médio completo ou equivalente" ~ 4,
+                         VD3004 == "Superior incompleto ou equivalente" ~ 4,
+                         (VD3004 == "Superior completo" & dec <= 5) ~ 5,
+                         (VD3004 == "Superior completo" & dec > 5) ~ 6))
 
 #LABOUR
 
@@ -179,7 +212,7 @@ base_dec <- base_ids %>%
 #8: Sick or disabled 
 #9: Other 
 
-base_les <- base_dec %>% 
+base_les <- base_deh %>% 
   mutate(les = case_when(V4012 == "Empregado do setor privado" ~ 3,
                          V4012 == "Empregado do setor público (inclusive empresas de economia mista)" ~ 3,
                          V4012 == "Conta própria" ~ 2,
@@ -191,25 +224,64 @@ base_les <- base_dec %>%
                          (is.na(V4012) & dag >= 18 & dec == 0) ~ 7,
                          (is.na(V4012) & dec == 1) ~ 0))
 
+#Identify public sector workers
+base_lpb <- base_les %>% 
+  mutate(lpb = ifelse(V4012 == "Empregado do setor público (inclusive empresas de economia mista)" |
+                        V4012 == "Militar do exército, da marinha, da aeronáutica, da polícia militar ou do corpo de bombeiros militar",
+         yes = 1,
+         no  = 0))
+
+#Identify domestic workers
+base_ldt <- base_lpb %>% 
+  mutate(ldt = ifelse(V4012 == "Trabalhador doméstico",
+                      yes = 1,
+                      no  = 0))
+
+#Identify entrepreneurs
+base_los <- base_ldt %>% 
+  mutate(los = ifelse(V4012 == "Empregador",
+                      yes = 1,
+                      no = 0))
+
+
+#Identify self-employed workers
+
+base_lse <- base_los %>% 
+  mutate(lse = ifelse(V4012 == "Conta própria",
+                      yes = 1,
+                      no  = 0))
+
 #Create labour ocupation (loc) variable based on 1st digit of ISCO
-base_loc <- base_les %>% 
-  mutate(loc = substr(V4010, 1,1))
+base_loc <- base_lse %>%
+  mutate(loc = ifelse(!is.na(V4010),
+                      yes = substr(V4010, 1,1),
+                      no = 0))
 
 #Create hours worked weekly (lhw) variable
-base_lhw <- base_loc %>% 
+base_lhw <- base_loc %>%
   mutate(lhw = V4039)
+
+#Create labour economic status for civil servants 
+base_lescs <- base_lhw %>%
+  mutate(lescs = case_when(V4045 == "Federal" ~ 1,
+                           V4045 == "Estadual" ~ 2,
+                           V4045 == "Municipal" ~ 3,
+                           is.na(V4045) ~ 0))
 
 #INCOME
 
 #Create income variables: yem (employment income), yse (self-employment income),
 #yiy (investiment income)
-base_yem <- base_lhw %>% 
+
+
+base_yem <- base_lescs%>% 
   mutate(yem1 = ifelse(les == 3, #if works as employee in main job
                       yes = as.numeric(V403312), #yem1 is main job's income
                       no = 0), #0 otherwise
          yem2 = ifelse(V4043 %in% c("Empregado do setor privado", #if works as employee in second job
                                     "Empregado do setor público (inclusive empresas de economia mista)",
-                                    "Militar do exército, da marinha, da aeronáutica, da polícia militar ou do corpo de bombeiros militar"),
+                                    "Militar do exército, da marinha, da aeronáutica, da polícia militar ou do corpo de bombeiros militar",
+                                    "Trabalhador doméstico"),
                        yes = as.numeric(V405012), #yem2 is second job's income
                        no = 0)) %>%  #otherwise
   rowwise() %>% 
@@ -232,19 +304,36 @@ base_yiy <- base_yse %>%
          yes = as.numeric(V5008A2),
          no = 0)) #income from investment 
 
-#Household total and per capita income; also household total and per capita labour income
+#Household total income
 
 base_yhh <- base_yiy %>% 
   group_by(idhh) %>% 
   mutate(yhh = sum(as.numeric(yse), #total household income
                    as.numeric(yem), 
-                   as.numeric(yiy)),
-         yhh00 = mean(as.numeric(yse)) + #per capita household income
-           mean(as.numeric(yem)) + 
-           mean(as.numeric(yiy)),
-         yem00 = sum(as.numeric(yem)), #total labour income
-         yem01 = mean(as.numeric(yem))) %>% #per capita labour income
+                   as.numeric(yiy))) %>% #per capita labour income
   ungroup(idhh)
+
+
+#Household total and per capita reported income (for social programs eligibility)
+#Defition of reported income comes from Cadastro Único (platform for social programs in Brazil)
+
+# base_yre <- base_yhh %>% 
+#   group_by(idhh) %>% 
+#   mutate(yre = sum(as.numeric(replace_na(VD4020, 0)), #Total income from work
+#                    as.numeric(replace_na(V5005A2, 0)), #Unemployment benefits
+#                    as.numeric(replace_na(V5004A2, 0)), #Old age or other form of pensions
+#                    as.numeric(replace_na(V5006A2, 0))), #Donations
+#          yre00 = yre/n()) %>% 
+#   ungroup(idhh)
+
+#Old PBF
+
+# yhh = sum(as.numeric(replace_na(VD4020, 0)), 
+#           as.numeric(replace_na(V5005A2, 0)),
+#           as.numeric(replace_na(V5004A, 0)),
+#           as.numeric(replace_na(V5008A, 0)),
+#           as.numeric(replace_na(V5001A2, 0)),
+#           as.numeric(replace_na(V5007A, 0)))
 
 #PUBLIC PENSIONS
 
@@ -252,34 +341,161 @@ base_yhh <- base_yiy %>%
 #and poor elderly/disabled benefit (poa01)
 
 base_bun <- base_yhh %>% 
-  mutate(bun = as.numeric(V5005A2),
-         poa = as.numeric(V5004A2),
-         poa01 = as.numeric(V5001A2)) #poa01 isn't really mandatory
+  mutate(bun = as.numeric(replace_na(V5005A2, 0)), #Unemployment benefits
+         poa = as.numeric(replace_na(V5004A2, 0)), #Old age or other form of pensions
+         bdioa = as.numeric(replace_na(V5001A2, 0)), #Disabled or poor elderly benefit (BPC)
+         ypt = as.numeric(replace_na(V5006A2, 0))) #Donations (private transfers)
 
 
 #Disabilities: PNADc doesn't have information on disabled persons, so we
 #give "-1" to everyone (Euromod's recommendation on missing variables)
-base_bun$ddi <- "-1"
+base_ddi <- base_bun %>% 
+  mutate(ddi = ifelse(V5001A == "Sim" & dag < 65,
+                      yes = "1",
+                      no = "0"))
 
-base_lem <- base_bun %>% 
+base_lem <- base_ddi %>% 
   mutate(lem = case_when(V4029 == "Sim" ~ "1",
-                         V4029 == "Não" ~ "2",
-                         V4029 == "-1" ~ "-1"))
+                         V4029 == "Não" ~ "2"))
+
+base_lem <- base_lem %>% 
+  mutate(lpm = case_when(VD4012 == "Contribuinte" ~ 1,
+                         VD4012 == "Não contribuinte" ~ 0))
+
+
+#Add input data year
+base <- base_lem %>% 
+  mutate(sgl_s = year)
 
 #Select mandatory variables for Euromod and make final adjustments
-base_final <- base %>% 
-  select(idhh, idperson, idfather, idmother, idpartner, dct, dwt, dag,
-         dec, les, yem, yem00, dgn, lhw, dms, loc, yse, yiy, ddi, poa, poa01, yhh, yhh00) %>% 
+base_final_pnad <- base %>% 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, sgl_s, dct, drgn1, drgn2, drgur, dwt, dag,
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+         yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
-         across(everything(), ~replace_na(.x, "-1")))
-
+         across(everything(), ~replace_na(.x, "0")))
 
 #Save base as a tab separated .txt 
-write.table(base_final, file=paste0("pnad", as.character(year), " euromod.txt"),
+write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
-#Save a version with all variables to add more in the future
-write.table(base, file=paste0("pnad", as.character(year), " euromod raw.txt"),
+#
+##Save a version with all variables to add more in the future
+#write.table(base, file=paste0("pnad", as.character(year), " euromod raw.txt"),
+#            quote=FALSE, sep='\t', row.names=FALSE)
+
+
+#IMPUTE EXPENDITURE VARIABLES
+
+
+#Get total expenditure imputed data (lowest level of disaggregation)
+tables_expenditure_pnad <- read_rds("Expenditure imputation\\tables_pnad_totals.rds")
+
+#Get expenditure category codes
+tradutor <- read_xls("Expenditure imputation\\general_expenditure_translator.xls", )
+
+habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
+despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
+prestacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Prestação de imóvel"]
+impostos           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Impostos"]
+imovel             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Imóvel (reforma)" | 
+                                        tradutor$Descricao_3_novo == "Imóvel (aquisição)"]
+outras             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outras"]
+investimentos      <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outros investimentos"]
+cultura            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Recreação e cultura"]
+contribuicoes_trab <- tradutor$Codigo[tradutor$Descricao_3_novo == "Contribuições trabalhistas"]
+fumo               <- tradutor$Codigo[tradutor$Descricao_3_novo == "Fumo"]
+transporte         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Transporte"]
+alimentacao        <- tradutor$Codigo[tradutor$Descricao_3_novo == "Alimentacao"]
+serv_banc          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços bancários"]
+serv_pess          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços pessoais"]
+assist_saude       <- tradutor$Codigo[tradutor$Descricao_3_novo == "Assistencia a saude"]
+higiene            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Higiene e cuidados pessoais"]
+educacao           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Educacao"]
+vestuario          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Vestuario"]
+emprestimo         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Empréstimo"]
+prev_priv          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Previdência privada"]
+pensoes            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Pensões, mesadas e doações"]
+
+#Aggregate by expenditure category
+
+#Healthcare expenditures
+pnad_xhl <- tables_expenditure_pnad %>% 
+  filter(product_code %in% assist_saude) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xhl = sum(value))
+
+#Education expenditures
+pnad_xed <- tables_expenditure_pnad %>% 
+  filter(product_code %in% educacao) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xed = sum(value))
+
+#Private pension expenditures
+pnad_xpp <- tables_expenditure_pnad %>% 
+  filter(product_code %in% prev_priv) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xpp = sum(value))
+
+#Alimony expenditures
+pnad_xmp <- tables_expenditure_pnad %>% 
+  filter(product_code == 48009) %>% 
+  group_by(idhh_pnad) %>% 
+  summarise(xmp = sum(value))
+
+
+#Get PNAD input database for BRASMOD
+pnad_input <- fread("Input\\pnad2018 euromod new.txt")
+
+base_xhl<- merge(pnad_input,
+                 pnad_xhl,
+                 by.x = "idhh",
+                 by.y = "idhh_pnad",
+                 all.x = T) %>% 
+  mutate(xhl = ifelse(xhl > 0,
+                      yes = replace_na(xhl, 0),
+                      no = 0))
+
+
+base_xed <- merge(base_xhl,
+                  pnad_xed,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xed = ifelse(xed > 0,
+                      yes = replace_na(xed, 0),
+                      no = 0))
+
+base_xpp <- merge(base_xed,
+                  pnad_xpp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xpp = ifelse(xpp > 0,
+                      yes = replace_na(xpp, 0),
+                      no = 0))
+
+base_xmp <- merge(base_xpp,
+                  pnad_xmp,
+                  by.x = "idhh",
+                  by.y = "idhh_pnad",
+                  all.x = T) %>% 
+  mutate(xmp = ifelse(xmp > 0 & !is.na(xmp),
+                      yes = replace_na(xmp, 0),
+                      no = 0))
+
+base_final_pnad_expenditures <- base_xmp %>% 
+  mutate_all(~replace(., is.na(.), 0))
+
+#Set working directory to input folder
+
+setwd("Input")
+
+#Save base as a tab separated .txt 
+write.table(base_final_pnad_expenditures, file=paste0("pnad", as.character(2018), " euromod expenditures.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
+
+
+
 
 
