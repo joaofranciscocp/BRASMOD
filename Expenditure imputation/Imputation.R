@@ -12,7 +12,7 @@ setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #Set year for imputation
 
-year = 2021
+year = 2022
 
 #READING THE DATA
 
@@ -498,35 +498,3 @@ base_final_pnad_expenditures <- base_xmp %>%
 write.table(base_final_pnad_expenditures, file=paste0("Input\\BR_", as.character(year), "_a2.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
-
-expenditures_pnad <- tables_pnad_totals %>%
-  group_by(idhh_pnad) %>% 
-  summarise(
-    habitacao            = sum(value[product_code %in% habitacao]),       
-    despesas_diversas    = sum(value[product_code %in% despesas_diversas]),
-    prestacao            = sum(value[product_code %in% prestacao]),        
-    impostos             = sum(value[product_code %in% impostos]),           
-    imovel               = sum(value[product_code %in% imovel]),           
-    outras               = sum(value[product_code %in% outras]),
-    investimentos        = sum(value[product_code %in% investimentos]),
-    cultura              = sum(value[product_code %in% cultura]),            
-    contribuicoes_trab   = sum(value[product_code %in% contribuicoes_trab]),
-    fumo                 = sum(value[product_code %in% fumo]),
-    transporte           = sum(value[product_code %in% transporte]),       
-    alimentacao          = sum(value[product_code %in% alimentacao]),    
-    serv_banc            = sum(value[product_code %in% serv_banc]),        
-    serv_pess            = sum(value[product_code %in% serv_pess]),        
-    assist_saude         = sum(value[product_code %in% assist_saude]),   
-    higiene              = sum(value[product_code %in% higiene]),           
-    educacao             = sum(value[product_code %in% educacao]),          
-    vestuario            = sum(value[product_code %in% vestuario]),        
-    emprestimo           = sum(value[product_code %in% emprestimo]),       
-    prev_priv            = sum(value[product_code %in% prev_priv]),        
-    pensoes              = sum(value[product_code %in% pensoes]))
-
-base_pnad <- merge(pnad_individual,
-                  expenditures_pnad,
-                  by.x = "idhh",
-                  by.y = "idhh_pnad",
-                  all.x = TRUE) %>% 
-  na.omit()
