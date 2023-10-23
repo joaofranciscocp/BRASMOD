@@ -127,7 +127,7 @@ base_ids$dct <- "76"
 
 #Create sample weight (dwt), age (dag), urban (drgur) and gender (gdn) variables
 base_ids <- base_ids %>% 
-  rename(dwt = V1032,
+  mutate(dwt = V1032,
          dag = V2009,
          dgn = V2007) %>% 
   mutate(dgn = case_when(dgn == "Homem" ~ 1,
