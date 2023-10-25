@@ -340,11 +340,10 @@ min_wage <- case_when(
   year == 2013 ~ 678
 )
 
-#We then consider a margin of error of 5%, and assume that
+#We then consider a margin of error of 2%, and assume that
 #values within 0.98*min_wage and 1.02*min_wage correspond to the BPC benefit
 #Besides that, we also consider that values which match exactly 
 #v1273 = min_wage + (some possible PBF benefit value) means that the person has received the BPC
-
 
 #Baseline PBF benefit
 bpbf_bb <- case_when(
@@ -368,14 +367,35 @@ bpbf_bj <- case_when(
 )
   
 
-typical_pbf_values 
+typical_pbf_and_bpc_values <- list(
+  min_wage + bpbf_bb,
+  min_wage + bpbf_bb + bpbf_bv,
+  min_wage + bpbf_bb + 2*bpbf_bv,
+  min_wage + bpbf_bb + 3*bpbf_bv,
+  min_wage + bpbf_bb + bpbf_bj,
+  min_wage + bpbf_bb + 2*bpbf_bj,
+  min_wage + bpbf_bb + 3*bpbf_bj,
+  min_wage + bpbf_bb + bpbf_bv + bpbf_bj,
+  min_wage + bpbf_bb + 2*bpbf_bv + bpbf_bj,
+  min_wage + bpbf_bb + bpbf_bv + 2*bpbf_bj
+)
 
 
-base_poa <- base_yhh %>% 
-  mutate(bun = as.numeric(replace_na(V5005A2, 0)), #Unemployment benefits
-         poa = as.numeric(replace_na(V5004A2, 0)), #Old age or other form of pensions
-         bdioa = as.numeric(replace_na(V5001A2, 0)), #Disabled or poor elderly benefit (BPC)
-         ypt = as.numeric(replace_na(V5006A2, 0))) #Donations (private transfers)
+#If v1273 value satisfies one of the conditions above, we assume that the person
+#has received the BPC benefit equal to min_wage
+base_bdioa <- base_ypt %>% 
+  mutate(bdioa = ifelse((v1273 %in% typical_pbf_and_bpc_values) | 
+                          (0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage),
+         yes = min_wage,
+         no = 0))
+
+
+#There is no information regarding the value of received unemployment benefit,
+#but there is a variable informing if the person has received an unemployment benefit,
+#for how long they stayed in their previous job before leaving,
+#and how much they earned there. With that information, we can simulate unemployment benefit values
+
+
 
 
 
