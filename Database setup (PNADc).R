@@ -335,10 +335,10 @@ base_yhh <- base_yiy %>%
 #           as.numeric(replace_na(V5001A2, 0)),
 #           as.numeric(replace_na(V5007A, 0)))
 
-#PUBLIC PENSIONS
+#PUBLIC PENSIONS AND OTHERS
 
 #Add unemployment benefit (bun), old age pension/retirement (poa),
-#and poor elderly/disabled benefit (poa01)
+#poor elderly/disabled benefit (bdioa) and private donations (ypt)
 
 base_bun <- base_yhh %>% 
   mutate(bun = as.numeric(replace_na(V5005A2, 0)), #Unemployment benefits
