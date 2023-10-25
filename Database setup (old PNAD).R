@@ -366,7 +366,7 @@ bpbf_bj <- case_when(
   year == 2013 ~ 38
 )
   
-
+#Possible combinations
 typical_pbf_and_bpc_values <- list(
   min_wage + bpbf_bb,
   min_wage + bpbf_bb + bpbf_bv,
@@ -394,6 +394,8 @@ base_bdioa <- base_ypt %>%
 #but there is a variable informing if the person has received an unemployment benefit,
 #for how long they stayed in their previous job before leaving,
 #and how much they earned there. With that information, we can simulate unemployment benefit values
+
+
 
 
 
