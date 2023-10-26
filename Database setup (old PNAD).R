@@ -372,13 +372,24 @@ typical_pbf_and_bpc_values <- list(
   min_wage + bpbf_bb + bpbf_bv,
   min_wage + bpbf_bb + 2*bpbf_bv,
   min_wage + bpbf_bb + 3*bpbf_bv,
+  min_wage + bpbf_bb + 4*bpbf_bv,
+  min_wage + bpbf_bb + 5*bpbf_bv,
+  min_wage + bpbf_bb + 6*bpbf_bv,
   min_wage + bpbf_bb + bpbf_bj,
   min_wage + bpbf_bb + 2*bpbf_bj,
   min_wage + bpbf_bb + 3*bpbf_bj,
+  min_wage + bpbf_bb + 4*bpbf_bj,
+  min_wage + bpbf_bb + 5*bpbf_bj,
+  min_wage + bpbf_bb + 6*bpbf_bj,
   min_wage + bpbf_bb + bpbf_bv + bpbf_bj,
   min_wage + bpbf_bb + 2*bpbf_bv + bpbf_bj,
-  min_wage + bpbf_bb + bpbf_bv + 2*bpbf_bj
-)
+  min_wage + bpbf_bb + 3*bpbf_bv + bpbf_bj,
+  min_wage + bpbf_bb + bpbf_bv + 2*bpbf_bj,
+  min_wage + bpbf_bb + bpbf_bv + 3*bpbf_bj,
+  min_wage + bpbf_bb + bpbf_bv + 4*bpbf_bj,
+  min_wage + bpbf_bb + 2*bpbf_bv + 2*bpbf_bj,
+  min_wage + bpbf_bb + 2*bpbf_bv + 3*bpbf_bj,
+  min_wage + bpbf_bb + 3*bpbf_bv + 2*bpbf_bj)
 
 
 #If v1273 value satisfies one of the conditions above, we assume that the person
@@ -389,6 +400,17 @@ base_bdioa <- base_ypt %>%
          yes = min_wage,
          no = 0))
 
+#We then deduce the matched amount from the variable v1273
+#What's left is assumed to be income from investment
+base_yiy <- base_bdioa %>% 
+  mutate(yiy = case_when(
+    is.na(v1273) ~ 0,
+    v1273 > 9999999 ~ 0,
+    !((0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage) |
+        v1273 %in% typical_pbf_and_bpc_values) ~ v1273
+  ))
+ 
+    
 
 #There is no information regarding the value of received unemployment benefit,
 #but there is a variable informing if the person has received an unemployment benefit,
@@ -396,8 +418,16 @@ base_bdioa <- base_ypt %>%
 #and how much they earned there. With that information, we can simulate unemployment benefit values
 
 
+base_bun <- base_bdioa %>% 
+  mutate(received_benefit = ifelse((!is.na(v9066) & v9066 == 2) | (!is.na(v9084) & v9084 == 2),
+                                   yes = 1,
+                                   no = 0),
+         months_worked = case_when(
+           (!is.na(v9066) & v9066 == 2 & !is.na(v9064)) ~ v9064,
+           (!is.na(v9084) & v9084 == 2 & !is.na(v9862)) ~ v9861*12 + v9862),
+         bun = case_when(
+           received_benefit == 0 ~ 0,
+           (received_benefit == 1 & months_worked )))
 
 
-
-
-
+)

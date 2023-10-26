@@ -80,6 +80,8 @@ tables_pof <- do.call(rbind,
                          CADERNETA_COLETIVA)) %>% 
   mutate(across(everything(), as.numeric))
 
+
+
 #Codes for expenditure categories (already taken from POF's own categorization)
 
 tradutor <- read_xls("Expenditure imputation\\general_expenditure_translator.xls", )
