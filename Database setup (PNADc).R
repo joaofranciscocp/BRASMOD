@@ -354,17 +354,20 @@ base_ddi <- base_bun %>%
                       yes = "1",
                       no = "0"))
 
+
+#Formal employment
 base_lem <- base_ddi %>% 
   mutate(lem = case_when(V4029 == "Sim" ~ "1",
                          V4029 == "Não" ~ "2"))
 
-base_lem <- base_lem %>% 
+#Contributed to social insurance
+base_lpm <- base_lem %>% 
   mutate(lpm = case_when(VD4012 == "Contribuinte" ~ 1,
                          VD4012 == "Não contribuinte" ~ 0))
 
 
 #Add input data year
-base <- base_lem %>% 
+base <- base_lpm %>% 
   mutate(sgl_s = year)
 
 #Select mandatory variables for Euromod and make final adjustments

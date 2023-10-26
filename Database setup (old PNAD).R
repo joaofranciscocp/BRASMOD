@@ -288,27 +288,12 @@ base_yse <- base_yem %>%
   rowwise() %>% 
   mutate(yse = sum(yse1, yse2, na.rm = TRUE)) #yse is final sum of yse1 and yse2
 
-
-base_yiy <- base_yse %>% 
-  mutate(yiy = ifelse(!is.na(v1273) & v1273 < 999999999,
-                      yes = as.numeric(v1273),
-                      no = 0)) #income from investment 
-
-#Household total income
-
-base_yhh <- base_yiy %>% 
-  group_by(idhh) %>% 
-  mutate(yhh = sum(as.numeric(yse), #total household income
-                   as.numeric(yem))) %>% #per capita labour income
-  ungroup(idhh)
-
-
 #PUBLIC PENSIONS AND OTHERS
 
 #Add  old age pension/retirement (poa)
 #and private donations (ypt)
 
-base_poa <- base_yhh %>% 
+base_poa <- base_yse %>% 
   mutate(poa1 = ifelse(!is.na(v1252) & v1252 < 9999999,
                        yes = v1252,
                        no = 0),
@@ -400,17 +385,57 @@ base_bdioa <- base_ypt %>%
          yes = min_wage,
          no = 0))
 
-#We then deduce the matched amount from the variable v1273
-#What's left is assumed to be income from investment
-base_yiy <- base_bdioa %>% 
-  mutate(yiy = case_when(
-    is.na(v1273) ~ 0,
-    v1273 > 9999999 ~ 0,
-    !((0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage) |
-        v1273 %in% typical_pbf_and_bpc_values) ~ v1273
-  ))
+#If the person has received the BPC and they're not over 65,
+#this means they can only be disabled
+
+base_ddi <- base_bdioa %>% 
+  mutate(ddi = ifelse(bdioa > 0 & dag < 65,
+                      yes = 1,
+                      no = 0))
+
+
+
+
+base_yiy <- base_ddi %>% 
+  mutate(yiy = ifelse(!is.na(v1273) & v1273 < 9999999 & !((0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage) |
+                                                            v1273 %in% typical_pbf_and_bpc_values),
+         yes = v1273,
+         no = 0))
+
+#Total household income
+base_yhh <- base_yiy %>% 
+  group_by(idhh) %>% 
+  mutate(yhh = sum(yem) + sum(yse) + sum(yiy))
+
+
+#Formal employment
+base_lem <- base_yhh %>% 
+  mutate(lem = ifelse((!is.na(v9042) & v9042 == 2) | (!is.na(v9097) & v9097 == 2),
+                      yes = 1,
+                      no = 0))
+
+#Contributed to social insurance
+base_lpm <- base_lem %>% 
+  mutate(lpm = ifelse(!is.na(v4711) & v4711 == 1,
+                      yes = 1,
+                      no = 0))
+
+#Add input data year
+base <- base_lpm %>% 
+  mutate(sgl_s = year)
+
+#Select mandatory variables for Euromod and make final adjustments
+base_final_pnad <- base %>% 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, sgl_s, dct, drgn1, drgn2, drgur, dwt, dag,
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+         yse, yiy, ddi, poa, bdioa, ypt, yhh, lpm) %>% 
+  mutate(across(everything(), as.character),
+         across(everything(), ~replace_na(.x, "0")))
+
+#Save base as a tab separated .txt 
+write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
+            quote=FALSE, sep='\t', row.names=FALSE)
  
-    
 
 #There is no information regarding the value of received unemployment benefit,
 #but there is a variable informing if the person has received an unemployment benefit,
