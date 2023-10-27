@@ -784,7 +784,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -797,7 +797,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>6</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -2216,7 +2216,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2254,7 +2254,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2421,7 +2421,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2471,7 +2471,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2547,7 +2547,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2611,7 +2611,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2674,7 +2674,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2770,19 +2770,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>92a8b3dc-1f37-4302-b8cb-def7251cb26c</ID>
-            <FunctionID>753af83c-1de7-4db1-872b-3154eae87263</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>495aa448-9837-4bf6-bb1c-fa3d9c713964</ID>
             <FunctionID>753af83c-1de7-4db1-872b-3154eae87263</FunctionID>
             <Name>Comp_perTU</Name>
@@ -2854,7 +2841,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -2980,7 +2967,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -3080,7 +3067,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -5120,7 +5107,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -5530,7 +5517,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -5582,7 +5569,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -8217,7 +8204,7 @@
             <Name>bfa01_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Programa Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -8230,7 +8217,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -8243,7 +8230,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -8256,7 +8243,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -10214,7 +10201,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10252,7 +10239,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10419,7 +10406,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10469,7 +10456,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10545,7 +10532,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10609,7 +10596,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10672,7 +10659,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10768,19 +10755,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>2b4d3ef6-3116-4309-b898-b0d2cb511055</ID>
-            <FunctionID>860ef88c-3a4b-403e-891e-b5024d8a420b</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>293bda72-108c-4809-af6c-5b6a99f3cd81</ID>
             <FunctionID>860ef88c-3a4b-403e-891e-b5024d8a420b</FunctionID>
             <Name>Comp_perTU</Name>
@@ -10852,7 +10826,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -10978,7 +10952,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -11078,7 +11052,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -11155,7 +11129,7 @@
         <Comment><![CDATA[BEN: Conditional cash transfer program (Auxílio Brasil)]]></Comment>
         <PrivateComment />
         <Order>27</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -12016,7 +11990,7 @@
         <Comment><![CDATA[BEN: Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
         <PrivateComment />
         <Order>25</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -13123,7 +13097,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -13533,7 +13507,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -13585,7 +13559,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -15055,7 +15029,7 @@
         <Comment><![CDATA[BEN: Child means-tested benefit (Salário Família)]]></Comment>
         <PrivateComment />
         <Order>24</Order>
-        <Switch>off</Switch>
+        <Switch>on</Switch>
         <Private>no</Private>
         <Color>-1</Color>
         <Function>
@@ -16785,7 +16759,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -16798,7 +16772,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>6</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -18217,7 +18191,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18255,7 +18229,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18423,7 +18397,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18473,7 +18447,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18549,7 +18523,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18613,7 +18587,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18677,7 +18651,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18773,19 +18747,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>f51c6d0c-3df2-4764-8dbf-117ac12319e1</ID>
-            <FunctionID>587eecb4-0736-456f-bb61-57873fffd35a</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>6ac93ddd-e12e-49ab-bb93-651ca1b7775a</ID>
             <FunctionID>587eecb4-0736-456f-bb61-57873fffd35a</FunctionID>
             <Name>Comp_perTU</Name>
@@ -18857,7 +18818,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -18983,7 +18944,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -19083,7 +19044,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -21123,7 +21084,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -21533,7 +21494,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -21585,7 +21546,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -24246,7 +24207,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -24259,7 +24220,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -24746,7 +24707,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -24772,7 +24733,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -26217,7 +26178,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26255,7 +26216,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26423,7 +26384,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26473,7 +26434,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26549,7 +26510,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26613,7 +26574,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26677,7 +26638,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26773,19 +26734,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>939ce97d-0625-4abb-943d-d68f993104cb</ID>
-            <FunctionID>65b2e7e9-f461-4cbd-8479-d98a10752396</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>983f5092-34d5-4a6d-a762-e2dd5d92fe4a</ID>
             <FunctionID>65b2e7e9-f461-4cbd-8479-d98a10752396</FunctionID>
             <Name>Comp_perTU</Name>
@@ -26858,7 +26806,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -26985,7 +26933,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -27085,7 +27033,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -29125,7 +29073,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -29535,7 +29483,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -29587,7 +29535,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -32748,7 +32696,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -32761,7 +32709,7 @@
             <Name>bfa01_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Programa Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -34219,7 +34167,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34257,7 +34205,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34424,7 +34372,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34474,7 +34422,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34550,7 +34498,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34613,7 +34561,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34676,7 +34624,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34772,19 +34720,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>a61e6e73-6714-4f77-96e6-102b772326f2</ID>
-            <FunctionID>239b04b2-73e7-47f9-a0dc-20d93c8c4f45</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>83185706-5627-4c5c-83f9-ae71a4475c45</ID>
             <FunctionID>239b04b2-73e7-47f9-a0dc-20d93c8c4f45</FunctionID>
             <Name>Comp_perTU</Name>
@@ -34856,7 +34791,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -34982,7 +34917,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -35082,7 +35017,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -37123,7 +37058,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -37533,7 +37468,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -37585,7 +37520,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -40246,7 +40181,7 @@
             <Name>bdioa_s</Name>
             <Comment><![CDATA[Benefit for the poor elderly/disabled (Benefício de Prestação Continuada)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -40259,7 +40194,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -40746,7 +40681,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -40772,7 +40707,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -42217,7 +42152,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42255,7 +42190,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42422,7 +42357,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42472,7 +42407,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42548,7 +42483,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42612,7 +42547,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42676,7 +42611,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42772,19 +42707,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>9f71965b-df11-4a3e-b855-9d77e1aa26e4</ID>
-            <FunctionID>3938fb67-6cc8-4d50-b428-ac0e18b9b89b</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>edb663de-c8a8-46fd-bc61-70af1f7eb3b7</ID>
             <FunctionID>3938fb67-6cc8-4d50-b428-ac0e18b9b89b</FunctionID>
             <Name>Comp_perTU</Name>
@@ -42857,7 +42779,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -42984,7 +42906,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -43084,7 +43006,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -45124,7 +45046,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -45534,7 +45456,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -45586,7 +45508,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -48234,7 +48156,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -48747,7 +48669,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -48773,7 +48695,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -50218,7 +50140,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50256,7 +50178,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50423,7 +50345,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50473,7 +50395,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50549,7 +50471,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50613,7 +50535,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50677,7 +50599,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50773,19 +50695,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>c774063a-81a8-4b3f-92ac-8ead501ea570</ID>
-            <FunctionID>b6f6c140-135b-4e21-899e-0b63bdce0fd8</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>d8005887-c4b7-4f58-833e-54280742151f</ID>
             <FunctionID>b6f6c140-135b-4e21-899e-0b63bdce0fd8</FunctionID>
             <Name>Comp_perTU</Name>
@@ -50858,7 +50767,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -50985,7 +50894,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -51085,7 +50994,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -53125,7 +53034,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -53535,7 +53444,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -53587,7 +53496,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -55076,7 +54985,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=806.80#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -55141,7 +55050,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1212.64#m & yem>806.80#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1212.64#m & yem>806.80#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -56222,7 +56131,7 @@
             <Name>bfa01_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Programa Bolsa Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>2</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -56261,7 +56170,7 @@
             <Name>bchmt_s</Name>
             <Comment><![CDATA[Child means-tested benefit (Salário Família)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[n/a]]></Value>
+            <Value><![CDATA[+]]></Value>
             <Order>5</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -56748,7 +56657,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -56774,7 +56683,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -58219,7 +58128,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58257,7 +58166,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58424,7 +58333,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58474,7 +58383,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58550,7 +58459,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58614,7 +58523,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58678,7 +58587,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58774,19 +58683,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>04fd7417-fb75-4d14-a30e-d3cb2bcd1473</ID>
-            <FunctionID>26284c6b-256a-494f-9797-21cc9ad69593</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>719fee50-a84c-4493-b70b-be4835ca9b23</ID>
             <FunctionID>26284c6b-256a-494f-9797-21cc9ad69593</FunctionID>
             <Name>Comp_perTU</Name>
@@ -58859,7 +58755,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -58986,7 +58882,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -59086,7 +58982,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -61126,7 +61022,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -61536,7 +61432,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -61588,7 +61484,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -63077,7 +62973,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=725.02#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=725.02#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -64210,7 +64106,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -64236,7 +64132,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -64749,7 +64645,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -64775,7 +64671,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -66220,7 +66116,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66258,7 +66154,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66425,7 +66321,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66475,7 +66371,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66551,7 +66447,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66615,7 +66511,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66679,7 +66575,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66775,19 +66671,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>6a81b012-37f9-4689-b10b-004eb2f64b99</ID>
-            <FunctionID>b20c7368-9216-4b3d-9a4f-44f3a16d1b1d</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>1085132b-9976-4bb5-8500-f5170328c3a7</ID>
             <FunctionID>b20c7368-9216-4b3d-9a4f-44f3a16d1b1d</FunctionID>
             <Name>Comp_perTU</Name>
@@ -66860,7 +66743,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -66987,7 +66870,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -67087,7 +66970,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -69127,7 +69010,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -69537,7 +69420,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -69589,7 +69472,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -72211,7 +72094,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -72237,7 +72120,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer benefit (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>3</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -72750,7 +72633,7 @@
             <Name>bot_s</Name>
             <Comment><![CDATA[Covid-19 related social assistance benefit (Auxílio Emergencial)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>1</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -72776,7 +72659,7 @@
             <Name>bfa02_s</Name>
             <Comment><![CDATA[Conditional cash transfer program (Auxílio Brasil)]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[+]]></Value>
+            <Value><![CDATA[n/a]]></Value>
             <Order>4</Order>
             <ValueType>string</ValueType>
             <Group />
@@ -74222,7 +74105,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Intermediate variables for calculations]]></Comment>
           <PrivateComment />
-          <Order>3</Order>
+          <Order>2</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74260,7 +74143,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits]]></Comment>
           <PrivateComment />
-          <Order>9</Order>
+          <Order>8</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74427,7 +74310,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Adjusting for the duration of the policy throughout the year]]></Comment>
           <PrivateComment />
-          <Order>10</Order>
+          <Order>9</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74477,7 +74360,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from June 2016 to June 2018.]]></Comment>
           <PrivateComment />
-          <Order>5</Order>
+          <Order>4</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74553,7 +74436,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[Calculating post-benefit per capita household income]]></Comment>
           <PrivateComment />
-          <Order>13</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74617,7 +74500,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Top-up benefit to overcome extreme poverty ("Benefício de Superação da Pobreza Extrema" - BSP)]]></Comment>
           <PrivateComment />
-          <Order>14</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74681,7 +74564,7 @@
           <Name>BenCalc</Name>
           <Comment><![CDATA[Calculating benefits ]]></Comment>
           <PrivateComment />
-          <Order>6</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74777,19 +74660,6 @@
             <Private />
           </Parameter>
           <Parameter>
-            <ID>c6cf058b-fb2c-4f51-83cf-8d5c62c58fad</ID>
-            <FunctionID>1f37e7ee-2337-4c53-8c70-f180222dd962</FunctionID>
-            <Name>#_Level</Name>
-            <Comment><![CDATA[]]></Comment>
-            <PrivateComment />
-            <Value><![CDATA[tu_household_bra]]></Value>
-            <Order>1</Order>
-            <ValueType>taxunit</ValueType>
-            <Group>1</Group>
-            <Color>-1</Color>
-            <Private />
-          </Parameter>
-          <Parameter>
             <ID>8e2914eb-15a0-4b93-90ff-17ed3aaffe62</ID>
             <FunctionID>1f37e7ee-2337-4c53-8c70-f180222dd962</FunctionID>
             <Name>Comp_perTU</Name>
@@ -74862,7 +74732,7 @@
           <Name>DefConst</Name>
           <Comment><![CDATA[Standard benefit values and poverty definitons valid from July 2018 to October 2021.]]></Comment>
           <PrivateComment />
-          <Order>8</Order>
+          <Order>6</Order>
           <Switch>n/a</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -74989,7 +74859,7 @@
           <Name>Allocate</Name>
           <Comment><![CDATA[Benefit allocation ]]></Comment>
           <PrivateComment />
-          <Order>12</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -75089,7 +74959,7 @@
           <Name>DefVar</Name>
           <Comment><![CDATA[Output variable ]]></Comment>
           <PrivateComment />
-          <Order>4</Order>
+          <Order>3</Order>
           <Switch>on</Switch>
           <Private>no</Private>
           <Color>-1</Color>
@@ -77129,7 +76999,7 @@
             <Name>Elig_Cond</Name>
             <Comment><![CDATA[1) employee in the private sector; 2) salary >= mininum wage; 3) no social contribution as employer or self-employed]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0 & ils_sicer=0]]></Value>
+            <Value><![CDATA[(les = 3 &  lpb = 0) & yem>= minwage & ils_sicse=0]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group />
@@ -77539,7 +77409,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand01 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0)  &  yse<=minwage & ils_sicee=0) & (tscse_rand01 < 0.2)]]></Value>
             <Order>0</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -77591,7 +77461,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0 & ils_sicer=0) & (tscse_rand02 < 0.2)]]></Value>
+            <Value><![CDATA[((lse = 1 & los = 0 & ldt = 0) & yse>=minwage & ils_sicee=0) & (tscse_rand02 < 0.2)]]></Value>
             <Order>2</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
