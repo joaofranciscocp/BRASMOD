@@ -52898,7 +52898,7 @@
             <Name>base_tscee</Name>
             <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
+            <Value><![CDATA[IF(yem>=minwage, yem, 0)]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>

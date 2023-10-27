@@ -32124,7 +32124,7 @@
       <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
       <ParID>7afb937d-c618-4c31-a510-c41124dadf52</ParID>
       <Order>1</Order>
-      <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
+      <Value><![CDATA[IF(yem>=minwage, yem, 0)]]></Value>
     </SYS_PAR>
     <SYS_PAR>
       <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
@@ -43385,7 +43385,68 @@
   <EXTENSION_POLs />
   <EXTENSION_FUNs />
   <EXTENSION_PARs />
-  <EXTENSION_SWITCHs />
+  <EXTENSION_SWITCHs>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>558ac7dc-ffbd-4ae2-a8da-1ffaa1b01804</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>8a8011d9-def7-4c18-ad2d-c01ab4803051</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>b2ae5125-eac0-4ef2-b138-7e017ca9d44f</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>6a42a6bb-16d6-4e28-a9bc-daa6422aa82f</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>5a4252a9-3d60-43fa-ba5b-f7af51c84804</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>36e57ca2-6fbb-4a70-b4bb-9d4364c581ee</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>eb153b45-0257-4ea6-ad81-99ccfc0cdd92</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>c68327ba-228f-40a5-9cf0-5194c4d7ac41</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+    <EXTENSION_SWITCH>
+      <ExtensionID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</ExtensionID>
+      <SysID>a7a7627a-6c4e-4619-926b-6a7a0469ffd8</SysID>
+      <DataID>552799b8-54cd-47c2-8fa5-e2df8bc5e586</DataID>
+      <Value>on</Value>
+    </EXTENSION_SWITCH>
+  </EXTENSION_SWITCHs>
   <LOOKGROUPs />
   <LOOKGROUP_POLs />
   <LOOKGROUP_FUNs />

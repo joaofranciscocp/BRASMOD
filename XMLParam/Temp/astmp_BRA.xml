@@ -7058,7 +7058,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1425.56#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1425.56#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -15048,7 +15048,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1503.25#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1503.25#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -23035,7 +23035,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=907.77#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=907.77#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -23100,7 +23100,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1364.43#m & yem>907.77#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1364.43#m & yem>907.77#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -31024,7 +31024,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=877.67#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -31089,7 +31089,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1319.18#m & yem>877.67#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -39009,7 +39009,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1655.98#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1655.98#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -46997,7 +46997,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=859.88#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=859.88#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -47062,7 +47062,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1292.43#m & yem>859.88#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1292.43#m & yem>859.88#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -52898,7 +52898,7 @@
             <Name>base_tscee</Name>
             <Comment><![CDATA[Base for the calculations of the SIC for employees. If employment income is smaller than the prevalent minimum wage, the function returns the difference between the minimum wage and the employment income. Alternatively, the function returns the employment income. ]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[IF(yem<minwage, minwage-yem, yem)]]></Value>
+            <Value><![CDATA[IF(yem>=minwage, yem, 0)]]></Value>
             <Order>1</Order>
             <ValueType>formula</ValueType>
             <Group>1</Group>
@@ -63038,7 +63038,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1089.72#m & yem>725.03#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1089.72#m & yem>725.03#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -70961,7 +70961,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=682.50#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=682.50#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -71026,7 +71026,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=1025.81#m & yem>682.51#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=1025.81#m & yem>682.51#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
@@ -78950,7 +78950,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=646.55#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=646.55#m & IsParentOfDepChild]]></Value>
             <Order>1</Order>
             <ValueType>condition</ValueType>
             <Group>1</Group>
@@ -79015,7 +79015,7 @@
             <Name>Comp_Cond</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment />
-            <Value><![CDATA[(les01=3 | ldt = 1) & yem<=971.78#m & yem>646.55#m & IsParentOfDepChild]]></Value>
+            <Value><![CDATA[(les = 3 & lpb = 0) & yem<=971.78#m & yem>646.55#m & IsParentOfDepChild]]></Value>
             <Order>3</Order>
             <ValueType>condition</ValueType>
             <Group>2</Group>
