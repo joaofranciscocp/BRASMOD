@@ -425,11 +425,17 @@ tables_pnad_totals <- merge(tables_pnad_shares,
 saveRDS(tables_pnad_totals, 
         paste0("Expenditure imputation\\tables_pnad_totals_", as.character(year), ".rds"))
 
+
+tables_pnad_totals <- read_rds(paste0("Database setup\\Expenditure imputation\\tables_pnad_totals_", 
+                               as.character(year), ".rds"))
+
+
 #Impute values into input file
 
 #Aggregate by expenditure category
 
-#First we get expenditure categories important for personal income tax deductions
+#First we get expenditure categories included in personal income tax deductions
+#If not doing it from the beginning, remember to get POF category product codes from translator above!
 
 #Healthcare expenditures
 pnad_xhl <- tables_pnad_totals %>% 
@@ -455,18 +461,25 @@ pnad_xmp <- tables_pnad_totals %>%
   group_by(idhh_pnad) %>% 
   summarise(xmp = sum(value))
 
+#Now we'll get expenditure categories in the National Accounts categorization
+#We'll use those to compute indirect taxes using calculated effective tax rates by Silveira at al. (2022)
+
 #Get codes for National Accounts categories
 
 crosswalk_pof_nat_acc <- read_xlsx("Database setup\\Expenditure imputation\\Crosswalk POF - National Accounts.xlsx")
 
 codes_nat_acc <- unique(crosswalk_pof_nat_acc$code_nat_acc)
 
-expenditures_nat_acc <- pnad_hh %>% #Create a dataframe that will have a column for idhh,
-  select(idhh)                        #and then one for every expenditure category in the National Accounts
+#Create a dataframe that will have a column for idhh,
+#and then one for every expenditure category in the National Accounts
+#If not doing it from the beginning, remember to read the PNAD output to get pnad_hh!
+expenditures_nat_acc <- pnad_hh %>% 
+  select(idhh)
 
 
 #This loops goes through the National Account categories
-#and aggregates total household expenditure in each category
+#and aggregates total household expenditure in each category.
+#We then add the result as a column in the dataframe above
 for(code in codes_nat_acc){
   codes_pof_list <- unique(crosswalk_pof_nat_acc %>%   #Get POF codes from the crosswalk
                              filter(code_nat_acc == code) %>% 
