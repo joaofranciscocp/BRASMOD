@@ -12,19 +12,21 @@ setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #Set year for imputation
 
-year = 2016
+year = 2019
 
 #READING THE DATA
 
 #PNAD
 
 #Outputs from BRASMOD
-pnad_individual <- fread(paste0("Expenditure imputation\\PNAD data\\bra_", as.character(year), "_std.txt"), 
+pnad_individual <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_", 
+                                as.character(year), "_std.txt"), 
                          sep = "\t", 
                          header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pnad_hh <- fread(paste0("Expenditure imputation\\PNAD data\\bra_", as.character(year), "_std_hh.txt"), sep = "\t", 
+pnad_hh <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_",
+                        as.character(year), "_std_hh.txt"), sep = "\t", 
                  header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
@@ -84,7 +86,7 @@ tables_pof <- do.call(rbind,
 
 #Codes for expenditure categories (already taken from POF's own categorization)
 
-tradutor <- read_xls("Expenditure imputation\\general_expenditure_translator.xls", )
+tradutor <- read_xls("Database setup\\Expenditure imputation\\general_expenditure_translator.xls", )
 
 habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
 despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
@@ -427,6 +429,8 @@ saveRDS(tables_pnad_totals,
 
 #Aggregate by expenditure category
 
+#First we get expenditure categories important for personal income tax deductions
+
 #Healthcare expenditures
 pnad_xhl <- tables_pnad_totals %>% 
   filter(product_code %in% assist_saude) %>% 
@@ -450,6 +454,39 @@ pnad_xmp <- tables_pnad_totals %>%
   filter(product_code == 48009) %>% 
   group_by(idhh_pnad) %>% 
   summarise(xmp = sum(value))
+
+#Get codes for National Accounts categories
+
+crosswalk_pof_nat_acc <- read_xlsx("Database setup\\Expenditure imputation\\Crosswalk POF - National Accounts.xlsx")
+
+codes_nat_acc <- unique(crosswalk_pof_nat_acc$code_nat_acc)
+
+expenditures_nat_acc <- pnad_hh %>% #Create a dataframe that will have a column for idhh,
+  select(idhh)                        #and then one for every expenditure category in the National Accounts
+
+
+#This loops goes through the National Account categories
+#and aggregates total household expenditure in each category
+for(code in codes_nat_acc){
+  codes_pof_list <- unique(crosswalk_pof_nat_acc %>%   #Get POF codes from the crosswalk
+                             filter(code_nat_acc == code) %>% 
+                             pull(code_pof)) 
+  
+  expenditure_values <- tables_pnad_totals %>%       #Aggregate expenditures by household
+    filter(product_code %in% codes_pof_list) %>% 
+    group_by(idhh_pnad) %>% 
+    summarise(x = sum(value[value>= 0]))
+    
+    
+  expenditures_nat_acc <- merge(expenditures_nat_acc, #Join aggregated expenditure values into dataframe created above
+                                expenditure_values,
+                                by.x = "idhh",
+                                by.y = "idhh_pnad",
+                                all.x = T)
+  
+  colnames(expenditures_nat_acc)[ncol(expenditures_nat_acc)] <- paste0("x", as.character(code)) #Rename column
+}
+
 
 
 #Get PNAD input database for BRASMOD
@@ -492,7 +529,13 @@ base_xmp <- merge(base_xpp,
                       yes = replace_na(xmp, 0),
                       no = 0))
 
-base_final_pnad_expenditures <- base_xmp %>% 
+base_nat_acc <- merge(base_xmp,
+                      expenditures_nat_acc,
+                      by.x = "idhh",
+                      by.y = "idhh",
+                      all.x = T)
+
+base_final_pnad_expenditures <- base_nat_acc %>% 
   mutate_all(~replace(., is.na(.), 0))
 
 
