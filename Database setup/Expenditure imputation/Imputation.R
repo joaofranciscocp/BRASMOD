@@ -33,46 +33,43 @@ pnad_hh <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_
 #POF
 
 #Outputs from BRASMOD
-pof_individual <- fread(paste0("Expenditure imputation\\POF data\\bra_", as.character(year), "_std.txt"), 
+pof_individual <- fread(paste0("Database setup\\Expenditure imputation\\POF data\\bra_", as.character(year), "_std.txt"), 
                                sep = "\t", 
                         header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pof_hh <- fread(paste0("Expenditure imputation\\POF data\\bra_", as.character(year), "_std_hh.txt"), 
+pof_hh <- fread(paste0("Database setup\\Expenditure imputation\\POF data\\bra_", as.character(year), "_std_hh.txt"), 
                 sep = "\t", 
                 header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
 #Correction for inflation
 
-cpi <- read_xls("Expenditure imputation\\CPI (IPCA).xls")
+cpi <- read_xls("Database setup\\Expenditure imputation\\CPI (IPCA).xls")
 inflation_correction <- cpi$price_level[cpi$year == year]
 
 #Expenditure data
 
-DESPESA_COLETIVA <- readRDS("Expenditure imputation\\POF data\\DESPESA_COLETIVA.rds") %>%  
+DESPESA_COLETIVA <- readRDS("Database setup\\Expenditure imputation\\POF data\\DESPESA_COLETIVA.rds") %>%  
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
-  filter(str_sub(V9001,-3) != "999" &
-           as.numeric(V9002) <= 6) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-DESPESA_INDIVIDUAL <- readRDS("Expenditure imputation\\POF data\\DESPESA_INDIVIDUAL.rds") %>% 
+DESPESA_INDIVIDUAL <- readRDS("Database setup\\Expenditure imputation\\POF data\\DESPESA_INDIVIDUAL.rds") %>% 
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
-  filter(str_sub(V9001,-3) != "999" &
-           as.numeric(V9002) <= 6) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-CADERNETA_COLETIVA <- readRDS("Expenditure imputation\\POF data\\CADERNETA_COLETIVA.rds") %>%
-  mutate(V9001 = substr(V9001, 1, 5)) %>%
+CADERNETA_COLETIVA <- readRDS("Database setup\\Expenditure imputation\\POF data\\CADERNETA_COLETIVA.rds") %>%
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>%
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
-  filter(str_sub(V9001,-3) != "999" &
-           as.numeric(V9002) <= 6) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
