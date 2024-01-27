@@ -13,7 +13,7 @@ setwd("C:\\Users\\joaofrancisco\\Desktop\\USP\\Economia\\LabPub\\BRASMOD")
 
 year = 2015
 
-pnad <- read_dta(paste0("Database setup\\Old PNAD\\pes", as.character(year), ".dta"))
+pnad <- readRDS(paste0("Database setup\\Old PNAD\\pnad", as.character(year), ".RDS"))
 
 #PART 1: ADD MANDATORY VARIABLES
 
