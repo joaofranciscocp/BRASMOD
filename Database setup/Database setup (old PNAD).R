@@ -7,12 +7,13 @@ library(haven)
 
 #Set it to where the BRASMOD folder is
 
-setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
+setwd("C:\\Users\\joaofrancisco\\Desktop\\USP\\Economia\\LabPub\\BRASMOD")
 
 #CHOOSE YEAR FOR PNAD SURVEY
-year = 2015
 
-pnad <- read_dta(paste0("C:\\Users\\joao.perez\\Desktop\\Old PNAD data\\pes", as.character(year), ".dta"))
+year <- 2015
+
+pnad <- readRDS(paste0("Database setup\\Old PNAD\\pnad", as.character(year), ".RDS"))
 
 #PART 1: ADD MANDATORY VARIABLES
 
@@ -322,7 +323,9 @@ base_ypt <- base_poa %>%
 min_wage <- case_when(
   year == 2015 ~ 788,
   year == 2014 ~ 724,
-  year == 2013 ~ 678
+  year == 2013 ~ 678,
+  year == 2012 ~ 622,
+  year == 2011 ~ 545
 )
 
 #We then consider a margin of error of 2%, and assume that
@@ -334,21 +337,27 @@ min_wage <- case_when(
 bpbf_bb <- case_when(
   year == 2015 ~ 77,
   year == 2014 ~ 70,
-  year == 2013 ~ 70
+  year == 2013 ~ 70,
+  year == 2012 ~ 70,
+  year == 2011 ~ 70
 )
 
 #Variable PBF benefit (per child)
 bpbf_bv <- case_when(
   year == 2015 ~ 35,
   year == 2014 ~ 32,
-  year == 2013 ~ 32
+  year == 2013 ~ 32,
+  year == 2012 ~ 32,
+  year == 2011 ~ 32
 )
 
 #Variable PBF benefit (per adolescent)
 bpbf_bj <- case_when(
   year == 2015 ~ 42,
   year == 2014 ~ 38,
-  year == 2013 ~ 38
+  year == 2013 ~ 38,
+  year == 2012 ~ 38,
+  year == 2011 ~ 38
 )
   
 #Possible combinations
@@ -374,14 +383,15 @@ typical_pbf_and_bpc_values <- list(
   min_wage + bpbf_bb + bpbf_bv + 4*bpbf_bj,
   min_wage + bpbf_bb + 2*bpbf_bv + 2*bpbf_bj,
   min_wage + bpbf_bb + 2*bpbf_bv + 3*bpbf_bj,
-  min_wage + bpbf_bb + 3*bpbf_bv + 2*bpbf_bj)
+  min_wage + bpbf_bb + 3*bpbf_bv + 2*bpbf_bj
+)
 
 
 #If v1273 value satisfies one of the conditions above, we assume that the person
 #has received the BPC benefit equal to min_wage
 base_bdioa <- base_ypt %>% 
-  mutate(bdioa = ifelse((v1273 %in% typical_pbf_and_bpc_values) | 
-                          (0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage),
+  mutate(bdioa = ifelse(!is.na(v1273) & ((v1273 %in% typical_pbf_and_bpc_values) | 
+                          (0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage)),
          yes = min_wage,
          no = 0))
 
@@ -393,8 +403,7 @@ base_ddi <- base_bdioa %>%
                       yes = 1,
                       no = 0))
 
-
-
+#The other sources of income are assumed to consist of investment income
 
 base_yiy <- base_ddi %>% 
   mutate(yiy = ifelse(!is.na(v1273) & v1273 < 9999999 & !((0.98 *min_wage <= v1273 & v1273 <= 1.02*min_wage) |
@@ -402,8 +411,13 @@ base_yiy <- base_ddi %>%
          yes = v1273,
          no = 0))
 
+base_yprrt <- base_yiy %>% 
+  mutate(yprrt = ifelse(!is.na(v1267) & v1267 < 9999999,
+                        yes = as.numeric(v1267),
+                        no = 0)) #income from rental of property 
+
 #Total household income
-base_yhh <- base_yiy %>% 
+base_yhh <- base_yprrt %>% 
   group_by(idhh) %>% 
   mutate(yhh = sum(yem) + sum(yse) + sum(yiy))
 
@@ -420,13 +434,11 @@ base_lpm <- base_lem %>%
                       yes = 1,
                       no = 0))
 
-#Add input data year
-base <- base_lpm %>% 
-  mutate(sgl_s = year)
+base <- base_lpm
 
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, sgl_s, dct, drgn1, drgn2, drgur, dwt, dag,
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
          dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
