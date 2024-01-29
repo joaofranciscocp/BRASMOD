@@ -11,7 +11,7 @@ setwd("C:\\Users\\joaofrancisco\\Desktop\\USP\\Economia\\LabPub\\BRASMOD")
 
 #CHOOSE YEAR FOR PNAD SURVEY
 
-year = 2015
+year <- 2015
 
 pnad <- readRDS(paste0("Database setup\\Old PNAD\\pnad", as.character(year), ".RDS"))
 
