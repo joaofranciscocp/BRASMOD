@@ -11677,7 +11677,7 @@
   </DataBase>
   <DataBase>
     <ID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</ID>
-    <Name>BR_2015_a1</Name>
+    <Name>BR_2015_a2</Name>
     <Comment><![CDATA[]]></Comment>
     <YearCollection>2015</YearCollection>
     <YearInc>2015</YearInc>
@@ -11811,69 +11811,6 @@
       <PolicySwitch>
         <SwitchablePolicyID>0dd0de29-2126-4b94-bb39-2130faefc906</SwitchablePolicyID>
         <SystemID>8a8011d9-def7-4c18-ad2d-c01ab4803051</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-    </DBSystemConfig>
-    <DBSystemConfig>
-      <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-      <SystemName>BRA_2015</SystemName>
-      <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-      <UseDefault />
-      <UseCommonDefault>no</UseCommonDefault>
-      <Uprate />
-      <BestMatch>yes</BestMatch>
-      <PolicySwitch>
-        <SwitchablePolicyID>8b258cd1-804e-4c9d-adc2-2d3e609c162a</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>1e2f5161-bfad-4a11-8299-7adc39c829db</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>2f84ea98-8a92-439d-bd6e-4b381a8fbfec</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>275b4fd0-de30-4fc4-be6a-11c5ab8bd52c</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>683b5f6d-c8df-44c2-bdb1-a1419ae98b5b</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>b860b530-3935-44a8-92ea-17fc68dee7f9</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>25ea4c00-4cad-43b3-97c4-3e89d3c4463c</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>557c232a-9ce6-4808-b52f-ca5e02fe8cf4</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
-        <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
-        <Value><![CDATA[n/a]]></Value>
-      </PolicySwitch>
-      <PolicySwitch>
-        <SwitchablePolicyID>0dd0de29-2126-4b94-bb39-2130faefc906</SwitchablePolicyID>
-        <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
         <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
         <Value><![CDATA[n/a]]></Value>
       </PolicySwitch>
@@ -12507,6 +12444,15 @@
         <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
         <Value><![CDATA[n/a]]></Value>
       </PolicySwitch>
+    </DBSystemConfig>
+    <DBSystemConfig>
+      <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
+      <SystemName>BRA_2015</SystemName>
+      <DataBaseID>28de3bc2-517c-4e3c-bcfe-e32abfdb60a6</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>no</BestMatch>
     </DBSystemConfig>
   </DataBase>
   <DataBase>
@@ -14327,6 +14273,30 @@
       <SystemID>558ac7dc-ffbd-4ae2-a8da-1ffaa1b01804</SystemID>
       <SystemName>BRA_2013</SystemName>
       <DataBaseID>78d9055a-2ec0-43a3-aa3a-00cf95b69735</DataBaseID>
+      <UseDefault />
+      <UseCommonDefault>no</UseCommonDefault>
+      <Uprate />
+      <BestMatch>yes</BestMatch>
+    </DBSystemConfig>
+  </DataBase>
+  <DataBase>
+    <ID>efe3c692-13cb-460c-be3e-93af6d9bdfca</ID>
+    <Name>BR_2015_a1</Name>
+    <Comment><![CDATA[]]></Comment>
+    <YearCollection />
+    <YearInc />
+    <Currency>national</Currency>
+    <FilePath>C:\Users\lauro\Desktop\brasmod_2023\Códigos antigas\Input\</FilePath>
+    <DecimalSign>.</DecimalSign>
+    <Private>no</Private>
+    <UseCommonDefault>no</UseCommonDefault>
+    <ReadXVariables>no</ReadXVariables>
+    <ListStringOutVar />
+    <IndirectTaxTableYear />
+    <DBSystemConfig>
+      <SystemID>4aca301d-ac1a-4cd5-b6d3-3043d4074d1d</SystemID>
+      <SystemName>BRA_2015</SystemName>
+      <DataBaseID>efe3c692-13cb-460c-be3e-93af6d9bdfca</DataBaseID>
       <UseDefault />
       <UseCommonDefault>no</UseCommonDefault>
       <Uprate />
