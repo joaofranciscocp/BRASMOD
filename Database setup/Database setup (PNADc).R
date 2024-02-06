@@ -9,7 +9,11 @@ library(PNADcIBGE)
 
 #Set it to where the BRASMOD folder is
 
-setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
+file_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+BRASMOD_directory <- gsub("/Database setup", "", file_directory)
+
+setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
 year = 2016
