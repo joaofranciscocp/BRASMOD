@@ -14,20 +14,20 @@ setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
 
 #Set year for imputation
 
-year = 2018
+year <- 2018
 
 #READING THE DATA
 
 #PNAD
 
 #Outputs from BRASMOD
-pnad_individual <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_", 
+pnad_individual <- fread(paste0("Database setup\\Expenditure imputation\\PNAD output data\\bra_", 
                                 as.character(year), "_std.txt"), 
                          sep = "\t", 
                          header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pnad_hh <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_",
+pnad_hh <- fread(paste0("Database setup\\Expenditure imputation\\PNAD output data\\bra_",
                         as.character(year), "_std_hh.txt"), sep = "\t", 
                  header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
@@ -35,12 +35,12 @@ pnad_hh <- fread(paste0("Database setup\\Expenditure imputation\\PNAD data\\bra_
 #POF
 
 #Outputs from BRASMOD
-pof_individual <- fread(paste0("Database setup\\Expenditure imputation\\POF data\\bra_", as.character(year), "_std.txt"), 
+pof_individual <- fread(paste0("Database setup\\Expenditure imputation\\POF output data\\bra_", as.character(year), "_std.txt"), 
                         sep = "\t", 
                         header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
 
-pof_hh <- fread(paste0("Database setup\\Expenditure imputation\\POF data\\bra_", as.character(year), "_std_hh.txt"), 
+pof_hh <- fread(paste0("Database setup\\Expenditure imputation\\POF output data\\bra_", as.character(year), "_std_hh.txt"), 
                 sep = "\t", 
                 header = T, dec = ",") %>% 
   mutate(across(everything(), as.numeric))
@@ -52,7 +52,7 @@ inflation_correction <- cpi$price_level[cpi$year == year]
 
 #Expenditure data
 
-DESPESA_COLETIVA <- readRDS("Database setup\\Expenditure imputation\\POF data\\DESPESA_COLETIVA.rds") %>%  
+DESPESA_COLETIVA <- readRDS("Database setup\\POF data\\DESPESA_COLETIVA.rds") %>%  
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
@@ -60,7 +60,7 @@ DESPESA_COLETIVA <- readRDS("Database setup\\Expenditure imputation\\POF data\\D
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-DESPESA_INDIVIDUAL <- readRDS("Database setup\\Expenditure imputation\\POF data\\DESPESA_INDIVIDUAL.rds") %>% 
+DESPESA_INDIVIDUAL <- readRDS("Database setup\\POF data\\DESPESA_INDIVIDUAL.rds") %>% 
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
@@ -68,7 +68,7 @@ DESPESA_INDIVIDUAL <- readRDS("Database setup\\Expenditure imputation\\POF data\
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)*inflation_correction/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new, UF)
 
-CADERNETA_COLETIVA <- readRDS("Database setup\\Expenditure imputation\\POF data\\CADERNETA_COLETIVA.rds") %>%
+CADERNETA_COLETIVA <- readRDS("Database setup\\POF data\\CADERNETA_COLETIVA.rds") %>%
   mutate(V9001 = str_sub(V9001, 1, -3)) %>%
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   filter(as.numeric(V9002) <= 6) %>% 
@@ -81,7 +81,7 @@ tables_pof <- do.call(rbind,
                            CADERNETA_COLETIVA)) %>% 
   mutate(across(everything(), as.numeric))
 
-morador_hh <- readRDS("Database setup\\Expenditure imputation\\POF data\\MORADOR.rds") %>%
+morador_hh <- readRDS("Database setup\\POF data\\MORADOR.rds") %>%
   filter(as.numeric(V0306) < 17) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC),
          idorigperson = paste0(idorighh, COD_INFORMANTE)) %>% 
