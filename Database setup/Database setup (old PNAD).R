@@ -272,7 +272,7 @@ base_lescs <- base_lhw %>%
 #The old PNAD has no information on unemployment benefit values, so we have
 #to simulate them with BRASMOD based on individual response
 base_bun <- base_lescs %>% 
-  mutate(bunyn = ifelse(!is.na(v9066) & v9066 == 2,
+  mutate(bunyn = ifelse((!is.na(v9066) & v9066 == 2) | (!is.na(v9084) & v9084 == 2),
                         yes = 1,
                         no  = 0))
 
@@ -281,7 +281,7 @@ base_bun <- base_lescs %>%
 #Create income variables: yem (employment income), yse (self-employment income),
 #yiy (investiment income)
 
-base_yem <- base_lescs%>% 
+base_yem <- base_bun %>% 
   mutate(yem1 = ifelse(les == 3 & v9532 < 999999999, #if works as employee in main job (999999999 means NA)
                        yes = as.numeric(v9532), #yem1 is main job's income
                        no = 0), #0 otherwise
