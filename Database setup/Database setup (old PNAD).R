@@ -7,13 +7,17 @@ library(haven)
 
 #Set it to where the BRASMOD folder is
 
-setwd("C:\\Users\\joaofrancisco\\Desktop\\USP\\Economia\\LabPub\\BRASMOD")
+file_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+BRASMOD_directory <- gsub("/Database setup", "", file_directory)
+
+setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
 
 year <- 2015
 
-pnad <- readRDS(paste0("Database setup\\Old PNAD\\pnad", as.character(year), ".RDS"))
+pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year), ".RDS"))
 
 #PART 1: ADD MANDATORY VARIABLES
 
