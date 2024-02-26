@@ -25,6 +25,7 @@ pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year)
 
 #Create household and individual IDs from PNAD variables
 base_ids <- pnad %>% 
+  filter(v0401 <= 6) %>%  #Exclude pensioners, domestic workers and their relatives living in the household
   mutate(idorighh = paste0(v0102, v0103),
          idorigperson = paste0(idorighh, "0", v0301)) #For old PNADs, that doesn't really create a unique idperson, but it's good enough
 
@@ -266,6 +267,14 @@ base_lescs <- base_lhw %>%
                            v9033 == 3 ~ 2,
                            v9033 == 5 ~ 3,
                            is.na(v9033) ~ 0))
+
+#Create unemployment benefit variable (binary: received? yes or no)
+#The old PNAD has no information on unemployment benefit values, so we have
+#to simulate them with BRASMOD based on individual response
+base_bun <- base_lescs %>% 
+  mutate(bunyn = ifelse(!is.na(v9066) & v9066 == 2,
+                        yes = 1,
+                        no  = 0))
 
 #INCOME
 
