@@ -452,7 +452,7 @@ base <- base_lpm
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
-         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, bunyn, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
@@ -460,24 +460,3 @@ base_final_pnad <- base %>%
 #Save base as a tab separated .txt 
 write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
- 
-
-#There is no information regarding the value of received unemployment benefit,
-#but there is a variable informing if the person has received an unemployment benefit,
-#for how long they stayed in their previous job before leaving,
-#and how much they earned there. With that information, we can simulate unemployment benefit values
-
-
-base_bun <- base_bdioa %>% 
-  mutate(received_benefit = ifelse((!is.na(v9066) & v9066 == 2) | (!is.na(v9084) & v9084 == 2),
-                                   yes = 1,
-                                   no = 0),
-         months_worked = case_when(
-           (!is.na(v9066) & v9066 == 2 & !is.na(v9064)) ~ v9064,
-           (!is.na(v9084) & v9084 == 2 & !is.na(v9862)) ~ v9861*12 + v9862),
-         bun = case_when(
-           received_benefit == 0 ~ 0,
-           (received_benefit == 1 & months_worked )))
-
-
-)
