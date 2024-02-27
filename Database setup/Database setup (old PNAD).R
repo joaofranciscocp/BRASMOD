@@ -1,7 +1,6 @@
 library(tidyverse)
 library(readxl)
 library(data.table)
-library(haven)
 
 #SET WORKING DIRECTORY
 
@@ -25,7 +24,7 @@ pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year)
 
 #Create household and individual IDs from PNAD variables
 base_ids <- pnad %>% 
-  filter(v0401 <= 6) %>%  #Exclude pensioners, domestic workers and their relatives living in the household
+  filter(v0401 <= 6) %>%  #Exclude domestic workers and their relatives living in the household
   mutate(idorighh = paste0(v0102, v0103),
          idorigperson = paste0(idorighh, "0", v0301)) #For old PNADs, that doesn't really create a unique idperson, but it's good enough
 
