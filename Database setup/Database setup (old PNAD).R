@@ -14,7 +14,7 @@ setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
 
-year <- 2015
+year <- 2009
 
 pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year), ".RDS"))
 
@@ -337,7 +337,9 @@ min_wage <- case_when(
   year == 2014 ~ 724,
   year == 2013 ~ 678,
   year == 2012 ~ 622,
-  year == 2011 ~ 545
+  year == 2011 ~ 545,
+  year == 2009 ~ 465,
+  year == 2008 ~ 415
 )
 
 #We then consider a margin of error of 2%, and assume that
@@ -351,7 +353,9 @@ bpbf_bb <- case_when(
   year == 2014 ~ 70,
   year == 2013 ~ 70,
   year == 2012 ~ 70,
-  year == 2011 ~ 70
+  year == 2011 ~ 70,
+  year == 2009 ~ 68,
+  year == 2008 ~ 62,
 )
 
 #Variable PBF benefit (per child)
@@ -360,7 +364,9 @@ bpbf_bv <- case_when(
   year == 2014 ~ 32,
   year == 2013 ~ 32,
   year == 2012 ~ 32,
-  year == 2011 ~ 32
+  year == 2011 ~ 32,
+  year == 2009 ~ 22,
+  year == 2008 ~ 20
 )
 
 #Variable PBF benefit (per adolescent)
@@ -369,7 +375,9 @@ bpbf_bj <- case_when(
   year == 2014 ~ 38,
   year == 2013 ~ 38,
   year == 2012 ~ 38,
-  year == 2011 ~ 38
+  year == 2011 ~ 38,
+  year == 2009 ~ 33,
+  year == 2008 ~ 30
 )
   
 #Possible combinations
