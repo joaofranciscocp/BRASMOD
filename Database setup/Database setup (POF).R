@@ -6,7 +6,11 @@ library(readxl)
 
 #Set it to where the BRASMOD folder is
 
-setwd("C:\\Users\\joao.perez\\Downloads\\brasmod\\brasmod")
+file_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
+
+BRASMOD_directory <- gsub("/Database setup", "", file_directory)
+
+setwd(BRASMOD_directory)
 
 #GET POF DATA
 
@@ -20,7 +24,6 @@ OUTROS_RENDIMENTOS <- readRDS("Expenditure imputation\\POF data\\OUTROS_RENDIMEN
 
 #DATA TRANSLATORS 
 #(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
-
 
 translator_earnings <- read_xls("Expenditure imputation\\earnings_translator.xls")
 translator_earnings <- translator_earnings[-nrow(translator_earnings),]
