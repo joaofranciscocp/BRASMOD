@@ -30,7 +30,7 @@ OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENT
 #DATA TRANSLATORS 
 #(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
 
-translator_earnings <- read_xls("Database setup\\POF data\\earnings_translator.xls")
+translator_earnings <- read_xls("Database setup\\POF data\\earnings_translator_2018.xls")
 translator_earnings <- translator_earnings[-nrow(translator_earnings),]
 
 #DATABASE SETUP
