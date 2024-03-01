@@ -12,20 +12,25 @@ BRASMOD_directory <- gsub("/Database setup", "", file_directory)
 
 setwd(BRASMOD_directory)
 
-#GET POF DATA
+#CHOOSE YEAR AND GET POF DATA
+
+year <- 2018
 
 #Read tables from POF data folder
 
-MORADOR <- readRDS("Expenditure imputation\\POF data\\MORADOR.rds")
+MORADOR <- readRDS(paste0("Database setup\\POF data\\MORADOR_", 
+                          as.character(year), ".rds"))
 
-RENDIMENTO_TRABALHO <- readRDS("Expenditure imputation\\POF data\\RENDIMENTO_TRABALHO.rds")
+RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\RENDIMENTO_TRABALHO_", 
+                                      as.character(year), ".rds"))
 
-OUTROS_RENDIMENTOS <- readRDS("Expenditure imputation\\POF data\\OUTROS_RENDIMENTOS.rds")
+OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENTOS_", 
+                                     as.character(year), ".rds"))
 
 #DATA TRANSLATORS 
 #(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
 
-translator_earnings <- read_xls("Expenditure imputation\\earnings_translator.xls")
+translator_earnings <- read_xls("Database setup\\POF data\\earnings_translator.xls")
 translator_earnings <- translator_earnings[-nrow(translator_earnings),]
 
 #DATABASE SETUP
