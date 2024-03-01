@@ -1,3 +1,4 @@
+#PACKAGES USED
 library(tidyverse)
 library(readxl)
 library(data.table)
@@ -458,9 +459,10 @@ base <- base_lpm
 
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, dct, drgn1, drgn2, drgur, dwt, dag,
-         dec, dey, deh, les, lem, lpb, ldt, los, lse, bunyn, yem, dgn, lhw, dms, loc, 
-         yse, yiy, ddi, poa, bdioa, ypt, yhh, lpm) %>% 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, 
+         dct, drgn1, drgn2, drgur, dgn, dwt, dag, dms, dec, dey, deh, ddi,
+         les, lem, lpb, ldt, los, lse, loc, lhw, lpm,   
+         yem, yse, yiy, yprrt, poa, bunyn, bdioa, ypt, yhh) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 

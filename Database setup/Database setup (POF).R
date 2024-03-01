@@ -70,10 +70,10 @@ base_ids <- base_ids %>%
 
 
 base_ids <- base_ids %>% 
-  mutate(malehead = ifelse(V0404 == 1 & V0306 == 1, #identifica heads homens
+  mutate(malehead = ifelse(V0404 == 1 & V0306 == 1, #identifies male heads
                            yes = 1,
                            no = 0),
-         femalehead = ifelse(V0404 == 2 & V0306 == 1, #identifica heads mulheres
+         femalehead = ifelse(V0404 == 2 & V0306 == 1, #dentifies female heads
                              yes = 1,
                              no = 0)) %>% 
   group_by(idhh) %>% 
@@ -427,7 +427,8 @@ base_yhh <- base_yiy %>%
 #OTHER INCOME SOURCES
 
 #Add unemployment benefit (bun), old age pension/retirement (poa),
-#and poor elderly/disabled benefit (bdioa)
+#poor elderly/disabled benefit (bdioa), private transfers (ypt) and
+#income from rental of property (yprrt)
 
 #Codes for all sort of old age pensions
 PENSIONS_OLD_AGE <- c(5400401, 5400501, 5400601, 5400701,
@@ -509,6 +510,27 @@ base_ypt <- merge(base_bdioa,
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
 
+
+#Income from rental of property
+
+RENT <- c(5401401)
+
+rent_aggregate <- aggregate(
+  OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% RENT],
+  by = list(COD_UPA = OUTROS_RENDIMENTOS$COD_UPA[OUTROS_RENDIMENTOS$V9001 %in% RENT],
+            NUM_DOM = OUTROS_RENDIMENTOS$NUM_DOM[OUTROS_RENDIMENTOS$V9001 %in% RENT],
+            NUM_UC = OUTROS_RENDIMENTOS$NUM_UC[OUTROS_RENDIMENTOS$V9001 %in% RENT],
+            COD_INFORMANTE = OUTROS_RENDIMENTOS$COD_INFORMANTE[OUTROS_RENDIMENTOS$V9001 %in% RENT]),
+  FUN = sum, 
+  na.rm = T) %>% 
+  rename(yprrt = x)
+
+base_yprrt <- merge(base_ypt,
+                    rent_aggregate,
+                    by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
+                    by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
+                    all.x = T)
+
 #OTHER VARIABLES
 
 #Disabilities
@@ -518,7 +540,7 @@ base_ypt <- merge(base_bdioa,
 #some disabled persons: if someone is less than 65 and received BPC,
 #they have to be disabled
 
-base_ddi <- base_ypt %>% 
+base_ddi <- base_yprrt %>% 
   mutate(ddi = ifelse(!is.na(bdioa) & bdioa > 0 & dag < 65,
                       yes = 1,
                       no = 0))
@@ -550,16 +572,15 @@ base_lpm <- merge(base_lem,
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
 
-base <- base_lpm %>% 
-  mutate(sgl_s = 2018)
+base <- base_lpm
 
 #Select only variables for simulation
 
 base_final_pof <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, sgl_s,
-         dct, drgn1, drgn2, drgur, dwt, dag,
-         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
-         yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner,
+         dct, dgn, drgn1, drgn2, drgur, dwt, dag, dms, dec, dey, deh, ddi,
+         les, lem, lpb, ldt, los, lse, yem, lhw, loc, lpm,
+         yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
