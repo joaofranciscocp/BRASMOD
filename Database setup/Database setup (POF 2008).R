@@ -27,11 +27,6 @@ RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\RENDIMENTO_TRAB
 OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENTOS_", 
                                      as.character(year), ".rds"))
 
-#DATA TRANSLATORS 
-#(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
-
-translator_earnings <- read_xls("Database setup\\POF data\\earnings_translator.xls")
-translator_earnings <- translator_earnings[-nrow(translator_earnings),]
 
 #DATABASE SETUP
 
@@ -60,7 +55,7 @@ base_ids <- MORADOR %>%
 #idperson as idhead to everyone. 
 
 base_ids <- base_ids %>% 
-  mutate(idhead = ifelse(V0306 == 1,
+  mutate(idhead = ifelse(COND_UNIDADE_CONSUMO == 1,
                          yes = as.numeric(base_ids$idperson),
                          no = 0)) %>%
   group_by(idhh) %>% 
@@ -70,10 +65,10 @@ base_ids <- base_ids %>%
 
 
 base_ids <- base_ids %>% 
-  mutate(malehead = ifelse(V0404 == 1 & V0306 == 1, #identifies male heads
+  mutate(malehead = ifelse(V0405 == 1 & COND_UNIDADE_CONSUMO == 1, #identifies male heads
                            yes = 1,
                            no = 0),
-         femalehead = ifelse(V0404 == 2 & V0306 == 1, #dentifies female heads
+         femalehead = ifelse(V0405 == 2 & COND_UNIDADE_CONSUMO == 1, #dentifies female heads
                              yes = 1,
                              no = 0)) %>% 
   group_by(idhh) %>% 
@@ -83,12 +78,12 @@ base_ids <- base_ids %>%
 #print(as.vector(base_ids$malehead) %*% as.vector(base_ids$femalehead))
 
 base_ids <- base_ids %>% 
-  mutate(idmalehead = ifelse(V0404 == 1 & 
-                               V0306 == 1,
+  mutate(idmalehead = ifelse(V0405 == 1 & 
+                               COND_UNIDADE_CONSUMO == 1,
                              yes = as.numeric(idperson),
                              no = 0),
-         idfemalehead = ifelse(V0404 == 2 & 
-                                 V0306 == 1,
+         idfemalehead = ifelse(V0405 == 2 & 
+                                 COND_UNIDADE_CONSUMO == 1,
                                yes = as.numeric(idperson),
                                no = 0)) %>% 
   group_by(idhh) %>% 
@@ -99,18 +94,15 @@ base_ids <- base_ids %>%
 
 #Identify household members with respect to head
 base_ids <- base_ids %>% 
-  mutate(idpartner = ifelse(V0306 == 2 |
-                              V0306 == 3, #if head's partner
+  mutate(idpartner = ifelse(COND_UNIDADE_CONSUMO == 2, #if head's partner
                             yes = idhead,
                             no = "0"),
          idfather = ifelse(
-           malehead == 1 & 
-             (V0306 == 4 | V0306 == 5 | V0306 == 6), #if head's child and head is a man
+           malehead == 1 & COND_UNIDADE_CONSUMO == 3, #if head's child and head is a man
            yes = idmalehead,
            no = "0"),
          idmother = ifelse(
-           femalehead == 1 & 
-             (V0306 == 4 | V0306 == 5 | V0306 == 6), #if head's child and head is a woman
+           femalehead == 1 & COND_UNIDADE_CONSUMO == 3, #if head's child and head is a woman
            yes = idfemalehead,
            no  = "0"))
 
@@ -137,8 +129,8 @@ base_ids$dct <- "76"
 #Create sample weight (dwt), age (dag),gender (gdn), and urban region (drgur) variables
 base_ids <- base_ids %>% 
   rename(dwt = PESO_FINAL,
-         dag = V0403,
-         dgn = V0404,
+         dag = IDADE_ANOS,
+         dgn = V0405,
          drgur = TIPO_SITUACAO_REG)
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
@@ -152,8 +144,8 @@ base_ids$dms <- ifelse(base_ids$idpartner != 0, #has a partner
 #and that level 2 is the states
 
 base_drgn <- base_ids %>% 
-  mutate(drgn1 = substr(UF, 1, 1),
-         drgn2 = substr(UF, 1, 2))
+  mutate(drgn1 = substr(COD_UF, 1, 1),
+         drgn2 = substr(COD_UF, 1, 2))
 
 #EDUCATION
 
@@ -167,19 +159,22 @@ base_drgn <- base_ids %>%
 #6: Tertiary education 
 
 base_dec <- base_drgn %>% 
-  mutate(dec = case_when(is.na(V0419) ~ 0,
-                         V0419 == 1 ~ 1,
-                         V0419 == 2 ~ 1,
-                         V0419 == 3 ~ 2,
-                         (V0419 == 4 & dag < 12) ~ 2,
-                         (V0419 == 4 & dag >= 12) ~ 3,
-                         V0419 == 6 ~ 4,
-                         V0419 == 8 ~ 5,
-                         V0419 == 9 ~ 5,
-                         V0419 == 10 ~ 6,
-                         V0419 == 11 ~ 6,
-                         V0419 == 5 ~ 3,
-                         V0419 == 7 ~ 4))
+  mutate(dec = case_when(is.na(V0420) ~ 0,
+                         V0420 == 0 ~ 0,
+                         V0420 == 1 ~ 1,
+                         V0420 == 2 ~ 1,
+                         V0420 == 3 ~ 2,
+                         V0420 == 4 ~ 2,
+                         (V0420 == 5 & dag < 12) ~ 2,
+                         (V0420 == 5 & dag >= 12) ~ 3,
+                         V0420 == 6 ~ 3,
+                         V0420 == 7 ~ 4,
+                         V0420 == 8 ~ 4,
+                         V0420 == 9 ~ 5,
+                         V0420 == 10 ~ 4,
+                         V0420 == 11 ~ 6,
+                         V0420 == 12 ~ 6,
+                         V0420 == 13 ~ 6))
 
 #Create years of education (dey) variable 
 
@@ -191,21 +186,23 @@ base_dey <- base_dec %>%
 base_deh <- base_dey %>% 
   mutate(deh = case_when((is.na(V0425) & dec == 0) ~ 0,
                          (is.na(V0425) & dec != 0) ~ dec,
+                         V0425 == 0 ~ 0,
                          V0425 == 1 ~ 0,
                          V0425 == 2 ~ 1,
                          V0425 == 3 ~ 2,
                          V0425 == 4 ~ 2,
                          V0425 == 5 ~ 2,
                          V0425 == 6 ~ 3,
-                         V0425 == 7 ~ 3,
+                         V0425 == 7 ~ 4,
                          V0425 == 8 ~ 3,
-                         V0425 == 9 ~ 4,
+                         V0425 == 9 ~ 3,
                          V0425 == 10 ~ 4,
                          V0425 == 11 ~ 4,
                          V0425 == 12 ~ 5,
-                         V0425 == 13 ~ 5,
+                         V0425 == 13 ~ 4,
                          V0425 == 14 ~ 6,
-                         V0425 == 15 ~ 6))
+                         V0425 == 15 ~ 6,
+                         V0425 == 16 ~ 6))
 
 #LABOUR
 
