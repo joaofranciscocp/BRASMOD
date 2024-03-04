@@ -210,10 +210,12 @@ base_deh <- base_dey %>%
 #labour status information from RENDIMENTO_TRABALHO
 
 
-#Codes from the translator for labour earnings
-EMPLOYED <- translator_earnings$Codigo[translator_earnings$Descricao_3 == 'Empregado']
-SELF_EMPLOYED <- translator_earnings$Codigo[translator_earnings$Descricao_3 == 'Conta propria']
-EMPLOYER <- 53005
+#Codes for labour earnings
+EMPLOYED <- c(53001, 53002, 53003, 53004, 54015, 54018, 54020, 54036, 54037, 
+              54038, 55001, 55002, 55011, 55026, 55035, 55037, 55038, 55039,
+              55040, 55041, 55042, 55043, 55045, 55062, 55063)
+SELF_EMPLOYED <- c(53005, 55003)
+EMPLOYER <- 53006
 
 
 LABOUR_CODES <- c(EMPLOYED, SELF_EMPLOYED, EMPLOYER)
@@ -222,11 +224,11 @@ LABOUR_CODES <- c(EMPLOYED, SELF_EMPLOYED, EMPLOYER)
 RENDIMENTO_TRABALHO$V9001 <- substr(RENDIMENTO_TRABALHO$V9001, 1, 5)
 
 labour_status <- aggregate(
-  (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$V5302[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-  by = list(COD_UPA = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_DOM = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_UC = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            COD_INFORMANTE = (RENDIMENTO_TRABALHO %>% filter(SUB_QUADRO == 1))$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
+  (RENDIMENTO_TRABALHO %>% filter(COD_TIPO_OCUP == 1))$V5303[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+  by = list(COD_UPA = (RENDIMENTO_TRABALHO %>% filter(COD_TIPO_OCUP == 1))$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            NUM_DOM = (RENDIMENTO_TRABALHO %>% filter(COD_TIPO_OCUP == 1))$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            NUM_UC = (RENDIMENTO_TRABALHO %>% filter(COD_TIPO_OCUP == 1))$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
+            COD_INFORMANTE = (RENDIMENTO_TRABALHO %>% filter(COD_TIPO_OCUP == 1))$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
   FUN = function(x) paste(x[!is.na(x)], collapse = ""))
 
 base_les <- merge(base_deh,
@@ -239,14 +241,14 @@ base_les <- merge(base_deh,
 #Public sector workers
 
 base_lpb <- base_les %>% 
-  mutate(lpb = ifelse(!is.na(les) & (les == 2 | les == 4),
+  mutate(lpb = ifelse(!is.na(les) & les == 2,
                       yes = 1,
                       no = 0))
 
 #Domestic workers
 
 base_ldt <- base_lpb %>% 
-  mutate(ldt = ifelse(!is.na(les) & (les == 1),
+  mutate(ldt = ifelse(!is.na(les) & (les == 3),
                       yes = 1,
                       no = 0))
 
@@ -280,14 +282,17 @@ base_lse <- base_los %>%
 
 base_les2 <- base_lse %>% 
   mutate(les = case_when(les == 3 ~ 3,
-                         les == 4 ~ 3,
+                         les == 4 ~ 1,
                          les == 6 ~ 2,
                          les == 2 ~ 3,
                          les == 5 ~ 2,
                          les == 1 ~ 3,
-                         les == 7 ~ 9,
+                         les == 7 ~ 6,
+                         les == 8 ~ 9,
+                         les == 9 ~ 1,
                          (is.na(les) & dec > 1) ~ 6,
-                         (is.na(les) & dag >= 18 & dec <= 0) ~ 7,
+                         (is.na(les) & dag >= 14 & dec <= 0) ~ 7,
+                         (is.na(les) & dag < 14 & dec <= 0) ~ 9,
                          (is.na(les) & dec == 1) ~ 0))
 
 
