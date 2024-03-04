@@ -296,34 +296,27 @@ base_les2 <- base_lse %>%
                          (is.na(les) & dec == 1) ~ 0))
 
 
-#Get ISCO occupation codes
-labour_ocupation <- aggregate(
-  RENDIMENTO_TRABALHO$V53011[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-  by = list(COD_UPA = RENDIMENTO_TRABALHO$COD_UPA[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_DOM = RENDIMENTO_TRABALHO$NUM_DOM[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            NUM_UC = RENDIMENTO_TRABALHO$NUM_UC[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES],
-            COD_INFORMANTE = RENDIMENTO_TRABALHO$COD_INFORMANTE[RENDIMENTO_TRABALHO$V9001 %in% LABOUR_CODES]),
-  FUN = function(x) paste(x[!is.na(x)], collapse = "")) %>% 
-  mutate(loc = ifelse(x != "",
-                      yes = gsub('[^0-9]', '', x),
-                      no = 0))
+#Get ISCO occupation codes and create labour ocupation (loc) variable based on 1st digit
 
+labour_ocupation <- RENDIMENTO_TRABALHO %>% 
+  filter(COD_TIPO_OCUP == 1 & V9001 %in% LABOUR_CODES) %>%
+  mutate(loc = as.numeric(substr(V53011, 1,1))) %>% 
+  select(c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE", loc))
 
 base_loc <- merge(base_les2,
                   labour_ocupation,
                   by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
-                  all.x = T) 
-
-#Create labour ocupation (loc) variable based on 1st digit of ISCO
-base_loc <- base_loc %>% 
-  mutate(loc = substr(loc, 1,1))
+                  all.x = T) %>% 
+  mutate(loc = ifelse(!is.na(loc),
+                      yes = loc,
+                      no  = 0))
 
 #Get weekly hours worked
 
 labour_hours <- RENDIMENTO_TRABALHO %>% 
-  filter(V5314 < 999 & SUB_QUADRO == 1) %>% #999 means no reporting
-  mutate(weekly_hours_times_months = V5314*V9011) %>% 
+  filter(V53041 < 999 & COD_TIPO_OCUP == 1) %>% #999 means no reporting
+  mutate(weekly_hours_times_months = V53041*V9011) %>% 
   group_by(COD_UPA,NUM_DOM,NUM_UC, COD_INFORMANTE) %>% 
   summarise(lhw = sum(weekly_hours_times_months)/12) #maximum possible value reported is 120h/w
 
@@ -386,12 +379,13 @@ base_yse <- merge(base_yem,
 #Aggregate investment earnings by individuals
 
 #Codes from the translator for investment
-INVESTMENTS <- c(5401401, 5501201, 5501301, 5501601, 5501602, 5594401,
-                 5504801, 5506001, 5506101, 5600101, 5600201, 5600301,
-                 5600401, 5700101, 5700201, 5700301, 5700401)
+INVESTMENTS <- c(55005, 55006, 55008, 55010, 55014, 55044)
 
 #Substitute NAs in "# of months earned" for 1 
 OUTROS_RENDIMENTOS$V9011[is.na(OUTROS_RENDIMENTOS$V9011)] <- 1
+
+#Get only first 5 digits of codes
+OUTROS_RENDIMENTOS$V9001 <- substr(OUTROS_RENDIMENTOS$V9001, 1, 5)
 
 #Annualize and correct earnings for inflation
 OUTROS_RENDIMENTOS[, c('V8500','V8500_DEFLA')] <- apply(
