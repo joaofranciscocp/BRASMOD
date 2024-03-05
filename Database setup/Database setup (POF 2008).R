@@ -576,7 +576,7 @@ base_final_pof <- base %>%
 
 
 #Save base as a tab separated .txt 
-write.table(base_final_pof, file=paste0("Input\\BR_2018_b1.txt"),
+write.table(base_final_pof, file=paste0("Input\\BR_2008_b1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
 
