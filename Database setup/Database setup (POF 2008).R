@@ -27,6 +27,9 @@ RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\RENDIMENTO_TRAB
 OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENTOS_", 
                                      as.character(year), ".rds"))
 
+DESPESA_INDIVIDUAL <- readRDS(paste0("Database setup\\POF data\\DESPESA_INDIVIDUAL_", 
+                                     as.character(year), ".rds"))
+
 
 #DATABASE SETUP
 
@@ -382,7 +385,7 @@ base_yse <- merge(base_yem,
 INVESTMENTS <- c(55005, 55006, 55008, 55010, 55014, 55044)
 
 #Substitute NAs in "# of months earned" for 1 
-OUTROS_RENDIMENTOS$V9011[is.na(OUTROS_RENDIMENTOS$V9011)] <- 1
+OUTROS_RENDIMENTOS$V9011[is.na(OUTROS_RENDIMENTOS$V9011) | OUTROS_RENDIMENTOS$V9011 == 0] <- 1
 
 #Get only first 5 digits of codes
 OUTROS_RENDIMENTOS$V9001 <- substr(OUTROS_RENDIMENTOS$V9001, 1, 5)
@@ -391,7 +394,6 @@ OUTROS_RENDIMENTOS$V9001 <- substr(OUTROS_RENDIMENTOS$V9001, 1, 5)
 OUTROS_RENDIMENTOS[, c('V8500','V8500_DEFLA')] <- apply(
   OUTROS_RENDIMENTOS[, c('V8500','V8500_DEFLA')],2,
   function(vetor) (vetor * OUTROS_RENDIMENTOS$V9011 * OUTROS_RENDIMENTOS$FATOR_ANUALIZACAO)/12)
-
 
 investiment_earnings <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% INVESTMENTS],
@@ -427,9 +429,9 @@ base_yhh <- base_yiy %>%
 #income from rental of property (yprrt)
 
 #Codes for all sort of old age pensions
-PENSIONS_OLD_AGE <- c(5400401, 5400501, 5400601, 5400701,
-                      5403101, 5503301, 5504601, 5505001, 5506201,
-                      5506401, 5500301, 5500401, 5500501, 5500601, 5500701)
+PENSIONS_OLD_AGE <- c(54001, 54002, 55022, 55023, 55064,
+                      54003, 54004, 55065, 54005, 54023, 55025,
+                      55033, 55066)
 
 pensions_old_age_aggregate <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% PENSIONS_OLD_AGE],
@@ -448,7 +450,7 @@ base_poa <- merge(base_yhh,
                   all.x = T)
 
 #Codes for unemployment benefits
-UNEMPLOYMENT <-  c(5501701, 5501702)
+UNEMPLOYMENT <-  c(55017, 55017)
 
 unemployment_aggregate <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% UNEMPLOYMENT],
@@ -468,7 +470,7 @@ base_bun <- merge(base_poa,
 
 
 #BPC is an old age/disabled benefit stands for "Benefício de Prestação Continuada"
-BPC <- c(5400201)
+BPC <- c(54011)
 
 bpc_aggregate <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% BPC],
@@ -488,7 +490,7 @@ base_bdioa <- merge(base_bun,
 
 #Private transfers (donations)
 
-DONATIONS <- c(5401301)
+DONATIONS <- c(54032)
 
 donations_aggregate <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% DONATIONS],
@@ -509,7 +511,7 @@ base_ypt <- merge(base_bdioa,
 
 #Income from rental of property
 
-RENT <- c(5401401)
+RENT <- c(54008)
 
 rent_aggregate <- aggregate(
   OUTROS_RENDIMENTOS$V8500_DEFLA[OUTROS_RENDIMENTOS$V9001 %in% RENT],
@@ -543,9 +545,14 @@ base_ddi <- base_yprrt %>%
 
 #Formal employment
 
+#The old POF (2008-2009) has no information on formal employment.
+#We use SICs > 0 as a proxy for that
+
+SIC <- c(53501, 53502, 53503, 53504, 53505)
+
 formal_employment <- RENDIMENTO_TRABALHO %>% 
   group_by(COD_UPA,NUM_DOM,NUM_UC, COD_INFORMANTE) %>% 
-  summarise(lem = ifelse(any(V5304 == 1),
+  summarise(lem = ifelse(any(V53061 > 0),
                          yes = 1,
                          no = 0))
 
@@ -554,28 +561,14 @@ base_lem <- merge(base_ddi,
                   by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
-#Pension membership
-
-pension_membership <- RENDIMENTO_TRABALHO %>% 
-  group_by(COD_UPA,NUM_DOM,NUM_UC, COD_INFORMANTE) %>% 
-  summarise(lpm = ifelse(any(V5305 == 1),
-                         yes = 1,
-                         no = 0))
-
-base_lpm <- merge(base_lem,
-                  pension_membership,
-                  by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
-                  by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
-                  all.x = T)
-
-base <- base_lpm
+base <- base_lem
 
 #Select only variables for simulation
 
 base_final_pof <- base %>% 
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner,
          dct, dgn, drgn1, drgn2, drgur, dwt, dag, dms, dec, dey, deh, ddi,
-         les, lem, lpb, ldt, los, lse, yem, lhw, loc, lpm,
+         les, lem, lpb, ldt, los, lse, yem, lhw, loc,
          yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),
