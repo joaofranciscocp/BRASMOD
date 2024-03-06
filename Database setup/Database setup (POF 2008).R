@@ -18,16 +18,13 @@ year <- 2008
 
 #Read tables from POF data folder
 
-MORADOR <- readRDS(paste0("Database setup\\POF data\\MORADOR_", 
+MORADOR <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\MORADOR_", 
                           as.character(year), ".rds"))
 
-RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\RENDIMENTO_TRABALHO_", 
+RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\RENDIMENTO_TRABALHO_", 
                                       as.character(year), ".rds"))
 
-OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENTOS_", 
-                                     as.character(year), ".rds"))
-
-DESPESA_INDIVIDUAL <- readRDS(paste0("Database setup\\POF data\\DESPESA_INDIVIDUAL_", 
+OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\OUTROS_RENDIMENTOS_", 
                                      as.character(year), ".rds"))
 
 
@@ -563,6 +560,49 @@ base_lem <- merge(base_ddi,
                   all.x = T)
 base <- base_lem
 
+
+#EXPENDITURE VARIABLES
+
+#Read expenditure-related tables
+
+DESPESA_INDIVIDUAL <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\DESPESA_INDIVIDUAL_", 
+                                     as.character(year), ".rds")) %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+DESPESA_90DIAS <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\DESPESA_90DIAS_", 
+                             as.character(year), ".rds")) %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+DESPESA_12MESES <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\DESPESA_12MESES_", 
+                                 as.character(year), ".rds")) %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  mutate(V9011 = ifelse(is.na(V9011) | V9011 == 0, 1, V9011)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+CADERNETA_COLETIVA <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\CADERNETA_COLETIVA_", 
+                                  as.character(year), ".rds")) %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+
+
+
+
+
 #Select only variables for simulation
 
 base_final_pof <- base %>% 
@@ -578,6 +618,9 @@ base_final_pof <- base %>%
 #Save base as a tab separated .txt 
 write.table(base_final_pof, file=paste0("Input\\BR_2008_b1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
+
+
+
 
 
 
