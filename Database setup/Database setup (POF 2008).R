@@ -558,8 +558,6 @@ base_lem <- merge(base_ddi,
                   by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
-base <- base_lem
-
 
 #EXPENDITURE VARIABLES
 
@@ -598,9 +596,102 @@ CADERNETA_COLETIVA <- readRDS(paste0("Database setup\\POF data\\", as.character(
   mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
   select(idorighh, V9001, V8000_DEFLA_new)
 
+tables_pof <- do.call(rbind,
+                      list(DESPESA_INDIVIDUAL,
+                           DESPESA_90DIAS,
+                           DESPESA_12MESES,
+                           CADERNETA_COLETIVA)) %>% 
+  mutate(across(everything(), as.numeric))
 
+#Health expenditures
 
+#Health expenditure codes
+SAUDE <- c(29001:29049, 29300, 29999,
+           42001:42003, 42044, 42045,
+           42023, 42024,
+           42009:42012,
+           42004:42008, 42020:42022, 42025, 42028:42034, 42047,
+           42005,
+           42006,
+           42013:42019, 42043, 42026,
+           29301:29303, 29305, 29309, 29311, 29312, 42039:42031,
+           29304, 29310, 29313, 42007, 42026, 42027, 42035:42038, 42042, 42999)
 
+pof_xhl <- tables_pof %>% 
+  filter(V9001 %in% SAUDE) %>% 
+  group_by(idorighh) %>% 
+  summarise(xhl = sum(V8000_DEFLA_new))
+
+base_xhl <- merge(base_lem,
+                  pof_xhl,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xhl = ifelse(idperson == idhead,      
+                      yes = replace_na(xhl, 0),
+                      no = 0))
+
+#Education expenditure codes
+EDUCACAO <- c(49001, 49031, 49032,
+              49033,
+              28055, 49002, 49003, 49011, 49015, 49022, 49034, 49041, 49043, 49044,
+              49047, 49049, 49052, 49054, 49084, 49086:49092,
+              49006:49008, 49045,
+              32001, 32002, 32999, 49019, 49021, 49025, 49029,
+              48003, 48013, 48036, 49003, 49005, 49009, 49010, 49012:49014, 49016:49018,
+              49024, 49027, 49028, 49030, 49042, 49046, 49048, 49053, 49085, 49093, 49999)
+
+pof_xed <- tables_pof %>% 
+  filter(V9001 %in% EDUCACAO) %>% 
+  group_by(idorighh) %>% 
+  summarise(xed = sum(V8000_DEFLA_new))
+
+base_xed <- merge(base_xhl,
+                  pof_xed,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xed = ifelse(idperson == idhead,      
+                      yes = replace_na(xed, 0),
+                      no = 0))
+
+#Private pension expenditure codes
+PREVIDENCIA_PRIV <- c(48006)
+
+pof_xpp <- tables_pof %>% 
+  filter(V9001 %in% PREVIDENCIA_PRIV) %>% 
+  group_by(idorighh) %>% 
+  summarise(xpp = sum(V8000_DEFLA_new))
+
+base_xpp <- merge(base_xed,
+                  pof_xpp,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xpp = ifelse(idperson == idhead,      
+                      yes = replace_na(xpp, 0),
+                      no = 0))
+
+#Alimony expenditure codes
+PENSAO_ALIM <- c(48005)
+
+pof_xmp <- tables_pof %>% 
+  filter(V9001 %in% PENSAO_ALIM) %>% 
+  group_by(idorighh) %>% 
+  summarise(xmp = sum(V8000_DEFLA_new))
+
+base_xmp <- merge(base_xpp,
+                  pof_xmp,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xmp = ifelse(idperson == idhead,      
+                      yes = replace_na(xmp, 0),
+                      no = 0))
 
 
 #Select only variables for simulation
@@ -609,7 +700,8 @@ base_final_pof <- base %>%
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner,
          dct, dgn, drgn1, drgn2, drgur, dwt, dag, dms, dec, dey, deh, ddi,
          les, lem, lpb, ldt, los, lse, yem, lhw, loc,
-         yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh) %>% 
+         yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh,
+         xmp, xhl, xpp, xed) %>% 
   arrange(idhh) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
