@@ -134,12 +134,14 @@ base_ids <- base_ids %>%
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-#Create sample weight (dwt), age (dag),gender (gdn), and urban region (drgur) variables
+#Create sample weight (dwt), age (dag), gender (gdn), race (dra),
+#and urban region (drgur) variables
 base_ids <- base_ids %>% 
-  rename(dwt = PESO_FINAL,
-         dag = V0403,
-         dgn = V0404,
-         drgur = TIPO_SITUACAO_REG)
+  rename(dwt   = PESO_FINAL,
+         dag   = V0403,
+         dgn   = V0404,
+         drgur = TIPO_SITUACAO_REG,
+         dra   = V0405)
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
