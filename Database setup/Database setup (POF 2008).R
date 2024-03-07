@@ -704,6 +704,7 @@ codes_nat_acc <- unique(crosswalk_pof_nat_acc$code_nat_acc_2005)
 #We'll create a dataframe that will have a column for idhh,
 #and then one for every expenditure category in the National Accounts
 expenditures_nat_acc <- base_xmp %>% 
+  ungroup(idhh) %>% 
   select(idorighh) %>% 
   distinct()
 
@@ -732,28 +733,32 @@ for(code in codes_nat_acc){
 
 #Merge expenditure variables with the rest of the data
 
-base_expenditures_nat_acc <- merge(base_xmp,
-                                   expenditures_nat_acc,
-                                   by.x = "idorighh",
-                                   by.y = "idorighh",
-                                   all.x = T)
+base_nat_acc <- merge(base_xmp,
+                      expenditures_nat_acc,
+                      by.x = "idorighh",
+                      by.y = "idorighh",
+                      all.x = T)
 
 #To avoid double counting, we assign all expenditures to head
 
-base_expenditures_nat_acc <- base_expenditures_nat_acc %>% 
+base_nat_acc <- base_nat_acc %>% 
   mutate(across(starts_with("x"), ~ ifelse(idperson == idhead,      
                                            yes = replace_na(., 0),
                                            no = 0)))
 
 #Select only variables for simulation
 
-base_final_pof <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner,
-         dct, dgn, drgn1, drgn2, drgur, dwt, dag, dms, dec, dey, deh, ddi,
-         les, lem, lpb, ldt, los, lse, yem, lhw, loc,
-         yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh,
-         xmp, xhl, xpp, xed) %>% 
-  arrange(idhh) %>% 
+mandatory_vars <- c("idhh", "idperson", "idorighh", "idorigperson", "idfather", "idmother", "idpartner",
+                    "dct", "dgn", "drgn1", "drgn2", "drgur", "dwt", "dag", "dms", "dec", "dey", "deh", "ddi",
+                    "les", "lem", "lpb", "ldt", "los", "lse", "yem", "lhw", "loc",
+                    "yse", "yiy", "yprrt", "poa", "bun", "bdioa", "ypt", "yhh",
+                    "xmp", "xhl", "xpp", "xed")
+
+expenditure_vars <- as.vector(colnames(base_nat_acc %>% select(starts_with("x"))))
+
+base_final_pof <- base_nat_acc %>% 
+  select(mandatory_vars, expenditure_vars) %>% 
+  arrange(idhh, idperson) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 
