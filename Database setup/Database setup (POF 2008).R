@@ -126,12 +126,15 @@ base_ids <- base_ids %>%
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-#Create sample weight (dwt), age (dag),gender (gdn), and urban region (drgur) variables
+#Create sample weight (dwt), age (dag), gender (gdn), race (dra),
+#and urban region (drgur) variables
+
 base_ids <- base_ids %>% 
-  rename(dwt = PESO_FINAL,
-         dag = IDADE_ANOS,
-         dgn = V0405,
-         drgur = TIPO_SITUACAO_REG)
+  rename(dwt   = PESO_FINAL,
+         dag   = IDADE_ANOS,
+         dgn   = V0405,
+         drgur = TIPO_SITUACAO_REG,
+         dra   = V0429)
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -749,7 +752,7 @@ base_nat_acc <- base_nat_acc %>%
 #Select only variables for simulation
 
 mandatory_vars <- c("idhh", "idperson", "idorighh", "idorigperson", "idfather", "idmother", "idpartner",
-                    "dct", "dgn", "drgn1", "drgn2", "drgur", "dwt", "dag", "dms", "dec", "dey", "deh", "ddi",
+                    "dct", "dgn", "drgn1", "drgn2", "drgur", "dwt", "dag", "dms", "dec", "dey", "deh", "ddi", "dra",
                     "les", "lem", "lpb", "ldt", "los", "lse", "yem", "lhw", "loc",
                     "yse", "yiy", "yprrt", "poa", "bun", "bdioa", "ypt", "yhh",
                     "xmp", "xhl", "xpp", "xed")
