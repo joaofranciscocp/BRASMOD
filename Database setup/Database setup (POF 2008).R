@@ -693,6 +693,57 @@ base_xmp <- merge(base_xpp,
                       yes = replace_na(xmp, 0),
                       no = 0))
 
+#Get expenditure variables categorized by the System of National Accounts
+#We'll use those to apply effective tax rates based on Siqueira et al. (2010)
+
+crosswalk_pof_nat_acc <- read_xls("Database setup\\POF data\\2008\\crosswalk_pof_national-accounts_2008.xls") %>% 
+  mutate(code_pof = substr(code_pof, 1, 5))
+
+codes_nat_acc <- unique(crosswalk_pof_nat_acc$code_nat_acc_2005)
+
+#We'll create a dataframe that will have a column for idhh,
+#and then one for every expenditure category in the National Accounts
+expenditures_nat_acc <- base_xmp %>% 
+  select(idorighh) %>% 
+  distinct()
+
+#This loops goes through the National Account categories
+#and aggregates total household expenditure in each category.
+#We then add the result as a column in the dataframe above
+for(code in codes_nat_acc){
+  codes_pof_list <- unique(crosswalk_pof_nat_acc %>%   #Get POF codes from the crosswalk
+                             filter(code_nat_acc_2005 == code) %>% 
+                             pull(code_pof)) 
+  
+  expenditure_values <- tables_pof %>%       #Aggregate expenditures by household
+    filter(V9001 %in% codes_pof_list) %>% 
+    group_by(idorighh) %>% 
+    summarise(x = sum(V8000_DEFLA_new))
+  
+  
+  expenditures_nat_acc <- merge(expenditures_nat_acc, #Join aggregated expenditure values into dataframe created above
+                                expenditure_values,
+                                by.x = "idorighh",
+                                by.y = "idorighh",
+                                all.x = T)
+  
+  colnames(expenditures_nat_acc)[ncol(expenditures_nat_acc)] <- paste0("x", as.character(code)) #Rename column
+}
+
+#Merge expenditure variables with the rest of the data
+
+base_expenditures_nat_acc <- merge(base_xmp,
+                                   expenditures_nat_acc,
+                                   by.x = "idorighh",
+                                   by.y = "idorighh",
+                                   all.x = T)
+
+#To avoid double counting, we assign all expenditures to head
+
+base_expenditures_nat_acc <- base_expenditures_nat_acc %>% 
+  mutate(across(starts_with("x"), ~ ifelse(idperson == idhead,      
+                                           yes = replace_na(., 0),
+                                           no = 0)))
 
 #Select only variables for simulation
 
