@@ -15,7 +15,7 @@ setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
 
-year <- 2008
+year <- 2012
 
 pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year), ".RDS"))
 
