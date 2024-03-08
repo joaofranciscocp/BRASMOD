@@ -16,7 +16,7 @@ BRASMOD_directory <- gsub("/Database setup", "", file_directory)
 setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
-year = 2016
+year <- 2016
 
 pnad_raw <- get_pnadc(year = year,
                       interview = 5)
@@ -134,11 +134,17 @@ base_ids <- base_ids %>%
   mutate(dwt = V1032,
          dag = V2009,
          dgn = V2007) %>% 
-  mutate(dgn = case_when(dgn == "Homem" ~ 1,
+  mutate(dgn = case_when(dgn == "Homem"  ~ 1,
                          dgn == "Mulher" ~ 2),
          drgur = ifelse(V1022 == "Urbana",
                         yes = 1,
-                        no = 0))
+                        no = 0),
+         dra = case_when(V2010 == "Branca"   ~ 1,
+                         V2010 == "Preta"    ~ 2,
+                         V2010 == "Amarela"  ~ 3,
+                         V2010 == "Parda"    ~ 4,
+                         V2010 == "Indígena" ~ 5,
+                         V2010 == "Ignorado" ~ 9))
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -370,13 +376,10 @@ base_lpm <- base_lem %>%
                          VD4012 == "Não contribuinte" ~ 0))
 
 
-#Add input data year
-base <- base_lpm %>% 
-  mutate(sgl_s = year)
-
 #Select mandatory variables for Euromod and make final adjustments
-base_final_pnad <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, sgl_s, dct, drgn1, drgn2, drgur, dwt, dag,
+base_final_pnad <- base_lpm %>% 
+  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, 
+         dct, drgn1, drgn2, drgur, dwt, dra, dag,
          dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
@@ -384,122 +387,6 @@ base_final_pnad <- base %>%
 
 #Save base as a tab separated .txt 
 write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
-            quote=FALSE, sep='\t', row.names=FALSE)
-
-#
-##Save a version with all variables to add more in the future
-#write.table(base, file=paste0("pnad", as.character(year), " euromod raw.txt"),
-#            quote=FALSE, sep='\t', row.names=FALSE)
-
-
-#IMPUTE EXPENDITURE VARIABLES
-
-
-#Get total expenditure imputed data (lowest level of disaggregation)
-tables_expenditure_pnad <- read_rds("Expenditure imputation\\tables_pnad_totals.rds")
-
-#Get expenditure category codes
-tradutor <- read_xls("Expenditure imputation\\general_expenditure_translator.xls", )
-
-habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
-despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
-prestacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Prestação de imóvel"]
-impostos           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Impostos"]
-imovel             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Imóvel (reforma)" | 
-                                        tradutor$Descricao_3_novo == "Imóvel (aquisição)"]
-outras             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outras"]
-investimentos      <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outros investimentos"]
-cultura            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Recreação e cultura"]
-contribuicoes_trab <- tradutor$Codigo[tradutor$Descricao_3_novo == "Contribuições trabalhistas"]
-fumo               <- tradutor$Codigo[tradutor$Descricao_3_novo == "Fumo"]
-transporte         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Transporte"]
-alimentacao        <- tradutor$Codigo[tradutor$Descricao_3_novo == "Alimentacao"]
-serv_banc          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços bancários"]
-serv_pess          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços pessoais"]
-assist_saude       <- tradutor$Codigo[tradutor$Descricao_3_novo == "Assistencia a saude"]
-higiene            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Higiene e cuidados pessoais"]
-educacao           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Educacao"]
-vestuario          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Vestuario"]
-emprestimo         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Empréstimo"]
-prev_priv          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Previdência privada"]
-pensoes            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Pensões, mesadas e doações"]
-
-#Aggregate by expenditure category
-
-#Healthcare expenditures
-pnad_xhl <- tables_expenditure_pnad %>% 
-  filter(product_code %in% assist_saude) %>% 
-  group_by(idhh_pnad) %>% 
-  summarise(xhl = sum(value))
-
-#Education expenditures
-pnad_xed <- tables_expenditure_pnad %>% 
-  filter(product_code %in% educacao) %>% 
-  group_by(idhh_pnad) %>% 
-  summarise(xed = sum(value))
-
-#Private pension expenditures
-pnad_xpp <- tables_expenditure_pnad %>% 
-  filter(product_code %in% prev_priv) %>% 
-  group_by(idhh_pnad) %>% 
-  summarise(xpp = sum(value))
-
-#Alimony expenditures
-pnad_xmp <- tables_expenditure_pnad %>% 
-  filter(product_code == 48009) %>% 
-  group_by(idhh_pnad) %>% 
-  summarise(xmp = sum(value))
-
-
-#Get PNAD input database for BRASMOD
-pnad_input <- fread("Input\\pnad2018 euromod new.txt")
-
-base_xhl<- merge(pnad_input,
-                 pnad_xhl,
-                 by.x = "idhh",
-                 by.y = "idhh_pnad",
-                 all.x = T) %>% 
-  mutate(xhl = ifelse(xhl > 0,
-                      yes = replace_na(xhl, 0),
-                      no = 0))
-
-
-base_xed <- merge(base_xhl,
-                  pnad_xed,
-                  by.x = "idhh",
-                  by.y = "idhh_pnad",
-                  all.x = T) %>% 
-  mutate(xed = ifelse(xed > 0,
-                      yes = replace_na(xed, 0),
-                      no = 0))
-
-base_xpp <- merge(base_xed,
-                  pnad_xpp,
-                  by.x = "idhh",
-                  by.y = "idhh_pnad",
-                  all.x = T) %>% 
-  mutate(xpp = ifelse(xpp > 0,
-                      yes = replace_na(xpp, 0),
-                      no = 0))
-
-base_xmp <- merge(base_xpp,
-                  pnad_xmp,
-                  by.x = "idhh",
-                  by.y = "idhh_pnad",
-                  all.x = T) %>% 
-  mutate(xmp = ifelse(xmp > 0 & !is.na(xmp),
-                      yes = replace_na(xmp, 0),
-                      no = 0))
-
-base_final_pnad_expenditures <- base_xmp %>% 
-  mutate_all(~replace(., is.na(.), 0))
-
-#Set working directory to input folder
-
-setwd("Input")
-
-#Save base as a tab separated .txt 
-write.table(base_final_pnad_expenditures, file=paste0("pnad", as.character(2018), " euromod expenditures.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
 
