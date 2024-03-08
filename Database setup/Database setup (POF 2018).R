@@ -18,19 +18,19 @@ year <- 2018
 
 #Read tables from POF data folder
 
-MORADOR <- readRDS(paste0("Database setup\\POF data\\MORADOR_", 
+MORADOR <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\MORADOR_", 
                           as.character(year), ".rds"))
 
-RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\RENDIMENTO_TRABALHO_", 
+RENDIMENTO_TRABALHO <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\RENDIMENTO_TRABALHO_", 
                                       as.character(year), ".rds"))
 
-OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\OUTROS_RENDIMENTOS_", 
+OUTROS_RENDIMENTOS <- readRDS(paste0("Database setup\\POF data\\", as.character(year), "\\OUTROS_RENDIMENTOS_", 
                                      as.character(year), ".rds"))
 
 #DATA TRANSLATORS 
 #(CODES FOR PRODUCTS, CATEGORIES OF EXPENDITURES AND EARNINGS, ETC)
 
-translator_earnings <- read_xls("Database setup\\POF data\\earnings_translator_2018.xls")
+translator_earnings <- read_xls(paste0("Database setup\\POF data\\", as.character(year), "\\earnings_translator_2018.xls"))
 translator_earnings <- translator_earnings[-nrow(translator_earnings),]
 
 #DATABASE SETUP
@@ -317,7 +317,8 @@ base_loc <- merge(base_les2,
 
 #Create labour ocupation (loc) variable based on 1st digit of ISCO
 base_loc <- base_loc %>% 
-  mutate(loc = substr(loc, 1,1))
+  mutate(loc = substr(loc, 1,1)) %>% 
+  select(-x)
 
 #Get weekly hours worked
 
@@ -560,30 +561,200 @@ base_lem <- merge(base_ddi,
                   by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
                   all.x = T)
-#Pension membership
 
-pension_membership <- RENDIMENTO_TRABALHO %>% 
-  group_by(COD_UPA,NUM_DOM,NUM_UC, COD_INFORMANTE) %>% 
-  summarise(lpm = ifelse(any(V5305 == 1),
-                         yes = 1,
-                         no = 0))
 
-base_lpm <- merge(base_lem,
-                  pension_membership,
-                  by.x = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
-                  by.y = c("COD_UPA","NUM_DOM","NUM_UC", "COD_INFORMANTE"),
-                  all.x = T)
+#EXPENDITURE VARIABLES
 
-base <- base_lpm
+#Read expenditure-related tables
+
+DESPESA_COLETIVA <- readRDS("Database setup\\POF data\\2018\\DESPESA_COLETIVA_2018.rds") %>%  
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+  mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+DESPESA_INDIVIDUAL <- readRDS("Database setup\\POF data\\2018\\DESPESA_INDIVIDUAL_2018.rds") %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
+  mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+CADERNETA_COLETIVA <- readRDS("Database setup\\POF data\\2018\\CADERNETA_COLETIVA_2018.rds") %>%
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>%
+  mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
+  filter(as.numeric(V9002) <= 6) %>% 
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new)
+
+tables_pof <- do.call(rbind,
+                      list(DESPESA_COLETIVA, 
+                           DESPESA_INDIVIDUAL,
+                           CADERNETA_COLETIVA)) %>% 
+  mutate(across(everything(), as.numeric))
+
+#Codes for expenditure categories (already taken from POF's own categorization)
+
+tradutor <- read_xls("Database setup\\POF data\\2018\\general_expenditure_translator_2018.xls", )
+
+habitacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Habitacao"]
+despesas_diversas  <- tradutor$Codigo[tradutor$Descricao_3_novo == "Despesas diversas"]
+prestacao          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Prestação de imóvel"]
+impostos           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Impostos"]
+imovel             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Imóvel (reforma)" | 
+                                        tradutor$Descricao_3_novo == "Imóvel (aquisição)"]
+outras             <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outras"]
+investimentos      <- tradutor$Codigo[tradutor$Descricao_3_novo == "Outros investimentos"]
+cultura            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Recreação e cultura"]
+contribuicoes_trab <- tradutor$Codigo[tradutor$Descricao_3_novo == "Contribuições trabalhistas"]
+fumo               <- tradutor$Codigo[tradutor$Descricao_3_novo == "Fumo"]
+transporte         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Transporte"]
+alimentacao        <- tradutor$Codigo[tradutor$Descricao_3_novo == "Alimentacao"]
+serv_banc          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços bancários"]
+serv_pess          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Serviços pessoais"]
+assist_saude       <- tradutor$Codigo[tradutor$Descricao_3_novo == "Assistencia a saude"]
+higiene            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Higiene e cuidados pessoais"]
+educacao           <- tradutor$Codigo[tradutor$Descricao_3_novo == "Educacao"]
+vestuario          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Vestuario"]
+emprestimo         <- tradutor$Codigo[tradutor$Descricao_3_novo == "Empréstimo"]
+prev_priv          <- tradutor$Codigo[tradutor$Descricao_3_novo == "Previdência privada"]
+pensoes            <- tradutor$Codigo[tradutor$Descricao_3_novo == "Pensões, mesadas e doações"]
+
+#Health expenditures
+
+pof_xhl <- tables_pof %>% 
+  filter(V9001 %in% assist_saude) %>% 
+  group_by(idorighh) %>% 
+  summarise(xhl = sum(V8000_DEFLA_new))
+
+base_xhl <- merge(base_lem,
+                  pof_xhl,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xhl = ifelse(idperson == idhead,      
+                      yes = replace_na(xhl, 0),
+                      no = 0))
+#Education expenditures
+
+pof_xed <- tables_pof %>% 
+  filter(V9001 %in% educacao) %>% 
+  group_by(idorighh) %>% 
+  summarise(xed = sum(V8000_DEFLA_new))
+
+base_xed <- merge(base_xhl,
+                  pof_xed,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xed = ifelse(idperson == idhead,      
+                      yes = replace_na(xed, 0),
+                      no = 0))
+
+#Private pension expenditure 
+
+pof_xpp <- tables_pof %>% 
+  filter(V9001 %in% prev_priv) %>% 
+  group_by(idorighh) %>% 
+  summarise(xpp = sum(V8000_DEFLA_new))
+
+base_xpp <- merge(base_xed,
+                  pof_xpp,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xpp = ifelse(idperson == idhead,      
+                      yes = replace_na(xpp, 0),
+                      no = 0))
+
+#Alimony expenditure
+
+pof_xmp <- tables_pof %>% 
+  filter(V9001 == 48009) %>% 
+  group_by(idorighh) %>% 
+  summarise(xmp = sum(V8000_DEFLA_new))
+
+base_xmp <- merge(base_xpp,
+                  pof_xmp,
+                  by.x = "idorighh",
+                  by.y = "idorighh",
+                  all.x = T) %>% 
+  group_by(idhh) %>% #To avoid double counting, we assign all expenditures to head
+  mutate(xmp = ifelse(idperson == idhead,      
+                      yes = replace_na(xmp, 0),
+                      no = 0))
+#Get expenditure variables categorized by the System of National Accounts
+#We'll use those to apply effective tax rates based on Silveira et al.(2022)
+
+crosswalk_pof_nat_acc <- read_xlsx("Database setup\\POF data\\2018\\crosswalk_pof_national-accounts_2018.xlsx")
+
+codes_nat_acc <- unique(crosswalk_pof_nat_acc$code_nat_acc)
+
+#We'll create a dataframe that will have a column for idhh,
+#and then one for every expenditure category in the National Accounts
+expenditures_nat_acc <- base_xmp %>% 
+  ungroup(idhh) %>% 
+  select(idorighh) %>% 
+  distinct()
+
+#This loops goes through the National Account categories
+#and aggregates total household expenditure in each category.
+#We then add the result as a column in the dataframe above
+for(code in codes_nat_acc){
+  codes_pof_list <- unique(crosswalk_pof_nat_acc %>%   #Get POF codes from the crosswalk
+                             filter(code_nat_acc == code) %>% 
+                             pull(code_pof)) 
+  
+  expenditure_values <- tables_pof %>%       #Aggregate expenditures by household
+    filter(V9001 %in% codes_pof_list) %>% 
+    group_by(idorighh) %>% 
+    summarise(x = sum(V8000_DEFLA_new))
+  
+  
+  expenditures_nat_acc <- merge(expenditures_nat_acc, #Join aggregated expenditure values into dataframe created above
+                                expenditure_values,
+                                by.x = "idorighh",
+                                by.y = "idorighh",
+                                all.x = T)
+  
+  colnames(expenditures_nat_acc)[ncol(expenditures_nat_acc)] <- paste0("x", as.character(code)) #Rename column
+}
+
+#Merge expenditure variables with the rest of the data
+
+base_nat_acc <- merge(base_xmp,
+                      expenditures_nat_acc,
+                      by.x = "idorighh",
+                      by.y = "idorighh",
+                      all.x = T)
+
+#To avoid double counting, we assign all expenditures to head
+
+base_nat_acc <- base_nat_acc %>% 
+  mutate(across(starts_with("x"), ~ ifelse(idperson == idhead,      
+                                           yes = replace_na(., 0),
+                                           no = 0)))
 
 #Select only variables for simulation
 
-base_final_pof <- base %>% 
-  select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner,
-         dct, dgn, drgn1, drgn2, drgur, dwt, dag, dms, dec, dey, deh, ddi,
-         les, lem, lpb, ldt, los, lse, yem, lhw, loc, lpm,
-         yse, yiy, yprrt, poa, bun, bdioa, ypt, yhh) %>% 
-  arrange(idhh) %>% 
+mandatory_vars <- c("idhh", "idperson", "idorighh", "idorigperson", "idfather", "idmother", "idpartner",
+                    "dct", "dgn", "drgn1", "drgn2", "drgur", "dwt", "dag", "dms", "dec", "dey", "deh", "ddi", "dra",
+                    "les", "lem", "lpb", "ldt", "los", "lse", "yem", "lhw", "loc",
+                    "yse", "yiy", "yprrt", "poa", "bun", "bdioa", "ypt", "yhh",
+                    "xmp", "xhl", "xpp", "xed")
+
+expenditure_vars <- as.vector(colnames(base_nat_acc %>% select(starts_with("x"))))
+
+
+base_final_pof <- base_nat_acc %>% 
+  select(mandatory_vars, expenditure_vars) %>% 
+  arrange(idhh, idperson) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 
