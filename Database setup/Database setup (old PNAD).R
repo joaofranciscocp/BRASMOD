@@ -15,7 +15,7 @@ setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
 
-year <- 2009
+year <- 2008
 
 pnad <- readRDS(paste0("Database setup\\Old PNAD data\\pnad", as.character(year), ".RDS"))
 
@@ -122,7 +122,8 @@ base_ids <- base_ids %>%
 base_ids$dct <- "76"
 
 
-#Create sample weight (dwt), age (dag), urban (drgur) and gender (gdn) variables
+#Create sample weight (dwt), age (dag), gender (gdn), race (dra),
+#and urban region (drgur) variables
 base_ids <- base_ids %>% 
   mutate(dwt = v4729,
          dag = v8005,
@@ -131,7 +132,13 @@ base_ids <- base_ids %>%
                          dgn == 4 ~ 2),
          drgur = ifelse(v4728 <= 3,
                         yes = 1,
-                        no = 0))
+                        no = 0),
+         dra   = case_when(v0404 == 2 ~ 1,
+                           v0404 == 4 ~ 2,
+                           v0404 == 6 ~ 3,
+                           v0404 == 8 ~ 4,
+                           v0404 == 0 ~ 5,
+                           v0404 == 9 ~ 9))
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -460,7 +467,7 @@ base <- base_lpm
 #Select mandatory variables for Euromod and make final adjustments
 base_final_pnad <- base %>% 
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, 
-         dct, drgn1, drgn2, drgur, dgn, dwt, dag, dms, dec, dey, deh, ddi,
+         dct, drgn1, drgn2, drgur, dgn, dra, dwt, dag, dms, dec, dey, deh, ddi,
          les, lem, lpb, ldt, los, lse, loc, lhw, lpm,   
          yem, yse, yiy, yprrt, poa, bunyn, bdioa, ypt, yhh) %>% 
   mutate(across(everything(), as.character),
