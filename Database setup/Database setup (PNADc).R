@@ -16,7 +16,7 @@ BRASMOD_directory <- gsub("/Database setup", "", file_directory)
 setwd(BRASMOD_directory)
 
 #CHOOSE YEAR FOR PNAD SURVEY
-year <- 2016
+year <- 2019
 
 pnad_raw <- get_pnadc(year = year,
                       interview = 5)
