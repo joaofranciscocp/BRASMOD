@@ -12,9 +12,14 @@ BRASMOD_directory <- gsub("/Database setup", "", file_directory)
 
 setwd(BRASMOD_directory)
 
-#CHOOSE YEAR AND GET POF DATA
+#CHOOSE YEAR AND FORMAL/INFORMAL SECTOR
 
 year <- 2018
+
+#This will be important for determining taxes on consumption
+#If set to "no", informal sector expenditures will be "hidden"
+#This is done to induce them not paying taxes
+include_informal_sector <- "no" 
 
 #Read tables from POF data folder
 
@@ -569,32 +574,76 @@ base_lem <- merge(base_ddi,
 
 DESPESA_COLETIVA <- readRDS("Database setup\\POF data\\2018\\DESPESA_COLETIVA_2018.rds") %>%  
   mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(V9004 = case_when(is.na(V9004) ~ as.character(999),
+                           nchar(V9004) == 3 ~ paste0("00", V9004),
+                           nchar(V9004) == 4 ~ paste0("0", V9004),
+                           V9004        == 0 ~ as.character(999),
+                           TRUE ~ as.character(V9004))) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(as.numeric(V9002) <= 6) %>% 
-  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
-  select(idorighh, V9001, V8000_DEFLA_new)
+  mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>%
+  mutate(TOR = substr(V9004, 1, 3)) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new, TOR)
 
 DESPESA_INDIVIDUAL <- readRDS("Database setup\\POF data\\2018\\DESPESA_INDIVIDUAL_2018.rds") %>% 
-  mutate(V9001 = str_sub(V9001, 1, -3)) %>% 
+  mutate(V9001 = str_sub(V9001, 1, -3)) %>%
+  mutate(V9004 = case_when(is.na(V9004) ~ as.character(999),
+                           nchar(V9004) == 3 ~ paste0("00", V9004),
+                           nchar(V9004) == 4 ~ paste0("0", V9004),
+                           V9004        == 0 ~ as.character(999),
+                           TRUE ~ as.character(V9004))) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>% 
   mutate(V9011 = ifelse(is.na(V9011), 1, V9011)) %>% 
   filter(as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*V9011*FATOR_ANUALIZACAO)/12) %>% 
-  select(idorighh, V9001, V8000_DEFLA_new)
+  mutate(TOR = substr(V9004, 1, 3)) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new, TOR)
 
 CADERNETA_COLETIVA <- readRDS("Database setup\\POF data\\2018\\CADERNETA_COLETIVA_2018.rds") %>%
   mutate(V9001 = str_sub(V9001, 1, -3)) %>%
+  mutate(V9004 = case_when(is.na(V9004) ~ as.character(999),
+                           nchar(V9004) == 3 ~ paste0("00", V9004),
+                           nchar(V9004) == 4 ~ paste0("0", V9004),
+                           V9004        == 0 ~ as.character(999),
+                           TRUE ~ as.character(V9004))) %>% 
   mutate(idorighh = paste0(COD_UPA, NUM_DOM, NUM_UC)) %>%
   filter(as.numeric(V9002) <= 6) %>% 
   mutate(V8000_DEFLA_new = (V8000_DEFLA*FATOR_ANUALIZACAO)/12) %>% 
-  select(idorighh, V9001, V8000_DEFLA_new)
+  mutate(TOR = substr(V9004, 1, 3)) %>% 
+  select(idorighh, V9001, V8000_DEFLA_new, TOR)
 
 tables_pof <- do.call(rbind,
-                      list(DESPESA_COLETIVA, 
+                      list(DESPESA_COLETIVA,
                            DESPESA_INDIVIDUAL,
-                           CADERNETA_COLETIVA)) %>% 
-  mutate(across(everything(), as.numeric))
+                           CADERNETA_COLETIVA)) 
+
+#Using the same classification as in Bachas, Gadenne and Jensen (2023)
+#See https://github.com/pierrebachas/Informality_Taxes_Redistribution
+
+crosswalk_TOR <- read_xlsx("Database setup\\POF data\\2018\\crosswalk_pof_TOR_2018.xlsx") %>% 
+  mutate(TOR_final = case_when(TOR_original %in% c(18,7,17,16)                ~ 1,   #Non-market
+                               TOR_original %in% c(29,26,14,6,27)             ~ 2,   #No store front
+                               TOR_original %in% c(8)                         ~ 3,   #Convenience and corner shops
+                               TOR_original %in% c(28,33,19)                  ~ 4,   #Specialized shops
+                               TOR_original %in% c(30,4)                      ~ 5,   #Large stores
+                               TOR_original %in% c(21,22,15,13,5,1,23,9,3,12) ~ 6,   #Institutions
+                               TOR_original %in% c(20)                        ~ 7,   #Service from individual
+                               TOR_original %in% c(25,10)                     ~ 8,   #Entertainement
+                               TOR_original %in% c(2,24)                      ~ 9,   #Informal entertainement
+                               TOR_original %in% c(31,32)                     ~ 99))  %>% #Unspecified
+  select(local_3dig, TOR_final)
+
+
+
+tables_pof <- merge(tables_pof,
+                    crosswalk_TOR,
+                    by.x = "TOR",
+                    by.y = "local_3dig",
+                    all.x = T) %>% 
+  mutate(formal = ifelse(TOR_final %in% c(1,2,3,7,9),
+                         yes = 0,
+                         no  = 1))
 
 #Codes for expenditure categories (already taken from POF's own categorization)
 
@@ -689,6 +738,8 @@ base_xmp <- merge(base_xpp,
   mutate(xmp = ifelse(idperson == idhead,      
                       yes = replace_na(xmp, 0),
                       no = 0))
+
+
 #Get expenditure variables categorized by the System of National Accounts
 #We'll use those to apply effective tax rates based on Silveira et al.(2022)
 
@@ -702,6 +753,14 @@ expenditures_nat_acc <- base_xmp %>%
   ungroup(idhh) %>% 
   select(idorighh) %>% 
   distinct()
+
+
+#If informal sector should be ignored, such expenditures are set to 0 for the
+#purposes of taxation
+if(include_informal_sector == "no"){
+  tables_pof <<- tables_pof %>% 
+    mutate(V8000_DEFLA_new = V8000_DEFLA_new*formal)
+}
 
 #This loops goes through the National Account categories
 #and aggregates total household expenditure in each category.
@@ -760,8 +819,14 @@ base_final_pof <- base_nat_acc %>%
 
 
 #Save base as a tab separated .txt 
-write.table(base_final_pof, file=paste0("Input\\BR_2018_b1.txt"),
-            quote=FALSE, sep='\t', row.names=FALSE)
+if(include_informal_sector == "no"){
+  write.table(base_final_pof, file=paste0("Input\\BR_2018_b2.txt"),
+              quote=FALSE, sep='\t', row.names=FALSE)
+} else{
+  write.table(base_final_pof, file=paste0("Input\\BR_2018_b1.txt"),
+              quote=FALSE, sep='\t', row.names=FALSE)
+}
+
 
 
 
