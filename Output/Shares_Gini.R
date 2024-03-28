@@ -68,21 +68,21 @@ bra_2018_hh <- bra_2018_hh[order(bra_2018_hh$ils_dispy), ]
 ### Analysis--------------------------------------------------------------------
 
 ## Gini-------------------------------------------------------------------------
-weighted.gini(bra_2018_hh$ils_dispy, bra_2018_hh$dwt)
-weighted.gini(bra_2018_ind$ils_dispy, bra_2018_ind$dwt)
+gini_hh <- weighted.gini(bra_2018_hh$ils_dispy, bra_2018_hh$dwt)
+gini_ind <- weighted.gini(bra_2018_ind$ils_dispy, bra_2018_ind$dwt)
 
 ## Gini index weighted by race--------------------------------------------------
 
 # Filtering individual Brasmod data by race
-race_1_Gini <- bra_2018_ind %>% 
+race_1_gini <- bra_2018_ind %>% 
   filter(dra==1) #dra == 1, white people
 
-race_2_4_Gini <- bra_2018_ind %>% 
+race_2_4_gini <- bra_2018_ind %>% 
   filter(dra==2 | dra==4) #dra == 2, black people; dra == 4, people of colour.
 
 #Calculating Gini in race group of interest
-weighted.gini(race_1_Gini$ils_dispy, race_1_Gini$dwt)
-weighted.gini(race_2_4_Gini$ils_dispy, race_2_4_Gini$dwt)
+gini_race_1 <- weighted.gini(race_1_Gini$ils_dispy, race_1_Gini$dwt)
+gini_race_2_4 <- weighted.gini(race_2_4_Gini$ils_dispy, race_2_4_Gini$dwt)
 
 #Using household data
 #base2 <- bra_2018_hh %>% 
@@ -97,15 +97,15 @@ weighted.gini(race_2_4_Gini$ils_dispy, race_2_4_Gini$dwt)
 
 ## Gini index weighted by gender------------------------------------------------
 
-gender_1_Gini <- bra_2018_ind %>% 
+gender_1_gini <- bra_2018_ind %>% 
   filter(dgn==1) #dgn == 1, man
 
-gender_2_Gini <- bra_2018_ind %>% 
+gender_2_gini <- bra_2018_ind %>% 
   filter(dgn==2) #dgn == 2, woman
 
 #Calculating Gini in gender group of interest
-weighted.gini(gender_1_Gini$ils_dispy, gender_1_Gini$dwt)
-weighted.gini(gender_2_Gini$ils_dispy, gender_2_Gini$dwt)
+gini_gender_1 <- weighted.gini(gender_1_Gini$ils_dispy, gender_1_Gini$dwt)
+gini_gender_2 <- weighted.gini(gender_2_Gini$ils_dispy, gender_2_Gini$dwt)
 
 #Using household data
 #base2 <- bra_2018_hh %>% 
@@ -121,23 +121,23 @@ weighted.gini(gender_2_Gini$ils_dispy, gender_2_Gini$dwt)
 ## Gini index weighted by race and gender---------------------------------------
 
 # Filtering individual Brasmod data by gender
-gen_1_race_1_Gini <- bra_2018_ind %>% 
+gen_1_race_1_gini <- bra_2018_ind %>% 
   filter(dgn==1 & dra==1) #dgn ==1, dra == 1, white men
 
-gen_1_race_2_4_Gini <- bra_2018_ind %>% 
-  filter(dgn==1 & dra==2 | dra==4) #dgn ==1, dra==2, dra==4 black men
+gen_1_race_2_4_gini <- bra_2018_ind %>% 
+  filter(dgn==1 & dra==2 | dra==4) #dgn ==1, dra==2, dra==4 men of colour
 
-gen_2_race_1_Gini <- bra_2018_ind %>% 
+gen_2_race_1_gini <- bra_2018_ind %>% 
   filter(dgn==2 & dra==1) #dgn==2, dra==1, white women
 
-gen_2_race_2_4_Gini <- bra_2018_ind %>% 
-  filter(dgn==2 & dra==2 | dra==4) #dgn == 2, woman
+gen_2_race_2_4_gini <- bra_2018_ind %>% 
+  filter(dgn==2 & dra==2 | dra==4) #dgn == 2, women of colour
 
 #Calculating Gini in gender/race groups of interest
-weighted.gini(gen_1_race_1_Gini$ils_dispy, gen_1_race_1_Gini$dwt) # white men
-weighted.gini(gen_1_race_2_4_Gini$ils_dispy, gen_1_race_2_4_Gini$dwt) # black men
-weighted.gini(gen_2_race_1_Gini$ils_dispy, gen_2_race_1_Gini$dwt) # white men
-weighted.gini(gen_2_race_2_4_Gini$ils_dispy, gen_2_race_2_4_Gini$dwt)
+gini_race_1_gen_1 <- weighted.gini(gen_1_race_1_Gini$ils_dispy, gen_1_race_1_Gini$dwt) # white men
+gini_race_2_4_gen_1 <- weighted.gini(gen_1_race_2_4_Gini$ils_dispy, gen_1_race_2_4_Gini$dwt) # men of colour
+gini_race_1_gen_2 <- weighted.gini(gen_2_race_1_Gini$ils_dispy, gen_2_race_1_Gini$dwt) # white women
+gini_race_2_4_gen_2 <- weighted.gini(gen_2_race_2_4_Gini$ils_dispy, gen_2_race_2_4_Gini$dwt) #women of colour
 
 
 ## Income shares (general)------------------------------------------------------
@@ -206,7 +206,7 @@ rendimento.med$Decil <- names(decis)
 barplot(rendimento.med$RendMed, names.arg = rendimento.med$Decil, xlab = "Decil", ylab = "Average Income", col = "red", main = "Average Income by Deciles")
 
 
-# Generating list with min and max of quantiles 90%, 99% e 99,9%----------------
+# Generating list with min and max of quantiles 90%, 99% e 99,9%
 decis.topo <- lapply(lapply(as.list(c(paste0(sapply(c(.9, .99, .999), 
                                                     function(quantil) weighted.quantile(x = bra_2018_hh$ils_dispy,
                                                                                         w = bra_2018_hh$dwt,
@@ -219,12 +219,6 @@ decis.topo <- lapply(lapply(as.list(c(paste0(sapply(c(.9, .99, .999),
 # Naming quantiles
 names(decis.topo) <- c("10%", "1%", "0,1%")
 
-
-
-################################################################################
-################################################################################
-################################################################################
-################################################################################
 ## Average income per decile (by groups of interest)----------------------------
 
 # Vector to identify variable "dgn"
@@ -269,7 +263,7 @@ apropriacao_gen_race$Decil <- names(decis)
 apropriacao_gen_race$Grupo <- paste0(apropriacao_gen_race$Genero,"-", apropriacao_gen_race$Raca)
 
 
-### Rendimento medio por decil por grupo ###
+## Average income by decile by group--------------------------------------------
 
 rendimento_gen_race <- data.frame()
 
@@ -306,7 +300,7 @@ rendimento_gen_race$Decil <- names(decis)
 rendimento_gen_race$Grupo <- paste0(rendimento_gen_race$Genero,"-", rendimento_gen_race$Raca)
 
 
-### Participacao grupo por decil ###
+## Participation by group by decile---------------------------------------------
 
 participacao_gen_race <- data.frame()
 
@@ -332,16 +326,17 @@ for (gen in genero) {
   
 }
 
-# Atributir o nome
+# Naming columns
 participacao_gen_race$Genero <- c(rep("H",20), rep("M",20))
 participacao_gen_race$Raca <- c(rep(c(rep("B",10), rep("N",10)),2))
 participacao_gen_race$Decil <- names(decis)
 participacao_gen_race$Grupo <- paste0(participacao_gen_race$Genero,"-", participacao_gen_race$Raca)
 
-# Salvar o grafico a ser feito a seguir
+## Ploting graph----------------------------------------------------------------
+# Saving graph
 png("CompDemoDecil.png", width = 4800, height = 3200, res = 300)
 
-# Ajuste das margens para caber a legenda
+# Adjusting margins
 par(mar=c(5, 5, 5, 11), xpd=TRUE)
 par(mfrow = c(1,1))
 
@@ -375,7 +370,7 @@ dev.off()
 
 
 
-# Composiçao demográfica média população
+## Average demographic composition of population--------------------------------
 
 participacao.med <- data.frame()
 
@@ -393,9 +388,9 @@ for (gen in genero) {
   
 }
 
-### Composicao demografica do topo ###
+## Demographic composition of the top-------------------------------------------
 
-### Participacao grupo por decil ###
+# Participation by group by decile
 
 participacao.topo_gen_race <- data.frame()
 
@@ -429,10 +424,13 @@ participacao.topo_gen_race$Raca <- c(rep(c(rep("B",3), rep("N",3)),2))
 participacao.topo_gen_race$Decil <- names(decis.topo)
 participacao.topo_gen_race$Grupo <- paste0(participacao.topo_gen_race$Genero,"-", participacao.topo_gen_race$Raca)
 
-### Participacao de cada grupo dentro dos quantis do topo ###
+# Participation of each group in the top deciles--------------------------------
 
+## Plotting graph---------------------------------------------------------------
+#Saving graph
 png("CompDemoTopo.png", width = 4800, height = 3200, res = 300)
 
+# Adjusting margins
 par(mar=c(5, 5, 5, 11), xpd=TRUE)
 par(mfrow = c(1,1))
 
@@ -464,19 +462,7 @@ legend("right",
 
 dev.off()
 
-
-
-
-
-
-
-
-
-
-
-
-
-###########################################################################
+## Participation of the top 1% in the total income of the group-----------------
 
 # Generating list with min and max of quantiles 90%, 99% e 99,9%
 decis.topo <- lapply(lapply(as.list(c(paste0(sapply(c(.9, .99, .999), 
@@ -492,9 +478,8 @@ decis.topo <- lapply(lapply(as.list(c(paste0(sapply(c(.9, .99, .999),
 names(decis.topo) <- c("10%", "1%", "0,1%")
 
 
-### Participacao do 1% do topo no total da renda do grupo ###
 
-# Gerar lista com minimo e maximo dos quantis 90%, 99% e 99,9% por grupo 
+# Deciles
 decis.topo.grupo <- data.frame()
 
 for (gen in genero) {
@@ -517,13 +502,15 @@ for (gen in genero) {
   
 }
 
-# Atributir o nome
+# Naming columns
 decis.topo.grupo$Genero <- c(rep("H",6), rep("M",6))
 decis.topo.grupo$Raca <- c(rep(c(rep("B",3), rep("N",3)),2))
 decis.topo.grupo$Decil <- names(decis.topo)
 decis.topo.grupo$Grupo <- paste0(decis.topo.grupo$Genero,"-", decis.topo.grupo$Raca)
 
-### Apropriacao da renda de cada grupo demográfico por decil ###
+## Plotting graph---------------------------------------------------------------
+
+# Income appropriation by demographic group by decile
 
 png("ApropGrupoDecil.png", width = 4800, height = 3200, res = 300)
 
@@ -564,7 +551,7 @@ for(i in 1:4) {
 
 dev.off()
 
-# Calcular a concentracao dentro do grupo
+# Calculating concentration in each group:
 
 criterios <- list("HB" = list("Genero" = genero[1],
                               "Raca" = raca[[1]],
@@ -606,13 +593,13 @@ for (grupo in criterios) {
   
 }
 
-# Atributir o nome
+# Naming columns
 apropriacao.topo.grupo$Genero <- c(rep("H",6), rep("M",6))
 apropriacao.topo.grupo$Raca <- c(rep(c(rep("B",3), rep("N",3)),2))
 apropriacao.topo.grupo$Quantil <- names(decis.topo)
 apropriacao.topo.grupo$Grupo <- paste0(apropriacao.topo.grupo$Genero,"-", apropriacao.topo.grupo$Raca)
 
-### Apropriacao da renda pelo topo por grupo ###
+## Income appropriation by the top by group-------------------------------------
 
 apropriacao.topo <- data.frame()
 
@@ -641,16 +628,17 @@ for (gen in genero) {
   
 }
 
-# Atributir o nome
+# Naming columns
 apropriacao.topo$Genero <- c(rep("H",nrow(apropriacao.topo)/2), rep("M",nrow(apropriacao.topo)/2))
 apropriacao.topo$Raca <- c(rep(c(rep("B",(nrow(apropriacao.topo)/4)), rep("N",(nrow(apropriacao.topo)/4))),2))
 apropriacao.topo$Decil <- names(decis.topo)
 apropriacao.topo$Grupo <- paste0(apropriacao.topo$Genero,"-", apropriacao.topo$Raca)
 
-### Apropriacao da renda no topo de cada grupo ###
-
+## Plotting graph---------------------------------------------------------------
+# Saving image
 png("ApropGrupoTopo.png", width = 4800, height = 3200, res = 300)
 
+# Adjusting margins
 par(mar=c(5, 5, 5, 5), xpd=TRUE)
 par(mfrow = c(2,2))
 
@@ -688,10 +676,12 @@ for(i in 1:4) {
 
 dev.off()
 
-### Apropriacao da renda pelo topo ###
-
+## Plotting graph---------------------------------------------------------------
+# Income appropriation by the top
+#Saving image
 png("ApropTopo.png", width = 4800, height = 3200, res = 300)
 
+#Adjusting margins
 par(mar=c(5, 5, 5, 5), xpd=TRUE)
 par(mfrow = c(1,1))
 
@@ -725,7 +715,7 @@ dev.off()
 
 
 
-# Gerar lista com minimo e maximo dos decis por grupo
+# Generating list with max and min of deciles by group
 decis.grupo <- data.frame()
 
 for (gen in genero) {
@@ -754,13 +744,13 @@ for (gen in genero) {
   
 }
 
-# Atributir o nome
+# Naming columns
 decis.grupo$Genero <- c(rep("H",22), rep("M",22))
 decis.grupo$Raca <- c(rep(c(rep("B",11), rep("N",11)),2))
 decis.grupo$Decil <- c(paste(seq(0, .9, .1)), "Max")
 decis.grupo$Grupo <- paste0(decis.grupo$Genero,"-", decis.grupo$Raca)
 
-# Calcular a concentracao dentro do grupo
+# Calculating concentration inside groups---------------------------------------
 
 criterios <- list("HB" = list("Genero" = genero[1],
                               "Raca" = raca[[1]],
@@ -802,16 +792,17 @@ for (grupo in criterios) {
   
 }
 
-# Atributir o nome
+# Naming columns
 apropriacao.grupo$Genero <- c(rep("H",20), rep("M",20))
 apropriacao.grupo$Raca <- c(rep(c(rep("B",10), rep("N",10)),2))
 apropriacao.grupo$Grupo <- paste0(apropriacao.grupo$Genero,"-", apropriacao.grupo$Raca)
 
-### Apropriacao da renda ###
-
+## Plotting graph---------------------------------------------------------------
+# Income appropriation
+#Saving image
 png("ApropDecil.png", width = 4800, height = 3200, res = 300)
 
-# Ajuste das margens para caber a legenda
+# Adjusting margins
 par(mar=c(5, 5, 5, 5), xpd=TRUE)
 par(mfrow = c(1,1))
 
@@ -840,8 +831,6 @@ legend("topleft",
        bty = "n")
 
 dev.off()
-
-
 
 
 
