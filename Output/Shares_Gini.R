@@ -16,7 +16,7 @@ library(data.table)
 install.packages("dplyr")
 library(dplyr)
 
-## modi (Quantil ponderado por peso)--------------------------------------------
+## modi (wieghted quantiles)----------------------------------------------------
 install.packages("modi")
 library(modi)
 
