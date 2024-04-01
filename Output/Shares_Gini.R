@@ -1,28 +1,32 @@
 ### Packages--------------------------------------------------------------------
 
 ## tidyverse--------------------------------------------------------------------
-install.packages("tidyverse")
+# install.packages("tidyverse")
 library(tidyverse)
 
 ## haven------------------------------------------------------------------------
-install.packages("haven")
+# install.packages("haven")
 library(haven)
 
 ## data.table------------------------------------------------------------------- 
-install.packages("data.table")
+# install.packages("data.table")
 library(data.table)
 
 ## dplyr------------------------------------------------------------------------
-install.packages("dplyr")
+# install.packages("dplyr")
 library(dplyr)
 
-## modi (wieghted quantiles)----------------------------------------------------
-install.packages("modi")
+## modi (weighted quantiles)----------------------------------------------------
+# install.packages("modi")
 library(modi)
 
-## acid (Gini com pesos)--------------------------------------------------------
-install.packages("acid")
+## acid (Weighted Gini)--------------------------------------------------------
+# install.packages("acid")
 library(acid)
+
+## ineq (Weighted Gini)
+# install.packages("dineq")
+library(dineq)
 
 ### Opening output data - Brasmod-----------------------------------------------
 
@@ -71,6 +75,11 @@ bra_2018_hh <- bra_2018_hh[order(bra_2018_hh$ils_dispy), ]
 gini_hh <- weighted.gini(bra_2018_hh$ils_dispy, bra_2018_hh$dwt)
 gini_ind <- weighted.gini(bra_2018_ind$ils_dispy, bra_2018_ind$dwt)
 
+# Using dineq package
+gini.wtd(bra_2018_hh$ils_dispy, bra_2018_hh$dwt)
+
+############################### Usar índices para decomposição? Índice de Theil?
+
 ## Gini index weighted by race--------------------------------------------------
 
 # Filtering individual Brasmod data by race
@@ -84,8 +93,12 @@ race_2_4_gini <- bra_2018_ind %>%
 gini_race_1 <- weighted.gini(race_1_Gini$ils_dispy, race_1_Gini$dwt)
 gini_race_2_4 <- weighted.gini(race_2_4_Gini$ils_dispy, race_2_4_Gini$dwt)
 
+
 #Using household data
-#base2 <- bra_2018_hh %>% 
+
+# Calcular Gini por hh
+
+#base2 <- bra_2018_ind %>% 
   #mutate(ils_dispy_new = ifelse(ils_dispy < 0,
                                 #0,
                                 #ils_dispy))%>% 
@@ -158,6 +171,18 @@ decis <- lapply(lapply(as.list(c(paste0(sapply(seq(from = 0, to = .9, by = .1),
                 function(elemento) as.numeric(elemento[[1]]))
 
 
+# Chat gpt's version
+decis_chat_gpt <- map(seq(from = 0, to = 0.9, by = 0.1), ~{
+  quantil <- .x
+  decil <- weighted.quantile(bra_2018_hh$ils_dispy, bra_2018_hh$dwt, prob = quantil) -
+    max(bra_2018_hh$ils_dispy)
+  decil
+}) %>%
+  map(~str_split(., "-")[[1]])
+
+
+
+
 # Naming deciles
 names(decis) <- paste0(seq(0,.9,.1), "-", seq(.1,1,.1))
 
@@ -180,9 +205,51 @@ for(dec in decis) {
 
 apropriacao$Decil <- names(decis)
 
-# Plotting graph
-barplot(apropriacao$Apro, names.arg = apropriacao$Decil, xlab = "Decil", ylab = "Income Appropriation", col = "blue", main = "Income Appropriation by Deciles")
+#Apropriação ils_origy
 
+decis_origy <- lapply(lapply(as.list(c(paste0(sapply(seq(from = 0, to = .9, by = .1), 
+                                               function(quantil) weighted.quantile(bra_2018_hh$ils_origy,
+                                                                                   bra_2018_hh$dwt,
+                                                                                   prob = quantil)),
+                                        "-",
+                                        c(sapply(seq(0.1,.9,.1), 
+                                                 function(quantil) weighted.quantile(bra_2018_hh$ils_origy,
+                                                                                     bra_2018_hh$dwt,
+                                                                                     prob = quantil)),
+                                          max(bra_2018_hh$ils_origy))))),
+                       function(decil) strsplit(decil, "-")), 
+                function(elemento) as.numeric(elemento[[1]]))
+
+
+# Naming deciles
+names(decis_origy) <- paste0(seq(0,.9,.1), "-", seq(.1,1,.1))
+
+
+# Calculating income appropriation
+
+apropriacao_origy <- data.frame()
+
+for(dec in decis_origy) {
+  
+  apropriacao_origy <- rbind(apropriacao_origy,
+                       data.frame(Decil = paste(dec, collapse = "0"),
+                                  Apro = sum(bra_2018_hh$ils_origy[bra_2018_hh$ils_origy >= dec[1] &
+                                                                     bra_2018_hh$ils_origy <= dec[2]]*
+                                               bra_2018_hh$dwt[bra_2018_hh$ils_origy >= dec[1] &
+                                                                 bra_2018_hh$ils_origy <= dec[2]])/
+                                    sum(bra_2018_hh$dwt*bra_2018_hh$ils_origy)))
+  
+}
+
+apropriacao_origy$Decil <- names(decis_origy)
+
+# Plotting graph
+barplot(apropriacao_origy$Apro, names.arg = apropriacao_origy$Decil, 
+        xlab = "Decil", ylab = "Income Appropriation (origy)", 
+        col = "blue", main = "Income Appropriation by Deciles (origy)")
+
+
+# Correção por dados do IRPF? Corrigir input com dados de IRPF?
 
 ## Average income per decile (general)------------------------------------------
 
@@ -234,21 +301,21 @@ for (gen in genero) {
   
   for(rc in raca) {
     
-    for(dec in decis) {
+    for(dec in decis_origy) {
       
       apropriacao_gen_race <- rbind(apropriacao_gen_race,
                            data.frame(Genero = gen,
                                       Raca = paste(rc, collapse = "-"),
                                       Decil = paste(dec, collapse = "-"),
-                                      Apro = sum(bra_2018_ind$ils_dispy[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                          bra_2018_ind$ils_dispy <= dec[2] &
+                                      Apro = sum(bra_2018_ind$ils_origy[bra_2018_ind$ils_origy >= dec[1] &
+                                                                          bra_2018_ind$ils_origy <= dec[2] &
                                                                           bra_2018_ind$dgn == gen & 
                                                                          (bra_2018_ind$dra %in% rc)]*
-                                                   bra_2018_ind$dwt[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                      bra_2018_ind$ils_dispy <= dec[2] &
+                                                   bra_2018_ind$dwt[bra_2018_ind$ils_origy >= dec[1] &
+                                                                      bra_2018_ind$ils_origy <= dec[2] &
                                                                       bra_2018_ind$dgn == gen & 
                                                                        (bra_2018_ind$dra %in% rc)])/
-                                        sum(bra_2018_ind$dwt*bra_2018_ind$ils_dispy)))
+                                        sum(bra_2018_ind$dwt*bra_2018_ind$ils_origy)))
       
     }
     
@@ -259,7 +326,7 @@ for (gen in genero) {
 # Naming columns
 apropriacao_gen_race$Genero <- c(rep("H",nrow(apropriacao_gen_race)/2), rep("M",nrow(apropriacao_gen_race)/2))
 apropriacao_gen_race$Raca <- c(rep(c(rep("B",(nrow(apropriacao_gen_race)/4)), rep("N",(nrow(apropriacao_gen_race)/4))),2))
-apropriacao_gen_race$Decil <- names(decis)
+apropriacao_gen_race$Decil <- names(decis_origy)
 apropriacao_gen_race$Grupo <- paste0(apropriacao_gen_race$Genero,"-", apropriacao_gen_race$Raca)
 
 
@@ -271,18 +338,18 @@ for (gen in genero) {
   
   for(rc in raca) {
     
-    for(dec in decis) {
+    for(dec in decis_origy) {
       
       rendimento_gen_race <- rbind(rendimento_gen_race,
                           data.frame(Genero = gen,
                                      Raca = paste(rc, collapse = "-"),
                                      Decil = paste(dec, collapse = "-"),
-                                     RendMed = weighted.mean(x = bra_2018_ind$ils_dispy[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                                         bra_2018_ind$ils_dispy <= dec[2] &
+                                     RendMed = weighted.mean(x = bra_2018_ind$ils_origy[bra_2018_ind$ils_origy >= dec[1] &
+                                                                                         bra_2018_ind$ils_origy <= dec[2] &
                                                                                           bra_2018_ind$dgn == gen & 
                                                                                          (bra_2018_ind$dra %in% rc)],
-                                                             w = bra_2018_ind$dwt[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                                    bra_2018_ind$ils_dispy <= dec[2] &
+                                                             w = bra_2018_ind$dwt[bra_2018_ind$ils_origy >= dec[1] &
+                                                                                    bra_2018_ind$ils_origy <= dec[2] &
                                                                                     bra_2018_ind$dgn == gen & 
                                                                                      (bra_2018_ind$dra %in% rc)], na.rm = T)))
       
@@ -296,7 +363,7 @@ for (gen in genero) {
 # Atributir o nome
 rendimento_gen_race$Genero <- c(rep("H",20), rep("M",20))
 rendimento_gen_race$Raca <- c(rep(c(rep("B",10), rep("N",10)),2))
-rendimento_gen_race$Decil <- names(decis)
+rendimento_gen_race$Decil <- names(decis_origy)
 rendimento_gen_race$Grupo <- paste0(rendimento_gen_race$Genero,"-", rendimento_gen_race$Raca)
 
 
@@ -308,17 +375,17 @@ for (gen in genero) {
   
   for(rc in raca) {
     
-    for(dec in decis) {
+    for(dec in decis_origy) {
       
       participacao_gen_race <- rbind(participacao_gen_race,
                             data.frame(Genero = gen,
                                        Raca = paste(rc, collapse = "-"),
                                        Decil = paste(dec, collapse = "-"),
-                                       Part = sum(bra_2018_ind$dwt[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                     bra_2018_ind$ils_dispy <= dec[2] &
+                                       Part = sum(bra_2018_ind$dwt[bra_2018_ind$ils_origy >= dec[1] &
+                                                                     bra_2018_ind$ils_origy <= dec[2] &
                                                                      bra_2018_ind$dgn == gen & 
-                                                                      (bra_2018_ind$dra %in% rc)])/sum(bra_2018_ind$dwt[bra_2018_ind$ils_dispy >= dec[1] &
-                                                                                                                          bra_2018_ind$ils_dispy <= dec[2]])))
+                                                                      (bra_2018_ind$dra %in% rc)])/sum(bra_2018_ind$dwt[bra_2018_ind$ils_origy >= dec[1] &
+                                                                                                                          bra_2018_ind$ils_origy <= dec[2]])))
       
     }
     
@@ -329,7 +396,7 @@ for (gen in genero) {
 # Naming columns
 participacao_gen_race$Genero <- c(rep("H",20), rep("M",20))
 participacao_gen_race$Raca <- c(rep(c(rep("B",10), rep("N",10)),2))
-participacao_gen_race$Decil <- names(decis)
+participacao_gen_race$Decil <- names(decis_origy)
 participacao_gen_race$Grupo <- paste0(participacao_gen_race$Genero,"-", participacao_gen_race$Raca)
 
 ## Ploting graph----------------------------------------------------------------
@@ -357,7 +424,7 @@ barplot(info.grafico,
         cex.names = 1.5,
         cex.lab=1.5,
         xlab = "Decil e total população",
-        ylab = "Composição demográfica dos decis de renda (em %)")
+        ylab = "Composição demográfica dos decis_origy de renda (em %)")
 
 legend("right", 
        inset=c(-.09, 0), 
