@@ -252,6 +252,17 @@
       <SystemName>MTR_ES</SystemName>
     </ConditionalFormat_Systems>
   </ConditionalFormat>
+  <ConditionalFormat>
+    <ID>508080e3-b0a4-4a2e-aa46-6f9cd46f4730</ID>
+    <BackColor>FFFFC000</BackColor>
+    <ForeColor>no special color</ForeColor>
+    <Condition />
+    <BaseSystemName>MTR_DE</BaseSystemName>
+    <ConditionalFormat_Systems>
+      <ConditionalFormatID>508080e3-b0a4-4a2e-aa46-6f9cd46f4730</ConditionalFormatID>
+      <SystemName>MTR_BRA</SystemName>
+    </ConditionalFormat_Systems>
+  </ConditionalFormat>
   <Country>
     <ID>3FD74576-2E77-485C-9420-0A1A4C5114CB</ID>
     <Name>Marginal Tax Rates</Name>
@@ -3057,7 +3068,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>21</Order>
+      <Order>22</Order>
       <Policy>
         <ID>FED2E930-B7C2-4783-8C72-567A017E19C6</ID>
         <SystemID>9C757D69-97D9-4A02-A241-4FBCAFCB02BB</SystemID>
@@ -5849,7 +5860,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>9</Order>
+      <Order>10</Order>
       <Policy>
         <ID>B1F5D840-2449-47B4-BB9E-D55A4C3A02DA</ID>
         <SystemID>B6FCAE71-6EB5-49A9-ABD2-81AF46F27C61</SystemID>
@@ -8641,7 +8652,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>24</Order>
+      <Order>25</Order>
       <Policy>
         <ID>2CC11DE1-9354-4D92-A604-CC47AE0FD2D8</ID>
         <SystemID>2FF11540-35B6-4A50-AE88-0C6C0E086F9E</SystemID>
@@ -11433,7 +11444,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>25</Order>
+      <Order>26</Order>
       <Policy>
         <ID>35606D77-3D0F-4295-B485-84C54BD7D8DE</ID>
         <SystemID>3ADE4B3B-0EB8-4333-BAA4-C5497B6047AE</SystemID>
@@ -14225,7 +14236,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>20</Order>
+      <Order>21</Order>
       <Policy>
         <ID>C309E2F1-856E-47C0-A909-008575DC3B80</ID>
         <SystemID>853BA5AF-EE3F-4E86-B574-846FEE09F5BB</SystemID>
@@ -17017,7 +17028,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>23</Order>
+      <Order>24</Order>
       <Policy>
         <ID>0603DAAC-A15E-40F9-96F0-7CCFBDDCD9E3</ID>
         <SystemID>B79FCC7C-7017-49AB-90AA-9D7A5C7676E7</SystemID>
@@ -19809,7 +19820,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>12</Order>
+      <Order>13</Order>
       <Policy>
         <ID>C9764155-05BB-47D4-9F9B-7DAB64407392</ID>
         <SystemID>402326A8-BC13-4D9B-8E31-0EF8B668F61E</SystemID>
@@ -28185,7 +28196,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>17</Order>
+      <Order>18</Order>
       <Policy>
         <ID>37FE177F-BCA1-4F7A-BFEA-011C564C593F</ID>
         <SystemID>2CFC016D-61CF-46C1-9277-64B77B7D3599</SystemID>
@@ -33769,7 +33780,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>22</Order>
+      <Order>23</Order>
       <Policy>
         <ID>F30CF8D6-1802-47E0-AE78-D34E1E36A555</ID>
         <SystemID>F1E0564C-210D-4CFA-ABCD-B7A28E70CC24</SystemID>
@@ -36561,7 +36572,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>10</Order>
+      <Order>11</Order>
       <Policy>
         <ID>EEEE2A9F-644C-4C3D-B41C-77D27F0B57FC</ID>
         <SystemID>A955ED97-A24F-4D42-B1FB-30627C0EC44A</SystemID>
@@ -42145,7 +42156,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>13</Order>
+      <Order>14</Order>
       <Policy>
         <ID>D9E2CF8D-1430-43AA-AE68-A1784F533121</ID>
         <SystemID>718AF3C0-3882-4A52-9C68-585E85592054</SystemID>
@@ -44937,7 +44948,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>15</Order>
+      <Order>16</Order>
       <Policy>
         <ID>A8DC2D03-3947-4363-8725-24B9FECE53F0</ID>
         <SystemID>AF5AC8EE-35EA-46BC-8A9C-53CCC5EAEED3</SystemID>
@@ -47729,7 +47740,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>16</Order>
+      <Order>17</Order>
       <Policy>
         <ID>5618ce58-712c-4fb1-b2ae-15899f47352d</ID>
         <SystemID>aec5cb1f-bf52-4a2b-8859-64a9e89a85d0</SystemID>
@@ -50978,7 +50989,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>18</Order>
+      <Order>19</Order>
       <Policy>
         <ID>927e1da1-45b8-4ece-b5fa-484ac7d7b0d3</ID>
         <SystemID>dac68922-8175-4e41-8adc-fb96b2b02f43</SystemID>
@@ -54227,7 +54238,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>19</Order>
+      <Order>20</Order>
       <Policy>
         <ID>7ac18625-5010-4264-95e1-0e3760078318</ID>
         <SystemID>255f1433-3f7f-41f9-bec1-f0ac7c47ae4d</SystemID>
@@ -57650,7 +57661,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>14</Order>
+      <Order>15</Order>
       <Policy>
         <ID>cc52c945-6624-4c83-8d72-695db4fb626a</ID>
         <SystemID>1951eb7a-eed8-4fcd-9359-078a045cdbe8</SystemID>
@@ -64496,7 +64507,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>8</Order>
+      <Order>9</Order>
       <Year />
       <Policy>
         <ID>dc772810-6486-482d-9d26-279493f91c13</ID>
@@ -67920,7 +67931,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>11</Order>
+      <Order>12</Order>
       <Year />
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -71323,6 +71334,3431 @@
           <Parameter>
             <ID>656a1c2c-1f2c-46d2-91e0-3823cb6840e4</ID>
             <FunctionID>ae163428-ab3a-4d02-92f9-ec125732ea9e</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+    </System>
+    <System>
+      <ID>c0d74acb-4d76-448e-894b-fed04b76d98a</ID>
+      <Name>MTR_BRA</Name>
+      <CountryID>3FD74576-2E77-485C-9420-0A1A4C5114CB</CountryID>
+      <CurrencyOutput>euro</CurrencyOutput>
+      <CurrencyParam>euro</CurrencyParam>
+      <ExchangeRateEuro>1</ExchangeRateEuro>
+      <HeadDefInc>ils_OrigY</HeadDefInc>
+      <Private>no</Private>
+      <Order>8</Order>
+      <Year />
+      <Comment><![CDATA[]]></Comment>
+      <Policy>
+        <ID>3cf2d92f-67e4-4718-854e-4be189451289</ID>
+        <SystemID>c0d74acb-4d76-448e-894b-fed04b76d98a</SystemID>
+        <Name>ao_control_MTR</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: ADD-ON CONTROL]]></Comment>
+        <PrivateComment />
+        <Order>1</Order>
+        <Switch>on</Switch>
+        <Private />
+        <Color>-1</Color>
+        <Function>
+          <ID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Applic</Name>
+          <Comment><![CDATA[DETERMINE TO WHICH SYSTEMS APPLICABLE]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>0d99c1db-0fd7-44c8-9a1f-2725c9b92370</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>description</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[Marginal Tax Rate Calculations]]></Value>
+            <Order>0</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9e8fdaa2-12fb-4c11-889b-50c88b5bc4ba</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>sys</Name>
+            <Comment><![CDATA[can use wild symbols (? and *)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[bra_20*]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>306918b9-9408-4ed8-94c6-e9552f88f305</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>sys</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5f1ca22c-d071-40f3-85da-9ed656bb4ce8</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>sys</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>34943884-3d61-4fd2-818d-28f3c07d8c1f</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>sys</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fc097e3a-2dd6-45de-8dc2-ad993b986453</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>sys</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>69af6282-c34e-4fd2-ade0-6627ca8139fc</ID>
+            <FunctionID>700ddb6e-52c0-4900-bc2c-acd2ec55e004</FunctionID>
+            <Name>SysNA</Name>
+            <Comment><![CDATA[ee_2001 & si_2005 private systems are not applicable]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>216b4002-9107-4788-801b-609eb9d2817a</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Pol</Name>
+          <Comment><![CDATA[ADD POLICY: preparations for marginal tax rate calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8d004384-ec1f-4f34-ad28-0dea135181b3</ID>
+            <FunctionID>216b4002-9107-4788-801b-609eb9d2817a</FunctionID>
+            <Name>pol_name</Name>
+            <Comment><![CDATA[store initial values, define loops etc]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_PREP]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>216910c6-edad-41fc-af73-36757d63ff42</ID>
+            <FunctionID>216b4002-9107-4788-801b-609eb9d2817a</FunctionID>
+            <Name>Insert_After_Pol</Name>
+            <Comment><![CDATA[(IT: tax evasion correction has to be done first)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[random_=cc=]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>f4f23610-ad93-441d-9b2b-b2bc5318c6e9</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Pol</Name>
+          <Comment><![CDATA[ADD POLICY: initialisations for marginal tax rate calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>8987bafd-1d80-468e-b5e2-92909da70552</ID>
+            <FunctionID>f4f23610-ad93-441d-9b2b-b2bc5318c6e9</FunctionID>
+            <Name>pol_name</Name>
+            <Comment><![CDATA[e.g. adjust earnings]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_INIT]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>65a791b9-9a35-4614-9b40-0522162d36da</ID>
+            <FunctionID>f4f23610-ad93-441d-9b2b-b2bc5318c6e9</FunctionID>
+            <Name>insert_after_pol</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_PREP]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7560bdb5-7c52-4d71-aaa2-cba8a6ce1c92</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Pol</Name>
+          <Comment><![CDATA[ADD POLICY: store each iteration's results for marginal tax rate calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>3</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>68785be3-696f-4d6c-878f-0c1cbeb0115c</ID>
+            <FunctionID>7560bdb5-7c52-4d71-aaa2-cba8a6ce1c92</FunctionID>
+            <Name>pol_name</Name>
+            <Comment><![CDATA[i.e. end of loops; restore ils_earns components]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_STORE]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5521d025-f186-49b7-8269-7c673b2787ae</ID>
+            <FunctionID>7560bdb5-7c52-4d71-aaa2-cba8a6ce1c92</FunctionID>
+            <Name>insert_after_pol</Name>
+            <Comment><![CDATA[note that inserted *after* standard output policy]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[output_std_=cc=]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>31f59a27-5626-4086-8bdf-349804df3746</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Pol</Name>
+          <Comment><![CDATA[ADD POLICY: calculation of marginal tax rates]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>b66545f5-374c-48a8-bc96-bd259fc8b557</ID>
+            <FunctionID>31f59a27-5626-4086-8bdf-349804df3746</FunctionID>
+            <Name>pol_name</Name>
+            <Comment><![CDATA[calculate indicators and output selected variables]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_CALC]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ab3837b5-cfa8-4b0c-b5d4-c095f3ca6d7e</ID>
+            <FunctionID>31f59a27-5626-4086-8bdf-349804df3746</FunctionID>
+            <Name>insert_after_pol</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[MTR_STORE]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>69adc852-3a06-4316-bf5b-3dc4a63dd56d</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_Par</Name>
+          <Comment><![CDATA[MODIFY STANDARD OUTPUT POLICY]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>5</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>cda55150-79ed-45c0-93b8-21b86ff230de</ID>
+            <FunctionID>69adc852-3a06-4316-bf5b-3dc4a63dd56d</FunctionID>
+            <Name>insert_func</Name>
+            <Comment><![CDATA[i.e. name of policy (sheet) and function row (by green numbers)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[output_std_=cc=_#1]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>315b18ed-d3be-4f96-a5d6-73bae1f67eeb</ID>
+            <FunctionID>69adc852-3a06-4316-bf5b-3dc4a63dd56d</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[new parameter (i.e. produce standard output only for the baseline)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[loopcount_base=1]]></Value>
+            <Order>3</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>afc062a6-01a0-4800-8de7-a3abb4004ea8</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_ExtensionSwitch</Name>
+          <Comment><![CDATA[use full take-up assumption (requires EM3)]]></Comment>
+          <PrivateComment />
+          <Order>6</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>3d99d444-d737-4e14-8f9d-d672de9c7010</ID>
+            <FunctionID>afc062a6-01a0-4800-8de7-a3abb4004ea8</FunctionID>
+            <Name>Extension_Name</Name>
+            <Comment><![CDATA[BE, EE, EL, FI, FR, HR, IE, LV, RO, ES, SK, PT]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1a281285-9509-4d9e-ad42-08ffbb0081f8</ID>
+            <FunctionID>afc062a6-01a0-4800-8de7-a3abb4004ea8</FunctionID>
+            <Name>Extension_Switch</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2cbc3da7-a495-4b6c-991f-dc2d1dffa63d</ID>
+            <FunctionID>afc062a6-01a0-4800-8de7-a3abb4004ea8</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>6b483055-b76d-4d78-a90b-80ac4a5740e8</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_ExtensionSwitch</Name>
+          <Comment><![CDATA[use tax compliance assumption (requires EM3)]]></Comment>
+          <PrivateComment />
+          <Order>7</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>af8183b6-21ac-4a52-a5df-b65d7c184420</ID>
+            <FunctionID>6b483055-b76d-4d78-a90b-80ac4a5740e8</FunctionID>
+            <Name>Extension_Name</Name>
+            <Comment><![CDATA[BG, EL, IT, RO]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ef8a7377-e55e-42ce-b929-49a3232c7ab5</ID>
+            <FunctionID>6b483055-b76d-4d78-a90b-80ac4a5740e8</FunctionID>
+            <Name>Extension_Switch</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1588b455-fd0e-4146-a39b-23229b1d9206</ID>
+            <FunctionID>6b483055-b76d-4d78-a90b-80ac4a5740e8</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>44629b17-d455-42dd-8770-821e067240c7</ID>
+            <FunctionID>6b483055-b76d-4d78-a90b-80ac4a5740e8</FunctionID>
+            <Name>Dataset</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>2b8bfeb5-e3f1-4a20-ad83-c5f7574caec0</ID>
+          <PolicyID>3cf2d92f-67e4-4718-854e-4be189451289</PolicyID>
+          <Name>AddOn_ExtensionSwitch</Name>
+          <Comment><![CDATA[switch on/off full year adjustments (requires EM3)]]></Comment>
+          <PrivateComment />
+          <Order>8</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>1e6875f6-2080-4c5d-ad26-4a8adf2c8b25</ID>
+            <FunctionID>2b8bfeb5-e3f1-4a20-ad83-c5f7574caec0</FunctionID>
+            <Name>Extension_Name</Name>
+            <Comment><![CDATA[LT]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5a884701-dfd0-4696-9e20-0c40d2554bf9</ID>
+            <FunctionID>2b8bfeb5-e3f1-4a20-ad83-c5f7574caec0</FunctionID>
+            <Name>Extension_Switch</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aa3e2719-1864-41d2-9e4a-b073d5364cae</ID>
+            <FunctionID>2b8bfeb5-e3f1-4a20-ad83-c5f7574caec0</FunctionID>
+            <Name>System</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</ID>
+        <SystemID>c0d74acb-4d76-448e-894b-fed04b76d98a</SystemID>
+        <Name>MTR_PREP</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: preparations for marginal tax rate calculations]]></Comment>
+        <PrivateComment />
+        <Order>3</Order>
+        <Switch>on</Switch>
+        <Private />
+        <Color>-1</Color>
+        <Function>
+          <ID>351d5d5e-b14d-4a07-b5a0-8e5bf15ab5ea</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>DefConst</Name>
+          <Comment><![CDATA[define constants]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>672248c2-3a67-4335-a776-8a9b7da0a770</ID>
+            <FunctionID>351d5d5e-b14d-4a07-b5a0-8e5bf15ab5ea</FunctionID>
+            <Name>$MARGIN</Name>
+            <Comment><![CDATA[change margin if required; increase income by x%/100 (see sheet: config); ]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0.03]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>09b22242-a13c-4ab9-971f-7ca235e8274e</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>DefTu</Name>
+          <Comment><![CDATA[define hh unit (to ensure exists)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>fc798876-56a3-4c2e-8afd-a6e3602c956d</ID>
+            <FunctionID>09b22242-a13c-4ab9-971f-7ca235e8274e</FunctionID>
+            <Name>name</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1a0b8605-01d5-47bb-ad28-01bc37c875c5</ID>
+            <FunctionID>09b22242-a13c-4ab9-971f-7ca235e8274e</FunctionID>
+            <Name>type</Name>
+            <Comment><![CDATA[comprises of all household members]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[HH]]></Value>
+            <Order>2</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0def3011-ab11-4a49-9364-1bd35f17db6d</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[country-specific adjustments]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>n/a</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>d11a3040-b3db-4c01-8f72-28e26faadd0c</ID>
+            <FunctionID>0def3011-ab11-4a49-9364-1bd35f17db6d</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[SK: store reported losses]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7b959b3c-c0bc-4f9a-8dee-978343848760</ID>
+            <FunctionID>0def3011-ab11-4a49-9364-1bd35f17db6d</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[FI: total self-employment income]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>51e35034-2cc2-4aa6-935b-e8fa019657ec</ID>
+            <FunctionID>0def3011-ab11-4a49-9364-1bd35f17db6d</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>824b1437-a3d7-4b20-9711-fdf8815a9057</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>Store</Name>
+          <Comment><![CDATA[STORE initial values (of input variables)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>5</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>464df2ac-0f5c-408b-b257-4a2fca838fb1</ID>
+            <FunctionID>824b1437-a3d7-4b20-9711-fdf8815a9057</FunctionID>
+            <Name>postfix</Name>
+            <Comment><![CDATA[ils_earns and its components are stored as x_backup]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[backup]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9d27e175-99d2-4fa4-a5e9-a7360173b1ce</ID>
+            <FunctionID>824b1437-a3d7-4b20-9711-fdf8815a9057</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[(i.e. ils_earns_backup, yem_backup, yse_backup)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns]]></Value>
+            <Order>2</Order>
+            <ValueType>incomelist</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ab340edf-997c-4b53-8e86-1946efc83d8c</ID>
+            <FunctionID>824b1437-a3d7-4b20-9711-fdf8815a9057</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[PL: yem]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bc4c7908-251e-4aed-a06c-23874d1b6ce3</ID>
+            <FunctionID>824b1437-a3d7-4b20-9711-fdf8815a9057</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[SK: gross self-empl profit]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0d72d22a-7f8f-42f4-9264-f471c24a4506</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>Loop</Name>
+          <Comment><![CDATA[DEFINE primary loop over tax-ben calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>6</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>999afa0c-21c5-4c8b-ae26-0a7519544349</ID>
+            <FunctionID>0d72d22a-7f8f-42f4-9264-f471c24a4506</FunctionID>
+            <Name>num_iterations</Name>
+            <Comment><![CDATA[1st iteration: standard tax-ben calculations]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[2]]></Value>
+            <Order>1</Order>
+            <ValueType>amount</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8ab3c261-99b4-446d-8be7-26b656e99dcb</ID>
+            <FunctionID>0d72d22a-7f8f-42f4-9264-f471c24a4506</FunctionID>
+            <Name>loop_id</Name>
+            <Comment><![CDATA[2nd iteration: tax-ben calculations with marginally increased income]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[base]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e3895dd3-d4a4-4f6c-aa1e-5cb51947a106</ID>
+            <FunctionID>0d72d22a-7f8f-42f4-9264-f471c24a4506</FunctionID>
+            <Name>start_after_pol</Name>
+            <Comment><![CDATA[loops over whole tax-benefit system including MTR_INIT and MTR_STORE]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr_prep]]></Value>
+            <Order>3</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>be3a9731-941f-4a2d-a479-d9b8a86db7f1</ID>
+            <FunctionID>0d72d22a-7f8f-42f4-9264-f471c24a4506</FunctionID>
+            <Name>stop_before_pol</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr_calc]]></Value>
+            <Order>4</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>30cc7871-b982-457a-a53c-662aa599add1</ID>
+          <PolicyID>39a2a2b1-704d-44dc-98fb-8cacd09e8daa</PolicyID>
+          <Name>UnitLoop</Name>
+          <Comment><![CDATA[DEFINE secondary loop over household members]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>8</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>a4891254-5f3b-4537-82b7-402df05fa8c8</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[loop is only carried out in the 2nd iteration of BASE-loop]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[loopcount_base=2]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>82f7cf7b-2246-41bf-873f-8794dae6c74c</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>elig_unit</Name>
+            <Comment><![CDATA[loop iterates as often over household as there are persons]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>95830c0f-f099-4031-a4e6-9810dd0cf5da</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>elig_unit_cond</Name>
+            <Comment><![CDATA[… with positive income as defined by ils_earns]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns>0]]></Value>
+            <Order>3</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b3f6303c-b3f8-488b-86e7-16808a2bb300</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>loop_id</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr]]></Value>
+            <Order>4</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>92ab8a27-e0d9-4055-9046-9581f19bc81a</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>first_pol</Name>
+            <Comment><![CDATA[loops over whole tax-benefit system including MTR_INIT and MTR_STORE]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr_init]]></Value>
+            <Order>5</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2c5d7dc4-d692-4024-9c40-24797e4e8dd9</ID>
+            <FunctionID>30cc7871-b982-457a-a53c-662aa599add1</FunctionID>
+            <Name>last_pol</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr_store]]></Value>
+            <Order>6</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>ecd90cd9-4a19-456a-8a08-d60869a79435</ID>
+        <SystemID>c0d74acb-4d76-448e-894b-fed04b76d98a</SystemID>
+        <Name>MTR_INIT</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: initialisations for marginal tax rate calculations]]></Comment>
+        <PrivateComment />
+        <Order>4</Order>
+        <Switch>on</Switch>
+        <Private />
+        <Color>-1</Color>
+        <Function>
+          <ID>083e2826-3701-4ee6-bcaa-bdf230967dbb</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>IlVarOp</Name>
+          <Comment><![CDATA[modify earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>fad7913d-eb19-48cb-9c89-83aba217d0df</ID>
+            <FunctionID>083e2826-3701-4ee6-bcaa-bdf230967dbb</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[… to increase it for the following tax-ben calc. where appropriate]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[loopcount_base=2]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5f585194-4328-4e6c-90c8-42e3a2258c58</ID>
+            <FunctionID>083e2826-3701-4ee6-bcaa-bdf230967dbb</FunctionID>
+            <Name>operator_il</Name>
+            <Comment><![CDATA[i.e. increase only in 2nd iteration of the primary loop, increase only for]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns]]></Value>
+            <Order>2</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e39c543f-52a9-46ce-89ee-953d304b094a</ID>
+            <FunctionID>083e2826-3701-4ee6-bcaa-bdf230967dbb</FunctionID>
+            <Name>operand</Name>
+            <Comment><![CDATA[one person in time within each household]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[1+(IsCurElig_mtr*$MARGIN)]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>346ed336-61d6-4480-bf18-936a76c48be1</ID>
+            <FunctionID>083e2826-3701-4ee6-bcaa-bdf230967dbb</FunctionID>
+            <Name>sel_var</Name>
+            <Comment><![CDATA[increase the main component of ils_earns]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[all]]></Value>
+            <Order>4</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>3ce000d1-5982-4775-be1e-d20c8870da08</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[country-specific adjustments]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>1</Order>
+          <Switch>n/a</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>971773bd-fe3a-4d97-af85-5c8981ad683e</ID>
+            <FunctionID>3ce000d1-5982-4775-be1e-d20c8870da08</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[make sure that yem is still the sum of its components]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>677f751e-4fa2-4174-8382-05fcc94ec242</ID>
+            <FunctionID>3ce000d1-5982-4775-be1e-d20c8870da08</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>75c7034f-150d-4e7f-89cb-7afbb42f84b9</ID>
+            <FunctionID>3ce000d1-5982-4775-be1e-d20c8870da08</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>54a7b5de-9d72-46e4-8a64-532f97e93019</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[country-specific adjustments]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>2</Order>
+          <Switch>n/a</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>ce8a7b79-6daf-4626-a42a-1b5b4fbf64eb</ID>
+            <FunctionID>54a7b5de-9d72-46e4-8a64-532f97e93019</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[make sure yse is still the sum of its components]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b6b2d865-a9b1-4f48-a1a2-25cd600e01b1</ID>
+            <FunctionID>54a7b5de-9d72-46e4-8a64-532f97e93019</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ebe03438-ea6a-4b27-85e4-a30d013900fd</ID>
+            <FunctionID>54a7b5de-9d72-46e4-8a64-532f97e93019</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>013e617d-7241-4473-a668-4cb5e50ada39</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>ChangeParam</Name>
+          <Comment><![CDATA[switch off specific policies (if required)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>n/a</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>199f1f64-9d13-4e22-9c83-091d6f85727f</ID>
+            <FunctionID>013e617d-7241-4473-a668-4cb5e50ada39</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[if required switch off policies that shouldn't be rerun]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>42cdb084-8a49-461c-80d7-0016c6610f14</ID>
+            <FunctionID>013e617d-7241-4473-a668-4cb5e50ada39</FunctionID>
+            <Name>param_id</Name>
+            <Comment><![CDATA[(e.g. for performance reasons, Simpleland's child benefit, which is ]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a6467d23-80af-4567-aed5-c37f84810e9e</ID>
+            <FunctionID>013e617d-7241-4473-a668-4cb5e50ada39</FunctionID>
+            <Name>param_condval</Name>
+            <Comment><![CDATA[independent of income, may be run only once)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>b24e8a19-c89f-49f4-999d-9ff5eab8f42c</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>UpdateTu</Name>
+          <Comment><![CDATA[UPDATE assessment units (if required)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>7</Order>
+          <Switch>off</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>dd31027b-ba7a-46ab-ba1f-e98aabb50ed8</ID>
+            <FunctionID>b24e8a19-c89f-49f4-999d-9ff5eab8f42c</FunctionID>
+            <Name>update_all</Name>
+            <Comment><![CDATA[if required update assessment units (take account of changed income)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[yes]]></Value>
+            <Order>1</Order>
+            <ValueType>yes/no</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>f8861c3d-1f06-4533-9c8d-87e9d81041bd</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>ChangeParam</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment />
+          <Order>5</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>20a76a76-089e-404e-95ee-c3efc468612e</ID>
+            <FunctionID>f8861c3d-1f06-4533-9c8d-87e9d81041bd</FunctionID>
+            <Name>Param_Id</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bda2b729-0adf-4f14-ad36-cb88e4978e54</ID>
+            <FunctionID>f8861c3d-1f06-4533-9c8d-87e9d81041bd</FunctionID>
+            <Name>Param_CondVal</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b30de24e-8446-4432-9b47-8f52ab90ce35</ID>
+            <FunctionID>f8861c3d-1f06-4533-9c8d-87e9d81041bd</FunctionID>
+            <Name>Run_Cond</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>2f6a834c-d017-4089-a4bd-5ab7e9c80a03</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>ChangeParam</Name>
+          <Comment><![CDATA[output for MTR base systeem (first run) ]]></Comment>
+          <PrivateComment />
+          <Order>6</Order>
+          <Switch>on</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>6300a13b-aee8-4455-aa78-ed39e5ca5749</ID>
+            <FunctionID>2f6a834c-d017-4089-a4bd-5ab7e9c80a03</FunctionID>
+            <Name>Param_Id</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[output_std_=cc=_#1.1]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a088440e-4246-40b8-86bb-e059dcbdf45f</ID>
+            <FunctionID>2f6a834c-d017-4089-a4bd-5ab7e9c80a03</FunctionID>
+            <Name>Param_CondVal</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[=sys=_base_mtr]]></Value>
+            <Order>2</Order>
+            <ValueType>string</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</ID>
+          <PolicyID>ecd90cd9-4a19-456a-8a08-d60869a79435</PolicyID>
+          <Name>InitVars</Name>
+          <Comment><![CDATA[country-specific adjustments]]></Comment>
+          <PrivateComment />
+          <Order>3</Order>
+          <Switch>n/a</Switch>
+          <Private>no</Private>
+          <Color>-1</Color>
+          <Parameter>
+            <ID>79dd9fc3-4af0-4fc9-805f-fafac9606d72</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>ptu_s</Name>
+            <Comment><![CDATA[[Note: reinitialise certain simulated variables to their original values: this applies in cases where the simulated variables are used before their simulations are triggered -> ensures that results from 1st and 2nd iterations are comparable]]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e1be7759-aa3e-4ceb-8c40-5d1037e540d6</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>prd_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d1d87cb4-f23d-4f0a-9f9b-e71c9774d14e</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>pxp_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a3ddc981-5169-43b8-b8b7-f73e7efac7a4</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>boact_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5927faa3-98df-45d0-b2bd-e8c620752213</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>boanc_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>301afb93-205e-4577-9f18-a16a7c8f0b52</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bunnc_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2a98f68d-516d-498e-81a2-98ca79f169da</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>txc00_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>886df7f5-1b43-426a-9d84-1c1da2f369ec</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bsamt_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f8f48d42-2024-4b60-b1a0-044cdefbd069</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bho_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bb28e960-e36b-4a99-9334-939377f7dbbd</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>boaxp_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eecb4096-fbf6-429f-8c97-779d7354a3c6</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bch_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>46decfc9-f40f-4c49-b687-bdf2d5cb001d</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bchba_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>cd94d94c-9cbf-48a0-9c72-597167ff84d7</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>tscbesi_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a1387294-cf1b-4b59-a660-f2157c1b0449</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bfalg_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>13</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>955dbdc0-7dbb-4d1c-ae6b-8db2caab009e</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bsa00_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>14</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fd0b7356-9f27-4b21-9a43-3e2cb4c252a3</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bsamttm_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8826d4ab-15c4-41b6-b6d9-b032903df428</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bsacm_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>16</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2c11de4c-3016-4f6e-bd4a-be7f240bc54c</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bho00_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>17</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>15e517c0-cdda-4f2e-b123-65a3a0462132</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>tscsepi_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>18</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eca422dc-97fb-40b2-9a0d-32fef4ed7824</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bfama_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>19</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>466d8140-5bfe-4ffc-926c-a64e8c310683</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bfapl_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>20</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0653baa4-5cc3-4b59-8169-8ba14fa20459</ID>
+            <FunctionID>c9d901c0-126b-41fd-b6d6-01c8c8f25a29</FunctionID>
+            <Name>bunmt_s</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>21</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>e30a7375-8067-49f5-b032-59f3f433d5ff</ID>
+        <SystemID>c0d74acb-4d76-448e-894b-fed04b76d98a</SystemID>
+        <Name>MTR_STORE</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: store each iteration's results for marginal tax rate calculations]]></Comment>
+        <PrivateComment />
+        <Order>5</Order>
+        <Switch>on</Switch>
+        <Private />
+        <Color>-1</Color>
+        <Function>
+          <ID>09adb088-77a1-4675-892e-273512489546</ID>
+          <PolicyID>e30a7375-8067-49f5-b032-59f3f433d5ff</PolicyID>
+          <Name>Store</Name>
+          <Comment><![CDATA[STORE the results of the primary loop]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9d48e3ae-7445-477e-8ad3-7602dec4cd42</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[only the results of baseline tax-benefit calculations]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[loopcount_base=1]]></Value>
+            <Order>0</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>020d492d-2822-43e3-8176-18b90192329c</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>postloop</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[base]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>219b9c3a-b9ad-4d84-b867-8cdd6d5517dd</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[ils_dispy and its components are stored as x_base1]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_dispy]]></Value>
+            <Order>2</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>125cc850-8b47-4e03-8871-4d6f8710fab6</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns]]></Value>
+            <Order>3</Order>
+            <ValueType>incomelist</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0bded892-be1f-441a-a3c6-59ee12f77aa3</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_ben]]></Value>
+            <Order>4</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>60baf925-0561-4418-ad8f-384d18211b33</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_pen]]></Value>
+            <Order>5</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dfcb7f89-ee71-40f1-b950-caec11164cd8</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_benmt]]></Value>
+            <Order>6</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5c4177b4-5f17-4913-a254-e2022a09a598</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[change income concepts if required]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_bennt]]></Value>
+            <Order>7</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e5587c56-f6da-4e7d-84ca-751122de4b97</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_tax]]></Value>
+            <Order>8</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>91fa052f-1dc4-4335-88c7-1656aca3e75b</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_sicee]]></Value>
+            <Order>9</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fce00ffb-c7f4-4a3a-9a95-8f04f9715d3e</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_sicse]]></Value>
+            <Order>10</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>849d9964-2057-4595-ae93-eaf5f7af6cdc</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3ffc46ed-c591-4dd7-a7d0-7e51885160a5</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[PL: yem; FI: total self-employment income]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>13</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>67d2541f-078b-4648-ab2f-db02fdb2e957</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[SK: gross profit]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>14</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>343bcffe-ea3d-45c3-8d48-eda9fd1446f7</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[FR: total earnings]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>dfa1ccd0-e3d1-4e48-8418-9893014526a3</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>16</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>02fa4255-b0be-4cd4-80d3-ff36ff80d993</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f4b89b30-726a-47e6-bfa5-0d69a95f4ed0</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c3ad8ced-2f2f-454a-8a12-5ea7beeeb6a7</ID>
+            <FunctionID>09adb088-77a1-4675-892e-273512489546</FunctionID>
+            <Name>IL</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ils_sicot]]></Value>
+            <Order>11</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0e50be4a-4022-4b13-8942-9d35d47568ee</ID>
+          <PolicyID>e30a7375-8067-49f5-b032-59f3f433d5ff</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[technical step]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e27eecf7-020c-4ba7-9318-2efb932990c0</ID>
+            <FunctionID>0e50be4a-4022-4b13-8942-9d35d47568ee</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[carry out any arithmetic operation using the newly defined HH unit;]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bd1454d5-6c62-45ce-a788-ce9249c97489</ID>
+            <FunctionID>0e50be4a-4022-4b13-8942-9d35d47568ee</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[this triggers the HH unit to be constructed (i.e. 'activated') which is]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[stm01_s]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>07d172bd-0eb7-41cc-bfcd-65135fcfa559</ID>
+            <FunctionID>0e50be4a-4022-4b13-8942-9d35d47568ee</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[necessary for the level parameter of func_store (see next function)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>4a56bffd-89f0-4f71-a524-587d669086dd</ID>
+          <PolicyID>e30a7375-8067-49f5-b032-59f3f433d5ff</PolicyID>
+          <Name>Store</Name>
+          <Comment><![CDATA[STORE the results of the secondary loop (mostly at the hh level)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>3</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>10d71cb6-83ee-413c-a4b0-b4a801ad73c4</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>run_cond</Name>
+            <Comment><![CDATA[i.e. calculations with increased income:]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[loopcount_base=2]]></Value>
+            <Order>0</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7cf189fc-9890-405b-85df-1932ef243ebe</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>postloop</Name>
+            <Comment><![CDATA[(there needs to be 1 storage variable per person with positive ils_earns)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4c9a21f7-1a6d-4904-aeb6-8b30ba9279d2</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[store after tax income in ils_dispy_unit1, ils_dispy_unit2, etc.]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_dispy]]></Value>
+            <Order>2</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>394e2b5b-6544-445a-a81e-fe903b27d210</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns]]></Value>
+            <Order>3</Order>
+            <ValueType>incomelist</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>95a61840-5e40-4059-990f-2b706a885168</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_ben]]></Value>
+            <Order>4</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>97930e27-04b2-45db-a711-9fa74638c0cb</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_pen]]></Value>
+            <Order>5</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a87ee04d-1eea-445b-aaee-e1e20041b7e1</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_benmt]]></Value>
+            <Order>6</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1104a1fc-47ec-4bac-905b-bc3fc45f4bc2</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_bennt]]></Value>
+            <Order>7</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d29315a4-b546-4342-97d9-728302c46e54</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_tax]]></Value>
+            <Order>8</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6e174dd6-4c20-433e-9eb6-95a7868b159a</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_sicee]]></Value>
+            <Order>9</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fa2d8ff4-2cbb-480f-a2e5-de7f4471c5a5</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[change income concepts if required]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_sicse]]></Value>
+            <Order>10</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8ac055ba-3216-4fa7-b060-e8730bbbc30d</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>12</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ca66d329-fa7b-4ec0-a810-4044dd35cd1d</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>13</Order>
+            <ValueType>variable</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ea9a00f6-c0ee-4596-bdec-ac83412ce2d8</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>14</Order>
+            <ValueType>variable</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ff60db42-5166-4e77-91ae-818c9e94515b</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>15</Order>
+            <ValueType>variable</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4e548a70-a8df-4aca-a670-e075de0edf88</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>16</Order>
+            <ValueType>variable</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>213fedce-b2d8-46dd-b452-cd9eabb01af6</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>17</Order>
+            <ValueType>variable</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3ce924aa-af0b-4773-be45-86a54172b040</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>18</Order>
+            <ValueType>variable</ValueType>
+            <Group>6</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1c1c454c-3429-435c-9cca-8ef63be34fa3</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>19</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>677cc0b0-9245-4bf2-b2c6-88fa3a9fb940</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>il_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>20</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e23dd729-3678-4c66-9d23-260560e20be1</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>21</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5149dfb7-4905-4603-b7c0-db69eb46233d</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>22</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d12ae89b-0651-4b8d-892c-f33adb86ecae</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>23</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3c2c1d70-d63b-4edd-928e-fc8725e256c9</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>24</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>170f1189-08a7-4ffa-a44b-eb11eb6724fa</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>25</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>63a6f59a-f94b-4575-ade0-802fbf07078b</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>var_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>26</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>6</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0fa9b683-b83e-46a5-a30d-962a73774522</ID>
+            <FunctionID>4a56bffd-89f0-4f71-a524-587d669086dd</FunctionID>
+            <Name>IL</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[ils_sicot]]></Value>
+            <Order>11</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>dc7d571b-9ed3-4866-9ea8-3892617514d8</ID>
+          <PolicyID>e30a7375-8067-49f5-b032-59f3f433d5ff</PolicyID>
+          <Name>Restore</Name>
+          <Comment><![CDATA[]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>22b996bb-2ab8-4410-93ad-37f176b57032</ID>
+            <FunctionID>dc7d571b-9ed3-4866-9ea8-3892617514d8</FunctionID>
+            <Name>postfix</Name>
+            <Comment><![CDATA[restore original income (ils_earns) at the beginning of each iteration …]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[backup]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+      </Policy>
+      <Policy>
+        <ID>20364fd1-d6fc-4991-8654-66af0b70458b</ID>
+        <SystemID>c0d74acb-4d76-448e-894b-fed04b76d98a</SystemID>
+        <Name>MTR_CALC</Name>
+        <Type>def</Type>
+        <Comment><![CDATA[DEF: calculation of marginal tax rates]]></Comment>
+        <PrivateComment />
+        <Order>6</Order>
+        <Switch>on</Switch>
+        <Private />
+        <Color>-1</Color>
+        <Function>
+          <ID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>DefVar</Name>
+          <Comment><![CDATA[define new variables]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>0</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9b7acbd7-6f5f-4211-92cc-ad8170c8ca98</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>ils_earns_diff</Name>
+            <Comment><![CDATA[marginal tax rate (in percent)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>0</Order>
+            <ValueType>formula</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b3a93f6a-e7b6-47e7-a227-afcb2d1c1e33</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc</Name>
+            <Comment><![CDATA[increase of earnings (at the individual level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6f6bbf61-b77e-4c7e-a8ea-880230928a69</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_pen</Name>
+            <Comment><![CDATA[benefit component of marginal tax rate (in percent)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c52aeb1d-bbff-4b8a-bbfc-bcf027e4fc83</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_benmt</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>3</Order>
+            <ValueType>formula</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>95fa7b92-12c6-437d-919a-b5bcd8d6c4e7</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_bennt</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>4</Order>
+            <ValueType>formula</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9c9098d1-03a8-46fd-a7b9-0eec72334f45</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_tax</Name>
+            <Comment><![CDATA[tax component of marginal tax rate (in percent)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>5</Order>
+            <ValueType>formula</ValueType>
+            <Group>6</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>235b3291-5440-4e6e-8c23-c2e0572e1646</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_sicee</Name>
+            <Comment><![CDATA[employee sic component of marginal tax rate (in percent)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>6</Order>
+            <ValueType>formula</ValueType>
+            <Group>7</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fccbe4be-9f7a-4dd9-bf16-fe0053ed4c7d</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_sicse</Name>
+            <Comment><![CDATA[self-employed sic component of marginal tax rate (in percent)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>7</Order>
+            <ValueType>formula</ValueType>
+            <Group>8</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>95888cf2-aeec-4d90-adc5-25d73dc1b1df</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>9</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>2</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2a0abc0a-a897-4d23-9574-7e662b91bb8b</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>10</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>3</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ca9ccd73-a12e-4f48-8c2a-0ba6525dd064</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>11</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>4</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7e36fbb8-5fa5-4f5e-bd5a-f9fb17d72c19</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>12</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>5</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fb616182-e984-4f6b-96f4-7e225137d6d8</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>13</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>6</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>37a929ce-c871-4018-82cd-507f493b2a70</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>14</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>7</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2152dd66-dd8b-4d13-a02c-7208c81e8f8e</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>var_monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[no]]></Value>
+            <Order>15</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>8</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>75f25f80-fae1-48af-bda7-681ec08fa6a9</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>mtrpc_sicot</Name>
+            <Comment><![CDATA[other sic component of marginal tax rate (in percent)]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[0]]></Value>
+            <Order>8</Order>
+            <ValueType>formula</ValueType>
+            <Group>9</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5582596e-2c12-44c1-8e47-5db6f4eee2fa</ID>
+            <FunctionID>eeadb83b-737c-44d1-8cd1-be74490e6a8f</FunctionID>
+            <Name>Var_Monetary</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[no]]></Value>
+            <Order>16</Order>
+            <ValueType>yes/no</ValueType>
+            <Group>9</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>fc7d2981-02c3-4920-b3c4-1cef23d726aa</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>Elig</Name>
+          <Comment><![CDATA[define eligible persons to calculate MTR]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>1</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>743af79b-3248-425b-bc13-4b26fd2997b2</ID>
+            <FunctionID>fc7d2981-02c3-4920-b3c4-1cef23d726aa</FunctionID>
+            <Name>elig_cond</Name>
+            <Comment><![CDATA[i.e. a person for whom the unit loop was run]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[IsUlElig_mtr]]></Value>
+            <Order>1</Order>
+            <ValueType>condition</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1f6925cf-e999-4725-aec9-89f5d570abe6</ID>
+            <FunctionID>fc7d2981-02c3-4920-b3c4-1cef23d726aa</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>646545f0-4617-49af-851e-f06d28f6f35c</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>2</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>4abe2ac8-fe23-48f0-abaa-1b79472d537e</ID>
+            <FunctionID>646545f0-4617-49af-851e-f06d28f6f35c</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3e3daec6-1b80-4dd2-94f2-9b44b76e7d66</ID>
+            <FunctionID>646545f0-4617-49af-851e-f06d28f6f35c</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aeb99dae-8efc-47cf-bf6f-0fdcfde657a5</ID>
+            <FunctionID>646545f0-4617-49af-851e-f06d28f6f35c</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1c374f56-9ea3-483e-9dd0-0d3ffecb8c7f</ID>
+            <FunctionID>646545f0-4617-49af-851e-f06d28f6f35c</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>2c6287b9-b612-4160-a335-be5074744480</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>3</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>6246fc19-f688-45e7-83ff-8e72b999815b</ID>
+            <FunctionID>2c6287b9-b612-4160-a335-be5074744480</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eafe1e34-e641-420e-94d7-95edff6a94fa</ID>
+            <FunctionID>2c6287b9-b612-4160-a335-be5074744480</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_dispy_mtr is stored at HH level, ils_dispy_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(1 - (ils_dispy_mtr - ils_dispy_base1#1) / ils_earns_diff) * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ae6be09d-435b-4e8a-a53f-f11425b4889a</ID>
+            <FunctionID>2c6287b9-b612-4160-a335-be5074744480</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6b35233d-23e8-460c-acda-b4e08bdde653</ID>
+            <FunctionID>2c6287b9-b612-4160-a335-be5074744480</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6b305d30-129f-47fd-9131-b7b7511e182f</ID>
+            <FunctionID>2c6287b9-b612-4160-a335-be5074744480</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>984f0b52-3683-494e-916c-fbfc687dc0f4</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>a9f0d87a-2499-4a46-9494-5ce83317b5e7</ID>
+            <FunctionID>984f0b52-3683-494e-916c-fbfc687dc0f4</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>19265122-24f0-41a9-8d34-1011a00dfff4</ID>
+            <FunctionID>984f0b52-3683-494e-916c-fbfc687dc0f4</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_pen_mtr is stored at HH level, ils_pen_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_pen_base1#1 - ils_pen_mtr) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>61dc3c5d-8fd9-4660-bd36-2c67914d5c24</ID>
+            <FunctionID>984f0b52-3683-494e-916c-fbfc687dc0f4</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>59f2d6e5-6467-4785-b5b5-bd1c32bdbe21</ID>
+            <FunctionID>984f0b52-3683-494e-916c-fbfc687dc0f4</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_pen]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4da77a0b-f529-40ac-80a2-cdae63802c52</ID>
+            <FunctionID>984f0b52-3683-494e-916c-fbfc687dc0f4</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>5</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>66008a18-5419-4012-afab-ef9d125e1031</ID>
+            <FunctionID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bfbc2179-eca8-45cc-80a2-dd842ebd6e6b</ID>
+            <FunctionID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_benmt_mtr is stored at HH level, ils_benmt_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_benmt_base1#1 - ils_benmt_mtr) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aba45370-7b1c-46ed-8473-7f78d1dfbbee</ID>
+            <FunctionID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d143db55-685a-41a3-9697-a77500237d62</ID>
+            <FunctionID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_benmt]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ecefe12a-7a1f-4e1d-b2b0-4a00cdaa2b3c</ID>
+            <FunctionID>2f18e11d-4fd5-4d1a-a02e-6c8a2d155493</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>f8422345-18ca-43b7-accf-ec81e86ac6bd</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>6</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>6bc0f1f2-14e0-41c1-8bed-c41a82cb9072</ID>
+            <FunctionID>f8422345-18ca-43b7-accf-ec81e86ac6bd</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8d1c14c2-e6e4-4513-b471-97c7ea25b3c7</ID>
+            <FunctionID>f8422345-18ca-43b7-accf-ec81e86ac6bd</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_bennt_mtr is stored at HH level, ils_bennt_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_bennt_base1#1 - ils_bennt_mtr) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d7be1339-b5e7-4fa8-aeb1-976405870a04</ID>
+            <FunctionID>f8422345-18ca-43b7-accf-ec81e86ac6bd</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fd1c8cbb-2399-454f-8008-9d8ecb431a62</ID>
+            <FunctionID>f8422345-18ca-43b7-accf-ec81e86ac6bd</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_bennt]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>166ed181-fb4d-41ff-bc89-49973a0a5d1c</ID>
+            <FunctionID>f8422345-18ca-43b7-accf-ec81e86ac6bd</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>80a0ddd7-9e48-4642-9a2c-6b807563527a</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>7</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>e25f34df-ebf5-401b-ac33-048861b2947f</ID>
+            <FunctionID>80a0ddd7-9e48-4642-9a2c-6b807563527a</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0920e57b-b321-4f8f-a8b4-65b62c742a70</ID>
+            <FunctionID>80a0ddd7-9e48-4642-9a2c-6b807563527a</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_tax_mtr is stored at HH level, ils_tax_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_tax_mtr - ils_tax_base1#1) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>49cf42e6-42bb-442a-825b-a49bf797efcd</ID>
+            <FunctionID>80a0ddd7-9e48-4642-9a2c-6b807563527a</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aec997b3-0956-4495-99f3-524ed64606cb</ID>
+            <FunctionID>80a0ddd7-9e48-4642-9a2c-6b807563527a</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_tax]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b4fcb3d1-227f-41b7-afdb-87cb25e4af7d</ID>
+            <FunctionID>80a0ddd7-9e48-4642-9a2c-6b807563527a</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>8</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9aa59e0a-700d-4ba6-9ae7-ba06f0efa993</ID>
+            <FunctionID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>78e41397-4178-46d7-98f7-83f079edd860</ID>
+            <FunctionID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_sicee_mtr is stored at HH level, ils_sicee_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_sicee_mtr - ils_sicee_base1#1) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b0a8b12a-11b3-4708-9195-e6a60d6a5969</ID>
+            <FunctionID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0289ba12-df9f-455e-8d11-80821388e579</ID>
+            <FunctionID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_sicee]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b1fac19e-56a1-4b27-971b-0578a7239dd6</ID>
+            <FunctionID>f03eed1c-4bee-4bd1-a413-fa6ebf6d14fa</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>29de6107-35fe-46fb-8e56-82c8adedcf3f</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>9</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>1e43efca-834b-4d69-b4b1-97da095e5b4d</ID>
+            <FunctionID>29de6107-35fe-46fb-8e56-82c8adedcf3f</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5b62c49d-0cab-4aa4-a1fe-19a489d7ed3d</ID>
+            <FunctionID>29de6107-35fe-46fb-8e56-82c8adedcf3f</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_sicse_mtr is stored at HH level, ils_sicse_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_sicse_mtr - ils_sicse_base1#1) / ils_earns_diff * 100]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>624d0c23-4e6d-4f57-89aa-5beb20cdf323</ID>
+            <FunctionID>29de6107-35fe-46fb-8e56-82c8adedcf3f</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>3</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>77145cc1-76dd-4711-8390-156ef5979b03</ID>
+            <FunctionID>29de6107-35fe-46fb-8e56-82c8adedcf3f</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_sicse]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3439c3a3-956b-4d0f-ad7f-1ad1308334fd</ID>
+            <FunctionID>29de6107-35fe-46fb-8e56-82c8adedcf3f</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>5</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>3e640a39-6f76-4f90-9427-2e3d0cd97128</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>Restore</Name>
+          <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>11</Order>
+          <Switch>off</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>42064792-43db-445e-96e8-d53a71170e0e</ID>
+            <FunctionID>3e640a39-6f76-4f90-9427-2e3d0cd97128</FunctionID>
+            <Name>postloop</Name>
+            <Comment><![CDATA[this is switched off by default as baseline results are outputted in a separate file]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[base]]></Value>
+            <Order>1</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6ccda4d1-d192-4559-b615-79b72e405bcd</ID>
+            <FunctionID>3e640a39-6f76-4f90-9427-2e3d0cd97128</FunctionID>
+            <Name>iteration</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[1]]></Value>
+            <Order>2</Order>
+            <ValueType>amount</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>DefOutput</Name>
+          <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>12</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>65a2754e-8715-45ad-8728-74e658ba9cfc</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>file</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[=sys=_mtr]]></Value>
+            <Order>0</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>886ce33d-39bb-4882-8209-c8d4bbe83e30</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[idhh]]></Value>
+            <Order>2</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c9170767-4972-48b2-835b-43a2e489072c</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[idperson]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>71b998e9-58ce-4489-9067-843ca12be0e6</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[yem_backup]]></Value>
+            <Order>5</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>821592da-9c55-4b0f-be32-911b06f58ef3</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>6</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>061814e3-77bb-488b-8c8e-0071b4ca67ba</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>7</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>29a1ea9a-6576-4cfe-a9fe-5f93fecd3919</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>8</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>82f59453-5a8f-403f-a0fd-0f07f7de8c76</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>9</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7984fdb2-1a22-4e1d-87c9-f667c0aa34b1</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>10</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>06fda657-43e9-4c2d-99ec-9e537f579e30</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[n/a]]></Value>
+            <Order>11</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fa47f1f2-5c10-40d6-b990-f2d98cc8dffd</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>il</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_backup]]></Value>
+            <Order>12</Order>
+            <ValueType>incomelist</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1053bf08-b2b0-4464-b50f-e30a6f413fa0</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>ilgroup</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[*base1]]></Value>
+            <Order>13</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>06fcea44-ceea-4fdd-891a-5e54622ca59d</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>vargroup</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtr*]]></Value>
+            <Order>14</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bc079a40-56dc-4c7b-8c76-407cea647e1f</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>vargroup</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[*mtr]]></Value>
+            <Order>15</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a10d8c8c-0e88-4a6a-8ac7-74bc7aa236f4</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>vargroup</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[*diff]]></Value>
+            <Order>16</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ecf17a4d-ce4b-4ced-87fd-072c8dc2f41b</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>replace_void_by</Name>
+            <Comment><![CDATA[replace missing (i.e. void) values]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[0]]></Value>
+            <Order>18</Order>
+            <ValueType>amount</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>718fde04-caa8-415d-8e59-457c9c93e388</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>nDecimals</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[2]]></Value>
+            <Order>19</Order>
+            <ValueType>amount</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>603a3dc2-4e41-494c-b0dc-685a1f48db99</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>20</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>6ecf592e-2583-4e8e-9dba-8b646a43ab02</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>Var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[dwt]]></Value>
+            <Order>4</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>56f0fa20-31a3-4eb9-b207-936594dbc828</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>Suppress_Void_Message</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[yes]]></Value>
+            <Order>1</Order>
+            <ValueType>yes/no</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>286e5083-2f8b-41da-b7bf-6f7ad6b369f5</ID>
+            <FunctionID>2a846a07-9f6b-4e88-bce9-bf3e6a6b76b3</FunctionID>
+            <Name>VarGroup</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment />
+            <Value><![CDATA[n/a]]></Value>
+            <Order>17</Order>
+            <ValueType>string</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7fd836c2-60e2-4790-9835-0f8588d18ed5</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>10</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>768fa8c2-c232-4b61-a92d-619157f8bcbc</ID>
+            <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>0</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>92756fdf-1c1a-4ced-9a33-c2a6aecde420</ID>
+            <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_sicot_mtr is stored at HH level, ils_sicot_base1 at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[(ils_sicot_mtr - ils_sicot_base1#1) / ils_earns_diff * 100]]></Value>
+            <Order>1</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>56122c85-cbd5-4fb5-b5f5-fb280bb3296c</ID>
+            <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
+            <Name>#_level</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_household_mtr]]></Value>
+            <Order>2</Order>
+            <ValueType>taxunit</ValueType>
+            <Group>1</Group>
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>83a8511c-a150-40ba-aca0-1975cdc8330b</ID>
+            <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[mtrpc_sicot]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bab2e716-c5a9-4656-b0cd-6c0c787a9c8f</ID>
+            <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
