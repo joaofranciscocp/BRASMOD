@@ -2338,7 +2338,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2A049071-8D03-44C3-B913-70BCFEBB1F7F</ID>
@@ -2396,7 +2396,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>70253A65-9897-4CFF-8872-DF0F05A3B133</ID>
@@ -2454,7 +2454,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>56E07A28-13C3-4468-950A-92682DB25010</ID>
@@ -2512,7 +2512,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>1541C66E-4EE8-4F5E-A44D-84682353729C</ID>
@@ -2570,7 +2570,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>11DF16D5-3207-4D48-A4D7-C18BD0131BCC</ID>
@@ -2628,7 +2628,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2BCFBB2F-E188-467E-B379-CA882DBB00ED</ID>
@@ -2686,7 +2686,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>8F64C724-668A-4AD8-9C00-6E97E8D2DA16</ID>
@@ -2744,7 +2744,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>DC3264AD-CCD0-4B82-A7B5-B1349F1460D4</ID>
@@ -2772,7 +2772,7 @@
           <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>9CA6DCDA-EED7-4C71-9027-697B168A2F1E</ID>
@@ -3000,7 +3000,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -3070,6 +3070,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>101ae984-9e07-436b-a06d-bf4e37537f59</ID>
+          <PolicyID>2955459D-3588-476A-8E92-041A847F9A10</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>872a636d-8813-4342-b210-4ec933ab6f42</ID>
+            <FunctionID>101ae984-9e07-436b-a06d-bf4e37537f59</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>258f1efe-624b-496b-a645-c462eb1f5934</ID>
+            <FunctionID>101ae984-9e07-436b-a06d-bf4e37537f59</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>400b18da-3c24-4dee-8b15-7e0f2edd4aa9</ID>
+            <FunctionID>101ae984-9e07-436b-a06d-bf4e37537f59</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>678df791-d0dc-4f53-9663-75c727c0863e</ID>
+            <FunctionID>101ae984-9e07-436b-a06d-bf4e37537f59</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -3081,7 +3144,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>22</Order>
+      <Order>23</Order>
       <Policy>
         <ID>FED2E930-B7C2-4783-8C72-567A017E19C6</ID>
         <SystemID>9C757D69-97D9-4A02-A241-4FBCAFCB02BB</SystemID>
@@ -5143,7 +5206,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>113CC49A-6F3A-414E-A983-F91625E2E3C4</ID>
@@ -5201,7 +5264,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>DE44DEC7-010D-4007-8C81-DD6F9EF9D550</ID>
@@ -5259,7 +5322,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>1F6ACAB1-A62E-4947-A818-508F56899B2A</ID>
@@ -5317,7 +5380,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>DAB41BDD-8A2D-403B-AEF0-5501B6BD0D7B</ID>
@@ -5375,7 +5438,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2A943589-230A-4478-88D8-AB057093BD35</ID>
@@ -5433,7 +5496,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>0ADE83B4-79ED-4401-8B8E-B5874FE51909</ID>
@@ -5491,7 +5554,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>20A24EFE-8A89-484A-AE2D-BC764BC671A2</ID>
@@ -5549,7 +5612,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>62D94329-6CEA-418E-9240-C05DFCE61F04</ID>
@@ -5577,7 +5640,7 @@
           <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>5A358333-6588-4C22-9105-549BD66EBAC0</ID>
@@ -5805,7 +5868,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -5875,6 +5938,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>627756c0-d8f4-40c7-99fe-b82cc3a9171a</ID>
+          <PolicyID>82D25F29-64AE-4D38-92F9-D4EBAED0BB1D</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>4389870e-17f9-4be4-be9e-6d791ab9f024</ID>
+            <FunctionID>627756c0-d8f4-40c7-99fe-b82cc3a9171a</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>384926f5-ce11-4ffd-8ad6-d19054c3dd6b</ID>
+            <FunctionID>627756c0-d8f4-40c7-99fe-b82cc3a9171a</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5fead5f4-b422-4015-8c93-92008f72f5ea</ID>
+            <FunctionID>627756c0-d8f4-40c7-99fe-b82cc3a9171a</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ab8dd841-512e-40f4-b969-c4e5316bf142</ID>
+            <FunctionID>627756c0-d8f4-40c7-99fe-b82cc3a9171a</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -5886,7 +6012,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>10</Order>
+      <Order>11</Order>
       <Policy>
         <ID>B1F5D840-2449-47B4-BB9E-D55A4C3A02DA</ID>
         <SystemID>B6FCAE71-6EB5-49A9-ABD2-81AF46F27C61</SystemID>
@@ -7948,7 +8074,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>AE19460F-17F9-4226-A125-1FC1C0AA5742</ID>
@@ -8006,7 +8132,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>BE63A5DC-ED6D-499C-AFB8-C716E7CB5AAF</ID>
@@ -8064,7 +8190,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>B6612262-7B6A-4634-BF0A-20E38F116179</ID>
@@ -8122,7 +8248,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A77C469B-D7C1-4D3B-BF1B-68BDA65AC853</ID>
@@ -8180,7 +8306,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A944628C-637C-4D0D-AF3E-ACFC26645503</ID>
@@ -8238,7 +8364,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3825AE50-ACF0-4D51-86AD-A97A01B159F5</ID>
@@ -8296,7 +8422,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>EA9BD6A5-07C9-4D96-9B15-03F041ECD3D9</ID>
@@ -8354,7 +8480,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>A32C1877-ADF0-451A-98CE-057FC4D5E368</ID>
@@ -8382,7 +8508,7 @@
           <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>1900DFBC-F217-4398-8016-B6073FF41A7F</ID>
@@ -8610,7 +8736,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -8680,6 +8806,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>d7abee4a-44c8-4f11-916c-1158e9ff61a1</ID>
+          <PolicyID>AD84285D-C593-4013-BBC5-BA783337DDF2</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>00cb5a61-a508-48ff-8fa1-2caf6fa73b9c</ID>
+            <FunctionID>d7abee4a-44c8-4f11-916c-1158e9ff61a1</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3ad98723-45e4-4e83-aaf8-e5fe3c805791</ID>
+            <FunctionID>d7abee4a-44c8-4f11-916c-1158e9ff61a1</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f9123ab7-b7b6-48fc-83ad-ae711006b0cb</ID>
+            <FunctionID>d7abee4a-44c8-4f11-916c-1158e9ff61a1</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4bd8c2ea-e25e-4332-87ed-424884d4e377</ID>
+            <FunctionID>d7abee4a-44c8-4f11-916c-1158e9ff61a1</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -8691,7 +8880,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>25</Order>
+      <Order>26</Order>
       <Policy>
         <ID>2CC11DE1-9354-4D92-A604-CC47AE0FD2D8</ID>
         <SystemID>2FF11540-35B6-4A50-AE88-0C6C0E086F9E</SystemID>
@@ -10753,7 +10942,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>0D8CF04B-04D6-4134-81E6-F368339C0F53</ID>
@@ -10811,7 +11000,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A6B4ACE5-2CCC-42A0-AEEB-92CD43B459DB</ID>
@@ -10869,7 +11058,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>D7D3F4EF-6D6D-4B96-B472-C479BCEF2B98</ID>
@@ -10927,7 +11116,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3752AE18-822E-4B86-BBD8-BB6935FB20D5</ID>
@@ -10985,7 +11174,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>61E86B8E-569A-4AC2-87B2-FB8BE8E0B198</ID>
@@ -11043,7 +11232,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4DE89C71-A95B-4B9F-B8C0-9BB24F7F97DB</ID>
@@ -11101,7 +11290,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>AA318D7A-820D-4BBC-9971-A150EE707136</ID>
@@ -11159,7 +11348,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>80DA3A31-69DE-4E7B-9F88-6C2A60FD9790</ID>
@@ -11187,7 +11376,7 @@
           <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>CE330722-9FE4-4953-B1E6-0DDF64491157</ID>
@@ -11415,7 +11604,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -11485,6 +11674,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>9e1581e4-4371-495f-936f-d42a22f0bbd5</ID>
+          <PolicyID>5B572786-23DB-4224-8AD1-F8129E96CE8C</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>88c6e80c-e666-44bc-8427-b45df063c2ee</ID>
+            <FunctionID>9e1581e4-4371-495f-936f-d42a22f0bbd5</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>19f171eb-bd87-4414-ad28-98d2e0551e8e</ID>
+            <FunctionID>9e1581e4-4371-495f-936f-d42a22f0bbd5</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fe5c3c92-8324-445e-83d8-510c3258966b</ID>
+            <FunctionID>9e1581e4-4371-495f-936f-d42a22f0bbd5</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4dded39d-46f2-497f-96af-ba6f5c8bfae2</ID>
+            <FunctionID>9e1581e4-4371-495f-936f-d42a22f0bbd5</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -11496,7 +11748,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>26</Order>
+      <Order>27</Order>
       <Policy>
         <ID>35606D77-3D0F-4295-B485-84C54BD7D8DE</ID>
         <SystemID>3ADE4B3B-0EB8-4333-BAA4-C5497B6047AE</SystemID>
@@ -13558,7 +13810,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>44E5B59A-DECB-446D-B8FA-7DD0AF132EB5</ID>
@@ -13616,7 +13868,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>D2CB8FD3-B551-43CA-B028-F07785AFB5B3</ID>
@@ -13674,7 +13926,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>12291899-4EA7-43B1-83A3-F126F249787A</ID>
@@ -13732,7 +13984,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>76914C80-4284-46A8-BC00-D0EE0B0738EA</ID>
@@ -13790,7 +14042,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>1EF7644F-FBB1-4F09-98F0-E902AF877F87</ID>
@@ -13848,7 +14100,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4D7A16FE-B6EB-4572-99B6-ACCC91842EAA</ID>
@@ -13906,7 +14158,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>6462EEC8-75C8-4DAF-842C-24B34451B9D2</ID>
@@ -13964,7 +14216,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>FBD1225C-BF7E-4A4E-9D0C-C6F49CD8503F</ID>
@@ -13992,7 +14244,7 @@
           <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>6A0477B4-EDA3-40AE-AAFC-485ACD47E70D</ID>
@@ -14220,7 +14472,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private />
           <Color>-1</Color>
@@ -14290,6 +14542,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>ca9a098b-d601-41ae-a6c5-b06fb91554cd</ID>
+          <PolicyID>2757BCB7-8AEE-4E18-AE8C-411A8C743F47</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>c5769f27-9a41-4afe-afa2-35c07824a26c</ID>
+            <FunctionID>ca9a098b-d601-41ae-a6c5-b06fb91554cd</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>df9b1fc0-0569-4ba1-91e8-16b644fb52e2</ID>
+            <FunctionID>ca9a098b-d601-41ae-a6c5-b06fb91554cd</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ac950dde-f59c-41be-9ad8-ab1acf58abe9</ID>
+            <FunctionID>ca9a098b-d601-41ae-a6c5-b06fb91554cd</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>be73ab1b-1c7a-4ee2-9fda-ff2ed6df6cb4</ID>
+            <FunctionID>ca9a098b-d601-41ae-a6c5-b06fb91554cd</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -14301,7 +14616,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>21</Order>
+      <Order>22</Order>
       <Policy>
         <ID>C309E2F1-856E-47C0-A909-008575DC3B80</ID>
         <SystemID>853BA5AF-EE3F-4E86-B574-846FEE09F5BB</SystemID>
@@ -16363,7 +16678,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>780BCF91-96C5-4990-9E18-347E8072E927</ID>
@@ -16421,7 +16736,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2CC70C0E-305D-4C83-B468-3F2099A1ACDB</ID>
@@ -16479,7 +16794,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>45CAD8C9-141D-4F55-B751-C3C7C4B8AB4A</ID>
@@ -16537,7 +16852,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>5CE5062A-2EDB-4AD5-A5DC-9B069BC533AA</ID>
@@ -16595,7 +16910,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>809A1B99-E3A3-40F5-81B7-49D6065EC9DF</ID>
@@ -16653,7 +16968,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>74DFB1F1-3C25-4D5A-9003-02BFE332422F</ID>
@@ -16711,7 +17026,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>565EE8A3-00FC-4477-B849-C36CC9F37334</ID>
@@ -16769,7 +17084,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>A058D947-7F7B-4221-953C-B46D755CF077</ID>
@@ -16797,7 +17112,7 @@
           <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4189173E-7E17-4CC0-AE13-E8B2905A9D7A</ID>
@@ -17025,7 +17340,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -17095,6 +17410,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>23bb27a7-c23d-4aba-8171-2893e97b9353</ID>
+          <PolicyID>1DC1F393-EE61-4CA5-90F7-67C5E628F329</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>742aa9f6-13ee-471f-803e-3b304e062145</ID>
+            <FunctionID>23bb27a7-c23d-4aba-8171-2893e97b9353</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ec4e2ad7-d8d9-4286-b912-c5f84b767423</ID>
+            <FunctionID>23bb27a7-c23d-4aba-8171-2893e97b9353</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1e02c591-33f0-4837-a101-9adcf41d5a15</ID>
+            <FunctionID>23bb27a7-c23d-4aba-8171-2893e97b9353</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2074cd49-d0e7-4d90-a072-6c465d12c7a5</ID>
+            <FunctionID>23bb27a7-c23d-4aba-8171-2893e97b9353</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -17106,7 +17484,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>24</Order>
+      <Order>25</Order>
       <Policy>
         <ID>0603DAAC-A15E-40F9-96F0-7CCFBDDCD9E3</ID>
         <SystemID>B79FCC7C-7017-49AB-90AA-9D7A5C7676E7</SystemID>
@@ -19168,7 +19546,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>23649B9C-04E4-4F85-9450-A1A3F97E1493</ID>
@@ -19226,7 +19604,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3F97FAE8-6CE6-44DE-8BCC-A29B86C051E5</ID>
@@ -19284,7 +19662,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2CB95174-86C5-4306-938A-3DBB5C165178</ID>
@@ -19342,7 +19720,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>379B3437-175B-4179-8958-515B9CF900BA</ID>
@@ -19400,7 +19778,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>07E13DEB-D56F-4C42-8BF5-1CF20B1B75DF</ID>
@@ -19458,7 +19836,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>97870EB1-050D-4082-BAC3-CB7F6BF0F1F8</ID>
@@ -19516,7 +19894,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A40FEBF3-F7A5-44A6-B549-A44C47712D1E</ID>
@@ -19574,7 +19952,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>2951D512-C763-482E-BB61-C764D2AB1AF0</ID>
@@ -19602,7 +19980,7 @@
           <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>FC63CC75-417E-419A-ADC4-E217D1A64548</ID>
@@ -19830,7 +20208,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -19900,6 +20278,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>0acabffa-e4b9-4a75-a1fe-2379a35b8f9b</ID>
+          <PolicyID>86FE4EAC-C578-4E3D-9924-9C601507B796</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>4fbe219d-f18b-45ca-820e-ea3fb8392ee4</ID>
+            <FunctionID>0acabffa-e4b9-4a75-a1fe-2379a35b8f9b</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>7bfbaf78-0bd5-43ed-9758-1d35878235ad</ID>
+            <FunctionID>0acabffa-e4b9-4a75-a1fe-2379a35b8f9b</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a74b3da9-c929-4610-af7a-9cb3af635cf9</ID>
+            <FunctionID>0acabffa-e4b9-4a75-a1fe-2379a35b8f9b</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5a839da5-e5fc-4c1c-8d36-207299d9a03c</ID>
+            <FunctionID>0acabffa-e4b9-4a75-a1fe-2379a35b8f9b</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -19911,7 +20352,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>13</Order>
+      <Order>14</Order>
       <Policy>
         <ID>C9764155-05BB-47D4-9F9B-7DAB64407392</ID>
         <SystemID>402326A8-BC13-4D9B-8E31-0EF8B668F61E</SystemID>
@@ -21973,7 +22414,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>EF778AAB-7579-4EF3-83A5-C333E9BBD627</ID>
@@ -22031,7 +22472,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>C2419C9E-7660-4359-B94C-FC94887C585D</ID>
@@ -22089,7 +22530,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E32CA256-A4C7-4D7F-A0DD-3F0E597D3B75</ID>
@@ -22147,7 +22588,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2F424AE1-983E-497E-A8E8-F0AF10F9D725</ID>
@@ -22205,7 +22646,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4673F03B-2CFC-4379-84BE-525A94BA411E</ID>
@@ -22263,7 +22704,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3F0D213F-A972-4C2A-924F-FD75392C9159</ID>
@@ -22321,7 +22762,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>8F11F472-4303-45AD-9EF1-A5105DC9DE91</ID>
@@ -22379,7 +22820,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>4F2F8924-2024-499A-89C7-F952EFB2D520</ID>
@@ -22407,7 +22848,7 @@
           <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4BB20EC6-A121-41CD-9437-4C6FE980BEB9</ID>
@@ -22635,7 +23076,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -22694,6 +23135,69 @@
           <Parameter>
             <ID>6a7bda38-60af-452f-9d9d-e9c83e9330df</ID>
             <FunctionID>df530eac-a10d-4189-9de5-1c5498aef33e</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>7137596c-fe84-406a-bd8d-558841e05048</ID>
+          <PolicyID>D5D1E34A-7E5A-47B6-AA04-0C3367FF4679</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>71ef8dc8-ac78-4577-9529-547f19489b0b</ID>
+            <FunctionID>7137596c-fe84-406a-bd8d-558841e05048</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ee538db2-4212-4af5-bed7-cf96900e3e0c</ID>
+            <FunctionID>7137596c-fe84-406a-bd8d-558841e05048</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>06f7656b-3a2a-4e94-8752-43a4d5cda6d9</ID>
+            <FunctionID>7137596c-fe84-406a-bd8d-558841e05048</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>de1bfdb7-7e87-4ad4-80a2-61a39fedc45b</ID>
+            <FunctionID>7137596c-fe84-406a-bd8d-558841e05048</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
@@ -24778,7 +25282,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>06C17F99-A75B-4908-8548-924030EE74EC</ID>
@@ -24836,7 +25340,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>1E843DCF-BE3C-4D87-9E47-7BF2D1FB589E</ID>
@@ -24894,7 +25398,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>87C6D0AC-C125-4BE1-8425-DB79D3ADBF88</ID>
@@ -24952,7 +25456,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>65ACCE06-DE39-4AD4-90D5-65152F84BDE5</ID>
@@ -25010,7 +25514,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>454EB71B-2C0C-4836-9948-7A2943A3B2C3</ID>
@@ -25068,7 +25572,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>FD3B732A-2A83-49AE-95CC-1B1198B65DD3</ID>
@@ -25126,7 +25630,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>38618110-02C2-4EE9-B75F-34AABBAC4E2B</ID>
@@ -25184,7 +25688,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>F4DCDC32-16E4-48A0-81CB-CF71311DF067</ID>
@@ -25212,7 +25716,7 @@
           <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>16D78BFF-1160-4AF1-BDCF-A16F2221CCAF</ID>
@@ -25440,7 +25944,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private />
           <Color>-1</Color>
@@ -25503,6 +26007,69 @@
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
             <Value><![CDATA[n/a]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>daaa89f2-d196-4931-8c87-9887d208ce60</ID>
+          <PolicyID>8A06DDD6-F15E-4AAD-B06A-324A74DEB2F9</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>7b19103e-d870-40a4-9397-008e2bcc7019</ID>
+            <FunctionID>daaa89f2-d196-4931-8c87-9887d208ce60</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9bdf761e-3ab0-49c4-bd9e-efeb74a94441</ID>
+            <FunctionID>daaa89f2-d196-4931-8c87-9887d208ce60</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2321742e-6f12-42b8-9ce8-481ee0a476d1</ID>
+            <FunctionID>daaa89f2-d196-4931-8c87-9887d208ce60</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>0aba84f2-6ad4-4b56-b058-d899c714a381</ID>
+            <FunctionID>daaa89f2-d196-4931-8c87-9887d208ce60</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
             <Order>4</Order>
             <ValueType>taxunit</ValueType>
             <Group />
@@ -27583,7 +28150,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>6ADA00E6-BC4F-47EE-85AD-C9A33E1EC0BB</ID>
@@ -27641,7 +28208,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>F73F28CC-685B-4900-A778-8898B49E97C4</ID>
@@ -27699,7 +28266,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>B56DD07C-076B-4E1A-B783-1CFE3150C7BC</ID>
@@ -27757,7 +28324,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>B6D91418-96CE-4509-A200-E9C4C5AACB4F</ID>
@@ -27815,7 +28382,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3868A992-B25B-46EB-A313-DDC482411FA6</ID>
@@ -27873,7 +28440,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>EFA83A4C-99E3-43ED-BD0C-F9615055AB60</ID>
@@ -27931,7 +28498,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>70961969-8F9A-45AD-BF58-105ACF11B2B8</ID>
@@ -27989,7 +28556,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>C8864386-667E-4205-A78A-D99DC5E93129</ID>
@@ -28017,7 +28584,7 @@
           <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>9E529048-5ED3-4861-9F3F-A86FDDE06E8F</ID>
@@ -28245,7 +28812,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -28315,6 +28882,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>d3741385-a30d-499a-a95b-23f1d634733d</ID>
+          <PolicyID>1C8271B5-52CC-40FE-A049-8E8AFA3B05C2</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>847f1a7d-b51c-402a-ac44-c5755a601b32</ID>
+            <FunctionID>d3741385-a30d-499a-a95b-23f1d634733d</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a346b383-4643-4940-a9b9-15e428343d6e</ID>
+            <FunctionID>d3741385-a30d-499a-a95b-23f1d634733d</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>52cfa09e-8a64-4328-bd36-101f493bd7ed</ID>
+            <FunctionID>d3741385-a30d-499a-a95b-23f1d634733d</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>b8308494-27b8-4c27-a2b2-717f67025a83</ID>
+            <FunctionID>d3741385-a30d-499a-a95b-23f1d634733d</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -28326,7 +28956,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>18</Order>
+      <Order>19</Order>
       <Policy>
         <ID>37FE177F-BCA1-4F7A-BFEA-011C564C593F</ID>
         <SystemID>2CFC016D-61CF-46C1-9277-64B77B7D3599</SystemID>
@@ -30388,7 +31018,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4929C4D9-015C-46A7-9BC9-6653A80A65FC</ID>
@@ -30446,7 +31076,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>16CF1F59-4EA7-4D09-A513-DA38327B773C</ID>
@@ -30504,7 +31134,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>CAF5642C-B7A7-4877-A46E-4EC757EAB2AE</ID>
@@ -30562,7 +31192,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3A876F41-54AF-4A91-94ED-6589BEE9A97F</ID>
@@ -30620,7 +31250,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>94D4EA3A-CA50-4924-BC0B-6664C64A0AED</ID>
@@ -30678,7 +31308,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4ECB2BF6-A905-4B1B-A2D6-D6736D8D8410</ID>
@@ -30736,7 +31366,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>BCDBA852-559A-40C7-BDEB-7E5425764359</ID>
@@ -30794,7 +31424,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>58112A71-8F81-47D4-B419-40F296438304</ID>
@@ -30822,7 +31452,7 @@
           <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>99250422-8194-447B-8D36-D778D225049D</ID>
@@ -31050,7 +31680,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -31109,6 +31739,69 @@
           <Parameter>
             <ID>55fc9f4c-f53f-4dfb-8120-f36e61c6d182</ID>
             <FunctionID>202ce71c-3078-4215-aa12-950e559daecf</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>082d8a77-fcd1-4888-b8ec-43a1c346e2fe</ID>
+          <PolicyID>7F52AF07-DBB1-48AD-890B-1314E1FBFB41</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>72870f02-eb14-419c-91c0-0c4fdb4bc7b1</ID>
+            <FunctionID>082d8a77-fcd1-4888-b8ec-43a1c346e2fe</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>10439e97-9bc1-426c-ab9f-c9d960f5d5f0</ID>
+            <FunctionID>082d8a77-fcd1-4888-b8ec-43a1c346e2fe</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>830c6b1b-ffc5-4eac-a36d-4e8a331e6a16</ID>
+            <FunctionID>082d8a77-fcd1-4888-b8ec-43a1c346e2fe</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>37cfdcf7-3364-4300-8a80-175fb4e4f182</ID>
+            <FunctionID>082d8a77-fcd1-4888-b8ec-43a1c346e2fe</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
@@ -33193,7 +33886,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4E5625D6-C89A-409C-83DB-CCEAAB92D382</ID>
@@ -33251,7 +33944,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4323BC2D-2307-4232-B6C9-D5AC61A0A362</ID>
@@ -33309,7 +34002,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E87CE4BB-AE9E-4BF2-8017-21A6E94B7850</ID>
@@ -33367,7 +34060,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>D9E56A4B-AF50-4019-BE80-CDA702D3932A</ID>
@@ -33425,7 +34118,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>298F9FDA-95DC-4128-BA01-DB29C902F4F7</ID>
@@ -33483,7 +34176,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>7A86CCD0-5EFA-494C-9B9C-5A0B0C9CE676</ID>
@@ -33541,7 +34234,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4ED14B67-81C0-4D48-A817-30732ABC2EA6</ID>
@@ -33599,7 +34292,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>6E6D973D-BB71-4465-8874-F55079F00652</ID>
@@ -33627,7 +34320,7 @@
           <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>CA1EE4DD-44AD-48BC-B3FA-2C5CF9DA959A</ID>
@@ -33855,7 +34548,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -33925,6 +34618,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>31827a35-c093-4e5a-89d0-0f5d63d941a8</ID>
+          <PolicyID>A1DDD4BB-141E-4244-95DF-5B2242CAFAFE</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>0a7c96b5-e970-40fd-ad66-12da0a3c2246</ID>
+            <FunctionID>31827a35-c093-4e5a-89d0-0f5d63d941a8</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8bc74f23-d89d-4b95-a8de-7a10652d9e64</ID>
+            <FunctionID>31827a35-c093-4e5a-89d0-0f5d63d941a8</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>5b361836-274d-4bc7-a8a5-219360445861</ID>
+            <FunctionID>31827a35-c093-4e5a-89d0-0f5d63d941a8</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>79985645-140d-4535-a5d2-41a8f53e958e</ID>
+            <FunctionID>31827a35-c093-4e5a-89d0-0f5d63d941a8</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -33936,7 +34692,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>23</Order>
+      <Order>24</Order>
       <Policy>
         <ID>F30CF8D6-1802-47E0-AE78-D34E1E36A555</ID>
         <SystemID>F1E0564C-210D-4CFA-ABCD-B7A28E70CC24</SystemID>
@@ -35998,7 +36754,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>AB3B7CFF-EA15-4C4C-922C-5298A9A37CB4</ID>
@@ -36056,7 +36812,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>8D16B0DF-E3A3-472D-8844-036BCBF48D8C</ID>
@@ -36114,7 +36870,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>37480B6A-8396-4D4B-8E2C-633FE0B7C3AA</ID>
@@ -36172,7 +36928,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>65CEEE5F-1947-472B-99A3-B5BD3C8BAD5F</ID>
@@ -36230,7 +36986,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>ACB346D2-418E-4763-A16D-8F5F28B9B0B7</ID>
@@ -36288,7 +37044,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2AED4EDC-C2C9-4D3C-87C5-D5CE8E7EF456</ID>
@@ -36346,7 +37102,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A087DFF9-2793-4E2D-8EAA-A2C2C4D63E21</ID>
@@ -36404,7 +37160,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>A3A14D01-AF49-4FE9-96D2-AEE6D682581B</ID>
@@ -36432,7 +37188,7 @@
           <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E27E8614-C824-4CEF-B024-B76BE468A65B</ID>
@@ -36660,7 +37416,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -36730,6 +37486,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>31aff141-5ca3-495e-abbb-01286792fc0e</ID>
+          <PolicyID>5A07807C-DD16-47AA-A37A-B3C8EBB793BC</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>39f81f1e-ce89-49a4-bc41-fecaa051d09a</ID>
+            <FunctionID>31aff141-5ca3-495e-abbb-01286792fc0e</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>a18e12fe-184a-418f-890d-71871d287a91</ID>
+            <FunctionID>31aff141-5ca3-495e-abbb-01286792fc0e</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2d8268ce-50d2-459b-be77-d917f210fcf5</ID>
+            <FunctionID>31aff141-5ca3-495e-abbb-01286792fc0e</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1e6327ec-3c14-41a2-9885-c8287deab6c2</ID>
+            <FunctionID>31aff141-5ca3-495e-abbb-01286792fc0e</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -36741,7 +37560,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>11</Order>
+      <Order>12</Order>
       <Policy>
         <ID>EEEE2A9F-644C-4C3D-B41C-77D27F0B57FC</ID>
         <SystemID>A955ED97-A24F-4D42-B1FB-30627C0EC44A</SystemID>
@@ -38803,7 +39622,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>0513FCE8-54C7-4472-9279-ADCB189B7CDF</ID>
@@ -38861,7 +39680,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>D42B3833-901C-4F07-AB57-AAABD6A69438</ID>
@@ -38919,7 +39738,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E81983A5-7017-47AC-B737-EB33A241C5B3</ID>
@@ -38977,7 +39796,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>F093F831-2044-4FB5-8023-6054D6F85F81</ID>
@@ -39035,7 +39854,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>68DA12DB-6C7F-4898-8E47-E5D3CD342EAA</ID>
@@ -39093,7 +39912,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>39550538-1BC4-4B7A-9B0C-9C6A7400886D</ID>
@@ -39151,7 +39970,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>84DB09FD-22FE-4EC8-896D-A603B0A46DE3</ID>
@@ -39209,7 +40028,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>138B0C30-C35A-4457-9B25-2A11108D577D</ID>
@@ -39237,7 +40056,7 @@
           <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E1D52515-078A-465A-B2C6-09C6A8370F98</ID>
@@ -39465,7 +40284,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -39524,6 +40343,69 @@
           <Parameter>
             <ID>da04cb79-d91c-4e3f-b0f6-d440a4f15f2a</ID>
             <FunctionID>44ef0f08-7148-47ee-846a-7a10294f7014</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>56c41f5b-bb5a-4375-87a5-df9171dca92e</ID>
+          <PolicyID>33477AB0-1E36-4630-A1C3-D0F9106B6947</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>7b8c1ec1-a17c-4c76-b44a-74df35b10d88</ID>
+            <FunctionID>56c41f5b-bb5a-4375-87a5-df9171dca92e</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3e0aa2cd-20cf-4e65-baa6-e5401afdbd6b</ID>
+            <FunctionID>56c41f5b-bb5a-4375-87a5-df9171dca92e</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>41d4670b-ec12-472a-b673-a4d77bd46a7b</ID>
+            <FunctionID>56c41f5b-bb5a-4375-87a5-df9171dca92e</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9a424efe-3190-4d8e-8251-169365e342fe</ID>
+            <FunctionID>56c41f5b-bb5a-4375-87a5-df9171dca92e</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
@@ -41608,7 +42490,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>3B0DC88C-4B7C-40B6-8234-0C35D5F6A856</ID>
@@ -41666,7 +42548,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>00CC9AED-D532-4704-9663-570A59988063</ID>
@@ -41724,7 +42606,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>F5BA20DF-289B-4780-AD46-F0D0761BC9AD</ID>
@@ -41782,7 +42664,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>FB0B0957-F0E9-4982-8D3A-6BDB8BE15444</ID>
@@ -41840,7 +42722,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>B05120FA-1029-4FF1-BFA2-1C463DE014B8</ID>
@@ -41898,7 +42780,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>BFC8F410-79F1-485F-9871-293D135399A1</ID>
@@ -41956,7 +42838,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>B5D7FD73-1921-49C0-9B4E-BAD637903F72</ID>
@@ -42014,7 +42896,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>DD659763-B3BA-47C3-BB57-4B16A011DAAC</ID>
@@ -42042,7 +42924,7 @@
           <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>357ED84D-B853-426A-997B-B7E1E63F885B</ID>
@@ -42270,7 +43152,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -42340,6 +43222,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>891d6a1c-c5cc-4b00-a484-c8731761ac84</ID>
+          <PolicyID>CF76D7EF-9075-4CBC-AD99-0BADC8CCEF60</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>5fd5ef46-85b5-4cf5-9391-b51c27297da8</ID>
+            <FunctionID>891d6a1c-c5cc-4b00-a484-c8731761ac84</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d3aafda5-daa1-41c6-8009-926bf4486f32</ID>
+            <FunctionID>891d6a1c-c5cc-4b00-a484-c8731761ac84</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1620a34f-a575-4b1c-bd01-dc38624a0042</ID>
+            <FunctionID>891d6a1c-c5cc-4b00-a484-c8731761ac84</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>c15168ee-ce25-42a9-8aee-57abbd0d2413</ID>
+            <FunctionID>891d6a1c-c5cc-4b00-a484-c8731761ac84</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -42351,7 +43296,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>14</Order>
+      <Order>15</Order>
       <Policy>
         <ID>D9E2CF8D-1430-43AA-AE68-A1784F533121</ID>
         <SystemID>718AF3C0-3882-4A52-9C68-585E85592054</SystemID>
@@ -44413,7 +45358,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>4B1A19D1-736F-4DD9-9202-CC0A1EC62CC8</ID>
@@ -44471,7 +45416,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>A26E87E9-ADD5-4623-ADAD-6F18628CFCB5</ID>
@@ -44529,7 +45474,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>C9A08576-08FB-40D1-99DC-1561B4836C85</ID>
@@ -44587,7 +45532,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>DF89DA06-22A5-415E-81BE-B75279E06EF8</ID>
@@ -44645,7 +45590,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>C24CB333-A68C-436D-9B36-56E8E754FE6E</ID>
@@ -44703,7 +45648,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>ED50265D-0BD1-4A49-BA5B-D2DE045A8CCB</ID>
@@ -44761,7 +45706,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>242CA034-B499-442B-BE08-9582C6C7A785</ID>
@@ -44819,7 +45764,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>C383907F-4622-496E-A99F-D55B26F7488E</ID>
@@ -44847,7 +45792,7 @@
           <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>E0233C07-99F9-455B-8089-3774F4D7850B</ID>
@@ -45075,7 +46020,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -45145,6 +46090,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>b53e36c4-7b90-4d28-a9f7-a1588e514145</ID>
+          <PolicyID>DFEC01C9-50F4-4D5D-85B6-DAEE6E75E0CA</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>1c400efd-f684-4016-9ce6-10edc31c8519</ID>
+            <FunctionID>b53e36c4-7b90-4d28-a9f7-a1588e514145</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>8d680381-a40e-4806-8b59-37a8651e0545</ID>
+            <FunctionID>b53e36c4-7b90-4d28-a9f7-a1588e514145</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>2b48dd64-908f-4e04-83c0-1c88da4aa319</ID>
+            <FunctionID>b53e36c4-7b90-4d28-a9f7-a1588e514145</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e2080369-877b-468e-a732-bbd109bad20f</ID>
+            <FunctionID>b53e36c4-7b90-4d28-a9f7-a1588e514145</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -45156,7 +46164,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>16</Order>
+      <Order>17</Order>
       <Policy>
         <ID>A8DC2D03-3947-4363-8725-24B9FECE53F0</ID>
         <SystemID>AF5AC8EE-35EA-46BC-8A9C-53CCC5EAEED3</SystemID>
@@ -47218,7 +48226,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>65CE2E25-3CFE-4BDD-ADA7-E38A23BC4B78</ID>
@@ -47276,7 +48284,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>EA5FFAF2-02C6-4F0E-89BB-7E9BB4A158A0</ID>
@@ -47334,7 +48342,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>5D9AD213-3476-4B5C-ADB6-C1637A83CF81</ID>
@@ -47392,7 +48400,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>2A61F61F-EF50-40E1-8EED-38262463168F</ID>
@@ -47450,7 +48458,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>92C5F030-C3F6-4201-B339-AB88B56D7D49</ID>
@@ -47508,7 +48516,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>8D91BBB2-B051-4E94-BAF8-0F75BF05A77E</ID>
@@ -47566,7 +48574,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>938D0CC9-3B8F-499D-874A-66410179739E</ID>
@@ -47624,7 +48632,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Parameter>
             <ID>2D419F0C-9769-4D08-995A-0614DE44F03D</ID>
@@ -47652,7 +48660,7 @@
           <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Parameter>
             <ID>D269E3C3-2C9B-4EC4-9647-629C272BF350</ID>
@@ -47880,7 +48888,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>n/a</Switch>
           <Private />
           <Color>-1</Color>
@@ -47950,6 +48958,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>aefe3db2-18ac-40af-be3d-6cd5e9596784</ID>
+          <PolicyID>DABEC7DE-CE8F-477D-9365-B582533D22F9</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>38e71d35-ba28-46ed-8a51-950bfe483b5d</ID>
+            <FunctionID>aefe3db2-18ac-40af-be3d-6cd5e9596784</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>087848ba-5f41-4be5-a2b2-872e8134843d</ID>
+            <FunctionID>aefe3db2-18ac-40af-be3d-6cd5e9596784</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>05841b96-9309-40d8-9529-4445e66ba6b6</ID>
+            <FunctionID>aefe3db2-18ac-40af-be3d-6cd5e9596784</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>fb636e10-03ba-4390-8f7c-ba40e3fb71df</ID>
+            <FunctionID>aefe3db2-18ac-40af-be3d-6cd5e9596784</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -47961,7 +49032,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>17</Order>
+      <Order>18</Order>
       <Policy>
         <ID>5618ce58-712c-4fb1-b2ae-15899f47352d</ID>
         <SystemID>aec5cb1f-bf52-4a2b-8859-64a9e89a85d0</SystemID>
@@ -50344,7 +51415,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50415,7 +51486,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50486,7 +51557,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50557,7 +51628,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50628,7 +51699,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50699,7 +51770,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50770,7 +51841,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -50841,7 +51912,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -50876,7 +51947,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -51142,7 +52213,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -51212,6 +52283,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>a308efcf-a3de-4e08-a4a0-3bb6e86d2ffa</ID>
+          <PolicyID>c5998907-92a4-44bb-b6ac-bbdbaabf0601</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>425bc6b0-097d-4f97-8eda-cd5a01ae79c3</ID>
+            <FunctionID>a308efcf-a3de-4e08-a4a0-3bb6e86d2ffa</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>aa79f152-83c2-4f7e-bca2-7e71931435d2</ID>
+            <FunctionID>a308efcf-a3de-4e08-a4a0-3bb6e86d2ffa</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>3055fbc9-5501-4d2a-bb5f-e855823cf6ce</ID>
+            <FunctionID>a308efcf-a3de-4e08-a4a0-3bb6e86d2ffa</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>94ea1457-490b-46f5-adbb-16d1b2832f29</ID>
+            <FunctionID>a308efcf-a3de-4e08-a4a0-3bb6e86d2ffa</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -51223,7 +52357,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>19</Order>
+      <Order>20</Order>
       <Policy>
         <ID>927e1da1-45b8-4ece-b5fa-484ac7d7b0d3</ID>
         <SystemID>dac68922-8175-4e41-8adc-fb96b2b02f43</SystemID>
@@ -53606,7 +54740,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -53677,7 +54811,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -53748,7 +54882,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -53819,7 +54953,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -53890,7 +55024,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -53961,7 +55095,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -54032,7 +55166,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -54103,7 +55237,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -54138,7 +55272,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -54404,7 +55538,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -54474,6 +55608,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>c4392ad1-9f7e-4d34-869a-1801437724fb</ID>
+          <PolicyID>1830a01d-d423-4567-83ea-b1924682e8d9</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>992594d8-5e5a-4977-9ad9-950799192db2</ID>
+            <FunctionID>c4392ad1-9f7e-4d34-869a-1801437724fb</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9c8de676-d61f-45ac-aec9-dea1c375c377</ID>
+            <FunctionID>c4392ad1-9f7e-4d34-869a-1801437724fb</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>ddc1f31c-450d-482c-aff1-31b2d336b453</ID>
+            <FunctionID>c4392ad1-9f7e-4d34-869a-1801437724fb</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>4d4a53f0-6285-41de-bbd1-37b7a0c57a35</ID>
+            <FunctionID>c4392ad1-9f7e-4d34-869a-1801437724fb</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -54485,7 +55682,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>20</Order>
+      <Order>21</Order>
       <Policy>
         <ID>7ac18625-5010-4264-95e1-0e3760078318</ID>
         <SystemID>255f1433-3f7f-41f9-bec1-f0ac7c47ae4d</SystemID>
@@ -56987,7 +58184,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57063,7 +58260,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57139,7 +58336,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57215,7 +58412,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57291,7 +58488,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57367,7 +58564,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57443,7 +58640,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57519,7 +58716,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -57556,7 +58753,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -57840,7 +59037,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -57910,6 +59107,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>abe22bb9-3e20-4fad-9bb7-975cc6eb2431</ID>
+          <PolicyID>b126d973-cace-4b86-bf35-b314f268b303</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>4005eb86-e35b-4d43-afdd-f8c11a29ac1a</ID>
+            <FunctionID>abe22bb9-3e20-4fad-9bb7-975cc6eb2431</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>05de733b-3d65-4377-8889-b6af13edb576</ID>
+            <FunctionID>abe22bb9-3e20-4fad-9bb7-975cc6eb2431</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>63adae2f-436c-4152-b66f-34f8ab83963e</ID>
+            <FunctionID>abe22bb9-3e20-4fad-9bb7-975cc6eb2431</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>34aa4514-0939-4667-bc61-6e983d574561</ID>
+            <FunctionID>abe22bb9-3e20-4fad-9bb7-975cc6eb2431</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -57921,7 +59181,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>15</Order>
+      <Order>16</Order>
       <Policy>
         <ID>cc52c945-6624-4c83-8d72-695db4fb626a</ID>
         <SystemID>1951eb7a-eed8-4fcd-9359-078a045cdbe8</SystemID>
@@ -60423,7 +61683,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60499,7 +61759,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60575,7 +61835,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60651,7 +61911,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60727,7 +61987,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60803,7 +62063,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60879,7 +62139,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -60955,7 +62215,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -60992,7 +62252,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -61276,7 +62536,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -61335,6 +62595,69 @@
           <Parameter>
             <ID>374c0949-7ba7-439a-ac9f-19480681d2be</ID>
             <FunctionID>60560d03-d300-4e30-8052-ef11bc0424f7</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>388532c0-6c14-477f-a95e-54c9fd7c985d</ID>
+          <PolicyID>e94df76c-4318-428e-bf2b-41de0174ecbe</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>fde53c83-e469-40b7-bc3c-6b62f016d62e</ID>
+            <FunctionID>388532c0-6c14-477f-a95e-54c9fd7c985d</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>bfd3e28d-504f-482b-8acc-3f7e104ff406</ID>
+            <FunctionID>388532c0-6c14-477f-a95e-54c9fd7c985d</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>92843fce-87e6-4597-9167-a84cc3719f6d</ID>
+            <FunctionID>388532c0-6c14-477f-a95e-54c9fd7c985d</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>41cde118-76cd-4c71-8915-fd87e0da6d54</ID>
+            <FunctionID>388532c0-6c14-477f-a95e-54c9fd7c985d</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
@@ -63859,7 +65182,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -63935,7 +65258,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64011,7 +65334,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64087,7 +65410,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64163,7 +65486,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64239,7 +65562,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64315,7 +65638,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64391,7 +65714,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -64428,7 +65751,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -64712,7 +66035,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -64782,6 +66105,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>5726475a-8965-4a10-a30a-2eaab66a9662</ID>
+          <PolicyID>2e453ce5-26d6-4f15-b509-3718ee3fff3c</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>ee3dd044-5360-4f93-9517-8e77614799b6</ID>
+            <FunctionID>5726475a-8965-4a10-a30a-2eaab66a9662</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1a3b9fbc-3ead-40f9-b5f6-fe3c78bc4ef1</ID>
+            <FunctionID>5726475a-8965-4a10-a30a-2eaab66a9662</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>1aa86b76-b388-4d56-8a4d-d993f63b7400</ID>
+            <FunctionID>5726475a-8965-4a10-a30a-2eaab66a9662</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>e671bb2f-57a4-4ad4-9840-0f717acd8f53</ID>
+            <FunctionID>5726475a-8965-4a10-a30a-2eaab66a9662</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -64793,7 +66179,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>9</Order>
+      <Order>10</Order>
       <Year />
       <Policy>
         <ID>dc772810-6486-482d-9d26-279493f91c13</ID>
@@ -67296,7 +68682,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67372,7 +68758,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67448,7 +68834,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67524,7 +68910,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67600,7 +68986,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67676,7 +69062,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -67752,7 +69138,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -67828,7 +69214,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -67865,7 +69251,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -68149,7 +69535,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -68219,6 +69605,69 @@
             <Private />
           </Parameter>
         </Function>
+        <Function>
+          <ID>506b4a97-f3f6-4617-a6bb-589a5a7aa5c1</ID>
+          <PolicyID>0aedf407-f53f-4040-964a-75c96b0d6235</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>9b5ec4d0-a755-4e14-8f41-7fb4d21ce2de</ID>
+            <FunctionID>506b4a97-f3f6-4617-a6bb-589a5a7aa5c1</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>989d5ebd-df38-4f1c-a324-672acfd52c5b</ID>
+            <FunctionID>506b4a97-f3f6-4617-a6bb-589a5a7aa5c1</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>390e1dfa-c62b-4989-b64c-2d7e2044df39</ID>
+            <FunctionID>506b4a97-f3f6-4617-a6bb-589a5a7aa5c1</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>eeb674bb-afc8-4a11-834c-0b36c89db7a2</ID>
+            <FunctionID>506b4a97-f3f6-4617-a6bb-589a5a7aa5c1</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
       </Policy>
     </System>
     <System>
@@ -68230,7 +69679,7 @@
       <ExchangeRateEuro>1</ExchangeRateEuro>
       <HeadDefInc>ils_OrigY</HeadDefInc>
       <Private>no</Private>
-      <Order>12</Order>
+      <Order>13</Order>
       <Year />
       <Comment><![CDATA[]]></Comment>
       <Policy>
@@ -70734,7 +72183,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -70810,7 +72259,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -70886,7 +72335,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -70962,7 +72411,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71038,7 +72487,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71114,7 +72563,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71190,7 +72639,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71266,7 +72715,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -71303,7 +72752,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71587,7 +73036,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -71646,6 +73095,69 @@
           <Parameter>
             <ID>656a1c2c-1f2c-46d2-91e0-3823cb6840e4</ID>
             <FunctionID>ae163428-ab3a-4d02-92f9-ec125732ea9e</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>0428497f-26e1-4b69-8746-2a050a9aab0d</ID>
+          <PolicyID>d3c8d308-4622-4d02-8185-85b042e9df00</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>f6590972-38cf-460a-9d87-e5695e3d4402</ID>
+            <FunctionID>0428497f-26e1-4b69-8746-2a050a9aab0d</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>32d36518-2b0a-421a-9723-76cf71fa4fc5</ID>
+            <FunctionID>0428497f-26e1-4b69-8746-2a050a9aab0d</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>af390852-ff92-4b29-b2f7-3d9f2f63396c</ID>
+            <FunctionID>0428497f-26e1-4b69-8746-2a050a9aab0d</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>f976faeb-da34-4bbd-8f59-fd35da44d220</ID>
+            <FunctionID>0428497f-26e1-4b69-8746-2a050a9aab0d</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
@@ -74172,7 +75684,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate MTR (in percentage terms)]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>3</Order>
+          <Order>5</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74248,7 +75760,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: public pensions]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>4</Order>
+          <Order>6</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74324,7 +75836,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>5</Order>
+          <Order>7</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74400,7 +75912,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: non means-tested benefits]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>6</Order>
+          <Order>8</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74476,7 +75988,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: taxes]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>7</Order>
+          <Order>9</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74552,7 +76064,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: employee SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>8</Order>
+          <Order>10</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74628,7 +76140,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: self-employed SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>9</Order>
+          <Order>11</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -74704,7 +76216,7 @@
           <Name>Restore</Name>
           <Comment><![CDATA[RESTORE results of baseline tax-benefit calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>11</Order>
+          <Order>13</Order>
           <Switch>off</Switch>
           <Private />
           <Color>-1</Color>
@@ -74741,7 +76253,7 @@
           <Name>DefOutput</Name>
           <Comment><![CDATA[DEFINE output for marginal tax rate calculations]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>12</Order>
+          <Order>14</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -75025,7 +76537,7 @@
           <Name>ArithOp</Name>
           <Comment><![CDATA[calculate the contribution by components: other SIC]]></Comment>
           <PrivateComment>""</PrivateComment>
-          <Order>10</Order>
+          <Order>12</Order>
           <Switch>on</Switch>
           <Private />
           <Color>-1</Color>
@@ -75084,6 +76596,69 @@
           <Parameter>
             <ID>bab2e716-c5a9-4656-b0cd-6c0c787a9c8f</ID>
             <FunctionID>7fd836c2-60e2-4790-9835-0f8588d18ed5</FunctionID>
+            <Name>TAX_UNIT</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[tu_individual_=cc=]]></Value>
+            <Order>4</Order>
+            <ValueType>taxunit</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+        </Function>
+        <Function>
+          <ID>87349ad8-16a0-4310-bb82-ba41c7ee8356</ID>
+          <PolicyID>20364fd1-d6fc-4991-8654-66af0b70458b</PolicyID>
+          <Name>ArithOp</Name>
+          <Comment><![CDATA[calculate change in earnings]]></Comment>
+          <PrivateComment>""</PrivateComment>
+          <Order>4</Order>
+          <Switch>on</Switch>
+          <Private />
+          <Color>-1</Color>
+          <Parameter>
+            <ID>de0143ed-5ae7-46d1-8c0b-260cb845374f</ID>
+            <FunctionID>87349ad8-16a0-4310-bb82-ba41c7ee8356</FunctionID>
+            <Name>who_must_be_elig</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[one]]></Value>
+            <Order>1</Order>
+            <ValueType>categorical</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>d235c9b2-003d-4a5e-bee3-6a8c09411591</ID>
+            <FunctionID>87349ad8-16a0-4310-bb82-ba41c7ee8356</FunctionID>
+            <Name>formula</Name>
+            <Comment><![CDATA[(note ils_earns from both loops is stored at IND level)]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_mtr - ils_earns_base1]]></Value>
+            <Order>2</Order>
+            <ValueType>formula</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>9a1f75b2-7969-4a7a-96e8-2d04c3d51e09</ID>
+            <FunctionID>87349ad8-16a0-4310-bb82-ba41c7ee8356</FunctionID>
+            <Name>output_var</Name>
+            <Comment><![CDATA[]]></Comment>
+            <PrivateComment>""</PrivateComment>
+            <Value><![CDATA[ils_earns_diff]]></Value>
+            <Order>3</Order>
+            <ValueType>variable</ValueType>
+            <Group />
+            <Color>-1</Color>
+            <Private />
+          </Parameter>
+          <Parameter>
+            <ID>81149b52-1d0f-4b64-a680-33ba3fd5aff5</ID>
+            <FunctionID>87349ad8-16a0-4310-bb82-ba41c7ee8356</FunctionID>
             <Name>TAX_UNIT</Name>
             <Comment><![CDATA[]]></Comment>
             <PrivateComment>""</PrivateComment>
