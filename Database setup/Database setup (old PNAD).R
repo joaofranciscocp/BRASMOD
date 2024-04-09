@@ -283,12 +283,17 @@ base_bun <- base_lescs %>%
                         yes = 1,
                         no  = 0))
 
+base_liwwh <- base_bun %>% 
+  mutate(liwwh = ifelse(!is.na(v9611) & !is.na(v9612),
+                        yes = v9611*12 + v9612,
+                        no = 0))
+
 #INCOME
 
 #Create income variables: yem (employment income), yse (self-employment income),
 #yiy (investiment income)
 
-base_yem <- base_bun %>% 
+base_yem <- base_liwwh %>% 
   mutate(yem1 = ifelse(les == 3 & v9532 < 999999999, #if works as employee in main job (999999999 means NA)
                        yes = as.numeric(v9532), #yem1 is main job's income
                        no = 0), #0 otherwise
@@ -468,7 +473,7 @@ base <- base_lpm
 base_final_pnad <- base %>% 
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, 
          dct, drgn1, drgn2, drgur, dgn, dra, dwt, dag, dms, dec, dey, deh, ddi,
-         les, lem, lpb, ldt, los, lse, loc, lhw, lpm,   
+         les, lem, lpb, ldt, los, lse, loc, lhw, lpm, liwwh,   
          yem, yse, yiy, yprrt, poa, bunyn, bdioa, ypt, yhh) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
