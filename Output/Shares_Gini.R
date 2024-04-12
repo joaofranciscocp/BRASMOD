@@ -65,9 +65,12 @@ class(bra_2018_hh$dwt)
 #class(bra_2018_hh$ils_dispy)
 #class(bra_2018_hh$dwt)
 
-### Ordering observations for variable of interest (ils_dispy)------------------
+### Ordering observations for variable of interest------------------------------
 bra_2018_ind <- bra_2018_ind[order(bra_2018_ind$ils_dispy), ]
 bra_2018_hh <- bra_2018_hh[order(bra_2018_hh$ils_dispy), ]
+
+# bra_2018_ind <- bra_2018_ind[order(bra_2018_ind$ils_origy), ]
+# bra_2018_hh <- bra_2018_hh[order(bra_2018_hh$ils_origy), ]
 
 ### Analysis--------------------------------------------------------------------
 
@@ -90,8 +93,8 @@ race_2_4_gini <- bra_2018_ind %>%
   filter(dra==2 | dra==4) #dra == 2, black people; dra == 4, people of colour.
 
 #Calculating Gini in race group of interest
-gini_race_1 <- weighted.gini(race_1_Gini$ils_dispy, race_1_Gini$dwt)
-gini_race_2_4 <- weighted.gini(race_2_4_Gini$ils_dispy, race_2_4_Gini$dwt)
+gini_race_1 <- weighted.gini(race_1_gini$ils_dispy, race_1_gini$dwt)
+gini_race_2_4 <- weighted.gini(race_2_4_gini$ils_dispy, race_2_4_gini$dwt)
 
 
 #Using household data
@@ -117,8 +120,8 @@ gender_2_gini <- bra_2018_ind %>%
   filter(dgn==2) #dgn == 2, woman
 
 #Calculating Gini in gender group of interest
-gini_gender_1 <- weighted.gini(gender_1_Gini$ils_dispy, gender_1_Gini$dwt)
-gini_gender_2 <- weighted.gini(gender_2_Gini$ils_dispy, gender_2_Gini$dwt)
+gini_gender_1 <- weighted.gini(gender_1_gini$ils_dispy, gender_1_gini$dwt)
+gini_gender_2 <- weighted.gini(gender_2_gini$ils_dispy, gender_2_gini$dwt)
 
 #Using household data
 #base2 <- bra_2018_hh %>% 
@@ -147,10 +150,10 @@ gen_2_race_2_4_gini <- bra_2018_ind %>%
   filter(dgn==2 & dra==2 | dra==4) #dgn == 2, women of colour
 
 #Calculating Gini in gender/race groups of interest
-gini_race_1_gen_1 <- weighted.gini(gen_1_race_1_Gini$ils_dispy, gen_1_race_1_Gini$dwt) # white men
-gini_race_2_4_gen_1 <- weighted.gini(gen_1_race_2_4_Gini$ils_dispy, gen_1_race_2_4_Gini$dwt) # men of colour
-gini_race_1_gen_2 <- weighted.gini(gen_2_race_1_Gini$ils_dispy, gen_2_race_1_Gini$dwt) # white women
-gini_race_2_4_gen_2 <- weighted.gini(gen_2_race_2_4_Gini$ils_dispy, gen_2_race_2_4_Gini$dwt) #women of colour
+gini_race_1_gen_1 <- weighted.gini(gen_1_race_1_gini$ils_dispy, gen_1_race_1_gini$dwt) # white men
+gini_race_2_4_gen_1 <- weighted.gini(gen_1_race_2_4_gini$ils_dispy, gen_1_race_2_4_gini$dwt) # men of colour
+gini_race_1_gen_2 <- weighted.gini(gen_2_race_1_gini$ils_dispy, gen_2_race_1_gini$dwt) # white women
+gini_race_2_4_gen_2 <- weighted.gini(gen_2_race_2_4_gini$ils_dispy, gen_2_race_2_4_gini$dwt) #women of colour
 
 
 ## Income shares (general)------------------------------------------------------
@@ -169,18 +172,6 @@ decis <- lapply(lapply(as.list(c(paste0(sapply(seq(from = 0, to = .9, by = .1),
                                           max(bra_2018_hh$ils_dispy))))),
                        function(decil) strsplit(decil, "-")), 
                 function(elemento) as.numeric(elemento[[1]]))
-
-
-# Chat gpt's version
-decis_chat_gpt <- map(seq(from = 0, to = 0.9, by = 0.1), ~{
-  quantil <- .x
-  decil <- weighted.quantile(bra_2018_hh$ils_dispy, bra_2018_hh$dwt, prob = quantil) -
-    max(bra_2018_hh$ils_dispy)
-  decil
-}) %>%
-  map(~str_split(., "-")[[1]])
-
-
 
 
 # Naming deciles
