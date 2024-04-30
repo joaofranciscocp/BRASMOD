@@ -283,6 +283,8 @@ base_bun <- base_lescs %>%
                         yes = 1,
                         no  = 0))
 
+
+#In work history (length in months)
 base_liwwh <- base_bun %>% 
   mutate(liwwh = ifelse(!is.na(v9611) & !is.na(v9612),
                         yes = v9611*12 + v9612,

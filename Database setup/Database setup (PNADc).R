@@ -370,8 +370,15 @@ base_lem <- base_ddi %>%
   mutate(lem = case_when(V4029 == "Sim" ~ "1",
                          V4029 == "Não" ~ "2"))
 
+#In work history (length in months)
+base_liwwh <- base_lem %>% 
+  rowwise() %>% 
+  mutate(liwwh = ifelse(!(is.na(V40401) & is.na(V40402) & is.na(V40403)),
+                        yes = sum(V40401, 12 + V40402, 24 + V40403, na.rm = TRUE),
+                        no  = 0))
+
 #Contributed to social insurance
-base_lpm <- base_lem %>% 
+base_lpm <- base_liwwh %>% 
   mutate(lpm = case_when(VD4012 == "Contribuinte" ~ 1,
                          VD4012 == "Não contribuinte" ~ 0))
 
