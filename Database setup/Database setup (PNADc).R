@@ -387,7 +387,7 @@ base_lpm <- base_liwwh %>%
 base_final_pnad <- base_lpm %>% 
   select(idhh, idperson, idorighh, idorigperson, idfather, idmother, idpartner, 
          dct, drgn1, drgn2, drgur, dwt, dra, dag,
-         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, dms, loc, 
+         dec, dey, deh, les, lem, lpb, ldt, los, lse, yem, dgn, lhw, liwwh, dms, loc, 
          yse, yiy, ddi, poa, bun, bdioa, ypt, yhh, lpm) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
