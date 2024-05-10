@@ -61,7 +61,7 @@ For any queries regarding the data or our research work, please contact us at <a
         <img src="docs/assets/labpub2.png" alt="LabPub logo">
     </div>
     <div>
-        <h2>Funding</h2>
+        <h2>Sponsors</h2>
         <img src="docs/assets/fipe_logo_1.png" alt="FIPE logo">
         <img src="docs/assets/samambaia_logo_1.png" alt="Samambaia logo">
     </div>
