@@ -46,7 +46,7 @@ You can download the latest version of the EUROMOD software to run the model on:
 
 ## Sources
 <div style="text-align: justify;">
-    The microdata sets used to run the model were built using the Pesquina Nacional por Amostra de Domícilios (PNAD) until 2015, and the Pesquisa Nacional por Amostra Contínua (PNADc) from 2015 onwards. PNAD and its quaterly version, PNADc, are the main national household surveys conducted by the Brazilian Institute of Geography and Statistics (IBGE). The model also uses data from the nationally representative budget survey Pesquisa de Orçamentos Familiares (POF), for 2008 and 2018.
+    The microdata sets used to run the model were built using the Pesquisa Nacional por Amostra de Domcílios (PNAD) until 2015, and the Pesquisa Nacional por Amostra de Domicílios contínua (PNADc) from 2015 onwards. PNAD and its quarterly version, PNADc, are the main national household surveys conducted by the Brazilian Institute of Geography and Statistics (IBGE). The model also uses data from the nationally representative budget survey Pesquisa de Orçamentos Familiares (POF), for 2008 and 2018.
 </div>
 
 ## Contact
