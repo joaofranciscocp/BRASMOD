@@ -50,7 +50,7 @@ You can download the latest version of the EUROMOD software to run the model on:
 </div>
 
 ## Contact
-For any queries regarding the data or our research work, please contact us at <anabottega@usp.br>.
+For any queries regarding the data or our research work, please contact us at <labpub@usp.br> or <made.feausp@gmail.com>.
 
 
 
