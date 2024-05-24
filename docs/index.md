@@ -1,17 +1,17 @@
 # BRASMOD    
 <div style="text-align: justify;">
-    BRASMOD is the first large-scale, open-access, tax-benefit microsimulation model for Brazil. Built within the EUROMOD software, our model encompasses the complete federal structure of taxes and benefits from 2008 to 2023, including the COVID-related benefits.
+BRASMOD is the first large-scale, open-access, tax-benefit microsimulation model for Brazil. Built within the EUROMOD software, our model encompasses the complete federal structure of taxes and benefits from 2008 to 2023, including the COVID-related benefits.
 </div>
 
 ## Paper and Citation
 <div style="text-align: justify;">
-    The preliminary results of BRASMOD are currently published in ANPEC magazine. You may be interested in citing our paper:
+The preliminary results of BRASMOD are currently published in ANPEC magazine. You may be interested in citing our paper:
 </div>
 > Bottega A., Cabral J.F., Duarte R., Forquesato P., Rocha F. (2024) [Progressivity, distortions, and impacts of the Brazilian tax and benefit system: microsimulation results](https://www.anpec.org.br/encontro/2023/submissao/files_I/i5-6065e1562b5d2a901e9a4736f43c4ddf.pdf), 51º Encontro Nacional de Economia, ANPEC.
 
 ## Data
 <div style="text-align: justify;">
-    All our data and code are hosted on GitHub. Click the link above to access our repository, where you can fork or download all the files related to this project. This repository contains the files and data necessary to run the BRASMOD microsimulation model. It follows the EUROMOD folder structure with the following folders:
+All our data and code are hosted on GitHub. Click the link above to access our repository, where you can fork or download all the files related to this project. This repository contains the files and data necessary to run the BRASMOD microsimulation model. It follows the EUROMOD folder structure with the following folders:
  </div>
 
 ### Database setup
@@ -41,7 +41,8 @@ Microdata output files (.txt) with the model results.
 
 ## EUROMOD platform 
 <div style="text-align: justify;">
-To run the model, you can download the latest version of the EUROMOD software on [EUROMOD](https://euromod-web.jrc.ec.europa.eu/download-euromod).
+    
+To run the model, you can download the latest version of the EUROMOD software [here](https://euromod-web.jrc.ec.europa.eu/download-euromod).
 
 The [EUROMOD](https://euromod-web.jrc.ec.europa.eu/) platform is maintained, developed, and managed by the Joint Research Centre ([JRC](https://joint-research-centre.ec.europa.eu/index_en)) of the European Commission. EUROMOD is a purpose-built software that offers an ideal platform for developing microsimulation models. You can find a series of resources related to the EUROMOD platform (like training courses and detailed manuals) and the EUROMOD models [here](https://euromod-web.jrc.ec.europa.eu/resources). 
 
