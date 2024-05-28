@@ -19,7 +19,7 @@ year <- 2018
 #This will be important for determining taxes on consumption
 #If set to "no", informal sector expenditures will be "hidden"
 #This is done to induce them not paying taxes
-include_informal_sector <- "yes" 
+include_informal_sector <- "no" 
 
 #Read tables from POF data folder
 
