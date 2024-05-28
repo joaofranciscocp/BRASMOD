@@ -1,6 +1,6 @@
 # BRASMOD
 
-This repository contains the files and data necessary to run the BRASMOD microsimulation model. It follows the EUROMOD folder structure, with the following folders:
+This repository contains the files and data necessary to run the BRASMOD microsimulation model. The model folder (BRASMOD_v1.0) follows the EUROMOD folder structure, with the following folders:
 
 | ***Folder***| ***Description*** |
 |-----|-----|
