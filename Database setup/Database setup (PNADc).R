@@ -135,7 +135,7 @@ base_ids <- base_ids %>%
          dag = V2009,
          dgn = V2007) %>% 
   mutate(dgn = case_when(dgn == "Homem"  ~ 1,
-                         dgn == "Mulher" ~ 2),
+                         dgn == "Mulher" ~ 0),
          drgur = ifelse(V1022 == "Urbana",
                         yes = 1,
                         no = 0),
@@ -379,7 +379,8 @@ base_liwwh <- base_lem %>%
 
 #Contributed to social insurance
 base_lpm <- base_liwwh %>% 
-  mutate(lpm = case_when(VD4012 == "Contribuinte" ~ 1,
+  mutate(lpm = case_when(is.na(VD4012) ~ 0,
+                         VD4012 == "Contribuinte" ~ 1,
                          VD4012 == "Não contribuinte" ~ 0))
 
 
