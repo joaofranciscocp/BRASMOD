@@ -19,7 +19,7 @@ year <- 2018
 #This will be important for determining taxes on consumption
 #If set to "no", informal sector expenditures will be "hidden"
 #This is done to induce them not paying taxes
-include_informal_sector <- "no" 
+include_informal_sector <- "yes" 
 
 #Read tables from POF data folder
 
@@ -144,9 +144,11 @@ base_ids$dct <- "76"
 base_ids <- base_ids %>% 
   rename(dwt   = PESO_FINAL,
          dag   = V0403,
-         dgn   = V0404,
          drgur = TIPO_SITUACAO_REG,
-         dra   = V0405)
+         dra   = V0405) %>% 
+  mutate(dgn   = ifelse(V0404 == 1,
+                        yes = 1,
+                        no  = 0))
 
 #Create marital status (dms) variable. With the PNADc, we're only able to capture 
 #if the individual has a partner or not
@@ -812,18 +814,20 @@ expenditure_vars <- as.vector(colnames(base_nat_acc %>% select(starts_with("x"))
 
 
 base_final_pof <- base_nat_acc %>% 
-  select(mandatory_vars, expenditure_vars) %>% 
+  select(all_of(c(mandatory_vars, expenditure_vars))) %>% 
   arrange(idhh, idperson) %>% 
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 
 
+version_folder <- list.files(pattern = "^BRASMOD")
+
 #Save base as a tab separated .txt 
 if(include_informal_sector == "no"){
-  write.table(base_final_pof, file=paste0("Input\\BR_2018_b2.txt"),
+  write.table(base_final_pof, file=paste0(version_folder, "\\Input\\BR_2018_b2.txt"),
               quote=FALSE, sep='\t', row.names=FALSE)
 } else{
-  write.table(base_final_pof, file=paste0("Input\\BR_2018_b1.txt"),
+  write.table(base_final_pof, file=paste0(version_folder, "\\Input\\BR_2018_b1.txt"),
               quote=FALSE, sep='\t', row.names=FALSE)
 }
 
