@@ -368,20 +368,20 @@ base_ddi <- base_bun %>%
 #Formal employment
 base_lem <- base_ddi %>% 
   mutate(lem = case_when(V4029 == "Sim" ~ "1",
-                         V4029 == "Não" ~ "2"))
+                         V4029 == "Não" ~ "0"))
 
 #In work history (length in months)
 base_liwwh <- base_lem %>% 
   rowwise() %>% 
   mutate(liwwh = ifelse(!(is.na(V40401) & is.na(V40402) & is.na(V40403)),
                         yes = sum(V40401, 12 + V40402, 24 + V40403, na.rm = TRUE),
-                        no  = 0))
+                        no  = 0)) %>% 
+  ungroup()
 
 #Contributed to social insurance
 base_lpm <- base_liwwh %>% 
-  mutate(lpm = case_when(is.na(VD4012) ~ 0,
-                         VD4012 == "Contribuinte" ~ 1,
-                         VD4012 == "Não contribuinte" ~ 0))
+  mutate(lpm = case_when(VD4012 == "Contribuinte" ~ "1",
+                         VD4012 == "Não contribuinte" ~ "0"))
 
 
 #Select mandatory variables for Euromod and make final adjustments
@@ -393,8 +393,10 @@ base_final_pnad <- base_lpm %>%
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 
+version_folder <- list.files(pattern = "^BRASMOD")
+
 #Save base as a tab separated .txt 
-write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
+write.table(base_final_pnad, file=paste0(version_folder, "\\Input\\BR_", as.character(year), "_a1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
 
 
