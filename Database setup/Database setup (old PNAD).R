@@ -121,7 +121,6 @@ base_ids <- base_ids %>%
 #Create country variable (dct) according to ISO-3166 (Brazil is 76)
 base_ids$dct <- "76"
 
-
 #Create sample weight (dwt), age (dag), gender (gdn), race (dra),
 #and urban region (drgur) variables
 base_ids <- base_ids %>% 
@@ -129,7 +128,7 @@ base_ids <- base_ids %>%
          dag = v8005,
          dgn = v0302) %>% 
   mutate(dgn = case_when(dgn == 2 ~ 1,
-                         dgn == 4 ~ 2),
+                         dgn == 4 ~ 0),
          drgur = ifelse(v4728 <= 3,
                         yes = 1,
                         no = 0),
@@ -480,6 +479,8 @@ base_final_pnad <- base %>%
   mutate(across(everything(), as.character),
          across(everything(), ~replace_na(.x, "0")))
 
+version_folder <- list.files(pattern = "^BRASMOD")
+
 #Save base as a tab separated .txt 
-write.table(base_final_pnad, file=paste0("Input\\BR_", as.character(year), "_a1.txt"),
+write.table(base_final_pnad, file=paste0(version_folder, "\\Input\\BR_", as.character(year), "_a1.txt"),
             quote=FALSE, sep='\t', row.names=FALSE)
