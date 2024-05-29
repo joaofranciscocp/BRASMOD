@@ -40,14 +40,12 @@ Microdata output files (.txt) with the model results.
 </div>
 
 ## EUROMOD platform 
-<div style="text-align: justify;">
     
 To run the model, you can download the latest version of the EUROMOD software [here](https://euromod-web.jrc.ec.europa.eu/download-euromod).
 
 The [EUROMOD](https://euromod-web.jrc.ec.europa.eu/) platform is maintained, developed, and managed by the Joint Research Centre ([JRC](https://joint-research-centre.ec.europa.eu/index_en)) of the European Commission. EUROMOD is a purpose-built software that offers an ideal platform for developing microsimulation models. You can find a series of resources related to the EUROMOD platform (like training courses and detailed manuals) and the EUROMOD models [here](https://euromod-web.jrc.ec.europa.eu/resources). 
 
 UNU-WIDER has also launched [SOUTHMOD](https://www.wider.unu.edu/project/southmod-simulating-tax-and-benefit-policies-development-phase-2), a research project that developed a bundle of tax-benefit microsimulation models for selected developing countries. You can apply for access to the SOUTHMOD bundle [here](https://www.wider.unu.edu/about/accessing-southmod-models). 
-</div>
 
 ## Sources
 <div style="text-align: justify;">
