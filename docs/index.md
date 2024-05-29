@@ -55,7 +55,7 @@ UNU-WIDER has also launched [SOUTHMOD](https://www.wider.unu.edu/project/southmo
 </div>
 
 ## Contact
-If you have any questions about the data or our research work, please contact us at labpub@usp.br> or made.feausp@gmail.com>.
+If you have any questions about the data or our research work, please contact us at <labpub@usp.br> or <made.feausp@gmail.com>.
 
 <div style="display: flex; justify-content: space-between;">
     <div>
