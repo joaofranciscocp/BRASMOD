@@ -343,7 +343,8 @@ base_ypt <- base_poa %>%
 #What we have is a "other sources of income" variable (v1273), which aggregates income
 #from means-tested social programs like BPC, investment income, etc
 
-#To identify individuals who have received the BPC, we use the "typical values method"
+#To identify individuals who have received the BPC, we use the 
+#"typical values method" (Barros, Carvalho e Franco, 2007) 
 #The value of the BPC benefit is exactly a monthly minimum wage
 
 min_wage <- case_when(
